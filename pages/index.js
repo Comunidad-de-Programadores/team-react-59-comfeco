@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Home = (props) => {
-  return <h1>Hello World</h1>;
+
+  return <h1>Hello World</h1>
 };
 
 export default Home;
