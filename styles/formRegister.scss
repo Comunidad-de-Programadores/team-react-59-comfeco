@@ -16,7 +16,30 @@ main {
   form {
     max-width: 324px;
 
-   
+    span.icoBackground {
+      align-items: center;
+      background-color: #fff;
+      border-radius: 50%;
+
+      display: flex;
+      height: 27px;
+      justify-content: center;
+
+      &.col-xs-2 {
+        -ms-flex-preferred-size: 10.666667%;
+        flex-basis: 10.666667%;
+        max-width: 10.666667%;
+      }
+
+      .ico {
+        align-items: center;
+        border-radius: 50%;
+        color: #942b94;
+        display: flex;
+        font-size: 17px;
+        justify-content: center;
+      }
+    }
   }
 
   
