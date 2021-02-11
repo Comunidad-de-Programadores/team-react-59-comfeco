@@ -1,7 +1,12 @@
 import React from "react";
+import Register from "./register"
 
 const Home = (props) => {
-  return <h1>Hello World</h1>;
+  return (
+    <>
+      <Register />
+    </>
+  );
 };
 
 export default Home;
