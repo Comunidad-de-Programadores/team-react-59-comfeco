@@ -1,5 +1,7 @@
 import firebase from "firebase";
 
+const db = () => firebase.firestore();
+
 export const config = {
     api: {
         bodyParser: {
@@ -14,8 +16,6 @@ export default async function handler(req,res){
         console.log(req.body)
 
         const { email , password , nickname } = JSON.parse(req.body);
-
-        const db = () => firebase.firestore()
 
         //Verify the values
         if(email == "" || password == "" || nickname == "" ||
