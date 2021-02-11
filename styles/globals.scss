@@ -1,5 +1,20 @@
 *{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  display: flex;
+  font-family: Lato, sans-serif;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+#__next{
+  display: inherit;
+  flex-wrap: inherit;
+  min-height: inherit;
+  width: 100%;
 }
