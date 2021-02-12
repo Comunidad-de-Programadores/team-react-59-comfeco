@@ -21,7 +21,7 @@ export default async function handler(req,res){
         if(email == "" || password == "" || nickname == "" ||
            !email || !password || !nickname
         ){
-            return res.status(401).json({error: "Missing values"})
+            return res.status(401).json({error: "Missing values"});
         }
 
 
@@ -57,18 +57,18 @@ export default async function handler(req,res){
                 const setNickname = await db().collection("users").add({
                     user: user.user.uid,
                     nickname
-                })
+                });
 
-                const token = await user.user.getIdTokenResult()
+                const token = await user.user.getIdTokenResult();
                 
                 //Request successful
-                res.status(200).json({ token })
+                res.status(200).json({ token });
             })
             .catch(error => {
 
                 //Request failed
                 res.status(400).json({ error })
-            })
+            });
     }else{
         res.status(200).json({message: "Only post method"})
     }
