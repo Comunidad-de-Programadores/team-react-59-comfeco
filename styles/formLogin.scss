@@ -1,6 +1,7 @@
 .form-login-container{
     background-color: #33004b;
     border-radius: 10px;
+    font-family: Lato, sans-serif;
     max-width: 405px;
     padding: 40px;
 
@@ -11,10 +12,10 @@
             align-items: center;
             background-color: #570c69 !important;
             border-radius: 4px;
-            height: 39px;
-            
+            height: 40px;
+
             justify-content: center;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             padding: 0 10px 0 8px;
             overflow: hidden;
 
@@ -30,7 +31,7 @@
                 &.col-xs-2 {
                     -ms-flex-preferred-size: 10%;
                     flex-basis: 10%;
-                    max-width: 10%;
+                    max-width: 9%;
                 }
 
                 .ico {
@@ -57,6 +58,7 @@
             
                 &:focus {
                   outline: none;
+                  border: 1px solid #570c69;
                 }
                 &::-webkit-input-placeholder {
                   color: #fff;
@@ -70,6 +72,47 @@
                   color: #fff;
                 }
               }
+        }
+
+        .button-container{
+            display:flex;
+            justify-content: center;
+
+            button{
+                background-color: #92278F;
+                color: white;
+                border-radius: 5px;
+                height: 35px;
+                padding: 5px 20px;
+                font-weight:700;
+
+                outline: none;
+                border: 0;
+
+                &:hover{
+                    background-color: #871d83;
+                }
+            }
+        }
+
+        .forgotPassword-container{
+            margin-bottom: 20px;
+            
+            
+            a{
+                color:#a743a5;
+                text-decoration: none;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .buttom{
+            border: none;
+            border-radius: 10px;
+            justify-content: center;
         }
     }
 }

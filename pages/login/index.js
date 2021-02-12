@@ -1,4 +1,6 @@
-export default function Login(){
+import Link from "next/link"
+
+export default function login(){
     return(
         <div className="form-login-container">
             <form className="row" action="">
@@ -15,10 +17,20 @@ export default function Login(){
                     </label>
                     <input name="loginPassword" id="loginPassword" className="col-xs-10" type="password" placeholder="Contraseña" />
                 </div>
-                <hr/>
-                <button name="loginButtom" id="loginButtom" className="" type="submit" value="enviar">
-                    Acceder
-                </button>
+                <br/>
+                <div className="forgotPassword-container col-xs-12">
+                    <Link href="/forgotPassword">
+                        <a className="link">¿Olvidaste tu contraseña?</a>
+                    </Link>
+                </div>
+                <br/>
+                <div className="button-container col-xs-12">
+                    <button name="loginButton" id="loginButton" className="col-xs-12" type="submit" value="send">
+                        Acceder
+                    </button>   
+                </div>
+                <br/>
+                <hr className="col-xs-12"/>
             </form>
         </div>
     )
