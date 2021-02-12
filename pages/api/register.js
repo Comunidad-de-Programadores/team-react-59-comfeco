@@ -21,7 +21,7 @@ export default async function handler(req,res){
         if(email == "" || password == "" || nickname == "" ||
            !email || !password || !nickname
         ){
-            return res.status(401).json({error: "Put all values"})
+            return res.status(401).json({error: "Missing values"})
         }
 
 
@@ -60,13 +60,16 @@ export default async function handler(req,res){
                 })
 
                 const token = await user.user.getIdTokenResult()
-
+                
+                //Request successful
                 res.status(200).json({ token })
             })
             .catch(error => {
+
+                //Request failed
                 res.status(400).json({ error })
             })
     }else{
-        req.status(200).json({message: "Only post metho"})
+        req.status(200).json({message: "Only post method"})
     }
 }
