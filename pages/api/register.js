@@ -70,6 +70,6 @@ export default async function handler(req,res){
                 res.status(400).json({ error })
             })
     }else{
-        req.status(200).json({message: "Only post method"})
+        res.status(200).json({message: "Only post method"})
     }
 }
