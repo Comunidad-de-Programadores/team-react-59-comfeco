@@ -3,3 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Change default styles of input autocomple;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active{
+  box-shadow: #570C69;
+  -webkit-box-shadow: 0 0 0 30px #570C69 inset !important;
+  -webkit-text-fill-color: #fff !important;
+  border: 3px solid transparent;
+}
+input:-webkit-autofill:focus{
+  box-shadow: #570C69;  
+  -webkit-box-shadow: 0 0 0 30px #74088f inset !important;
+}
+

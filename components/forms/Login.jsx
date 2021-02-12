@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function Login(){
     return(
         <div className="form-login-container">
-            <form className="row" action="">
+            <form className="row" action="" method="post">
                 <div className="row col-xs-12 input-container">
                     <label htmlFor="loginCorreo" className="ico-background col-xs-1">
                             <span className="ico icon-mail-envelope-closed"></span>
@@ -16,6 +16,12 @@ export default function Login(){
                             <span className="ico icon-lock"></span>
                     </label>
                     <input name="loginPassword" id="loginPassword" className="col-xs-11" type="password" placeholder="Contraseña" />
+                </div>
+                <br/>
+                <div className="row col-xs-12 checkBox-container">
+                    <input name="checkRemember" id="checkRemember" type="checkbox"/>
+                    <label htmlFor="checkRemember"></label>
+                    <p>Recordar usuario</p>
                 </div>
                 <br/>
                 <div className="button-container col-xs-12">

@@ -48,14 +48,14 @@
 
             input {
                 background-color: transparent;
-                border: 3px solid transparent;
-                color: #fff !important;
-                font-weight: 300;
+                border: 3px solid #570C69;
                 border-radius: 4px;
+                color: #fff !important;
+                
+                font-weight: 300;
                 height: 100%;
-
                 padding: 10px;
-            
+                
                 &:focus {
                     outline: none;
                     background-color:#74088f;
@@ -66,13 +66,44 @@
                 }
             
                 &::-moz-placeholder {
-                  color: #fff;
+                  color: #eee;
                 }
             
                 &::-ms-input-placeholder {
-                  color: #fff;
+                  color: #eee;
                 }
               }
+        }
+
+        .checkBox-container{
+            color: #eee;
+            margin-bottom: 20px;
+
+            label{
+                width:20px;
+                
+                &::before{
+                    background:white;
+                    border-radius: 50%;
+                    display:block;
+                    content: '';
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            input{
+                display: none;
+
+                    &:checked ~ label:before{
+                        background-image: url(./icons/check.png);
+                        background-size: 100% 100%;
+                    }
+            }
+
+            p{
+                margin-left: 10px;
+            }
         }
         
         .button-container{
