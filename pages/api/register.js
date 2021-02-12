@@ -66,8 +66,7 @@ export default async function handler(req,res){
             .catch(error => {
                 res.status(400).json({ error })
             })
+    }else{
+        req.status(200).json({message: "Only post metho"})
     }
-    
-
-    
 }
