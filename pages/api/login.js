@@ -12,8 +12,13 @@ export default async function handler(req,res){
 
     if(req.method === 'POST'){
 
-        //Reques Body
+        //Request Body
         const { email , password } = JSON.parse(req.body);
+
+        //Check body
+        if(!email || email == "" || !password || password == ""){
+            return res.status(400).json({ error: "Missing values" })
+        }
 
         //FirebaseKeys
         var firebaseConfig = {
@@ -32,10 +37,18 @@ export default async function handler(req,res){
             firebase.app();
         }
         
+        //SignIn
         firebase.auth().signInWithEmailAndPassword(email,password)
             .then(async (user) => {
                 const token = await user.user.getIdTokenResult();
+                
+                //Request successful
                 res.status(200).json({ token });
+            })
+            .catch(error => {
+
+                //Request failed
+                res.status(400).json({ error });
             })
     }else{
         res.status(200).json({message: "Only post method"})
