@@ -1,0 +1,44 @@
+main {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100% - 50px);
+}
+
+.backgroundRegister {
+  background: #fff;
+  /* background: linear-gradient(
+    to right,
+    #f993d5,
+    #93019c,
+    #016a88,
+    #056b89,
+    #00c5ff
+  ); */
+  background: linear-gradient(
+    to right,
+    #f993d5,
+    #93019c,
+    #016a88,
+    #0011aa5c,
+    #00c5ff
+  );
+/*   background: linear-gradient(
+    to right,
+    #ab01ba,
+    #590179,
+    #0b0841,
+    
+    #0011aa5c,
+    #00c5ff
+  ); */
+  height: 210vh;
+  width: 161vw;
+  position: fixed;
+  z-index: -1;
+  transform: rotateZ(45deg);
+  left: -50vh;
+  top: -46vh;
+}
