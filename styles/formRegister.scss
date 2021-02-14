@@ -1,10 +1,47 @@
-
-
 .form-group-register {
   background-color: #33004b;
   border-radius: 10px;
   padding: 40px;
   max-width: 405px;
+
+  &.trasera{
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+
+
+
+  }
+
+  .botonesDeSesion {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+
+    span {
+      color: #fff;
+    }
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+    
+    a{
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
 
   form {
     max-width: 324px;
@@ -33,7 +70,33 @@
         justify-content: center;
       }
     }
+
+    
   }
+  .legal{
+    p{
+      font-size: 12px;
+    }
+
+    a{
+      color: #3498db;
+      text-decoration: none;
+    }
+  }
+
+  .containerRegistrarse{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+
+    .registerButtom {
+      color: #fff;
+    }
+  }
+
+ 
 
   .containerInput {
     align-items: center;
