@@ -13,9 +13,8 @@ export const config = {
 export default async function handler(req,res){
 
     if(req.method === 'POST'){
-        console.log(req.body)
 
-        const { email , password , nickname } = JSON.parse(req.body);
+        const { email , password , nickname } = req.body;
 
         //Verify the values
         if(email == "" || password == "" || nickname == "" ||
