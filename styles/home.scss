@@ -25,7 +25,7 @@ main {
     #0011aa5c,
     #00c5ff
   );
-/*   background: linear-gradient(
+  /*   background: linear-gradient(
     to right,
     #ab01ba,
     #590179,
@@ -34,11 +34,40 @@ main {
     #0011aa5c,
     #00c5ff
   ); */
-  height: 210vh;
+  height: 215vh;
   width: 161vw;
   position: fixed;
   z-index: -1;
   transform: rotateZ(45deg);
   left: -50vh;
   top: -46vh;
+}
+
+.containerSesion {
+  width: 90%;
+}
+
+.containerRegisterLogin {
+  width: 100%;
+  /* max-width: 550px; */
+  position: relative;
+  color: #fff;
+  transition: 0.3s ease all;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.containerRegisterLogin.active {
+  transform: rotateY(180deg);
+}
+
+.delantera {
+  
+  p {
+    min-height: 100px;
+    max-width: 100px;
+    background-color: red;
+  }
 }

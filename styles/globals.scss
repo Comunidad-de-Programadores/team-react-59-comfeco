@@ -12,9 +12,48 @@ body {
   min-height: 100vh;
 }
 
-#__next{
+#__next, .containerAll{
   display: inherit;
   flex-wrap: inherit;
   min-height: inherit;
   width: 100%;
+}
+
+/* .imgContainer{
+  img{
+    width: 10px !important;
+    he
+  }
+} */
+
+::selection {
+  background: #3498db;
+  color: #fff;
+  text-shadow: none;
+}
+
+img::selection {
+  background: rgba(#3498db, 0.2);
+  color: #fff;
+  text-shadow: none;
+}
+
+a::selection {
+  background: #1abc9c !important;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 1px solid #1abc9c !important;
+  }
+}
+.visited:visited {
+  color: #EE216B !important;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3498db;
 }
