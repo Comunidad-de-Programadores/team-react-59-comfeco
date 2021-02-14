@@ -1,9 +1,20 @@
 footer {
   align-self: flex-end;
-  background: #000011;
+  /* background: #000011; */
   color: #fff;
-  
-  padding: 1em;
+
   text-align: center;
   width: 100%;
+
+  justify-content: center;
+  align-items: center;
+
+  .containerFooter {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 50px;
+    border-top: 2px solid #fff;
+  }
 }

@@ -1,6 +1,52 @@
 header {
+  align-items: center;
   height: fit-content;
+  justify-content: center;
   min-height: 75px;
   position: fixed;
   width: 100%;
+}
+
+.containerHeader {
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 75px;
+  border-bottom: 2px solid #fff;
+
+  .navegation {
+    display: inline-flex;
+
+    nav {
+      margin-left: auto;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      ul li {
+        display: inline-block;
+
+        a {
+          color: #fff;
+          display: block;
+          font-size: 13px;
+          font-weight: bold;
+
+          letter-spacing: 1px;
+          line-height: 22px;
+          margin-right: 9px;
+
+          padding: 0;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          span {
+            padding-right: 20px;
+          }
+        }
+      }
+    }
   }
+}
