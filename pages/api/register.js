@@ -62,7 +62,7 @@ export default async function handler(req,res){
                 const token = await user.user.getIdTokenResult();
                 
                 //Request successful
-                res.status(200).json({ token });
+                res.status(200).json({ token: token.token });
             })
             .catch(error => {
 
