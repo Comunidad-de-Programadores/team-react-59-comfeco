@@ -11,9 +11,8 @@ export const config = {
 export default async function handler(req,res){
 
     if(req.method === 'POST'){
-
         //Request Body
-        const { email , password } = JSON.parse(req.body);
+        const { email , password } = req.body;
 
         //Check body
         if(!email || email == "" || !password || password == ""){
@@ -43,7 +42,7 @@ export default async function handler(req,res){
                 const token = await user.user.getIdTokenResult();
                 
                 //Request successful
-                res.status(200).json({ token });
+                res.status(200).json({ token: token.token });
             })
             .catch(error => {
 
