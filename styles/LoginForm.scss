@@ -1,16 +1,32 @@
-.form-login-container{
-    background-color: #33004B;
+$formBackground:#33004B;
+
+$inputBackground:#570C69;
+$inputBackgroundFocus:#74088f;
+
+$buttonBackground:#92278F;
+$buttonBackgroundHover:#751972;
+
+$forgotPasswordColor:#a854a7;
+
+.formLoginContainer{
+    background-color: $formBackground;
     border-radius: 10px;
     font-family: Lato, sans-serif;
     max-width: 410px;
-    padding: 40px;
+    padding:40px;
+
+    .formLoginTitle{
+        color: #fff;
+        margin: 0;
+        padding-bottom: 30px;
+    }
 
     form {
         width: 100%;
    
-        .input-container{
+        .inputContainer{
             align-items: center;
-            background-color: #570C69 !important;
+            background-color: $inputBackground;
             border-radius: 4px;
             height: 35px;
             
@@ -38,7 +54,7 @@
                 .ico {
                     align-items: center;
                     border-radius: 50%;
-                    color: #942b94;
+                    color: $inputBackgroundFocus;
                     display: flex;
 
                     font-size: 17px;
@@ -58,7 +74,7 @@
                 
                 &:focus {
                     outline: none;
-                    background-color:#74088f;
+                    background-color:$inputBackgroundFocus;
                     border: 3px solid #690c61;
                 }
                 &::-webkit-input-placeholder {
@@ -75,20 +91,22 @@
               }
         }
 
-        .checkBox-container{
+        .checkBoxContainer{
             color: #eee;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
 
             label{
-                width:20px;
+                width:18px;
                 
                 &::before{
                     background:white;
                     border-radius: 50%;
                     display:block;
                     content: '';
+
                     height: 100%;
                     width: 100%;
+                    transition: 1s;
                 }
             }
 
@@ -97,7 +115,8 @@
 
                     &:checked ~ label:before{
                         background-image: url(./icons/check.png);
-                        background-size: 100% 100%;
+                        background-size: contain;
+                        transform: rotate(1turn) scale(1.1)
                     }
             }
 
@@ -106,13 +125,13 @@
             }
         }
         
-        .button-container{
+        .buttonContainer{
             display:flex;
             justify-content: center;
             margin-bottom: 20px;
 
             button{
-                background-color: #92278F;
+                background-color: $buttonBackground;
                 border-radius: 5px;
                 border: 0;
                 color: white;
@@ -121,20 +140,20 @@
                 height: 40px;
                 outline: none;
                 padding: 5px 20px;
-                width: 50%;
+                width: 165px;
 
                 &:hover{
-                    background-color: #871d83;
+                    background-color: $buttonBackgroundHover;
                 }
             }
         }
 
-        .forgotPassword-container{
+        .forgotPasswordContainer{
             display: flex;
             justify-content: center;
             
             a{
-                color:#a854a7;
+                color:$forgotPasswordColor;
                 text-decoration: none;
 
                 &:hover{
@@ -143,4 +162,20 @@
             }
         }
     }
+}
+
+
+/* Change default styles of input autocomple */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active{
+  box-shadow: $inputBackground;
+  -webkit-box-shadow: 0 0 0 30px $inputBackground inset !important;
+  -webkit-text-fill-color: #fff !important;
+  border: 3px solid transparent;
+}
+input:-webkit-autofill:focus{
+  box-shadow: $inputBackgroundFocus;  
+  -webkit-box-shadow: 0 0 0 30px $inputBackgroundFocus inset !important;
 }
