@@ -3,17 +3,17 @@ import Link from "next/link"
 export default function Login(){
     return(
         <div className="formLoginContainer">
-            <h1 className="formLoginTitle">Iniciar sesión</h1>
+            <h1>Iniciar sesión</h1>
             <form className="row" action="" method="post">
                 <div className="row col-xs-12 inputContainer">
-                    <label htmlFor="loginCorreo" className="ico-background col-xs-1">
+                    <label htmlFor="loginCorreo" className="icoBackground col-xs-1">
                             <span className="ico icon-mail-envelope-closed"></span>
                     </label>
                     <input name="loginCorreo" id="loginCorreo" className="col-xs-11" type="email" placeholder="Correo electrónico" autoComplete="off"/>
                 </div>
                 <br/>
                 <div className="row col-xs-12 inputContainer">
-                    <label htmlFor="loginPassword" className="ico-background col-xs-1">
+                    <label htmlFor="loginPassword" className="icoBackground col-xs-1">
                             <span className="ico icon-lock"></span>
                     </label> 
                     <input name="loginPassword" id="loginPassword" className="col-xs-11" type="password" placeholder="Contraseña" />
@@ -32,7 +32,7 @@ export default function Login(){
                 </div>
                 <br/>
                 <div className="row col-xs-12 forgotPasswordContainer">
-                    <Link href="/forgotPassword">
+                    <Link href="/login/resetPassword">
                         <a className="link">¿Olvidaste tu contraseña?</a>
                     </Link>
                 </div>

@@ -4,7 +4,8 @@ import "../styles/normalize.scss";
 
 import "../styles/globals.scss";
 
-import "../styles/LoginForm.scss"
+import "../styles/loginForm.scss"
+import "../styles/resetPassword.scss"
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
