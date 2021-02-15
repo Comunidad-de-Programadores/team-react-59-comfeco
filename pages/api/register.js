@@ -1,4 +1,4 @@
-import User from "../../models/user.models";
+import User from "../../models/user.model";
 import { connectdb } from "../../database/db";
 import jwt from "jsonwebtoken";
 
