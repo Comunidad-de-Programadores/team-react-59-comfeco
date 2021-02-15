@@ -28,13 +28,13 @@ export default async function handler(req,res){
         const token = await jwt.sign({
             action_type: "reset password",
             _id: emailExist._id
-        },process.env.KEY,{ expiresIn: 30000 });
+        },process.env.KEY,{  expiresIn: '1h' });
 
         //Send Mail
         const send = await sendMail("Reset Password",`
             <h2>Now you are going to reset the password</h2>
             <br/>
-            <p>Click to the link (the link expires in 30 min)</p>
+            <p>Click to the link (the link expires in 1h)</p>
             <br/>
             <a>${token}</a>
         `,email)

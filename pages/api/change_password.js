@@ -1,6 +1,7 @@
 import { connectdb } from "../../database/db";
 import jwt from "jsonwebtoken";
 import User from "../../models/user.model";
+import encryptNewPassword from "../../functions/encryptNewPassword";
 
 export default async function handler(req,res){
     await connectdb();
@@ -38,8 +39,11 @@ export default async function handler(req,res){
            return res.status(400).json({ error: "Email Doesn't Exist" });
         }
 
+        //hash the password
+        const hashPassword = await encryptNewPassword(password);
+
         //Update password
-        const updatePassword = await User.findByIdAndUpdate(tokenContent._id,{ password });
+        const updatePassword = await User.findByIdAndUpdate(tokenContent._id,{ password: hashPassword });
 
         res.status(200).json({message: "Done!"})
 

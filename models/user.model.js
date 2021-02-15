@@ -28,7 +28,7 @@ User.pre("save", function (next) {
             next();
         });
     });
-  });
+});
   
 User.methods.compare = function (pass, cb) {
     bcrypt.compare(pass, this.password, (err, equal) => {
