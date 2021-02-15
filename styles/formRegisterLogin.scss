@@ -84,7 +84,35 @@
         }
       }
 
+      input {
+        /* 
+        background-color: #570c69 !important; */
+        background-color: transparent;
+        border: 3px solid transparent;
+        color: #fff !important;
+        font-weight: 300;
+        border-radius: 4px;
+        height: 100%;
 
+        padding: 10px;
+
+        &:focus {
+          outline: none;
+          background-color: #74088f;
+          border: 3px solid #690c61;
+        }
+        &::-webkit-input-placeholder {
+          color: #fff;
+        }
+
+        &::-moz-placeholder {
+          color: #fff;
+        }
+
+        &::-ms-input-placeholder {
+          color: #fff;
+        }
+      }
     }
 
 
