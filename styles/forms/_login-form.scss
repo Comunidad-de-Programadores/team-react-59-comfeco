@@ -108,7 +108,7 @@ $forgotPasswordColor:#a854a7;
                 display: none;
 
                     &:checked ~ label:before{
-                        background-image: url(./icons/check.png);
+                        background-image: url(../icons/check.png);
                         background-size: contain;
                         transform: rotate(1turn) scale(1.1)
                     }
