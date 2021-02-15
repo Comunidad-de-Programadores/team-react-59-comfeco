@@ -40,7 +40,7 @@ export default async function handler(req,res){
             }
             
             //If equal
-            const token = await jwt.sign({_id: emailExist._id },"Minatozaki");
+            const token = await jwt.sign({_id: emailExist._id },process.env.KEY);
         
             res.status(200).json({ token });
         })
