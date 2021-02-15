@@ -1,16 +1,17 @@
-import firebase from "firebase";
-
-const db = () => firebase.firestore();
+import User from "../../models/user.models";
+import { connectdb } from "../../database/db";
+import jwt from "jsonwebtoken";
 
 export const config = {
     api: {
         bodyParser: {
-            sizeLimit: '5mb',
+            sizeLimit: '2mb',
         },
     },
 }
 
 export default async function handler(req,res){
+    await connectdb();
 
     if(req.method === 'POST'){
 
@@ -20,54 +21,28 @@ export default async function handler(req,res){
         if(email == "" || password == "" || nickname == "" ||
            !email || !password || !nickname
         ){
-            return res.status(401).json({error: "Missing values"});
+            return res.status(400).json({error: "Missing values"});
         }
 
-
-        //FirebaseKeys
-        var firebaseConfig = {
-            apiKey: "AIzaSyBYNf8d2bbZC55LNA-B3rChfDpWOS58Ixk",
-            authDomain: "store-f42c8.firebaseapp.com",
-            projectId: "store-f42c8",
-            storageBucket: "store-f42c8.appspot.com",
-            messagingSenderId: "527568472092",
-            appId: "1:527568472092:web:342dea10fc14f14fd677d9"
-        };
-
-        //Veify if there is apps initialized of firebase
-        if(!firebase.apps.length){
-            firebase.initializeApp(firebaseConfig);
-        }else{
-            firebase.app();
+        //Verify if Email Exist
+        const emailExist = await User.findOne({email});
+        if(emailExist){
+            return res.status(400).json({error: "email exist"});
         }
 
-        //Verify Nickname
-        const exist = (await db().collection("users").where("nickname","==",nickname).get()).size;
-
-        if(exist != 0){
-            return res.status(401).json({error: "This nickname exist"});
+        //Verify if nickname Exist
+        const nicknameExist = await User.findOne({nickname});
+        if(nicknameExist){
+            return res.status(400).json({error: "nickname exist"});
         }
 
-        //Create User
-        firebase.auth().createUserWithEmailAndPassword(email,password)
-            .then(async (user) => {
-                
-                //Add Nickname
-                const setNickname = await db().collection("users").add({
-                    user: user.user.uid,
-                    nickname
-                });
+        //Register Users
+        const register = await new User({ email , password , nickname }).save()
 
-                const token = await user.user.getIdTokenResult();
-                
-                //Request successful
-                res.status(200).json({ token: token.token });
-            })
-            .catch(error => {
+        //Create Token
+        const token = await jwt.sign({_id: register._id},"Minatozaki");
 
-                //Request failed
-                res.status(400).json({ error })
-            });
+        res.status(200).json({ token });
     }else{
         res.status(200).json({message: "Only post method"})
     }
