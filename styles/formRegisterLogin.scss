@@ -1,0 +1,64 @@
+.formGroupSesion {
+  background-color: #33004b;
+  border-radius: 10px;
+  
+  max-width: 405px;
+
+  /* Styles for demo */
+  min-height: 547px;
+  min-width: 415px;
+  max-height: 547px;
+  max-width: 415px;
+
+  padding: 40px;
+
+
+  .botonesDeSesion {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+
+    /* &.padding{
+        padding: 40px 40px 0 40px;
+    } */
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  span {
+    color: #fff;
+  }
+
+  form {
+    max-width: 324px;
+    width: 100%;
+
+   
+
+
+    }
+
+
+
+ 
+
+  }
+
+}
+
+  
