@@ -1,12 +1,23 @@
 import React from "react";
 import Icono from "../nano/Icono";
 import A from "../nano/A";
+import $ from "../nano/$"
 
 const Register = () => {
+  const voltearIniciar = () => {
+    const tarjeta = $("containerRegisterLogin")
+  
+    if(tarjeta.classList.contains('active')){
+      tarjeta.classList.remove('active');
+    }
+    
+  }
   return (
-    <div className="col-xs-5 form-group-register trasera">
-      <div className="botonesDeSesion">
-        <button className="iniciarSesion">
+    <div className="trasera formGroupSesion col-xs-5">
+      <div className="botonesDeSesion formRegisterButton">
+        <button className="iniciarSesion" onClick={() => {
+              voltearIniciar();
+            }}>
           <A href="#iniciarSesion">Iniciar sesión</A>
         </button>
         <span>|</span>
@@ -22,7 +33,7 @@ const Register = () => {
           <input
             type="text"
             placeholder="Nombre de Usuario"
-            maxlength="15"
+            maxLength="15"
             id="registerUserName"
             name="registerUserName"
             className="col-xs-10"
@@ -36,7 +47,7 @@ const Register = () => {
           <input
             type="text"
             placeholder="Nombre Completo"
-            maxlength="24"
+            maxLength="24"
             id="registerNombre"
             name="registerNombre"
             className="col-xs-10"
@@ -83,7 +94,7 @@ const Register = () => {
           />
         </div>
 
-        {/* <hr /> */}
+       
         <div className="containerRegistrarse">
           <button
             className="registerButtom"
@@ -96,7 +107,7 @@ const Register = () => {
           </button>
         </div>
       </form>
-      <div className="legal">
+        <div className="legal">
         <p>
           Al registrarte, estas aceptando los <A>Términos y condiciones</A>, y la 
           <A> Política de privacidad y protección de datos</A> de COMFECO.
