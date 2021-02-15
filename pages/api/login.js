@@ -1,4 +1,6 @@
-import firebase from "firebase";
+import User from "../../models/user.model";
+import { connectdb } from "../../database/db";
+import jwt from "jsonwebtoken";
 
 export const config = {
     api: {
@@ -9,6 +11,7 @@ export const config = {
 }
 
 export default async function handler(req,res){
+    await connectdb();
 
     if(req.method === 'POST'){
         //Request Body
@@ -19,36 +22,28 @@ export default async function handler(req,res){
             return res.status(400).json({ error: "Missing values" })
         }
 
-        //FirebaseKeys
-        var firebaseConfig = {
-            apiKey: "AIzaSyBYNf8d2bbZC55LNA-B3rChfDpWOS58Ixk",
-            authDomain: "store-f42c8.firebaseapp.com",
-            projectId: "store-f42c8",
-            storageBucket: "store-f42c8.appspot.com",
-            messagingSenderId: "527568472092",
-            appId: "1:527568472092:web:342dea10fc14f14fd677d9"
-        };
-
-        //Veify if there is apps initialized of firebase
-        if(!firebase.apps.length){
-            firebase.initializeApp(firebaseConfig);
-        }else{
-            firebase.app();
+        //Check if email exist
+        const emailExist = await User.findOne({ email });
+        if(!emailExist){
+            return res.status(400).json({ error: "Email does't exist" });
         }
-        
-        //SignIn
-        firebase.auth().signInWithEmailAndPassword(email,password)
-            .then(async (user) => {
-                const token = await user.user.getIdTokenResult();
-                
-                //Request successful
-                res.status(200).json({ token: token.token });
-            })
-            .catch(error => {
 
-                //Request failed
-                res.status(400).json({ error });
-            })
+        //Compare password encrypt
+        emailExist.compare(password,async (error,equal) => {
+            if (error){
+                return res.status(500).json({ error });
+            }
+            
+            //If don't equal
+            if (!equal){
+                return res.status(401).json({ error: "Password invalid" });
+            }
+            
+            //If equal
+            const token = await jwt.sign({_id: emailExist._id },"Minatozaki");
+        
+            res.status(200).json({ token });
+        })
     }else{
         res.status(200).json({message: "Only post method"})
     }
