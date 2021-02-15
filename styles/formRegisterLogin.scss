@@ -138,7 +138,19 @@
       }
     }
 
- 
+    .forgotPasswordContainer {
+      display: flex;
+      justify-content: center;
+
+      a {
+        color: #a854a7;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
 
   }
 
