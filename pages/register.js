@@ -2,9 +2,10 @@ import React from "react";
 import Layout from "../components/general/Layout";
 import Register from "../components/forms/Register";
 import Login from "../components/forms/Login";
+import Image from "next/Image"
 
 const register = () => {
-
+ 
   
 
   return (
@@ -21,8 +22,8 @@ const register = () => {
         </div>
         <div className="containerRegisterLogin" id="containerRegisterLogin">
         <Login />
-          <Register />
-         
+        <Register />
+         {/* <Image src="/Paleta.png" width={200} height={100} /> */}
         </div>
       </div>
     </Layout>
