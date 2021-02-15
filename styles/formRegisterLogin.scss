@@ -115,7 +115,28 @@
       }
     }
 
+    .buttonContainer {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
 
+      button.login {
+        background-color: #92278f;
+        border-radius: 5px;
+        border: 0;
+        color: white;
+        font-weight: 700;
+
+        height: 40px;
+        outline: none;
+        padding: 5px 20px;
+        width: 50%;
+
+        &:hover {
+          background-color: #871d83;
+        }
+      }
+    }
 
  
 
