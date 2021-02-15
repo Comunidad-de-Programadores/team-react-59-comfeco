@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function Login(){
+const Login = ()=>{
     return(
         <div className="formLoginContainer">
             <h1>Iniciar sesión</h1>
@@ -32,7 +32,7 @@ export default function Login(){
                 </div>
                 <br/>
                 <div className="row col-xs-12 forgotPasswordContainer">
-                    <Link href="/login/resetPassword">
+                    <Link href="/">
                         <a className="link">¿Olvidaste tu contraseña?</a>
                     </Link>
                 </div>
@@ -40,3 +40,5 @@ export default function Login(){
         </div>
     )
 }
+
+export default Login
