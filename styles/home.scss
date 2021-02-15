@@ -1,3 +1,4 @@
+@import "variables.scss";
 main {
   align-items: center;
   background-color: transparent;
@@ -9,47 +10,28 @@ main {
 
 .backgroundRegister {
   background: #fff;
-  /* background: linear-gradient(
-    to right,
-    #f993d5,
-    #93019c,
-    #016a88,
-    #056b89,
-    #00c5ff
-  ); */
+
   background: linear-gradient(
     to right,
-    #f993d5,
-    #93019c,
-    #016a88,
-    #0011aa5c,
-    #00c5ff
+    #d49c00, #d19d00, #f2b307, #881986, #7434b4, #9048de, #7736be, #b925b7, #b628b9, #b526b9, #d39d00, #d19d00, #d19e00
   );
-  /*   background: linear-gradient(
-    to right,
-    #ab01ba,
-    #590179,
-    #0b0841,
-    
-    #0011aa5c,
-    #00c5ff
-  ); */
+
   height: 215vh;
   width: 161vw;
   position: fixed;
   z-index: -1;
-  transform: rotateZ(45deg);
-  left: -50vh;
-  top: -46vh;
+  transform: rotateZ(-45deg);
+  left: -30vw;
+  top: -60vh;
 }
 
 .containerSesion {
   width: 90%;
+  min-height: 550px;
 }
-
+/* 
 .containerRegisterLogin {
   width: 100%;
-  /* max-width: 550px; */
   position: relative;
   color: #fff;
   transition: 0.3s ease all;
@@ -71,3 +53,4 @@ main {
     background-color: red;
   }
 }
+ */
