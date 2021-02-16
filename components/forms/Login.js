@@ -6,19 +6,51 @@ import $ from "../nano/$";
 const Login = () => {
   const voltearRecuperar = () => {
     const tarjetas = $("containerRegisterLogin");
-    if (!tarjetas.classList.contains("activeIzq")) {
-      tarjetas.classList.add("activeIzq");
-      $("buttonBack").classList.add("active")
+    if (!tarjetas.classList.contains("activeLeft")) {
+      tarjetas.classList.add("activeLeft");
+      $("buttonBack").classList.add("active");
     }
-    
-    
-   
+
+    $("traseraIzq").classList.add("tarjetaFocus");
+
+    setTimeout(() => {
+      $("traseraIzq").classList.remove("tarjetaFocus");
+    }, 1500);
   };
 
- 
+  const focus = () => {
+    const active = document.activeElement.id;
+
+    const addClass = (css) => {
+      return document.activeElement.parentNode.classList.add(`${css}`);
+    };
+
+    const removeClass = (id, css) => {
+      return $(`${id}`).parentNode.classList.remove(`${css}`);
+    };
+
+    if (active === "loginCorreo") {
+      addClass("activeFocus");
+    } else {
+      removeClass("loginCorreo", "activeFocus");
+    }
+
+    if (active === "loginPassword") {
+      addClass("activeFocus");
+    } else {
+      removeClass("loginPassword", "activeFocus");
+    }
+  };
+
   return (
-    <div className="delantera formGroupSesion col-xs-5">
-      <Buttons/>
+    <div
+      className="front formGroupSesion col-xs-5"
+      id="front"
+      onClick={() => {
+        focus();
+      }}
+    >
+      <Buttons />
       <form className="row" action="">
         <div className="row col-xs-12 containerInput">
           <label htmlFor="loginCorreo" className="icoBackground col-xs-1">
@@ -31,9 +63,13 @@ const Login = () => {
             type="email"
             placeholder="Correo electrónico"
             autoComplete="off"
+            onClick={() => {
+              focus();
+            }}
           />
         </div>
         <br />
+
         <div className="row col-xs-12 containerInput">
           <label htmlFor="loginPassword" className="icoBackground col-xs-1">
             <span className="ico icon-lock"></span>
@@ -44,12 +80,15 @@ const Login = () => {
             className="col-xs-11"
             type="password"
             placeholder="Contraseña"
+            onClick={() => {
+              focus();
+            }}
           />
         </div>
         <br />
         <div className="buttonContainer col-xs-12">
           <button
-            className="login"
+            className="login submit"
             name="loginButton"
             id="loginButton"
             type="submit"

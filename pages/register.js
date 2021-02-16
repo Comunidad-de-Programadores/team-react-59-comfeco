@@ -3,7 +3,6 @@ import Layout from "../components/general/Layout";
 import Register from "../components/forms/Register";
 import Login from "../components/forms/Login";
 import ResetPassword from "../components/forms/ResetPassword";
-import Image from "next/Image"
 
 const register = () => {
   return (
@@ -18,14 +17,10 @@ const register = () => {
             veritatis praesentium doloremque corrupti.
           </p>
         </div>
-        <div className="containerRegisterLogin " id="containerRegisterLogin">
-        <ResetPassword />
-        
+        <div className="containerForm" id="containerRegisterLogin">
+          <ResetPassword />
           <Login />
-
           <Register />
-          
-          
         </div>
       </div>
     </Layout>

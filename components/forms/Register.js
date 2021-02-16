@@ -2,12 +2,66 @@ import React from "react";
 import Icono from "../nano/Icono";
 import A from "../nano/A";
 import Buttons from "./Buttons";
+import $ from "../nano/$";
 
 const Register = () => {
+  const focus = () => {
+    const activo = document.activeElement.id;
+
+    const addClass = (css) => {
+      return document.activeElement.parentNode.classList.add(`${css}`);
+    };
+
+    const removeClass = (id, css) => {
+      return $(`${id}`).parentNode.classList.remove(`${css}`);
+    };
+
+    if (activo === "registerNombre") {
+      addClass("activeFocus");
+    } else {
+      removeClass("registerNombre", "activeFocus");
+    }
+
+    if (activo === "registerUserName") {
+      addClass("activeFocus");
+    } else {
+      removeClass("registerUserName", "activeFocus");
+    }
+
+    if (activo === "registerCorreo") {
+      addClass("activeFocus");
+    } else {
+      removeClass("registerCorreo", "activeFocus");
+    }
+
+    if (activo === "registerPassword") {
+      addClass("activeFocus");
+    } else {
+      removeClass("registerPassword", "activeFocus");
+    }
+
+    if (activo === "registerPasswordConfirm") {
+      addClass("activeFocus");
+    } else {
+      removeClass("registerPasswordConfirm", "activeFocus");
+    }
+
+    if (activo === "front") {
+      removeClass("registerNombre", "activeFocus");
+      removeClass("registerUserName", "activeFocus");
+      removeClass("registerCorreo", "activeFocus");
+      removeClass("registerPassword", "activeFocus");
+      removeClass("registerPasswordConfirm", "activeFocus");
+    }
+  };
+
   return (
     <div /*  */
-      className="traseraDerecha formGroupSesion col-xs-5 "
+      className="backRight formGroupSesion col-xs-5 "
       id="traseraDerecha"
+      onClick={() => {
+        focus();
+      }}
     >
       <Buttons />
       <form action="" className="row">
@@ -22,6 +76,9 @@ const Register = () => {
             id="registerNombre"
             name="registerNombre"
             className="col-xs-11"
+            onClick={() => {
+              focus();
+            }}
           />
         </div>
         <br />
@@ -36,6 +93,9 @@ const Register = () => {
             id="registerUserName"
             name="registerUserName"
             className="col-xs-11"
+            onClick={() => {
+              focus();
+            }}
           />
         </div>
         <br />
@@ -81,9 +141,9 @@ const Register = () => {
           />
         </div>
 
-        <div className="containerRegistrarse">
+        <div className="containerRegister">
           <button
-            className="registerButtom"
+            className="registerButtom submit"
             type="submit"
             value="Enviar"
             name="registerButtom"

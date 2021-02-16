@@ -8,38 +8,49 @@ const Buttons = () => {
     $("traseraDerecha").style.display = "block";
 
     if (
-      tarjeta.classList.contains("activeDerecha") ||
-      tarjeta.classList.contains("activeIzq")
+      tarjeta.classList.contains("activeRight") ||
+      tarjeta.classList.contains("activeLeft")
     ) {
-      tarjeta.classList.remove("activeDerecha");
-      if (tarjeta.classList.contains("activeIzq")) {
+      tarjeta.classList.remove("activeRight");
+      if (tarjeta.classList.contains("activeLeft")) {
       }
-      tarjeta.classList.remove("activeIzq");
-
+      tarjeta.classList.remove("activeLeft");
     }
+
+    $("front").classList.add("tarjetaFocus");
+
+    setTimeout(() => {
+      $("front").classList.remove("tarjetaFocus");
+    }, 1500);
   };
 
   const voltearRegistro = () => {
     const tarjetas = $("containerRegisterLogin");
-    if (!tarjetas.classList.contains("activeDerecha")) {
-      tarjetas.classList.add("activeDerecha");
+    if (!tarjetas.classList.contains("activeRight")) {
+      tarjetas.classList.add("activeRight");
     }
 
-    if (tarjetas.classList.contains("activeIzq")) {
-      tarjetas.classList.remove("activeIzq");
+    if (tarjetas.classList.contains("activeLeft")) {
+      tarjetas.classList.remove("activeLeft");
     }
     $("traseraDerecha").style.display = "block";
-  
+
+    $("traseraDerecha").classList.add("tarjetaFocus");
+
+    setTimeout(() => {
+      $("traseraDerecha").classList.remove("tarjetaFocus");
+    }, 1500);
   };
 
   return (
     <>
-      <div className="botonesDeSesion">
+      <div className="buttonSesion">
         <button
           className="iniciarSesion"
           onClick={() => {
             voltearIniciar();
           }}
+          id="loginTitle"
         >
           <A href="#iniciarSesion">Iniciar sesión</A>
         </button>
@@ -49,6 +60,7 @@ const Buttons = () => {
           onClick={() => {
             voltearRegistro();
           }}
+          id="registerTitle"
         >
           <A href="#registrarse">Regístrarse</A>
         </button>
