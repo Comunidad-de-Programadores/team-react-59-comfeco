@@ -1,8 +1,11 @@
+
+@import "variables.scss";
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 
 body {
   background: #282828;
@@ -27,23 +30,25 @@ body {
 } */
 
 ::selection {
-  background: #3498db;
+  background: $colorSelection;
   color: #fff;
   text-shadow: none;
+  /* border-radius: 3px; */
 }
 
 img::selection {
-  background: rgba(#3498db, 0.2);
+  background: rgba($colorSelection, 0.2);
   color: #fff;
   text-shadow: none;
+  /* border-radius: 3px; */
 }
 
 a::selection {
-  background: #1abc9c !important;
+  background: $colorSelection !important;
   text-decoration: none;
 
   &:hover {
-    border-bottom: 1px solid #1abc9c !important;
+    border-bottom: 1px solid $colorSelection !important;
   }
 }
 .visited:visited {
