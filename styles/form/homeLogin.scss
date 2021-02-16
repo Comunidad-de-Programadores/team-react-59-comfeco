@@ -1,16 +1,16 @@
 @import "variables.scss";
+
 main {
   align-items: center;
   background-color: transparent;
   display: flex;
   justify-content: center;
-  width: 100%;
   min-height: calc(100% - 50px);
+  width: 100%;
 }
 
 .backgroundRegister {
   background: #fff;
-
   background: linear-gradient(
     to right,
     #d49c00,
@@ -29,40 +29,15 @@ main {
   );
   background: $colorGray1;
   height: 215vh;
-  width: 161vw;
-  position: fixed;
-  z-index: -1;
-  transform: rotateZ(-45deg);
   left: -30vw;
   top: -60vh;
+  transform: rotateZ(-45deg);
+  position: fixed;
+  width: 161vw;
+  z-index: -1;
 }
 
 .containerSesion {
-  width: 90%;
   min-height: 550px;
+  width: 90%;
 }
-/* 
-.containerRegisterLogin {
-  width: 100%;
-  position: relative;
-  color: #fff;
-  transition: 0.3s ease all;
-  transform: rotateY(0deg);
-  transform-style: preserve-3d;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.containerRegisterLogin.active {
-  transform: rotateY(180deg);
-}
-
-.delantera {
-  
-  p {
-    min-height: 100px;
-    max-width: 100px;
-    background-color: red;
-  }
-}
- */

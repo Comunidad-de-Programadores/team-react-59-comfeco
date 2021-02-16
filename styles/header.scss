@@ -12,22 +12,21 @@ header {
 }
 
 .containerHeader {
-  width: 90%;
-  justify-content: center;
   align-items: center;
+  border-bottom: 2px solid #fff;
   display: flex;
   height: 75px;
-  border-bottom: 2px solid #fff;
+  justify-content: center;
+  width: 90%;
 
   .navegation {
     display: inline-flex;
 
     nav {
-      margin-left: auto;
-
+      align-items: center;
       display: flex;
       justify-content: center;
-      align-items: center;
+      margin-left: auto;
 
       ul li {
         display: inline-block;

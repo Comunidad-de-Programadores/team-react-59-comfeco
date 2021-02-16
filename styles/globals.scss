@@ -1,11 +1,10 @@
-
 @import "variables.scss";
-*{
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 
 body {
   background: #282828;
@@ -15,32 +14,24 @@ body {
   min-height: 100vh;
 }
 
-#__next, .containerAll{
+#__next,
+.containerAll {
   display: inherit;
   flex-wrap: inherit;
   min-height: inherit;
   width: 100%;
 }
 
-/* .imgContainer{
-  img{
-    width: 10px !important;
-    he
-  }
-} */
-
 ::selection {
   background: $colorSelection;
   color: #fff;
   text-shadow: none;
-  /* border-radius: 3px; */
 }
 
 img::selection {
   background: rgba($colorSelection, 0.2);
   color: #fff;
   text-shadow: none;
-  /* border-radius: 3px; */
 }
 
 a::selection {
@@ -51,14 +42,12 @@ a::selection {
     border-bottom: 1px solid $colorSelection !important;
   }
 }
-.visited:visited {
-  color: #EE216B !important;
-}
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 5px;
+  background: #fff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3498db;
+  background: $colorPurple2;
 }

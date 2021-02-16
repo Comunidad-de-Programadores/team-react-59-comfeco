@@ -69,7 +69,7 @@ const resetPassword = () => {
             con el que podrá restablecer su contraseña.
           </p>
 
-          {/* <Image src="/Paleta.png" width={200} height={100} /> */}
+          <Image src="/Paleta.png" width={200} height={100} />
         </form>
       </div>
     </>
