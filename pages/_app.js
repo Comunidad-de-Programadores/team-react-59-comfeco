@@ -7,7 +7,6 @@ import "../styles/globals.scss";
 import "../styles/header.scss";
 import "../styles/footer.scss";
 
-import "../styles/resetPassword.scss"
 import "../styles/formRegisterLogin.scss"
 
 import "../styles/home.scss"
