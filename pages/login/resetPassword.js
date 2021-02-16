@@ -1,4 +1,5 @@
-export default function resetPassword(){
+import React from 'react';
+const resetPassword = () => {
     return(
         <>
             <main>
@@ -22,3 +23,5 @@ export default function resetPassword(){
         </>
     )
 }
+
+export default resetPassword
