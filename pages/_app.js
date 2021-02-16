@@ -1,4 +1,7 @@
 import "../styles/flexboxGrid.scss";
+import "../styles/icons/fonts.css";
+import "../styles/normalize.scss";
+
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
