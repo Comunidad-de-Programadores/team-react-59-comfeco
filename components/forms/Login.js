@@ -1,30 +1,24 @@
 import React from "react";
 import A from "../nano/A";
+import Buttons from "./Buttons";
 import $ from "../nano/$";
 
 const Login = () => {
-  const voltearRegistro = () => {
+  const voltearRecuperar = () => {
     const tarjetas = $("containerRegisterLogin");
-    if (!tarjetas.classList.contains("active")) {
-      tarjetas.classList.add("active");
+    if (!tarjetas.classList.contains("activeIzq")) {
+      tarjetas.classList.add("activeIzq");
+      $("buttonBack").classList.add("active")
     }
+    
+    
+   
   };
+
+ 
   return (
     <div className="delantera formGroupSesion col-xs-5">
-      <div className="botonesDeSesion">
-        <button className="iniciarSesion">
-          <A href="#iniciarSesion">Iniciar sesión</A>
-        </button>
-        <span>|</span>
-        <button
-          className="registrarse"
-          onClick={() => {
-            voltearRegistro();
-          }}
-        >
-          <A href="#registrarse">Regístrarse</A>
-        </button>
-      </div>
+      <Buttons/>
       <form className="row" action="">
         <div className="row col-xs-12 containerInput">
           <label htmlFor="loginCorreo" className="icoBackground col-xs-1">
@@ -61,14 +55,25 @@ const Login = () => {
             type="submit"
             value="send"
           >
-            Iniciar sesión
+            Acceder
           </button>
         </div>
         <br />
         <div className="forgotPasswordContainer col-xs-12">
-          <A href="/forgotPassword" css={"link"} id="#">
-            ¿Olvidaste tu contraseña?
-          </A>
+          <button
+            className="registrarse"
+            onClick={() => {
+              voltearRecuperar();
+            }}
+          >
+            <A
+              href="#recuperar-contrasena"
+              css={"link"}
+              id="recuperar-contrasena"
+            >
+              ¿Olvidaste tu contraseña?
+            </A>
+          </button>
         </div>
       </form>
     </div>
