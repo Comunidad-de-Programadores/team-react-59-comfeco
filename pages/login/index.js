@@ -1,6 +1,6 @@
 /* import Link from "next/link"
 
-export default function login(){
+export default function Login (){
     return(
         
     )
