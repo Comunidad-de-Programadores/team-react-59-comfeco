@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 header {
   align-items: center;
   height: fit-content;
@@ -5,15 +7,11 @@ header {
   min-height: 75px;
   position: fixed;
   width: 100%;
-
-  img{
-    box-shadow: inset 0px 0px 20px 18px #9048de
-  }
 }
 
 .containerHeader {
   align-items: center;
-  border-bottom: 2px solid #fff;
+  border-bottom: $borderHeaderFooter;
   display: flex;
   height: 75px;
   justify-content: center;

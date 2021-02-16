@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 footer {
   align-self: flex-end;
   align-items: center;
@@ -7,7 +9,7 @@ footer {
 
   .containerFooter {
     align-items: center;
-    border-top: 2px solid #fff;
+    border-top: $borderHeaderFooter;
     display: flex;
     height: 50px;
     justify-content: center;

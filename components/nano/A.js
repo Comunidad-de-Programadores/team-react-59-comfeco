@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import Link from "next/Link";
 
 const A = ({ type, children, css = "", href = "#", id = "" }) => {
@@ -13,13 +13,15 @@ const A = ({ type, children, css = "", href = "#", id = "" }) => {
       >
         {children}
       </a>
-    )
+    );
   }
   return (
     <Link href={href}>
-      <a  id={id} className={css}>{children}</a>
+      <a id={id} className={css}>
+        {children}
+      </a>
     </Link>
-  )
-}
+  );
+};
 
-export default A
+export default A;

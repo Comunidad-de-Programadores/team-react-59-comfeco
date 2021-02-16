@@ -1,307 +1,45 @@
 @import "variables.scss";
 
 .formGroupSesion {
-  background-color: #33004b;
   background-color: $formBackground;
   border-radius: 10px;
-
-  max-width: 405px;
-
-  /* Styles for demo */
-  min-height: 547px;
-  min-width: 415px;
-  max-height: 547px;
-  max-width: 415px;
-
-  padding: 40px;
   font-family: $fontTitle;
 
-  .botonesDeSesion {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
-  }
-  p {
-    color: rgb(231, 231, 231);
-    /* padding-bottom: 30px; */
-  }
+  max-height: 547px;
+  max-width: 415px;
+  min-height: 547px;
+  min-width: 415px;
+
+  padding: 40px;
 
   button {
-    border: none;
     background-color: transparent;
+    border: none;
+    transition: $transicion600ms;
 
     a {
-      color: #fff;
+      color: $colorText;
       text-decoration: none;
     }
 
-    &:focus {
+    &.submit:focus {
       outline: none;
     }
 
-    &:hover {
+    &.submit:hover {
       cursor: pointer;
+      background-color: rgba(#000, 0.3);
+      transition: $transicion600ms;
     }
   }
   span {
     color: #fff;
   }
 
-  form {
-    max-width: 324px;
-    width: 100%;
-
-    &:hover {
-      cursor: default;
-    }
-
-    .containerInput {
-      align-items: center;
-      background-color: $formInputBackground !important;
-      border-radius: 4px;
-      height: 39px;
-
-      margin-bottom: 30px;
-      justify-content: center;
-      padding: 0 10px 0 8px;
-      overflow: hidden;
-
-      .icoBackground {
-        padding-left: 8px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      span.icoBackground {
-        align-items: center;
-        background-color: #fff;
-        border-radius: 50%;
-
-        display: flex;
-        height: 27px;
-        justify-content: center;
-
-        &.col-xs-2 {
-          -ms-flex-preferred-size: 10.666667%;
-          flex-basis: 10.666667%;
-          max-width: 10.666667%;
-        }
-
-        .ico {
-          align-items: center;
-          border-radius: 50%;
-          color: #942b94;
-          display: flex;
-          font-size: 17px;
-          justify-content: center;
-        }
-      }
-
-      input {
-        background-color: $formInputBackground !important;
-        /* background-color: transparent; */
-        border: 3px solid transparent;
-        color: #fff !important;
-        font-weight: 300;
-        border-radius: 4px;
-        height: 100%;
-
-        padding: 10px 0px 10px 10px;
-        /* font-size: 16px; */
-
-        &:focus {
-          outline: none;
-          background-color: $formInputBackground;
-          /* border: 3px solid #690c61; */
-        }
-        &::-webkit-input-placeholder {
-          color: #fff;
-        }
-
-        &::-moz-placeholder {
-          color: #fff;
-        }
-
-        &::-ms-input-placeholder {
-          color: #fff;
-        }
-      }
-    }
-
-    .buttonContainer {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-
-      button.login {
-        /* background-color: #92278f; */
-        border-radius: 5px;
-        border: 0;
-        color: white;
-
-        height: 40px;
-        outline: none;
-        padding: 5px 20px;
-        width: 50%;
-
-        /* &:hover {
-         
-        } */
-      }
-    }
-
-    .forgotPasswordContainer {
-      display: flex;
-      justify-content: center;
-
-      a {
-        color: $colorFuchia4;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: none;
-        }
-      }
-    }
-
-    .containerRegistrarse {
-      justify-content: center;
-      align-items: center;
-      display: flex;
-      width: 100%;
-      margin-bottom: 30px;
-
-      .registerButtom {
-        color: #fff;
-      }
-    }
+  p {
+    color: $colorText;
   }
 
-  .legal {
-    p {
-      font-size: 12px;
-    }
-
-    a {
-      color: $colorFuchia4;
-      text-decoration: none;
-
-     
-    }
-  }
-}
-.containerRegisterLogin {
-  max-width: 550px;
-  position: relative;
-  color: #fff;
-  transition: $transicion600ms;
-  transform: rotateY(0deg);
-  transform-style: preserve-3d;
-
-  cursor: default;
-  z-index: 2;
-
-  &.activeDerecha {
-    transform: rotateY(180deg);
-
-    .traseraIzq {
-      display: none;
-    }
-  }
-
-  &.activeIzq {
-    transform: rotateY(-180deg);
-    display: block;
-
-    .traseraIzq {
-      opacity: 1;
-    }
-    .traseraDerecha {
-      display: none !important;
-    }
-  }
-
-  .traseraDerecha,
-  .traseraIzq {
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    backface-visibility: hidden;
-  }
-
-  .traseraDerecha {
-    transform: rotateY(180deg);
-    z-index: 15;
-  }
-
-  .traseraIzq {
-    transform: rotateY(-180deg);
-    z-index: 10;
-
-    max-height: 350px;
-    min-height: 350px;
-
-    .containerInput {
-      padding-right: 0;
-    }
-
-    .buttonBack {
-      position: relative;
-
-     
-
-      a {
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        background-color: transparent;
-        display: inline-flex;
-        border-radius: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-  }
-
-  .delantera {
-    backface-visibility: hidden;
-    max-height: 350px;
-    min-height: 350px;
-    position: relative;
-    z-index: 1;
-  }
-}
-
-.formGroupSesion {
-  .titulo {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    p {
-      justify-content: center;
-      display: flex;
-      align-items: center;
-      font-size: 18px;
-      height: 34px;
-    }
-  }
-
-  .submitEmail {
-    background-color: $colorFuchia4;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .buttonContainer {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
   hr {
     border: 1px solid #fff;
 
@@ -318,21 +56,250 @@
       width: 48px;
     }
   }
+
+  .buttonSesion {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+
+  form {
+    max-width: 324px;
+    width: 100%;
+
+    .containerInput {
+      align-items: center;
+      background-color: $formInputBackground !important;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      height: 39px;
+
+      margin-bottom: 30px;
+      justify-content: center;
+      padding: 0 10px 0 8px;
+      transition: $transicion600msLineal;
+      overflow: hidden;
+
+      &:hover {
+        border: 1px solid $colorFuchia4;
+        transition: $transicion600msLineal;
+        outline: none;
+      }
+
+      .icoBackground {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding-left: 8px;
+      }
+    }
+  }
+
+  input {
+    background-color: $formInputBackground !important;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    color: $colorText !important;
+
+    font-weight: 300;
+    height: 100%;
+    padding: 10px 0px 10px 10px;
+
+    &:focus {
+      background-color: $formInputBackground;
+      outline: none;
+    }
+    &::-webkit-input-placeholder {
+      color: $colorText;
+    }
+
+    &::-moz-placeholder {
+      color: $colorText;
+    }
+
+    &::-ms-input-placeholder {
+      color: $colorText;
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    button.login {
+      border: 1px solid #fff;
+      border-radius: 5px;
+      color: white;
+      height: 40px;
+
+      outline: none;
+      padding: 5px 20px;
+      width: 50%;
+    }
+  }
+
+  .containerRegister {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+
+    button {
+      color: #fff;
+      width: 50%;
+      border: 1px solid;
+      height: 40px;
+      border-radius: 5px;
+    }
+  }
+
+  .legal {
+    p {
+      font-size: 12px;
+    }
+
+    a {
+      color: $colorFuchia4;
+      text-decoration: none;
+    }
+  }
+
+  .forgotPasswordContainer {
+    display: flex;
+    justify-content: center;
+
+    a {
+      color: $colorFuchia4;
+      text-decoration: none;
+      outline: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .title {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    p {
+      align-items: center;
+      display: flex;
+      font-size: 18px;
+      height: 34px;
+      justify-content: center;
+    }
+  }
+
+  .submitEmail {
+    align-items: center;
+    background-color: $colorFuchia4;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 }
 
-.menu2.active:before {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  content: "";
+.containerForm {
+  color: #fff;
+  cursor: default;
+  max-width: 550px;
+  position: relative;
+  transition: $transicion600ms;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  z-index: 2;
+
+  .front {
+    backface-visibility: hidden;
+    max-height: 350px;
+    min-height: 350px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid transparent;
+  }
+
+  .backRight,
+  .backLeft {
+    backface-visibility: hidden;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    border: 1px solid transparent;
+  }
+
+  .backRight {
+    transform: rotateY(180deg);
+    z-index: 15;
+  }
+
+  .backLeft {
+    transform: rotateY(-180deg);
+    z-index: 10;
+
+    max-height: 350px;
+    min-height: 350px;
+
+    .containerInput {
+      padding-right: 0;
+    }
+
+    .buttonBack {
+      position: relative;
+
+      a {
+        align-items: center;
+        background-color: transparent;
+        border-radius: 100%;
+        display: flex;
+        height: 30px;
+        justify-content: center;
+        position: absolute;
+        width: 30px;
+      }
+    }
+  }
+
+  &.activeRight {
+    transform: rotateY(180deg);
+    .backLeft {
+      display: none;
+    }
+  }
+
+  &.activeLeft {
+    transform: rotateY(-180deg);
+    display: block;
+
+    .backRight {
+      display: none !important;
+    }
+  }
+}
+
+.animationCircle.active:before {
+  animation: circle 0.6s 0.6s forwards;
   border: 4px solid transparent;
   border-radius: 50%;
+  content: "";
+  height: 24px;
 
   transform: translate(-50%, -50%);
-  animation: circulo 0.6s 0.6s forwards;
+  width: 24px;
+  position: absolute;
 }
 
-@keyframes circulo {
+@keyframes circle {
   0% {
     border-color: transparent;
     transform: rotate(0deg);
@@ -352,5 +319,23 @@
   100% {
     border-color: $colorFuchia4;
     transform: rotate(-700deg);
+  }
+}
+
+.activeFocus {
+  border: 1px solid $colorFuchia4 !important;
+  transition: $transicion600ms !important;
+}
+
+.tarjetaFocus {
+  animation: tarjetaFocus 2s;
+}
+
+@keyframes tarjetaFocus {
+  1% {
+    border-color: #fff;
+  }
+  100% {
+    border-color: transparent;
   }
 }
