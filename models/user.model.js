@@ -40,4 +40,4 @@ User.methods.compare = function (pass, cb) {
     });
 };
 
-export default mongoose.models.users || mongoose.model("users",User);
+export default mongoose.models.users || mongoose.model("users", User)
