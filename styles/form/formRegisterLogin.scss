@@ -220,13 +220,21 @@
   transform-style: preserve-3d;
   z-index: 2;
 
-  .front {
+  .front,.newPassword {
     backface-visibility: hidden;
     max-height: 350px;
     min-height: 350px;
     position: relative;
     z-index: 1;
     border: 1px solid transparent;
+  }
+
+  .newPassword{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-height: 280px;
+    min-height: 280px
   }
 
   .backRight,

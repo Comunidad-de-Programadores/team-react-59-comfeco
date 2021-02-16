@@ -1,6 +1,6 @@
 import React from "react";
-import A from "../nano/A";
 import Buttons from "./Buttons";
+import A from "../nano/A";
 import $ from "../nano/$";
 
 const Login = () => {

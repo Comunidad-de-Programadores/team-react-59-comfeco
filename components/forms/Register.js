@@ -136,7 +136,7 @@ const Register = () => {
             type="password"
             name="registerPasswordConfirm"
             id="registerPasswordConfirm"
-            placeholder="Confirmar Contraseña"
+            placeholder="Confirmar contraseña"
             className="col-xs-11"
           />
         </div>
