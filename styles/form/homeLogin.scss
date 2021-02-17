@@ -10,34 +10,31 @@ main {
 }
 
 .backgroundRegister {
-  background: #fff;
-  background: linear-gradient(
-    to right,
-    #d49c00,
-    #d19d00,
-    #f2b307,
-    #881986,
-    #7434b4,
-    #9048de,
-    #7736be,
-    #b925b7,
-    #b628b9,
-    #b526b9,
-    #d39d00,
-    #d19d00,
-    #d19e00
-  );
   background: $colorGray1;
-  height: 215vh;
-  left: -30vw;
-  top: -60vh;
-  transform: rotateZ(-45deg);
+
+  background: linear-gradient(
+    to bottom,
+    #000000,
+    #390f63,
+    #8a188c,
+    #69156a,
+    #d39d00
+  );
+  background: linear-gradient(
+    to bottom,
+    #000000,
+    $colorPurple1,
+    $colorFuchia2,
+    /* $colorFuchia1, */
+    $colorYellow1
+
+
+  );
+  height: 120vh;
   position: fixed;
-  width: 161vw;
+  top: 0;
+  width: 100vw;
   z-index: -1;
 }
 
-.containerSesion {
-  min-height: 550px;
-  width: 90%;
-}
+

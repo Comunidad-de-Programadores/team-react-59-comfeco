@@ -96,8 +96,6 @@ const resetPassword = () => {
             Ingrese el correo con el que se registro, Y se Te enviará un enlace
             con el que podrá restablecer su contraseña.
           </p>
-
-          {/*  <Image src="/Paleta.png" width={200} height={100} /> */}
         </form>
       </div>
     </>

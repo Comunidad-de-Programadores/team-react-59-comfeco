@@ -17,7 +17,7 @@ const Header = () => {
             />
           </div>
           <div className="col-xs-9 navegation">
-            <nav>
+           {/*  <nav>
               <ul>
                 <li>
                   <Link href="/">Inicio</Link>
@@ -32,7 +32,7 @@ const Header = () => {
                   <Link href="#">Tool3</Link>
                 </li>
               </ul>
-            </nav>
+            </nav> */}
           </div>
         </div>
       </header>
