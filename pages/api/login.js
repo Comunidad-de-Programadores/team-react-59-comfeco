@@ -19,13 +19,13 @@ export default async function handler(req, res) {
 
     //Check body
     if (!email || email == "" || !password || password == "") {
-      return res.status(400).json({ error: "Missing values" });
+      return res.status(400).json({ error: "Faltan valores" });
     }
 
     //Check if email exist
     const emailExist = await User.findOne({ email });
     if (!emailExist) {
-      return res.status(400).json({ error: "Email does't exist" });
+      return res.status(400).json({ error: "Email no existe" });
     }
 
     //Compare password encrypt
@@ -36,7 +36,7 @@ export default async function handler(req, res) {
 
       //If don't equal
       if (!equal) {
-        return res.status(401).json({ error: "Password invalid" });
+        return res.status(401).json({ error: "Contraseña invalida" });
       }
 
       //If equal

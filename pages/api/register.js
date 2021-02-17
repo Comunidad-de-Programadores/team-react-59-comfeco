@@ -25,19 +25,19 @@ export default async function handler(req, res) {
       !password ||
       !nickname
     ) {
-      return res.status(400).json({ error: "Missing values" });
+      return res.status(400).json({ error: "Faltan valores" });
     }
 
     //Verify if Email Exist
     const emailExist = await User.findOne({ email });
     if (emailExist) {
-      return res.status(400).json({ error: "email exist" });
+      return res.status(400).json({ error: "Email existe" });
     }
 
     //Verify if nickname Exist
     const nicknameExist = await User.findOne({ nickname });
     if (nicknameExist) {
-      return res.status(400).json({ error: "nickname exist" });
+      return res.status(400).json({ error: "Nickname existe" });
     }
 
     //Register Users

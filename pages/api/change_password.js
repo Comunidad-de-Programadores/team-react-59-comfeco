@@ -9,9 +9,10 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     const { token, password } = req.body;
 
+    console.log(req.body);
     //Check if email body exist
     if (!token || token == "" || password == "" || !password) {
-      return res.status(200).json({ error: "Email or password are invalid" });
+      return res.status(200).json({ error: "token or password are invalid" });
     }
 
     //Token

@@ -48,6 +48,27 @@ const resetPassword = () => {
     }
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const req = await fetch("/api/change_password_req", {
+      method: "POST",
+      headers: new Headers([["Content-type", "application/json"]]),
+      body: JSON.stringify({
+        email: e.target.resetPassword.value,
+        uri: location.origin,
+      }),
+    });
+
+    const res = await req.json();
+
+    if (res.error) {
+      console.log(res);
+      return;
+    }
+
+    console.log("ok");
+  };
+
   return (
     <>
       <div
@@ -73,7 +94,7 @@ const resetPassword = () => {
           <p className="col-xs-12">Restablecer la contraseña</p>
           <hr className="titleHr" />
         </div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="row col-xs-12 containerInput">
             <label htmlFor="resetPassword" className="icoBackground col-xs-1">
               <span className="ico icon-mail-envelope-closed"></span>
@@ -101,5 +122,4 @@ const resetPassword = () => {
     </>
   );
 };
-
 export default resetPassword;

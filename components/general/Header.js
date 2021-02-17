@@ -1,9 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Router from "next/router";
 
 import Image from "next/image";
 import Link from "next/Link";
 
 const Header = () => {
+  const [localToken, setLocalToken] = useState(false);
+  const [sessToken, setSessToken] = useState(false);
+  const [user, setUser] = useState({ nickname: "", email: "" });
+
+  const verifyToken = (type) => {
+    fetch("/api/get_user", {
+      headers: new Headers([
+        [
+          "Authorization",
+          `${type === "local" ? localStorage.token : sessionStorage.token}`,
+        ],
+      ]),
+    })
+      .then((data) => data.json())
+      .then((data) => {
+        if (data.error) {
+          return;
+        }
+        setUser(data);
+      });
+  };
+
+  useEffect(() => {
+    setLocalToken(!!localStorage.getItem("token"));
+    setSessToken(!!sessionStorage.getItem("token"));
+  }, []);
+
+  useEffect(() => {
+    if (localToken) {
+      verifyToken("local");
+    }
+
+    if (sessToken) {
+      verifyToken("sess");
+    }
+  }, [localToken, sessToken]);
+
+  const logout = () => {
+    localStorage.removeItem("token");
+    sessionStorage.removeItem("token");
+    setLocalToken(!!localStorage.getItem("token"));
+    setSessToken(!!sessionStorage.getItem("token"));
+    Router.reload();
+  };
+
   return (
     <>
       <header className="row col-xs-12">
@@ -17,7 +63,19 @@ const Header = () => {
             />
           </div>
           <div className="col-xs-9 navegation">
-           {/*  <nav>
+            {localToken && (
+              <nav>
+                <p style={{ marginRight: 10 }}>{user.nickname}</p>
+                <button onClick={logout}>Logout</button>
+              </nav>
+            )}
+            {sessToken && (
+              <nav>
+                <p style={{ marginRight: 10 }}>{user.nickname}</p>
+                <button onClick={logout}>Logout</button>
+              </nav>
+            )}
+            {/*  <nav>
               <ul>
                 <li>
                   <Link href="/">Inicio</Link>

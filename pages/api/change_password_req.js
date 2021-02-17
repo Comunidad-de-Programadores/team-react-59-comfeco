@@ -7,7 +7,8 @@ export default async function handler(req, res) {
   await connectdb();
 
   if (req.method === "POST") {
-    const { email } = req.body;
+    const { email, uri } = req.body;
+    console.log(uri);
 
     //Check if email body exist
     if (
@@ -39,11 +40,11 @@ export default async function handler(req, res) {
     const send = await sendMail(
       "Reset Password",
       `
-            <h2>Now you are going to reset the password</h2>
+            <h2>Ahora vas a reestablecer tu contraseña</h2>
             <br/>
-            <p>Click to the link (the link expires in 1h)</p>
+            <p>dale click al link expira en una hora</p>
             <br/>
-            <a>${token}</a>
+            <a>${uri}/nueva-contrasena?token=${token}</a>
         `,
       email
     );
