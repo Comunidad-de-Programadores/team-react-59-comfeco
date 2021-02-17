@@ -1,0 +1,392 @@
+@import "variables.scss";
+
+.formGroupSesion {
+  background-color: $formBackground;
+  border-radius: 10px;
+  font-family: $fontTitle;
+
+  max-height: 547px;
+  max-width: 415px;
+  min-height: 547px;
+  min-width: 415px;
+
+  padding: 40px;
+
+  button {
+    background-color: transparent;
+    border: none;
+    transition: $transicion600ms;
+
+    a {
+      color: $colorText;
+      text-decoration: none;
+    }
+
+    &.submit:focus {
+      outline: none;
+    }
+
+    &.submit:hover {
+      cursor: pointer;
+      background-color: rgba(#000, 0.3);
+      transition: $transicion600ms;
+    }
+  }
+  span {
+    color: #fff;
+  }
+
+  hr {
+    border: 1px solid #fff;
+
+    &.titleHr {
+      background-color: $colorFuchia4;
+      border: none;
+      border-left: 9px solid #fff;
+      border-right: 9px solid #fff;
+
+      border-radius: 1px;
+      height: 4px;
+      margin: 0px auto 30px;
+
+      width: 48px;
+    }
+  }
+
+  .buttonSesion {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+
+  form {
+    max-width: 324px;
+    width: 100%;
+
+    .containerInput {
+      align-items: center;
+      background-color: $formInputBackground !important;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      height: 39px;
+
+      margin-bottom: 30px;
+      justify-content: center;
+      padding: 0 10px 0 8px;
+      transition: $transicion600msLineal;
+      overflow: hidden;
+
+      &.error {
+        border: 1px solid #f22;
+      }
+
+      &:hover {
+        border: 1px solid $colorFuchia4;
+        transition: $transicion600msLineal;
+        outline: none;
+      }
+
+      .icoBackground {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding-left: 8px;
+      }
+    }
+  }
+
+  input {
+    background-color: $formInputBackground !important;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    color: $colorText !important;
+
+    font-weight: 300;
+    height: 100%;
+    padding: 10px 0px 10px 10px;
+
+    &:focus {
+      background-color: $formInputBackground;
+      outline: none;
+    }
+    &::-webkit-input-placeholder {
+      color: $colorText;
+    }
+
+    &::-moz-placeholder {
+      color: $colorText;
+    }
+
+    &::-ms-input-placeholder {
+      color: $colorText;
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    button.login {
+      border: 1px solid #fff;
+      border-radius: 5px;
+      color: white;
+      height: 40px;
+
+      outline: none;
+      padding: 5px 20px;
+      width: 50%;
+    }
+  }
+
+  .containerRegister {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+
+    button {
+      color: #fff;
+      width: 50%;
+      border: 1px solid;
+      height: 40px;
+      border-radius: 5px;
+    }
+  }
+
+  .legal {
+    p {
+      font-size: 12px;
+    }
+
+    a {
+      color: $colorFuchia4;
+      text-decoration: none;
+    }
+  }
+
+  .forgotPasswordContainer {
+    display: flex;
+    justify-content: center;
+
+    a {
+      color: $colorFuchia4;
+      text-decoration: none;
+      outline: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .title {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    p {
+      align-items: center;
+      display: flex;
+      font-size: 18px;
+      height: 34px;
+      justify-content: center;
+    }
+  }
+
+  .submitEmail {
+    align-items: center;
+    background-color: $colorFuchia4;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+
+.containerForm {
+  color: #fff;
+  cursor: default;
+  max-width: 550px;
+  position: relative;
+  transition: $transicion600ms;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  z-index: 2;
+
+  .front,
+  .newPassword {
+    backface-visibility: hidden;
+    max-height: 350px;
+    min-height: 350px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid transparent;
+  }
+
+  .newPassword {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-height: 280px;
+    min-height: 280px;
+  }
+
+  .backRight,
+  .backLeft {
+    backface-visibility: hidden;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    border: 1px solid transparent;
+  }
+
+  .backRight {
+    transform: rotateY(180deg);
+    z-index: 15;
+  }
+
+  .backLeft {
+    transform: rotateY(-180deg);
+    z-index: 10;
+
+    max-height: 350px;
+    min-height: 350px;
+
+    .containerInput {
+      padding-right: 0;
+    }
+
+    .buttonBack {
+      position: relative;
+
+      a {
+        align-items: center;
+        background-color: transparent;
+        border-radius: 100%;
+        display: flex;
+        height: 30px;
+        justify-content: center;
+        position: absolute;
+        width: 30px;
+      }
+    }
+  }
+
+  &.activeRight {
+    transform: rotateY(180deg);
+    .backLeft {
+      display: none;
+    }
+  }
+
+  &.activeLeft {
+    transform: rotateY(-180deg);
+    display: block;
+
+    .backRight {
+      display: none !important;
+    }
+  }
+}
+
+.containerSesion {
+  min-height: 550px;
+  width: 85%;
+
+  .containerText {
+    color: #fff;
+    display: block;
+    font-family: $fontTitle;
+    padding-right: 202px;
+
+    .ico {
+      font-size: 24px;
+      color: $colorYellow2;
+    }
+
+    p {
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+
+    h4 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    hr {
+      border: 1px solid #fff;
+      background-color: #d740da;
+      border: none;
+      border-right: 10px solid #fff;
+      border-radius: 1px;
+      height: 4px;
+      width: 55px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.animationCircle.active:before {
+  animation: circle 0.6s 0.6s forwards;
+  border: 4px solid transparent;
+  border-radius: 50%;
+  content: "";
+  height: 24px;
+
+  transform: translate(-50%, -50%);
+  width: 24px;
+  position: absolute;
+}
+
+@keyframes circle {
+  0% {
+    border-color: transparent;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    border-color: transparent $colorFuchia4 transparent transparent;
+  }
+
+  50% {
+    border-color: transparent $colorFuchia4 $colorFuchia4 transparent;
+  }
+
+  75% {
+    border-color: transparent $colorFuchia4 $colorFuchia4 $colorFuchia4;
+  }
+  100% {
+    border-color: $colorFuchia4;
+    transform: rotate(-700deg);
+  }
+}
+
+.activeFocus {
+  border: 1px solid $colorFuchia4 !important;
+  transition: $transicion600ms !important;
+}
+
+.tarjetaFocus {
+  animation: tarjetaFocus 2s;
+}
+
+@keyframes tarjetaFocus {
+  1% {
+    border-color: #fff;
+  }
+  100% {
+    border-color: transparent;
+  }
+}

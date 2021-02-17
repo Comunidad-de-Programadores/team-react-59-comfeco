@@ -1,10 +1,26 @@
-*{
+@import "variables.scss";
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
+body {
+  background: #282828;
+  display: flex;
+  font-family: Lato, sans-serif;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
 @import "/styles/forms/login-form";
 @import "/styles/forms/reset-password-form"
 
+#__next,
+.containerAll {
+  display: inherit;
+  flex-wrap: inherit;
+  min-height: inherit;
+  width: 100%;
+}
 

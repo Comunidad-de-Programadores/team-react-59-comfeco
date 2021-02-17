@@ -1,18 +1,11 @@
 import React from "react";
-import Link from 'next/link'
-
+import Register from "./register";
 const Home = (props) => {
   return (
     <>
-      <Link href="/login">
-        <a>Login</a>
-      </Link>
-      <br/>
-      <Link href="/terms-conditions">
-        <a>terms conditions</a>
-      </Link>
+      <Register />
     </>
-  )
+  );
 };
 
 export default Home;
