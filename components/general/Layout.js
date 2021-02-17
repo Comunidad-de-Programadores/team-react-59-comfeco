@@ -17,9 +17,17 @@ const Layout = (props) => {
             name="keywords"
             content="comfeco,festival,javascript,react,angular,vue,svelte"
           />
+          <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Lato:wght@400;700&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <Header />
-        <main className="row col-xs-12">{props.children}</main>
+        {props.children}
+
         <Footer />
       </div>
     </>
