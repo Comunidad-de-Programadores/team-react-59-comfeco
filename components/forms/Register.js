@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Icono from "../nano/Icono";
 import A from "../nano/A";
 import Buttons from "./Buttons";
 import Router from "next/router";
@@ -18,11 +17,11 @@ const Register = () => {
       return $(`${id}`).parentNode.classList.remove(`${css}`);
     };
 
-    if (activo === "registerNombre") {
+    /*  if (activo === "registerNombre") {
       addClass("activeFocus");
     } else {
       removeClass("registerNombre", "activeFocus");
-    }
+    } */
 
     if (activo === "registerUserName") {
       addClass("activeFocus");
@@ -49,7 +48,7 @@ const Register = () => {
     }
 
     if (activo === "front") {
-      removeClass("registerNombre", "activeFocus");
+      /* removeClass("registerNombre", "activeFocus"); */
       removeClass("registerUserName", "activeFocus");
       removeClass("registerCorreo", "activeFocus");
       removeClass("registerPassword", "activeFocus");

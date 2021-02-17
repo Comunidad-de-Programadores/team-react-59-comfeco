@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import Buttons from "./Buttons";
 import Router from "next/router";
-
-import A from "../nano/A";
 import $ from "../nano/$";
+import Icono from "../nano/Icono";
 
 const Login = () => {
   const [data, setData] = useState({ error: null, message: "" });
 
   const voltearRecuperar = () => {
     const tarjetas = $("containerRegisterLogin");
+
     if (!tarjetas.classList.contains("activeLeft")) {
       tarjetas.classList.add("activeLeft");
       $("buttonBack").classList.add("active");
@@ -46,6 +46,10 @@ const Login = () => {
     }
   };
 
+  const remerberme = () => {
+    $("checkRemember").classList.toggle("active");
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -70,7 +74,7 @@ const Login = () => {
       return;
     }
 
-    if (e.target.checkRemember.checked) {
+    if ($("checkRemember").classList.contains("active")) {
       localStorage.setItem("token", `Bearer ${res.token}`);
       Router.reload();
       return;
@@ -119,15 +123,21 @@ const Login = () => {
             type="password"
             placeholder="Contraseña"
             onClick={() => {
-              focus();
+              voltearRecuperar();
             }}
           />
         </div>
         <br />
-        <div className="row col-xs-12 checkBoxContainer">
-          <input name="checkRemember" id="checkRemember" type="checkbox" />
-          <label htmlFor="checkRemember"></label>
-          <p>Mantener sesion</p>
+        <div
+          className="row col-xs-12 checkBoxContainer"
+          onClick={() => {
+            remerberme();
+          }}
+        >
+          <Icono css={"icon-check-circle"} id="checkRemember" />
+          <label htmlFor="checkRemember" id="checkRememberLabel">
+            <p>Mantener sesion</p>
+          </label>
         </div>
         <br />
         {data.error && (
@@ -157,18 +167,13 @@ const Login = () => {
         <br />
         <div className="forgotPasswordContainer col-xs-12">
           <button
-            className="registrarse"
+            className="registrarse link"
             onClick={() => {
               voltearRecuperar();
             }}
+            href="#recuperar-contrasena"
           >
-            <A
-              href="#recuperar-contrasena"
-              css={"link"}
-              id="recuperar-contrasena"
-            >
-              ¿Olvidaste tu contraseña?
-            </A>
+            <a>¿Olvidaste tu contraseña?</a>
           </button>
         </div>
       </form>
