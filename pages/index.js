@@ -1,11 +1,12 @@
 import React from "react";
-import Register from "./register";
-const Home = (props) => {
+import HomeRegister from "./home-register";
+
+const home = (props) => {
   return (
     <>
-      <Register />
+      <HomeRegister />
     </>
   );
 };
 
-export default Home;
+export default home;

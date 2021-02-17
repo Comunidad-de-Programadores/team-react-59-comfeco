@@ -155,7 +155,7 @@ const Register = () => {
       </form>
       <div className="legal">
         <p>
-          Al registrarte, estas aceptando los <A>Términos y condiciones</A>, y
+          Al registrarte, estas aceptando los <A href={"/terminos-y-condiciones"}>Términos y condiciones</A>, y
           la
           <A> Política de privacidad y protección de datos</A> de COMFECO.
         </p>

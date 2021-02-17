@@ -13,8 +13,6 @@ body {
   flex-wrap: wrap;
   min-height: 100vh;
 }
-@import "/styles/forms/login-form";
-@import "/styles/forms/reset-password-form"
 
 #__next,
 .containerAll {
@@ -24,3 +22,32 @@ body {
   width: 100%;
 }
 
+::selection {
+  background: $colorSelection;
+  color: #fff;
+  text-shadow: none;
+}
+
+img::selection {
+  background: rgba($colorSelection, 0.2);
+  color: #fff;
+  text-shadow: none;
+}
+
+a::selection {
+  background: $colorSelection !important;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 1px solid $colorSelection !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $colorPurple2;
+}

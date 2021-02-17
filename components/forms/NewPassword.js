@@ -1,33 +1,31 @@
 import React from "react";
-
-import A from "../nano/A";
 import $ from "../nano/$";
 
 const NewPassword = () => {
-    const focus = () => {
-        const active = document.activeElement.id;
-    
-        const addClass = (css) => {
-          return document.activeElement.parentNode.classList.add(`${css}`);
-        };
-    
-        const removeClass = (id, css) => {
-          return $(`${id}`).parentNode.classList.remove(`${css}`);
-        };
-    
-        if (active === "resectPassword") {
-          addClass("activeFocus");
-        } else {
-          removeClass("resectPassword", "activeFocus");
-        }
-    
-        if (active === "resectPasswordConfirm") {
-          addClass("activeFocus");
-        } else {
-          removeClass("resectPasswordConfirm", "activeFocus");
-        }
-      };
-    return (
+  const focus = () => {
+    const active = document.activeElement.id;
+
+    const addClass = (css) => {
+      return document.activeElement.parentNode.classList.add(`${css}`);
+    };
+
+    const removeClass = (id, css) => {
+      return $(`${id}`).parentNode.classList.remove(`${css}`);
+    };
+
+    if (active === "resectPassword") {
+      addClass("activeFocus");
+    } else {
+      removeClass("resectPassword", "activeFocus");
+    }
+
+    if (active === "resectPasswordConfirm") {
+      addClass("activeFocus");
+    } else {
+      removeClass("resectPasswordConfirm", "activeFocus");
+    }
+  };
+  return (
     <div
       className="newPassword formGroupSesion col-xs-5"
       id="newPassword"

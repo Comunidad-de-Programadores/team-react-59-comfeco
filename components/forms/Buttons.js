@@ -20,7 +20,9 @@ const Buttons = () => {
     $("front").classList.add("tarjetaFocus");
 
     setTimeout(() => {
-      $("front").classList.remove("tarjetaFocus");
+      if ($("front") !== null) {
+        $("front").classList.remove("tarjetaFocus");
+      }
     }, 1500);
   };
 
@@ -38,7 +40,9 @@ const Buttons = () => {
     $("traseraDerecha").classList.add("tarjetaFocus");
 
     setTimeout(() => {
-      $("traseraDerecha").classList.remove("tarjetaFocus");
+      if ($("traseraDerecha") !== null) {
+        $("traseraDerecha").classList.remove("tarjetaFocus");
+      }
     }, 1500);
   };
 

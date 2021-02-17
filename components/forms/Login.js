@@ -86,6 +86,12 @@ const Login = () => {
           />
         </div>
         <br />
+        <div className="row col-xs-12 checkBoxContainer">
+          <input name="checkRemember" id="checkRemember" type="checkbox" />
+          <label htmlFor="checkRemember"></label>
+          <p>Recordar usuario</p>
+        </div>
+        <br />
         <div className="buttonContainer col-xs-12">
           <button
             className="login submit"

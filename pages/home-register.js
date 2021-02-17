@@ -4,7 +4,7 @@ import Register from "../components/forms/Register";
 import Login from "../components/forms/Login";
 import ResetPassword from "../components/forms/ResetPassword";
 
-const register = () => {
+const HomeRegister = () => {
   
   return (
     <Layout>
@@ -62,4 +62,4 @@ const register = () => {
   );
 };
 
-export default register;
+export default HomeRegister;
