@@ -4,6 +4,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+ 
+}
+
+button{
+  background-color: transparent !important;
 }
 
 body {
@@ -51,3 +57,8 @@ a::selection {
 ::-webkit-scrollbar-thumb {
   background: $colorPurple2;
 }
+
+.ico {
+  color: #fff;
+}
+
