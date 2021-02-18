@@ -44,7 +44,7 @@ export default async function handler(req, res) {
             <br/>
             <p>dale click al link expira en una hora</p>
             <br/>
-            <a>${uri}/nueva-contrasena?token=${token}</a>
+            <a href="${uri}/nueva-contrasena?token=${token}">${uri}/nueva-contrasena?token=${token}</a>
         `,
       email
     );
