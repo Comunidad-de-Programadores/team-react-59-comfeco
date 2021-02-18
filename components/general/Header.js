@@ -66,13 +66,35 @@ const Header = () => {
             {localToken && (
               <nav>
                 <p style={{ marginRight: 10 }}>{user.nickname}</p>
-                <button onClick={logout}>Logout</button>
+                <button
+                  onClick={logout}
+                  style={{
+                    padding: "10px",
+                    border: "white 1px solid",
+                    borderRadius: "10px",
+                    color: "white",
+                    cursor: "pointer",
+                  }}
+                >
+                  Logout
+                </button>
               </nav>
             )}
             {sessToken && (
               <nav>
                 <p style={{ marginRight: 10 }}>{user.nickname}</p>
-                <button onClick={logout}>Logout</button>
+                <button
+                  onClick={logout}
+                  style={{
+                    padding: "10px",
+                    border: "white 1px solid",
+                    borderRadius: "10px",
+                    color: "white",
+                    cursor: "pointer",
+                  }}
+                >
+                  Logout
+                </button>
               </nav>
             )}
             {/*  <nav>

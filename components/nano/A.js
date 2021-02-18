@@ -6,21 +6,18 @@ const A = ({ type, children, css = "", href = "#", id = "" }) => {
     return (
       <a
         className={css}
-        href={href}
-        target="_blank"
         rel="noopener noreferrer nofollow"
         id={id}
+        style={{ cursor: "pointer" }}
       >
         {children}
       </a>
     );
   }
   return (
-    <Link href={href}>
-      <a id={id} className={css}>
-        {children}
-      </a>
-    </Link>
+    <a id={id} className={css} style={{ cursor: "pointer" }}>
+      {children}
+    </a>
   );
 };
 
