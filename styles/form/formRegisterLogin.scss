@@ -522,4 +522,39 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .containerSesion {
+    .containerText {
+      .containerP {
+      }
 
+      h4 {
+      }
+
+      hr {
+      }
+
+      .ico {
+      }
+
+      p {
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .containerSesion .containerText {
+    margin-bottom: 0;
+    .containerP {
+      width: 75vw;
+
+      .pRelleno {
+        display: none;
+      }
+    }
+    .title {
+      width: 80vw;
+    }
+  }
+}
