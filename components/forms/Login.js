@@ -172,7 +172,7 @@ const Login = () => {
             onClick={() => {
               voltearRecuperar();
             }}
-            href="#recuperar-contrasena"
+            style={{ cursor: "pointer" }}
           >
             <a>¿Olvidaste tu contraseña?</a>
           </button>
