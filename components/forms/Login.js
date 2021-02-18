@@ -123,7 +123,7 @@ const Login = () => {
             type="password"
             placeholder="Contraseña"
             onClick={() => {
-              voltearRecuperar();
+              focus();
             }}
           />
         </div>
@@ -167,6 +167,7 @@ const Login = () => {
         <br />
         <div className="forgotPasswordContainer col-xs-12">
           <button
+            type="button"
             className="registrarse link"
             onClick={() => {
               voltearRecuperar();
