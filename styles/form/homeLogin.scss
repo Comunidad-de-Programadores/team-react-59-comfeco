@@ -1,0 +1,42 @@
+@import "variables.scss";
+
+main {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  min-height: calc(100% - 50px - 75px);
+  margin-top: 75px;
+  width: 100%;
+}
+
+.backgroundRegister {
+  background: $colorGray1;
+
+  background: linear-gradient(
+    to bottom,
+    #000000,
+    #390f63,
+    #8a188c,
+    #69156a,
+    #d39d00
+  );
+  background: linear-gradient(
+    to bottom,
+    #009688,
+    #673ab7,
+    $colorFuchia2,
+    /* $colorFuchia1, */ $colorYellow1
+  );
+  height: 120vh;
+  position: fixed;
+  top: 0;
+  width: 120vw;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  main {
+    margin-top: 90px;
+    min-height: calc(100% - 50px - 90px);
+  }
+}

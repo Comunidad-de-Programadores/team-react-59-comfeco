@@ -1,0 +1,117 @@
+@import "variables.scss";
+
+header {
+  align-items: center;
+  height: fit-content;
+  justify-content: center;
+  min-height: 75px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.containerHeader {
+  align-items: center;
+  border-bottom: $borderHeaderFooter;
+  display: flex;
+  height: 75px;
+  justify-content: center;
+  width: 90%;
+
+  .navegation {
+    display: inline-flex;
+
+    nav {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-left: auto;
+
+      ul li {
+        display: inline-block;
+
+        a {
+          color: #fff;
+          display: block;
+          font-size: 13px;
+          font-weight: bold;
+
+          letter-spacing: 1px;
+          line-height: 22px;
+          margin-right: 9px;
+
+          padding: 0;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          span {
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+}
+
+@media screen and (min-width: 769px) {
+  header {
+    .headerPhone {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    .headerDesktop {
+      display: none;
+    }
+  }
+
+  .headerPhone {
+    background-color: #111;
+    .imgLogo {
+      img {
+        width: 120px;
+      }
+    }
+  }
+
+  .containerHeader {
+    width: 100%;
+
+    .col-xs-2.left {
+      text-align: left;
+
+      .ico {
+        font-size: 18px;
+      }
+    }
+  }
+  .col-xs-2.right {
+    text-align: right;
+
+    .ico {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  header{
+    background-color: #111;
+    width: 100%;
+    border-bottom: 2px solid #fff;
+    .containerHeader {
+      border-bottom: none;
+      
+  }
+  }
+
+  main{
+    margin-top: 95px !important;
+  }
+}
