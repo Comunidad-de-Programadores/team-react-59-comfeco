@@ -558,3 +558,53 @@
     }
   }
 }
+
+@media screen and (max-width: 460px) {
+  .containerSesion {
+    align-items: center;
+  }
+  .formGroupSesion {
+    max-height: 455px;
+    max-width: 95vw;
+    min-height: 455px;
+    min-width: 95vw;
+    padding: 20px;
+
+    .containerRegister {
+      margin-bottom: 12px;
+    }
+
+    .legal {
+      margin-top: 10px;
+
+      p {
+        font-size: 11px;
+      }
+    }
+  }
+
+  .containerForm {
+    .front {
+      max-height: 390px;
+      min-height: 390px;
+    }
+    .backLeft {
+      max-height: 260px;
+      min-height: 260px;
+
+      p {
+        font-size: 14px;
+      }
+
+      .title {
+        p {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
+  .mainForLogin {
+    margin-top: 25px;
+  }
+}
