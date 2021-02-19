@@ -8,6 +8,7 @@ const User = new mongoose.Schema(
     nickname: { type: String, required: true },
     password: { type: String },
     twitterId: { type: String },
+    twitterName: { type: String },
   },
   {
     timestamps: true,

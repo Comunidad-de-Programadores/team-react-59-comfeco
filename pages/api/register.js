@@ -41,7 +41,12 @@ export default async function handler(req, res) {
     }
 
     //Register Users
-    const register = await new User({ email, password, nickname }).save();
+    const register = await new User({
+      type: "default",
+      email,
+      password,
+      nickname,
+    }).save();
 
     //Create Token
     const token = await jwt.sign({ _id: register._id }, process.env.KEY);
