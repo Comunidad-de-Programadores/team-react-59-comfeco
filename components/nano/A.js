@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/Link";
 
 const A = ({ type, children, css = "", href = "#", id = "" }) => {
   if (type === "a") {
