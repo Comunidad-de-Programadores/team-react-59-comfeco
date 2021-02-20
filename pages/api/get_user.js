@@ -20,8 +20,8 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "invalid" });
     }
 
-    const { email, nickname } = await User.findById(content._id);
-    res.status(200).json({ email, nickname });
+    const { nickname } = await User.findById(content._id);
+    res.status(200).json({ nickname });
   } else {
     res.status(200).json({ message: "Only get method" });
   }
