@@ -12,6 +12,8 @@ import "../styles/form/homeLogin.scss";
 import "../styles/colorChange.scss";
 import "../styles/form/newPassword.scss"
 
+import "../styles/dashboard.scss";
+
 import "../styles/demo.scss";
 
 function MyApp({ Component, pageProps }) {

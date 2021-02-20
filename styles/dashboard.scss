@@ -1,0 +1,202 @@
+@import "variables.scss";
+
+.dashboard {
+  min-height: calc(100% - 50px - 75px);
+  background-color: $formBackgroundDashboard;
+}
+
+#content{
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  grid-auto-rows: auto;
+  grid-gap: 15px;
+  width: 90%;
+  margin: 0 auto;
+  padding:15px;
+  grid-template-areas:
+    "panelCom panelCabecera     panelTaller"
+    "panelCom panelColaborador  panelTaller"
+    "panelCom panelSponsor      panelTaller"
+    "panelCom panelTimer        panelTaller"
+    
+}
+
+.panelCabecera{
+  grid-area: panelCabecera;
+  h1, h3 {
+    text-align: center;
+  }
+  h3 {
+    margin-bottom: 20px;
+    color: $colorGray3;
+  }
+  div {
+    width: 90%;
+    margin: 0 auto 1em;
+    span {
+    font-size: 0.875em;
+    line-height: 1.5em;    
+    }
+  }
+}
+.panelColaborador{
+  grid-area: panelColaborador;
+  height: 200px;
+}
+.panelTaller{
+  grid-area: panelTaller;
+}
+.panelSponsor{
+  grid-area: panelSponsor;
+  height: 150px;
+}
+.panelTimer{
+  grid-area: panelTimer;
+  height: 150px;
+}
+.panelCom{
+  grid-area: panelCom;
+}
+#content {
+  .card-container-com {
+    background-color: $colorPurple6;
+    padding: 15px;
+    font-size: 0.75em;
+    .card-com {
+      .card-com-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .card-com-title {
+          color: $colorWhite;
+        }
+      }
+      .card-com-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-bottom: 1px solid $colorPurple1;
+        padding-bottom: 4px;
+      }
+      .card-com-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .card-com-img {
+        background: gray;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+  
+      .card-com-title {
+        font-weight: 400;
+      }
+  
+      .card-com-link {
+        color: $colorPurple2;
+      }
+    }
+  }
+  .card-container-taller {
+    background-color: $colorPurple6;
+    padding: 15px;
+    overflow: auto;
+    height: 223px;
+    font-size: 0.75em;
+    .card-taller {
+      .card-taller-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .card-taller-title {
+          color: $colorWhite;
+        }
+      }
+      .card-taller-select {
+        select {
+          display: block;
+          padding: 0.8em 0.4em;
+          width: 100%;
+          box-sizing: border-box;
+          margin: 20px auto;
+          box-shadow: 0 1px 0 1px $colorPurple6;
+          border-color: $colorPurple6;
+        }
+      }
+      .card-taller-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-bottom: 1px solid $colorPurple1;
+        padding-bottom: 4px;
+      }
+      .card-taller-event {
+        background-color: $colorPurple1;
+        color: $colorWhite;
+        padding: 4px;
+        margin: 8px 0;
+      }
+      .card-taller-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .card-taller-img {
+        background: gray;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card-taller-text {
+        display: flex;
+        flex-flow: column wrap;
+        .card-taller-title {
+          font-weight: 400;
+          color: $colorGray2;
+        }
+        .card-taller-hora {
+          color: $colorGray3;
+          margin-bottom: 4px;
+        }
+        .card-taller-subtext {
+          color: $colorGray1;
+         .card-taller-name {
+          color: $colorPurple2;
+         } 
+        }
+      }
+      .card-taller-link {
+        cursor: pointer;
+        color: $colorPurple2;
+      }
+    }
+  }
+}
+
+/*mobile grid */
+@media screen and (max-width: 768px) {
+  #content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+    grid-template-areas:
+    "panelCabecera"
+    "panelColaborador"
+    "panelSponsor"
+    "panelCom"
+    "panelTaller"
+    "panelTimer"
+  }
+}
