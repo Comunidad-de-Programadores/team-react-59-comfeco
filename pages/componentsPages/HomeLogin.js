@@ -2,6 +2,7 @@ import React from "react";
 import Register from "../../components/forms/Register";
 import Login from "../../components/forms/Login";
 import ResetPassword from "../../components/forms/ResetPassword";
+import Counter from "../../components/deadline/counter";
 
 const HomeLogin = () => {
   return (
@@ -13,7 +14,6 @@ const HomeLogin = () => {
             <h4>Sobre el evento</h4>
             <hr />
           </div>
-
           <div className="containerP row">
             <span className="ico icon-check-circle col-xs-2 col-md-1"></span>
             <p className="col-xs-10 col-md-11">
