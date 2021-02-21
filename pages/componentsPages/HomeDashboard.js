@@ -1,6 +1,7 @@
 import React from "react";
 import Communities from '../../components/card/CardCommunity/Communities';
-import Workshops from '../../components/card/CardCommunity/Workshops';
+import Workshops from '../../components/card/CardWorkshop/Workshops';
+import Counter from "../../components/deadline/counter";
 
 const HomeDashboard = () => {
   return (
@@ -18,7 +19,9 @@ const HomeDashboard = () => {
         </div>
         <div className="panelColaborador">Colaboradores</div>
         <div className="panelSponsor">Sponsors</div>
-        <div className="panelTimer">Timer</div>
+        <div className="panelTimer">
+          <Counter deadline={1614560400}></Counter>
+        </div>
         <div className="panelTaller">
           < Workshops />  
         </div>

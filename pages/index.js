@@ -14,7 +14,7 @@ const Home = () => {
 
   return (
     <Layout>
-      {!tokenSessExist && !tokenLocalExist ? <HomeLogin /> : <HomeDashboard />}
+      <HomeDashboard />
     </Layout>
   );
 };
