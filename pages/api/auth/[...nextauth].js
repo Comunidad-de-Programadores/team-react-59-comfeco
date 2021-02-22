@@ -20,10 +20,10 @@ const config = {
       clientId: process.env.GOOGLEID,
       clientSecret: process.env.GOOGLESECRET,
     }),
-    /* Providers.LinkedIn({
+    Providers.LinkedIn({
       clientId: process.env.LINKEDINID,
       clientSecret: process.env.LINKEDINSECRET,
-    }), */
+    }),
     /* Providers.Email({
     server: {
       host: "",
@@ -37,7 +37,6 @@ const config = {
   ],
   callbacks: {
     async signIn(user, account, profile) {
-      console.log({ ...user, type: account.provider });
       const token = await jwt.sign(
         { ...user, type: account.provider },
         process.env.KEY

@@ -37,7 +37,7 @@ export default async function handler(req, res) {
           }).save();
 
           const twitterToken = await jwt.sign(
-            { _id: newTwitterUser._id },
+            { _id: newTwitterUser._id, image: code.image },
             process.env.KEY
           );
 
@@ -59,7 +59,7 @@ export default async function handler(req, res) {
           }).save();
 
           const githubToken = await jwt.sign(
-            { _id: newGithubUser._id },
+            { _id: newGithubUser._id, image: code.image },
             process.env.KEY
           );
 
@@ -70,7 +70,7 @@ export default async function handler(req, res) {
           const existFacebook = await User.findOne({ facebookId: code.id });
 
           if (existFacebook) {
-            return res.status(200).json({ error: "Facebook Exist" });
+            return res.status(400).json({ error: "Facebook Exist" });
           }
 
           const newFacebookUser = await new User({
@@ -81,7 +81,7 @@ export default async function handler(req, res) {
           }).save();
 
           const facebookToken = await jwt.sign(
-            { _id: newFacebookUser._id },
+            { _id: newFacebookUser._id, image: code.image },
             process.env.KEY
           );
 
@@ -92,7 +92,7 @@ export default async function handler(req, res) {
           const existGoogle = await User.findOne({ googleId: code.id });
 
           if (existGoogle) {
-            return res.status(200).json({ error: "Google Exist" });
+            return res.status(400).json({ error: "Google Exist" });
           }
 
           const newGoogleUser = await new User({
@@ -103,11 +103,33 @@ export default async function handler(req, res) {
           }).save();
 
           const googleToken = await jwt.sign(
-            { _id: newGoogleUser._id },
+            { _id: newGoogleUser._id, image: code.image },
             process.env.KEY
           );
 
           res.status(200).json({ token: googleToken });
+          break;
+
+        case "linkedin":
+          const existLinkedin = await User.findOne({ linkedinId: code.id });
+
+          if (existLinkedin) {
+            return res.status(400).json({ error: "Linkedin Exist" });
+          }
+
+          const newLinkedinUser = await new User({
+            type: code.type,
+            linkedinId: code.id,
+            linkedinName: code.name,
+            nickname,
+          }).save();
+
+          const linkedinToken = await jwt.sign(
+            { _id: newLinkedinUser._id, image: code.image },
+            process.env.KEY
+          );
+
+          res.status(200).json({ token: linkedinToken });
           break;
 
         default:

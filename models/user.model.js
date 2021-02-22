@@ -15,6 +15,8 @@ const User = new mongoose.Schema(
     facebookName: { type: String },
     googleId: { type: String },
     googleName: { type: String },
+    linkedinId: { type: String },
+    linkedinName: { type: String },
   },
   {
     timestamps: true,

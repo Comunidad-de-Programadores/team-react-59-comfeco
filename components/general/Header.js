@@ -8,7 +8,7 @@ import Icono from "../nano/Icono";
 const Header = () => {
   const [localToken, setLocalToken] = useState(false);
   const [sessToken, setSessToken] = useState(false);
-  const [user, setUser] = useState({ nickname: "", email: "" });
+  const [user, setUser] = useState({ nickname: "", email: "", image: null });
 
   const verifyToken = (type) => {
     fetch("/api/get_user", {
@@ -71,6 +71,17 @@ const Header = () => {
             {localToken && (
               <nav>
                 <p style={{ marginRight: 10 }}>{user.nickname}</p>
+                {user.image && (
+                  <img
+                    src={user.image}
+                    style={{
+                      width: "50px",
+                      height: "50px",
+                      marginRight: "10px",
+                      borderRadius: "50%",
+                    }}
+                  />
+                )}
                 <button
                   onClick={logout}
                   style={{
