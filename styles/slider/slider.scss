@@ -1,86 +1,468 @@
-*{
-  border: 1px solid red
-}
-.slick-list,
-.slick-slider,
-.slick-track {
-  position: relative;
-  display: block;
-}
-.slick-loading .slick-slide,
-.slick-loading .slick-track {
-  visibility: hidden;
-}
-.slick-slider {
+* {
   box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-.slick-list {
-  overflow: hidden;
   margin: 0;
   padding: 0;
 }
-.slick-list:focus {
-  outline: 0;
+
+$colorTeamSvelte: #ff3e00;
+$transicion600msLineal2: 1000ms linear all;
+$colorBackgroundBlackLigt: #05070b;
+$colorBackgroundBlackLigt: #17171d;
+$transicion600ms: all 600ms ease;
+
+body {
+  font-family: Lato;
+  display: flex;
+  min-height: 100vh;
 }
-.slick-list.dragging {
-  cursor: pointer;
-  cursor: hand;
+.backgroundColor {
+  background: linear-gradient(
+    to top,
+    $colorBackgroundBlackLigt,
+    $colorBackgroundBlackLigt
+  );
+  height: 186%;
+  left: -200px;
+  position: fixed;
+  transform: rotate(-183deg);
+  width: 235%;
+  z-index: -150;
 }
-.slick-slider .slick-list,
-.slick-slider .slick-track {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+
+main {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
-.slick-track {
-  top: 0;
-  left: 0;
+
+.ico {
+  color: #fff;
 }
-.slick-track:after,
-.slick-track:before {
-  display: table;
+
+.container2 {
+  position: relative;
+
+  .showInformation {
+    align-items: center;
+    display: flex;
+    border-radius: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 13px 0px $colorBackgroundBlackLigt;
+
+    height: 35px;
+    position: absolute;
+    justify-content: center;
+    cursor: pointer;
+
+    right: -17px;
+    top: 0px;
+    transition: 1500ms all cubic-bezier(0, -15, 0, 15);
+    width: 35px;
+    z-index: 10;
+
+    &.activeRightButton {
+      top: -4%;
+      transition: 1500ms all cubic-bezier(0, -15, 0, 15);
+
+      button {
+        background-color: #000 !important;
+        transition: $transicion600ms;
+      }
+    }
+    &.activeAnimation {
+      animation: fa-spin-fast 200ms infinite linear;
+    }
+
+    button {
+      border: none;
+      border-radius: 100%;
+      cursor: pointer;
+      height: 80%;
+
+      background-color: $colorTeamSvelte !important;
+      transition: $transicion600ms;
+      outline: none;
+      width: 80%;
+
+      span {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-shadow: 1px 1px 0px #f00;
+      }
+    }
+
+    &:hover {
+      button {
+        background-color: #ff2600 !important;
+        transition: $transicion600ms;
+      }
+    }
+  }
+}
+
+.containerCard {
+  align-items: center;
+
+  border-radius: 10px 10px 43px 43px;
+  color: #fff;
+  cursor: default;
+
+  display: flex;
+  justify-content: center;
+  height: 310px;
+
+  position: relative;
+  transition: $transicion600ms;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  width: 220px;
+  z-index: 2;
+
+  .front {
+    align-items: center;
+    backface-visibility: hidden;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    height: 310px;
+
+    position: relative;
+    width: 220px;
+    z-index: 1;
+
+    .img {
+      position: absolute;
+
+      & > div {
+        overflow: visible !important;
+
+        .avatar {
+          min-width: initial !important;
+          max-width: initial !important;
+          min-height: initial !important;
+          max-height: initial !important;
+        }
+      }
+    }
+  }
+
+  .back {
+    background-color: $colorBackgroundBlackLigt;
+    border: 1px solid white;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    overflow: hidden;
+    height: 100%;
+    position: absolute;
+    transform: rotateY(-180deg);
+
+    .avatarBack {
+      align-items: center;
+      clip-path: polygon(0 0, 100% 0, 100% 35%, 0 100%);
+      display: flex;
+      background-color: #fff;
+      height: 60%;
+      justify-content: center;
+      transition: 800ms linear all;
+      overflow: hidden;
+      width: 100%;
+
+      img {
+        min-width: initial !important;
+        max-width: initial !important;
+        min-height: initial !important;
+        max-height: initial !important;
+        width: 218px !important;
+        height: 320px !important;
+        bottom: -111px !important;
+      }
+    }
+
+    p.name {
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: 0.2px;
+    }
+
+    .description {
+      align-items: center;
+      display: flex;
+
+      justify-content: center;
+      padding: 3px 0px 8px 0px;
+
+      p {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 100;
+        width: 90%;
+      }
+    }
+
+    .redesSocials {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      ul {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        li {
+          list-style: none;
+          width: 30px;
+          height: 100%;
+          overflow: hidden;
+          position: relative;
+
+          &:first-child {
+            border-radius: 10px 0 0 0;
+          }
+
+          &:last-child {
+            border-radius: 0 10px 0 0;
+          }
+
+          &.btn2::before {
+            bottom: 1px;
+          }
+
+          &.btn2::after {
+            top: 3px;
+          }
+
+          &.btn2:hover::before,
+          &.btn2:hover::after {
+            background-color: #fff;
+            border-width: 40px 60px;
+          }
+          a {
+            align-items: center;
+            background: rgba(#fff, 0.1);
+            display: flex;
+
+            height: inherit;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            width: inherit;
+            span {
+              z-index: 150;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.activeRight {
+    transform: rotateY(180deg);
+
+    .back .avatarBack {
+      clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
+      transition: 800ms linear all;
+    }
+  }
+
+  .containerButton {
+    position: relative;
+  }
+
+  .circleLogo {
+    background: $colorBackgroundBlackLigt;
+    box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    transition: $transicion600ms;
+    top: 3px;
+  }
+
+  .avatar {
+    border-radius: 10px 10px 35px 35px;
+    border-bottom: none;
+    box-shadow: 0px 13px 8px 2px #000;
+    border: 1px solid #fff !important;
+    position: absolute;
+    width: 100% !important;
+    height: 325px !important;
+    top: -23px !important;
+  }
+
+  &:hover {
+    .circleLogo {
+      box-shadow: inset 0px 0px 10px 10px rgb(0, 0, 0);
+      transition: $transicion600ms;
+    }
+
+    .teamTecnologi .containerSvg svg {
+      box-shadow: inset 0px -35px 20px 0px #000;
+      transition: $transicion600ms;
+    }
+  }
+
+  .team {
+    border-radius: 0 0 35px 35px;
+    bottom: 0px;
+    height: inherit;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .teamTecnologi {
+    align-items: flex-end;
+    background-color: transparent;
+    bottom: 17px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+
+    .containerSvg {
+      align-items: flex-end;
+      bottom: 3px;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      width: 400%;
+
+      svg {
+        border-radius: 50% 50% 0px 0px;
+        box-shadow: inset 0px -25px 20px 0px #000;
+
+        height: 57px;
+        width: 200%;
+        transition: $transicion600ms;
+
+        path {
+          fill: $colorTeamSvelte !important;
+          width: 150px;
+        }
+      }
+    }
+
+    .logoLeader {
+      height: 30px;
+      position: absolute;
+      top: 8px;
+      z-index: 100;
+    }
+
+    .name {
+      align-items: center;
+      display: flex;
+      bottom: -17px;
+      border-radius: 7%;
+
+      box-shadow: inset 0px -23px 0px 0px $colorTeamSvelte;
+      height: 40px;
+      justify-content: center;
+      position: absolute;
+
+      width: 100%;
+      p {
+        color: #fff;
+        font-weight: 700;
+        text-align: center;
+        text-transform: capitalize;
+        width: 100%;
+
+        &.svelte {
+          text-shadow: 0px 0px 20px #f00;
+        }
+      }
+    }
+  }
+}
+
+/* Colores de las redes sociales */
+.instagram {
+  border-radius: 5px;
+  color: #c15a3a !important;
+}
+
+.twitter {
+  border-radius: 5px;
+  color: #00acee !important;
+}
+
+.linkedin {
+  color: #0077b5 !important;
+}
+
+.github {
+  color: #ee216b !important;
+}
+
+.facebook {
+  color: #3b5998 !important;
+}
+
+/* botones */
+
+a.btn2 {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 80px;
+
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: $transicion600msLineal2;
+  overflow: hidden;
+  width: 250px;
+  will-change: transform;
+}
+
+.btn2::before,
+.btn2::after {
+  position: absolute;
   content: "";
+  border: 0px solid;
+  transition: $transicion600msLineal2;
+  z-index: 100;
 }
-.slick-track:after {
-  clear: both;
+
+.btn2::before {
+  bottom: 0;
+  left: 0;
+  border-color: transparent transparent transparent #fff;
 }
-.slick-slide {
-  display: none;
-  float: left;
-  height: 100%;
-  min-height: 1px;
+
+.btn2::after {
+  top: 0;
+  right: 0;
+  border-color: transparent #fff transparent transparent;
 }
-[dir="rtl"] .slick-slide {
-  float: right;
+
+.btn2:hover {
+  color: #fff;
 }
-.slick-slide img {
-  display: block;
+
+.btn2:hover::before,
+.btn2:hover::after {
+  border-width: 80px 260px;
 }
-.slick-slide.slick-loading img {
-  display: none;
+
+/* Animaciones */
+@keyframes fa-spin-fast {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
 }
-.slick-slide.dragging img {
-  pointer-events: none;
-}
-.slick-initialized .slick-slide {
-  display: block;
-}
-.slick-vertical .slick-slide {
-  display: block;
-  height: auto;
-  border: 1px solid transparent;
-}
-.slick-arrow.slick-hidden {
-  display: none;
-} /*# sourceMappingURL=slick.min.css.map */

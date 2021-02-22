@@ -14,9 +14,9 @@ import "../styles/form/newPassword.scss"
 
 import "../styles/demo.scss";
 import "../styles/slider/slider.scss"
-import 'swiper/swiper.scss';
-import '../styles/swiper.min.css';
-import '../styles/estilos.css';
+/* import 'swiper/swiper.scss'; */
+import '../styles/slider/swiper.min.css';
+import '../styles/slider/estilos.css';
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
