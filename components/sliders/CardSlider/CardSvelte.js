@@ -1,7 +1,16 @@
 import React from "react";
 import Image from "next/image";
 
-const CardSvelte = ({ avatar, nameAvatar,descripction ,facebook = "#",github = "#",twitter = "#",linkedin = "#"}) => {
+const CardSvelte = ({
+  avatar,
+  nameAvatar,
+  descripction,
+  facebook = "#",
+  github = "#",
+  twitter = "#",
+  linkedin = "#",
+  team,
+}) => {
   const showInformation = () => {
     const reemplazarClass = (id, removeClass, addClass) => {
       document.getElementById(`${id}`).classList.toggle(`${removeClass}`);
@@ -27,11 +36,11 @@ const CardSvelte = ({ avatar, nameAvatar,descripction ,facebook = "#",github = "
   return (
     <main>
       <div className="backgroundColor"></div>
-      <div className="container2">
+      <div className={`${team} container2`}>
         <div className="showInformation" id="showInformation">
           <button
             onClick={() => {
-                showInformation();
+              showInformation();
             }}
           >
             <span className="ico icon-menu" id="iconShowInformation"></span>
@@ -76,11 +85,38 @@ const CardSvelte = ({ avatar, nameAvatar,descripction ,facebook = "#",github = "
                       />
                     </g>
                   </svg>
-                  <img
-                    className="logoLeader"
-                    src="/sponsors-oficiales/svelte-icon.svg"
-                    alt=""
-                  />
+                  {team === "svelte" ? (
+                    <img
+                      className="logoLeader"
+                      src="/iconosTeam/svelte.svg"
+                      alt={team}
+                    />
+                  ) : null}
+
+                  {team === "react" ? (
+                    <img
+                      className="logoLeader"
+                      src="/iconosTeam/react.svg"
+                      alt={team}
+                    />
+                  ) : null}
+
+                  {team === "vue" ? (
+                    <img
+                      className="logoLeader"
+                      src="/iconosTeam/vue.svg"
+                      alt={team}
+                    />
+                  ) : null}
+
+                  {team === "angular" ? (
+                    <img
+                      className="logoLeader"
+                      src="/iconosTeam/angular.svg"
+                      alt={team}
+                    />
+                  ) : null}
+
                   <div className="circleLogo"></div>
                 </div>
                 <div className="name">
@@ -99,10 +135,9 @@ const CardSvelte = ({ avatar, nameAvatar,descripction ,facebook = "#",github = "
             </div>
             <p className="name">{nameAvatar}</p>
             <div className="description">
-              <p className="svelte">
-                {descripction}
-              </p>
+              <p className="svelte">{descripction}</p>
             </div>
+
             <div className="redesSocials">
               <ul>
                 <li className="btn2">

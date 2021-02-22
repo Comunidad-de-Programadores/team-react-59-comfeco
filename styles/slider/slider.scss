@@ -5,6 +5,9 @@
 }
 
 $colorTeamSvelte: #ff3e00;
+$colorTeamReact: #0d47a1;
+$colorTeamVue: #41b883;
+$colorTeamAngular: #e23237;
 $transicion600msLineal2: 1000ms linear all;
 $colorBackgroundBlackLigt: #05070b;
 $colorBackgroundBlackLigt: #17171d;
@@ -80,7 +83,6 @@ main {
       cursor: pointer;
       height: 80%;
 
-      background-color: $colorTeamSvelte !important;
       transition: $transicion600ms;
       outline: none;
       width: 80%;
@@ -89,13 +91,11 @@ main {
         align-items: center;
         display: flex;
         justify-content: center;
-        text-shadow: 1px 1px 0px #f00;
       }
     }
 
     &:hover {
       button {
-        background-color: #ff2600 !important;
         transition: $transicion600ms;
       }
     }
@@ -345,7 +345,6 @@ main {
         transition: $transicion600ms;
 
         path {
-          fill: $colorTeamSvelte !important;
           width: 150px;
         }
       }
@@ -364,7 +363,6 @@ main {
       bottom: -17px;
       border-radius: 7%;
 
-      box-shadow: inset 0px -23px 0px 0px $colorTeamSvelte;
       height: 40px;
       justify-content: center;
       position: absolute;
@@ -464,5 +462,125 @@ a.btn2 {
   }
   100% {
     transform: rotate(359deg);
+  }
+}
+
+.react {
+  path {
+    fill: $colorTeamReact !important;
+  }
+
+  .name {
+    box-shadow: inset 0px -23px 0px 0px $colorTeamReact;
+  }
+
+  .showInformation {
+    &:hover button {
+      background-color: #002260 !important;
+    }
+
+    button {
+      background-color: $colorTeamReact !important;
+
+      span {
+        text-shadow: 1px 1px 0px #6200ff;
+      }
+    }
+  }
+
+  .back p.name {
+    box-shadow: none;
+  }
+}
+
+.svelte {
+  path {
+    fill: $colorTeamSvelte !important;
+  }
+
+  .name {
+    box-shadow: inset 0px -23px 0px 0px $colorTeamSvelte;
+  }
+
+  .showInformation {
+    &:hover button {
+      background-color: #ff2600 !important;
+    }
+
+    button {
+      background-color: $colorTeamSvelte !important;
+
+      span {
+        text-shadow: 1px 1px 0px transparent;
+      }
+    }
+  }
+
+  .back p.name {
+    box-shadow: none;
+  }
+}
+
+.vue {
+  .containerCard .teamTecnologi .logoLeader {
+    height: 24px;
+    top: 14px;
+  }
+  path {
+    fill: $colorTeamVue !important;
+  }
+
+  .name {
+    box-shadow: inset 0px -23px 0px 0px $colorTeamVue;
+  }
+
+  .showInformation {
+    &:hover button {
+      background-color: #00573dc9 !important;
+    }
+
+    button {
+      background-color: $colorTeamVue !important;
+
+      span {
+        text-shadow: 1px 1px 0px transparent;
+      }
+    }
+  }
+
+  .back p.name {
+    box-shadow: none;
+  }
+}
+
+.angular {
+  .containerCard .teamTecnologi .logoLeader {
+    height: 26px;
+    top: 10px;
+  }
+  path {
+    fill: $colorTeamAngular !important;
+  }
+
+  .name {
+    box-shadow: inset 0px -23px 0px 0px $colorTeamAngular;
+  }
+
+  .showInformation {
+    &:hover button {
+      background-color: #ac0000 !important;
+    }
+
+    button {
+      background-color: $colorTeamAngular !important;
+
+      span {
+        text-shadow: 1px 1px 0px transparent;
+      }
+    }
+  }
+
+  .back p.name {
+    box-shadow: none;
   }
 }
