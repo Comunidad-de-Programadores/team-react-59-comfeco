@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Router from "next/router";
+import Link from "next/link";
 
 import Image from "next/image";
 import Icono from "../nano/Icono";
@@ -55,12 +56,16 @@ const Header = () => {
       <header className="row col-xs-12">
         <div className="row containerHeader headerDesktop">
           <div className="col-xs-3">
-            <Image
-              src="/logo1.png"
-              alt="Picture of the author"
-              width={139}
-              height={41}
-            />
+            <Link href="/">
+              <a>
+                <Image
+                  src="/logo1.png"
+                  alt="Picture of the author"
+                  width={139}
+                  height={41}
+                />
+              </a>
+            </Link>
           </div>
           <div className="col-xs-9 navegation">
             {localToken && (

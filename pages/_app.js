@@ -10,12 +10,18 @@ import "../styles/form/formRegisterLogin.scss";
 import "../styles/form/homeLogin.scss";
 
 import "../styles/colorChange.scss";
-import "../styles/form/newPassword.scss"
+import "../styles/form/newPassword.scss";
 
 import "../styles/demo.scss";
 
+import { Provider } from "next-auth/client";
+
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <Provider session={pageProps.session}>
+      <Component {...pageProps} />
+    </Provider>
+  );
 }
 
 export default MyApp;

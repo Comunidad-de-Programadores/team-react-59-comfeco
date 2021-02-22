@@ -23,25 +23,91 @@ export default async function handler(req, res) {
 
       switch (code.type) {
         case "twitter":
-          const existTwitter = await User.findOne({ twitterId: code.userId });
+          const existTwitter = await User.findOne({ twitterId: code.id });
 
           if (existTwitter) {
             return res.status(400).json({ error: "Twitter Exist" });
           }
 
-          const newUser = await new User({
-            type: "twitter",
-            twitterId: code.userId,
-            twitterName: code.userName,
+          const newTwitterUser = await new User({
+            type: code.type,
+            twitterId: code.id,
+            twitterName: code.name,
             nickname,
           }).save();
 
-          const bearerToken = await jwt.sign(
-            { _id: newUser._id },
+          const twitterToken = await jwt.sign(
+            { _id: newTwitterUser._id },
             process.env.KEY
           );
 
-          res.status(200).json({ token: bearerToken });
+          res.status(200).json({ token: twitterToken });
+          break;
+
+        case "github":
+          const existGithub = await User.findOne({ githubId: code.id });
+
+          if (existGithub) {
+            return res.status(400).json({ error: "Github Exist" });
+          }
+
+          const newGithubUser = await new User({
+            type: code.type,
+            githubId: code.id,
+            githubName: code.name,
+            nickname,
+          }).save();
+
+          const githubToken = await jwt.sign(
+            { _id: newGithubUser._id },
+            process.env.KEY
+          );
+
+          res.status(200).json({ token: githubToken });
+          break;
+
+        case "facebook":
+          const existFacebook = await User.findOne({ facebookId: code.id });
+
+          if (existFacebook) {
+            return res.status(200).json({ error: "Facebook Exist" });
+          }
+
+          const newFacebookUser = await new User({
+            type: code.type,
+            facebookId: code.id,
+            facebookName: code.name,
+            nickname,
+          }).save();
+
+          const facebookToken = await jwt.sign(
+            { _id: newFacebookUser._id },
+            process.env.KEY
+          );
+
+          res.status(200).json({ token: facebookToken });
+          break;
+
+        case "google":
+          const existGoogle = await User.findOne({ googleId: code.id });
+
+          if (existGoogle) {
+            return res.status(200).json({ error: "Google Exist" });
+          }
+
+          const newGoogleUser = await new User({
+            type: code.type,
+            googleId: code.id,
+            googleName: code.name,
+            nickname,
+          }).save();
+
+          const googleToken = await jwt.sign(
+            { _id: newGoogleUser._id },
+            process.env.KEY
+          );
+
+          res.status(200).json({ token: googleToken });
           break;
 
         default:

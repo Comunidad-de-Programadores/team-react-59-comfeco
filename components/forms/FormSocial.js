@@ -67,10 +67,9 @@ const FormSocial = (props) => {
             error: true,
             message: data.error,
           });
-          Router.push("/");
           return;
         }
-        localStorage.setItem("token", data.token);
+        localStorage.setItem("token", `Bearer ${data.token}`);
         Router.push("/");
       });
   };

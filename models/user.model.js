@@ -9,6 +9,12 @@ const User = new mongoose.Schema(
     password: { type: String },
     twitterId: { type: String },
     twitterName: { type: String },
+    githubId: { type: String },
+    githubName: { type: String },
+    facebookId: { type: String },
+    facebookName: { type: String },
+    googleId: { type: String },
+    googleName: { type: String },
   },
   {
     timestamps: true,
