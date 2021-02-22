@@ -9,11 +9,6 @@ const Register = () => {
   const [data, setData] = useState({ error: null, message: "" });
 
   const focus = () => {
-
-    // lo que hice fue almacenar en una constante el nombre 
-    // de la clase, en caso de que se cambie el nombre
-    //solo es necesario cambiarla aquí, espero que lo haya hecho
-    //bien xd 
     
     const focusClass ="activefocus";
     const activo = document.activeElement.id;
