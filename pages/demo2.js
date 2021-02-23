@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 import CardSvelte from "../components/sliders/CardSlider/CardSvelte";
+import { fromString } from "uuidv4";
 
 const demo2 = () => {
   useEffect(() => {
@@ -43,13 +44,17 @@ const demo2 = () => {
             }}
           >
             <CardSvelte
-              avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
-              nameAvatar="Oscar barajas"
+              avatar="/leader/react-leader-lara-diaz.png"
+              nameAvatar="lara diaz"
               descripction="Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam voluptate nostrum."
-              team="angular"
-              idshow="andular"
-              idCont="rdassact"
-              idIcon="adf"
+              facebook="#"
+              github="#"
+              twitter="#"
+              linkedin="#"
+              team="react"
+              idshow="react1"
+              idCont="react2"
+              idIcon="react3"
             />
           </div>
           <div
@@ -61,14 +66,18 @@ const demo2 = () => {
               window.swiper.autoplay.start();
             }}
           >
-            <CardSvelte
-              avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
-              nameAvatar="Oscar barajas"
+             <CardSvelte
+              avatar="/leader/react-leader-vanessa-marely.png"
+              nameAvatar="vanessa marely"
               descripction="Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam voluptate nostrum."
-              team="angular"
-              idshow="svelte"
-              idCont="rdasssact"
-              idIcon="addsf"
+              facebook="#"
+              github="#"
+              twitter="#"
+              linkedin="#"
+              team="react"
+              idshow="react4"
+              idCont="react5"
+              idIcon="react6"
             />
           </div>
 
@@ -82,13 +91,17 @@ const demo2 = () => {
             }}
           >
             <CardSvelte
-              avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
-              nameAvatar="Oscar barajas"
+              avatar="/leader/react-leader-diego_plascencia.png"
+              nameAvatar="diego plascencia"
               descripction="Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam voluptate nostrum."
+              facebook="#"
+              github="#"
+              twitter="#"
+              linkedin="#"
               team="react"
-              idshow="andsaular"
-              idCont="rdasassact"
-              idIcon="addsdasf"
+              idshow="react7"
+              idCont="react8"
+              idIcon="react9"
             />
           </div>
 
@@ -102,13 +115,17 @@ const demo2 = () => {
             }}
           >
             <CardSvelte
-              avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
-              nameAvatar="Oscar barajas"
+              avatar="/leader/react-leader-alejandro-nanez.png"
+              nameAvatar="alejandro ñañez"
               descripction="Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam voluptate nostrum."
+              facebook="#"
+              github="#"
+              twitter="#"
+              linkedin="#"
               team="react"
-              idshow="andsausalar"
-              idCont="rdasasssaact"
-              idIcon="adewdsf"
+              idshow="react10"
+              idCont="react11"
+              idIcon="react12"
             />
           </div>
           <div
@@ -121,13 +138,17 @@ const demo2 = () => {
             }}
           >
             <CardSvelte
-              avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
-              nameAvatar="Oscar barajas"
+              avatar="/leader/react-leader-lina-maria-montano.png"
+              nameAvatar="lina maria montano"
               descripction="Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam voluptate nostrum."
+              facebook="#"
+              github="#"
+              twitter="#"
+              linkedin="#"
               team="react"
-              idshow="andsdsaaular"
-              idCont="rdassdaassact"
-              idIcon="adfsddsf"
+              idshow="react13"
+              idCont="react14"
+              idIcon="react15"
             />
           </div>
 

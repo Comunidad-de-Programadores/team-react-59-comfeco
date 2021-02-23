@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
+
 const CardSvelte = ({
   avatar,
   nameAvatar,
@@ -14,10 +15,6 @@ const CardSvelte = ({
   idCont,
   idIcon,
 }) => {
-
-  
-  
-
   const showInformation = () => {
     const idAllContainerCard = document.querySelectorAll(`#${idCont}`);
     const idAllshowInformation = document.querySelectorAll(`#${idshow}`);
@@ -39,8 +36,6 @@ const CardSvelte = ({
 
       idAllIconShowInformation[i].classList.toggle("icon-reply");
     }
-
-   
   };
   return (
     <>
