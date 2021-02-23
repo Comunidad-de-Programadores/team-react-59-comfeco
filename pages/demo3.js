@@ -7,9 +7,32 @@ const demo3 = () => {
         avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
         nameAvatar="Oscar barajas"
         descripction="Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam voluptate nostrum."
-        team="angular"
+        team="react"
+        idshow="rdact" idCont="rdasct"
       />
-      
+      <CardSvelte
+        avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
+        nameAvatar="Oscar barajas"
+        descripction="Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam voluptate nostrum."
+        team="svelte"
+        idshow="sdelte" idCont="rdassct"
+      />
+
+      <CardSvelte
+        avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
+        nameAvatar="Oscar barajas"
+        descripction="Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam voluptate nostrum."
+        team="vue"
+        idshow="vde" idCont="rdascsst"
+     />
+      {/* <CardSvelte
+        avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
+        nameAvatar="Oscar barajas"
+        descripction="Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam voluptate nostrum."
+        team="angular"
+        idshow="andular"
+        idCont="rdassact"
+      /> */}
     </>
   );
 };

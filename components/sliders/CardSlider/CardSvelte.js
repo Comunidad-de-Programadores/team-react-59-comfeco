@@ -10,43 +10,51 @@ const CardSvelte = ({
   twitter = "#",
   linkedin = "#",
   team,
+  idshow,
+  idCont,
+  idIcon,
 }) => {
+  
+
   const showInformation = () => {
-    const reemplazarClass = (id, removeClass, addClass) => {
-      document.getElementById(`${id}`).classList.toggle(`${removeClass}`);
+    const idAllContainerCard = document.querySelectorAll(`#${idCont}`);
+    const idAllshowInformation = document.querySelectorAll(`#${idshow}`);
+    const idAllIconShowInformation = document.querySelectorAll(`#${idIcon}`);
+    const length1 = idAllContainerCard.length;
 
-      document.getElementById(`${id}`).classList.toggle(`${addClass}`);
-    };
+    for (let i = 0; i < length1; i++) {
+      idAllContainerCard[i].classList.toggle("activeRight");
 
-    document.getElementById("containerCard").classList.toggle("activeRight");
+      idAllshowInformation[i].classList.add("activeAnimation");
 
-    document
-      .getElementById("showInformation")
-      .classList.toggle("activeRightButton");
-    document.getElementById("showInformation").classList.add("activeAnimation");
+      idAllshowInformation[i].classList.toggle("activeRightButton");
 
-    setTimeout(() => {
-      document
-        .getElementById("showInformation")
-        .classList.remove("activeAnimation");
-    }, 1500);
+      setTimeout(() => {
+        idAllshowInformation[i].classList.remove("activeAnimation");
+      }, 1500);
 
-    reemplazarClass("iconShowInformation", "icon-menu", "icon-reply");
+      idAllIconShowInformation[i].classList.toggle("icon-menu");
+
+      idAllIconShowInformation[i].classList.toggle("icon-reply");
+    }
+
+   
   };
   return (
-    <main>
-      <div className="backgroundColor"></div>
+    <>
+      {/*  <div className="backgroundColor"></div> */}
       <div className={`${team} container2`}>
-        <div className="showInformation" id="showInformation">
+        <div className="showInformation" id={idshow}>
+          {/*  {console.log(id2)} */}
           <button
             onClick={() => {
               showInformation();
             }}
           >
-            <span className="ico icon-menu" id="iconShowInformation"></span>
+            <span className="ico icon-menu" id={idIcon}></span>
           </button>
         </div>
-        <div className="containerCard" id="containerCard">
+        <div className="containerCard" id={idCont}>
           <div className="front">
             <div className="img">
               <Image
@@ -165,7 +173,7 @@ const CardSvelte = ({
           </div>
         </div>
       </div>
-    </main>
+    </>
   );
 };
 
