@@ -14,6 +14,8 @@ const CardSvelte = ({
   idCont,
   idIcon,
 }) => {
+
+  
   
 
   const showInformation = () => {

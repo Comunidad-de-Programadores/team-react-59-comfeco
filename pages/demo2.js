@@ -4,26 +4,13 @@ import CardSvelte from "../components/sliders/CardSlider/CardSvelte";
 
 const demo2 = () => {
   useEffect(() => {
-    /*   document.getElementById("s1").style.backgroundImage =
-      "url('/Genarogg.jpg')"; */
-    /*  document.getElementById("s2").style.backgroundImage =
-      "url('/Genarogg.jpg')";
-    document.getElementById("s3").style.backgroundImage =
-      "url('/Genarogg.jpg')";
-    document.getElementById("s4").style.backgroundImage =
-      "url('/Genarogg.jpg')";
-    document.getElementById("s5").style.backgroundImage =
-      "url('/Genarogg.jpg')";
-    document.getElementById("s6").style.backgroundImage =
-      "url('/Genarogg.jpg')"; */
-
-    const swiper = new Swiper(".swiper-container", {
+    window.swiper = new Swiper(".swiper-container", {
       effect: "coverflow",
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: "auto",
       loop: true,
-      speed: 1000,
+      speed: 5000,
       coverflowEffect: {
         rotate: 10,
         stretch: 25,
@@ -31,13 +18,13 @@ const demo2 = () => {
         modifier: 1,
         slideShadows: false,
       },
-      /* autoplay: {
+      autoplay: {
         delay: 1000,
         disableOnInteraction: false,
-       
-      }, */
+      },
       pagination: {
         el: ".swiper-pagination",
+        clickable: true,
       },
     });
   }, []);
@@ -46,7 +33,15 @@ const demo2 = () => {
     <>
       <div className="swiper-container">
         <div className="swiper-wrapper">
-        <div className="swiper-slide">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -57,7 +52,15 @@ const demo2 = () => {
               idIcon="adf"
             />
           </div>
-          <div className="swiper-slide" id="s3">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -69,7 +72,15 @@ const demo2 = () => {
             />
           </div>
 
-          <div className="swiper-slide" id="s5">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -81,7 +92,15 @@ const demo2 = () => {
             />
           </div>
 
-          <div className="swiper-slide" id="s5">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -92,7 +111,15 @@ const demo2 = () => {
               idIcon="adewdsf"
             />
           </div>
-          <div className="swiper-slide" id="s5">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -104,7 +131,15 @@ const demo2 = () => {
             />
           </div>
 
-          <div className="swiper-slide" id="s5">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -116,7 +151,15 @@ const demo2 = () => {
             />
           </div>
 
-          <div className="swiper-slide" id="s5">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -128,7 +171,15 @@ const demo2 = () => {
             />
           </div>
 
-          <div className="swiper-slide" id="s5">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -140,7 +191,15 @@ const demo2 = () => {
             />
           </div>
 
-          <div className="swiper-slide" id="s5">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -152,16 +211,15 @@ const demo2 = () => {
             />
           </div>
 
-
-
-
-
-
-
-
-
-
-<div className="swiper-slide">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -171,7 +229,15 @@ const demo2 = () => {
               idCont="rdassdgact"
             />
           </div>
-          <div className="swiper-slide" id="s3">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -182,7 +248,15 @@ const demo2 = () => {
             />
           </div>
 
-          <div className="swiper-slide" id="s5">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -193,7 +267,15 @@ const demo2 = () => {
             />
           </div>
 
-          <div className="swiper-slide" id="s5">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -203,7 +285,15 @@ const demo2 = () => {
               idCont="rdasassuysaact"
             />
           </div>
-          <div className="swiper-slide" id="s5">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -214,7 +304,15 @@ const demo2 = () => {
             />
           </div>
 
-          <div className="swiper-slide" id="s5">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -225,7 +323,15 @@ const demo2 = () => {
             />
           </div>
 
-          <div className="swiper-slide" id="s5">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -236,7 +342,15 @@ const demo2 = () => {
             />
           </div>
 
-          <div className="swiper-slide" id="s5">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -247,7 +361,15 @@ const demo2 = () => {
             />
           </div>
 
-          <div className="swiper-slide" id="s5">
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
             <CardSvelte
               avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
               nameAvatar="Oscar barajas"
@@ -257,28 +379,6 @@ const demo2 = () => {
               idCont="rdasasasdfsdasdsact"
             />
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
         <div className="swiper-pagination"></div>
       </div>
