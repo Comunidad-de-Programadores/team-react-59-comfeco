@@ -117,16 +117,12 @@
         }
       }
       .card-taller-select {
-        select {
-          display: block;
-          padding: 0.8em 0.4em;
-          width: 100%;
-          box-sizing: border-box;
-          margin: 20px auto;
-          box-shadow: 0 1px 0 1px $colorPurple6;
-          border-color: $colorPurple6;
+        margin: 20px auto;
+        .css-1uccc91-singleValue {
+          white-space: normal;
         }
       }
+
       .card-taller-body {
         display: flex;
         justify-content: space-between;

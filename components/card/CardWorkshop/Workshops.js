@@ -1,46 +1,80 @@
 import React, { useEffect, useState } from 'react';
+import Select from 'react-select';
 import Workshop from './Workshop';
 import A from '../../nano/A';
 
+
 const Workshops = ( ) => {
   const [workshops, setWorkshops] = useState([]);
+  const [group, setGroup] = useState([{value:'',label:''}]);
+  const [valueSelected, setValueSelected] = useState([]);
 
-  const getWorkshops = async () => {
-    const data = await fetch("/api/get_workshops");
+  
+  const getGroupWorkshops = async () => {
+    const data = await fetch("/api/get_groupworkshops");
+    return await data.json();
+  };
+  
+  const getWorkshops = async (group) => {
+    const data = await fetch("/api/get_workshops?group="+group);
     return await data.json();
   };
 
+  const selectedGroup = (valueSelected) => {
+    setValueSelected(valueSelected);
+  }
+
   useEffect(() => {
     let mounted = true;
-    getWorkshops().then(items => {
-      if(mounted) {
-        setWorkshops(items)
-      }
-    })
+    let groupSelect = [];
+    
+    getGroupWorkshops().then(groupWorkshop => {
+        if(mounted) {
+          groupWorkshop.map((item) => {
+            groupSelect.push(
+              {
+                value: item.name,
+                label: item.name
+              }
+            );
+          });
+          setValueSelected(groupSelect[0]);
+          setGroup(groupSelect);
+        }
+      });
+
     return () => mounted = false;
   }, [])
- 
+
+  useEffect(() => {
+    if(valueSelected.value !== undefined) {
+      getWorkshops(valueSelected.value).then(items => {
+        setWorkshops(items);
+      });
+    }
+  }, [valueSelected]);
+
   return(
-    <div class="card-container-taller">
+    <div className="card-container-taller">
       <div className="card-taller">
         <div className="card-taller-header">
           <span className="card-taller-title"> Talleres</span>
           <A type={'a'} css={'card-taller-link'} href={'#'}><span>Ver más</span></A>
         </div>
-        <div className="card-taller-select">
-          <select className="select-taller">
-              <option>Talleres por área de conocimiento</option>
-              <option>Primera opción</option>
-              <option>Segunda opción</option>
-              <option>Tercera opción</option>
-              <option>Cuarta opción</option>
-          </select>
-        </div>
+        
         <div className="card-taller-event">
             Hoy
         </div>
+        <div className="card-taller-select">
+          <Select
+            options={group}
+            noOptionsMessage={()=>"No hay resultados"}
+            onChange={(option) => selectedGroup(option)}
+            value={valueSelected}
+          />
+        </div>
         {workshops.map( workshop => (
-          <Workshop key={workshop.id} {...workshop} />
+          <Workshop key={workshop._id} {...workshop} />
         ))}
       </div>
     </div>
