@@ -1,29 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Community from './Community';
 import A from '../../nano/A';
 
-const communities = [
-  {
-    id: '1',
-    title: 'Comunidad de Programadores',
-    img: '',
-    url: 'https://discord.gg/5Bb5yvzNPr',
-  },
-  {
-    id: '2',
-    title: 'El lenguaje de los programadores',
-    img: '',
-    url: 'https://www.facebook.com/lenguajeprogramador',
-  },
-  {
-    id: '3',
-    title: 'Bragecreativo',
-    img: '',
-    url: 'https://www.facebook.com/',
-  },
-];
+const Communities = () => {
+  const [communities, setCommunities] = useState([]);
 
-const Communities = ( ) => {
+  const getCommunities = async () => {
+    const data = await fetch("/api/get_communities");
+    return await data.json();
+  };
+
+  useEffect(() => {
+    let mounted = true;
+    getCommunities().then(items => {
+      if(mounted) {
+        setCommunities(items)
+      }
+    })
+    return () => mounted = false;
+  }, [])
+ 
   return(
     <div class="card-container-com">
       <div className="card-com">

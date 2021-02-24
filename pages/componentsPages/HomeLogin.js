@@ -2,7 +2,6 @@ import React from "react";
 import Register from "../../components/forms/Register";
 import Login from "../../components/forms/Login";
 import ResetPassword from "../../components/forms/ResetPassword";
-import Counter from "../../components/deadline/counter";
 
 const HomeLogin = () => {
   return (

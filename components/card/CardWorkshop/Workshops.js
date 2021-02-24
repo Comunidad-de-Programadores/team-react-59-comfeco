@@ -1,35 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Workshop from './Workshop';
 import A from '../../nano/A';
 
-const workshops = [
-  {
-    id: '1',
-    title: 'State of Javascript',
-    hour: '16:00 PM',
-    date: '20/02/2021',
-    attendant: 'Juan Pablo de la Torre',
-    group: 'Talleres por área del conocimiento'
-  },
-  {
-    id: '2',
-    title: 'State of Javascript',
-    hour: '16:00 PM',
-    date: '20/02/2021',
-    attendant: 'Juan Pablo de la Torre',
-    group: 'Talleres por área del conocimiento'
-  },
-  {
-    id: '3',
-    title: 'State of Javascript',
-    hour: '16:00 PM',
-    date: '20/02/2021',
-    attendant: 'Juan Pablo de la Torre',
-    group: 'Talleres por área del conocimiento'
-  },
-];
-
 const Workshops = ( ) => {
+  const [workshops, setWorkshops] = useState([]);
+
+  const getWorkshops = async () => {
+    const data = await fetch("/api/get_workshops");
+    return await data.json();
+  };
+
+  useEffect(() => {
+    let mounted = true;
+    getWorkshops().then(items => {
+      if(mounted) {
+        setWorkshops(items)
+      }
+    })
+    return () => mounted = false;
+  }, [])
+ 
   return(
     <div class="card-container-taller">
       <div className="card-taller">
