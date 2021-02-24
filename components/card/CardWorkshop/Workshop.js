@@ -10,7 +10,7 @@ const Workshop = ({ _id, name, hour, attendant }) => {
         <div className="card-taller-text">
           <span className="card-taller-title">{ name }</span>
           <span className="card-taller-hora">{ hour }</span>
-          <span className="card-taller-subtext">By<span className="card-taller-name">{ attendant }</span></span>
+          <span className="card-taller-subtext">By <span className="card-taller-name">{ attendant }</span></span>
         </div>
       </div>
     </div>

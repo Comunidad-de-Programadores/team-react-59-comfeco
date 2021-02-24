@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Select from 'react-select';
-import Workshop from './Workshop';
-import A from '../../nano/A';
 import moment from 'moment';
 import 'moment-timezone';
+
+import Workshop from './Workshop';
+import A from '../../nano/A';
+
+import convertTimeZoneLocal from '../../../functions/convertTimeZoneLocal';
+import isToday from '../../../functions/isToday';
 
 const Workshops = ( ) => {
   const [workshops, setWorkshops] = useState([]);
@@ -23,40 +27,6 @@ const Workshops = ( ) => {
   const selectedGroup = (valueSelected) => {
     setValueSelected(valueSelected);
   }
-
-  const calcTime = () => {
-    let dateTime = "23/02/2021 16:00";
-    dateTime = moment(dateTime, 'DD/MM/YYYY HH:mm').format('YYYY-MM-DD HH:mm');
-    dateTime = moment.tz(dateTime, "America/Mexico_City").format();
-    dateTime = moment(dateTime).tz("America/Lima");
-    const hourString = dateTime.format('LT');
-    console.log(hourString);
-  }
-
-  const compareDate = () => {
-    let dateTime = "25/02/2021 16:00";
-    dateTime = moment(dateTime, 'DD/MM/YYYY HH:mm').format('YYYY-MM-DD HH:mm');
-    dateTime = moment.tz(dateTime, "America/Mexico_City");
-    dateTime = moment(dateTime).tz("America/Lima").format('L');
-    let dateToday = moment().format('L');
-    let dateTomorrow = moment().add(1, 'days').format('L');
-    
-    if( dateToday === dateTime) {
-      console.log("Es hoy");
-    }
-
-    if( dateTomorrow === dateTime) {
-      console.log("Es mañana");
-    }
-  }
-
-  useEffect(() => {
-    let mounted = true;
-    
-    calcTime();
-    compareDate();
-    return () => mounted = false;
-  }, [])
 
   useEffect(() => {
     let mounted = true;
@@ -82,8 +52,17 @@ const Workshops = ( ) => {
 
   useEffect(() => {
     if(valueSelected.value !== undefined) {
+      let workShopToday = [];
       getWorkshops(valueSelected.value).then(items => {
-        setWorkshops(items);
+        items.map((item) => {
+          //Verified isToday
+          if( isToday(item.date, item.hour, item.zone) ) {
+            //Convert Time Zone Local
+            item.hour = convertTimeZoneLocal(item.date, item.hour, item.zone);
+            workShopToday.push(item); 
+          }
+        });
+        setWorkshops(workShopToday);
       });
     }
   }, [valueSelected]);
@@ -107,9 +86,10 @@ const Workshops = ( ) => {
             value={valueSelected}
           />
         </div>
-        {workshops.map( workshop => (
-          <Workshop key={workshop._id} {...workshop} />
-        ))}
+        {workshops 
+          ? workshops.map( workshop => ( <Workshop key={workshop._id} {...workshop} /> ))
+          : <span>Hoy no hay taller</span>
+        }
       </div>
     </div>
   );
