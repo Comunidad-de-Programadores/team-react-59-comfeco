@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Workshop = ({ id, title, hour, attendant }) => {
+const Workshop = ({ id, name, hour, attendant }) => {
   return(
     <div id ={id} className="card-taller-body">
       <div className="card-taller-content">
@@ -9,7 +9,7 @@ const Workshop = ({ id, title, hour, attendant }) => {
           </svg>
         </div>
         <div className="card-taller-text">
-          <span className="card-taller-title">{ title }</span>
+          <span className="card-taller-title">{ name }</span>
           <span className="card-taller-hora">{ hour }</span>
           <span className="card-taller-subtext">By<span className="card-taller-name">{ attendant }</span></span>
         </div>
