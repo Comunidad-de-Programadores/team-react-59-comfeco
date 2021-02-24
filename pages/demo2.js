@@ -162,13 +162,17 @@ const demo2 = () => {
             }}
           >
             <CardSvelte
-              avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
-              nameAvatar="Oscar barajas"
+              avatar="/leader/svelte-leader-oscar-barajas.png"
+              nameAvatar="oscar barajas"
               descripction="Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam voluptate nostrum."
-              team="react"
-              idshow="andssadasdaular"
-              idCont="rdasasasdsact"
-              idIcon="addsfkil"
+              facebook="#"
+              github="#"
+              twitter="#"
+              linkedin="#"
+              team="svelte"
+              idshow="svelte1"
+              idCont="svelte2"
+              idIcon="svelte3"
             />
           </div>
 
@@ -182,13 +186,17 @@ const demo2 = () => {
             }}
           >
             <CardSvelte
-              avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
-              nameAvatar="Oscar barajas"
+              avatar="/leader/svelte-leader-manuel-muño.png"
+              nameAvatar="manuel muñoz"
               descripction="Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam voluptate nostrum."
-              team="react"
-              idshow="andssadasddsaular"
-              idCont="rdasasasddssact"
-              idIcon="addsdsafkil"
+              facebook="#"
+              github="#"
+              twitter="#"
+              linkedin="#"
+              team="svelte"
+              idshow="svelte4"
+              idCont="svelte5"
+              idIcon="svelte6"
             />
           </div>
 
@@ -202,13 +210,41 @@ const demo2 = () => {
             }}
           >
             <CardSvelte
-              avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
-              nameAvatar="Oscar barajas"
+              avatar="/leader/svelte-leader-silvestre-vivo.png"
+              nameAvatar="silvestre vivo"
               descripction="Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam voluptate nostrum."
-              team="react"
-              idshow="andssadsadasdaular"
-              idCont="rdasasaadsdsdsact"
-              idIcon="addsfsadkil"
+              facebook="#"
+              github="#"
+              twitter="#"
+              linkedin="#"
+              team="svelte"
+              idshow="svelte7"
+              idCont="svelte8"
+              idIcon="svelte9"
+            />
+          </div>
+
+          <div
+            className="swiper-slide"
+            onMouseEnter={() => {
+              swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              window.swiper.autoplay.start();
+            }}
+          >
+             <CardSvelte
+              avatar="/leader/svelte-leader-marcos-rivas.png"
+              nameAvatar="marcos rivas"
+              descripction="Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam voluptate nostrum."
+              facebook="#"
+              github="#"
+              twitter="#"
+              linkedin="#"
+              team="svelte"
+              idshow="svelte10"
+              idCont="svelte11"
+              idIcon="svelte12"
             />
           </div>
 
@@ -222,16 +258,19 @@ const demo2 = () => {
             }}
           >
             <CardSvelte
-              avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
-              nameAvatar="Oscar barajas"
+              avatar="/leader/svelte-leader-noah-kaufman.png"
+              nameAvatar="noah kaufman"
               descripction="Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam voluptate nostrum."
-              team="react"
-              idshow="andssadasdaasdular"
-              idCont="rdasasasdasdsact"
-              idIcon="addsfkasdail"
+              facebook="#"
+              github="#"
+              twitter="#"
+              linkedin="#"
+              team="svelte"
+              idshow="svelte13"
+              idCont="svelte14"
+              idIcon="svelte15"
             />
           </div>
-
           <div
             className="swiper-slide"
             onMouseEnter={() => {
@@ -242,30 +281,17 @@ const demo2 = () => {
             }}
           >
             <CardSvelte
-              avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
-              nameAvatar="Oscar barajas"
+              avatar="/leader/svelte-leader-noah-kaufman.png"
+              nameAvatar="noah kaufman"
               descripction="Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam voluptate nostrum."
+              facebook="#"
+              github="#"
+              twitter="#"
+              linkedin="#"
               team="angular"
-              idshow="andulbdar"
-              idCont="rdassdgact"
-            />
-          </div>
-          <div
-            className="swiper-slide"
-            onMouseEnter={() => {
-              swiper.autoplay.stop();
-            }}
-            onMouseLeave={() => {
-              window.swiper.autoplay.start();
-            }}
-          >
-            <CardSvelte
-              avatar="/sponsors-oficiales/leader-oscar_barajas_lites.png"
-              nameAvatar="Oscar barajas"
-              descripction="Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam voluptate nostrum."
-              team="angular"
-              idshow="g"
-              idCont="rdaadsssact"
+              idshow="svelte13"
+              idCont="svelte14"
+              idIcon="svelte15"
             />
           </div>
 
