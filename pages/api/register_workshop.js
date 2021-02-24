@@ -13,18 +13,20 @@ export default async function handler(req, res) {
   await connectdb();
 
   if (req.method === "POST") {
-    const { name, hour, date, attendant, group } = req.body;
+    const { name, date, hour, zone, attendant, group } = req.body;
 
     //Verify the values
     if (
       name == "" ||
-      hour == "" ||
       date == "" ||
+      hour == "" ||
+      zone == "" ||
       attendant == "" ||
       group == "" ||
       !name ||
-      !hour ||
       !date ||
+      !hour ||
+      !zone ||
       !attendant ||
       !group
     ) {
@@ -35,8 +37,9 @@ export default async function handler(req, res) {
     const register = await new Workshop({
       type: "default",
       name,
-      hour,
       date,
+      hour,
+      zone,
       attendant,
       group
     }).save();

@@ -4,8 +4,9 @@ const Workshop = new mongoose.Schema(
   {
     type: { type: String, required: true },
     name: { type: String },
-    hour: { type: String},
     date: { type: String},
+    hour: { type: String},
+    zone: { type: String},
     attendant: { type: String},
     group: { type: String}
   },

@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Select from 'react-select';
 import Workshop from './Workshop';
 import A from '../../nano/A';
-
+import moment from 'moment';
+import 'moment-timezone';
 
 const Workshops = ( ) => {
   const [workshops, setWorkshops] = useState([]);
   const [group, setGroup] = useState([{value:'',label:''}]);
   const [valueSelected, setValueSelected] = useState([]);
-
   
   const getGroupWorkshops = async () => {
     const data = await fetch("/api/get_groupworkshops");
@@ -23,6 +23,40 @@ const Workshops = ( ) => {
   const selectedGroup = (valueSelected) => {
     setValueSelected(valueSelected);
   }
+
+  const calcTime = () => {
+    let dateTime = "23/02/2021 16:00";
+    dateTime = moment(dateTime, 'DD/MM/YYYY HH:mm').format('YYYY-MM-DD HH:mm');
+    dateTime = moment.tz(dateTime, "America/Mexico_City").format();
+    dateTime = moment(dateTime).tz("America/Lima");
+    const hourString = dateTime.format('LT');
+    console.log(hourString);
+  }
+
+  const compareDate = () => {
+    let dateTime = "25/02/2021 16:00";
+    dateTime = moment(dateTime, 'DD/MM/YYYY HH:mm').format('YYYY-MM-DD HH:mm');
+    dateTime = moment.tz(dateTime, "America/Mexico_City");
+    dateTime = moment(dateTime).tz("America/Lima").format('L');
+    let dateToday = moment().format('L');
+    let dateTomorrow = moment().add(1, 'days').format('L');
+    
+    if( dateToday === dateTime) {
+      console.log("Es hoy");
+    }
+
+    if( dateTomorrow === dateTime) {
+      console.log("Es mañana");
+    }
+  }
+
+  useEffect(() => {
+    let mounted = true;
+    
+    calcTime();
+    compareDate();
+    return () => mounted = false;
+  }, [])
 
   useEffect(() => {
     let mounted = true;
