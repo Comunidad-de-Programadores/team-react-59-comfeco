@@ -9,10 +9,44 @@ header {
   position: fixed;
   width: 100%;
   z-index: 100;
+<<<<<<< HEAD
   background-color: transparent;
   transition: $transicion600ms;
   border-bottom: 2px solid transparent;
 
+=======
+
+  .user_nav {
+    background: rgba(white, 0.5);
+    padding: 5px;
+    border-radius: 10px;
+
+    p {
+      margin-right: 10px;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    button {
+      padding: 10px;
+      border: white 1px solid;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        transition: all ease 0.3s;
+        background: white !important;
+        color: #111;
+      }
+    }
+  }
+>>>>>>> social-auths
 }
 
 .containerHeader {
@@ -120,17 +154,16 @@ header {
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  header{
+  header {
     background-color: #111;
     width: 100%;
     border-bottom: 2px solid #fff;
     .containerHeader {
       border-bottom: none;
-      
-  }
+    }
   }
 
-  main{
+  main {
     margin-top: 95px !important;
   }
 }
