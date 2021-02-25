@@ -1,7 +1,7 @@
 @import "variables.scss";
 
 header {
-  background-color: $colorBody;
+  /* background-color: $colorBody; */
   align-items: center;
   height: fit-content;
   justify-content: center;
@@ -9,11 +9,16 @@ header {
   position: fixed;
   width: 100%;
   z-index: 100;
+  background-color: transparent;
+  transition: $transicion600ms;
+  border-bottom: 2px solid transparent;
+
 }
 
 .containerHeader {
   align-items: center;
   border-bottom: $borderHeaderFooter;
+  transition: $transicion600ms;
   display: flex;
   height: 75px;
   justify-content: center;
@@ -97,6 +102,19 @@ header {
 
     .ico {
       font-size: 18px;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px){
+  header.menuFixed{
+    background-color: $colorBackgroundColorFixed;
+    transition: $transicion600ms;
+    border-bottom: $borderHeaderFooter;
+
+    .containerHeader {
+      border-bottom: 2px solid transparent;
+      transition: $transicion600ms;
     }
   }
 }

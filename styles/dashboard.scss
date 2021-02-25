@@ -2,27 +2,26 @@
 
 .dashboard {
   min-height: calc(100% - 50px - 75px);
-  background-color: $formBackgroundDashboard;
+  /* background-color: $formBackgroundDashboard; */
 }
 
 #content{
   display: grid;
-  grid-template-columns: 20% auto 20%;
+  grid-template-columns: auto 20% ;
   grid-auto-rows: auto;
   grid-gap: 15px;
   width: 90%;
   margin: 0 auto;
   padding:15px;
   grid-template-areas:
-    "panel-comunidad panel-cabecera     panel-taller"
-    "panel-comunidad panel-colaborador  panel-taller"
-    "panel-comunidad panel-sponsor      panel-taller"
-    "panel-comunidad panel-timer        panel-taller"
-    
+    " panelCabecera    containerPaneles"
+    " panelColaborador containerPaneles"
+    " panelSponsor     containerPaneles"
+    " panelTimer       containerPaneles"
 }
 
-.panel-cabecera{
-  grid-area: panel-cabecera;
+.panelCabecera{
+  grid-area: panelCabecera;
   h1, h3 {
     text-align: center;
   }
@@ -39,23 +38,23 @@
     }
   }
 }
-.panel-colaborador{
-  grid-area: panel-colaborador;
+.panelColaborador{
+  grid-area: panelColaborador;
   height: 200px;
 }
-.panel-taller{
-  grid-area: panel-taller;
+.panelTaller{
+  grid-area: panelTaller;
 }
-.panel-sponsor{
-  grid-area: panel-sponsor;
+.panelSponsor{
+  grid-area: panelSponsor;
   height: 150px;
 }
-.panel-timer{
-  grid-area: panel-timer;
+.panelTimer{
+  grid-area: panelTimer;
   background-color: black;
 }
-.panel-comunidad{
-  grid-area: panel-comunidad;
+.panelCom{
+  grid-area: panelCom;
 }
 #content {
   .card-container-com {
@@ -187,11 +186,11 @@
     width: 90%;
     margin: 0 auto;
     grid-template-areas:
-    "panel-cabecera"
-    "panel-colaborador"
-    "panel-sponsor"
-    "panel-comunidad"
-    "panel-taller"
-    "panel-timer"
+    "panelCabecera"
+    "panelColaborador"
+    "panelSponsor"
+    "panelCom"
+    "panelTaller"
+    "panelTimer"
   }
 }

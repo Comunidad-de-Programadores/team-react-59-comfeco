@@ -17,7 +17,7 @@ const Layout = (props) => {
             name="keywords"
             content="comfeco,festival,javascript,react,angular,vue,svelte"
           />
-          <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+          <link rel="shortcut icon" href="./favicon3.png" type="image/x-icon" />
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link

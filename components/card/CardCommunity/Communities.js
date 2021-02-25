@@ -25,7 +25,7 @@ const Communities = () => {
       <div className="card-com">
         <div className="card-com-header">
           <span className="card-com-title"> Comunidades</span>
-          <A type={'a'} css={'card-com-link'} href={'#'}><span>Ver más</span></A>
+          <A css={'card-com-link'} href={'#'}><span>Ver más</span></A>
         </div>
         { communities.map( community => (
           <Community key={ community._id } {...community} />

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?pidj7v');
-  src:  url('fonts/icomoon.eot?pidj7v#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?pidj7v') format('truetype'),
-    url('fonts/icomoon.woff?pidj7v') format('woff'),
-    url('fonts/icomoon.svg?pidj7v#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?7a5r9q');
+  src:  url('fonts/icomoon.eot?7a5r9q#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?7a5r9q') format('truetype'),
+    url('fonts/icomoon.woff?7a5r9q') format('woff'),
+    url('fonts/icomoon.svg?7a5r9q#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,8 +25,51 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-reply:before {
-  content: "\e90d";
+.icon-angular:before {
+  content: "\e901";
+  color: #dd0031;
+}
+.icon-react:before {
+  content: "\e903";
+  color: #61dafb;
+}
+.icon-svelte:before {
+  content: "\e905";
+  color: #ff3e00;
+}
+.icon-vue-dot-js:before {
+  content: "\e909";
+  color: #4fc08d;
+}
+.icon-linkedin:before {
+  content: "\e90c";
+}
+.icon-twitter:before {
+  content: "\e910";
+}
+.icon-menu:before {
+  content: "\e90f";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-facebook-f:before {
+  content: "\f09a";
+}
+.icon-github:before {
+  content: "\f09b";
+}
+.icon-chevron-left:before {
+  content: "\f053";
+}
+.icon-chevron-right:before {
+  content: "\f054";
+}
+.icon-lock:before {
+  content: "\e902";
+}
+.icon-mail-envelope-closed:before {
+  content: "\e904";
 }
 .icon-send:before {
   content: "\e906";
@@ -60,6 +103,9 @@
 }
 .icon-checkmark:before {
   content: "\e943";
+}
+.icon-reply:before {
+  content: "\e90d";
 }
 .icon-navigation-more:before {
   content: "\e912";
