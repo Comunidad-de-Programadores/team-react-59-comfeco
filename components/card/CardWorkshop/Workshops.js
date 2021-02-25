@@ -87,7 +87,7 @@ const Workshops = ( ) => {
           />
         </div>
         {workshops 
-          ? workshops.map( workshop => ( <Workshop key={workshop._id} {...workshop} /> ))
+          ? workshops.map( workshop => ( <Workshop key={ workshop._id } {...workshop} /> ))
           : <span>Hoy no hay taller</span>
         }
       </div>
