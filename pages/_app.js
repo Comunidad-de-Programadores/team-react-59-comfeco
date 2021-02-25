@@ -6,7 +6,7 @@ import "../styles/icons/fonts.css";
 /* Estilos globales */
 import "../styles/globals.scss";
 import "../styles/header.scss";
-/* import "../styles/footer.scss"; */
+import "../styles/footer.scss";
 
 /* Estilos de los componentes de los formularios de registro */
 import "../styles/form/formRegisterLogin.scss";
