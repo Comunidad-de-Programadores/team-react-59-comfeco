@@ -22,8 +22,5 @@
     "react-dom": "17.0.1",
     "react-select": "^4.1.0",
     "sass": "^1.32.7"
-    "uuidv4": "^6.2.6"
-    "swiper": "^6.4.15",
-    "react-slick": "^0.28.0",
   }
 }
