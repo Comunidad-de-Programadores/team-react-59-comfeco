@@ -10,7 +10,7 @@ main {
   width: 100%;
 }
 
-.backgroundRegister {
+/* .backgroundRegister {
   background: $colorGray1;
 
   background: linear-gradient(
@@ -26,14 +26,14 @@ main {
     #009688,
     #673ab7,
     $colorFuchia2,
-    /* $colorFuchia1, */ $colorYellow1
+    
   );
   height: 120vh;
   position: fixed;
   top: 0;
   width: 120vw;
   z-index: -1;
-}
+} */
 @media screen and (max-width: 768px) {
   main {
     margin-top: 90px;

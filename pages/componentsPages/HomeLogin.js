@@ -6,7 +6,7 @@ import ResetPassword from "../../components/forms/ResetPassword";
 const HomeLogin = () => {
   return (
     <main className="row col-xs-12">
-      <div className="backgroundRegister "></div>
+      {/* <div className="backgroundRegister "></div> */}
       <div className="containerSesion row between-md center-xs">
         <div className="containerText col-xs-12 col-md-5 ">
           <div className="title">

@@ -16,8 +16,11 @@ const demoHome = () => {
     <Layout>
       {!tokenSessExist && !tokenLocalExist ? (
         <>
-          <HomeLogin />
-          <HomeDashboard />
+          <div className="containerNotLogin">
+            <div className="backgroundHome"></div>
+            <HomeLogin />
+            <HomeDashboard />
+          </div>
         </>
       ) : (
         <HomeDashboard />
