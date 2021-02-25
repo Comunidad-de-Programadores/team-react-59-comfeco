@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 
-const CardSvelte = ({
+const CardLeader = ({
   avatar,
   nameAvatar,
   descripction,
@@ -174,4 +174,4 @@ const CardSvelte = ({
   );
 };
 
-export default CardSvelte;
+export default CardLeader;
