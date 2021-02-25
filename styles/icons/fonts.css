@@ -58,6 +58,9 @@
 .icon-lock:before {
   content: "\e902";
 }
-.icon-mail-envelope-closed:before {
-  content: "\e904";
+.icon-checkmark:before {
+  content: "\e943";
+}
+.icon-navigation-more:before {
+  content: "\e912";
 }
