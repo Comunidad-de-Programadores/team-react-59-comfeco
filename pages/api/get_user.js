@@ -30,40 +30,28 @@ export default async function handler(req, res) {
         res.status(200).json({ nickname: user.nickname, email: user.email });
         break;
       case "twitter":
-        res
-          .status(200)
-          .json({
-            image: content.image,
-            nickname: user.nickname,
-            email: user.email,
-          });
+        res.status(200).json({
+          image: content.image,
+          nickname: user.nickname,
+        });
         break;
       case "github":
-        res
-          .status(200)
-          .json({
-            image: content.image,
-            nickname: user.nickname,
-            email: user.email,
-          });
+        res.status(200).json({
+          image: content.image,
+          nickname: user.nickname,
+        });
         break;
       case "facebook":
-        res
-          .status(200)
-          .json({
-            image: content.image,
-            nickname: user.nickname,
-            email: user.email,
-          });
+        res.status(200).json({
+          image: content.image,
+          nickname: user.nickname,
+        });
         break;
       case "google":
-        res
-          .status(200)
-          .json({
-            image: content.image,
-            nickname: user.nickname,
-            email: user.email,
-          });
+        res.status(200).json({
+          image: content.image,
+          nickname: user.nickname,
+        });
         break;
       case "linkedin":
         res.status(200).json({ nickname: user.nickname });

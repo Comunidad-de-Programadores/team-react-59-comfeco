@@ -54,6 +54,7 @@ const Login = () => {
     e.preventDefault();
 
     const padre = e.target.parentNode;
+    e.target.elements[2].innerText = "...";
 
     const req = await fetch("/api/login", {
       method: "POST",
@@ -67,6 +68,7 @@ const Login = () => {
     const res = await req.json();
     if (res.error) {
       padre.style.border = "red 1px solid";
+      e.target.elements[2].innerText = "Acceder";
       setData({
         error: true,
         message: res.error,

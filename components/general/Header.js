@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Router from "next/router";
 import Link from "next/link";
+import md5 from "md5";
 
 import Image from "next/image";
 import Icono from "../nano/Icono";
@@ -8,7 +9,7 @@ import Icono from "../nano/Icono";
 const Header = () => {
   const [localToken, setLocalToken] = useState(false);
   const [sessToken, setSessToken] = useState(false);
-  const [user, setUser] = useState({ nickname: "", email: "", image: null });
+  const [user, setUser] = useState({ nickname: "", email: null, image: null });
 
   const verifyToken = (type) => {
     fetch("/api/get_user", {
@@ -43,6 +44,14 @@ const Header = () => {
     }
   }, [localToken, sessToken]);
 
+  useEffect(() => {
+    if (user.email) {
+      const hash = md5(user.email);
+      const image = `https://www.gravatar.com/avatar/${hash}?d=identicon`;
+      setUser({ ...user, image });
+    }
+  }, [user.email]);
+
   const logout = () => {
     localStorage.removeItem("token");
     sessionStorage.removeItem("token");
@@ -68,67 +77,34 @@ const Header = () => {
             </Link>
           </div>
           <div className="col-xs-9 navegation">
+            {/*Verify User localstorage*/}
             {localToken && (
-              <nav>
-                <p style={{ marginRight: 10 }}>{user.nickname}</p>
-                {user.image && (
-                  <img
-                    src={user.image}
-                    style={{
-                      width: "50px",
-                      height: "50px",
-                      marginRight: "10px",
-                      borderRadius: "50%",
-                    }}
-                  />
+              <nav className="user_nav">
+                {/* Image verify */}
+                {user.image ? (
+                  <img src={user.image} />
+                ) : (
+                  <img src="/no_user.jpg" />
                 )}
-                <button
-                  onClick={logout}
-                  style={{
-                    padding: "10px",
-                    border: "white 1px solid",
-                    borderRadius: "10px",
-                    color: "white",
-                    cursor: "pointer",
-                  }}
-                >
-                  Logout
-                </button>
+
+                <p>{user.nickname}</p>
+
+                <button onClick={logout}>Logout</button>
               </nav>
             )}
+            {/*Verify User session*/}
             {sessToken && (
-              <nav>
-                <p style={{ marginRight: 10 }}>{user.nickname}</p>
-                <button
-                  onClick={logout}
-                  style={{
-                    padding: "10px",
-                    border: "white 1px solid",
-                    borderRadius: "10px",
-                    color: "white",
-                    cursor: "pointer",
-                  }}
-                >
-                  Logout
-                </button>
+              <nav className="user_nav">
+                {/* Image Verify */}
+                {user.image ? (
+                  <img src={user.image} />
+                ) : (
+                  <img src="/no_user.jpg" />
+                )}
+                <p>{user.nickname}</p>
+                <button onClick={logout}>Logout</button>
               </nav>
             )}
-            {/*  <nav>
-              <ul>
-                <li>
-                  <Link href="/">Inicio</Link>
-                </li>
-                <li>
-                  <Link href="/hola">Tool1</Link>
-                </li>
-                <li>
-                  <Link href="#">Tool2</Link>
-                </li>
-                <li>
-                  <Link href="#">Tool3</Link>
-                </li>
-              </ul>
-            </nav> */}
           </div>
         </div>
         <div className="row center-xs containerHeader headerPhone">
