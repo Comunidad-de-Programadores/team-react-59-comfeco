@@ -14,15 +14,15 @@
   margin: 0 auto;
   padding:15px;
   grid-template-areas:
-    "panelCom panelCabecera     panelTaller"
-    "panelCom panelColaborador  panelTaller"
-    "panelCom panelSponsor      panelTaller"
-    "panelCom panelTimer        panelTaller"
+    "panel-comunidad panel-cabecera     panel-taller"
+    "panel-comunidad panel-colaborador  panel-taller"
+    "panel-comunidad panel-sponsor      panel-taller"
+    "panel-comunidad panel-timer        panel-taller"
     
 }
 
-.panelCabecera{
-  grid-area: panelCabecera;
+.panel-cabecera{
+  grid-area: panel-cabecera;
   h1, h3 {
     text-align: center;
   }
@@ -39,23 +39,23 @@
     }
   }
 }
-.panelColaborador{
-  grid-area: panelColaborador;
+.panel-colaborador{
+  grid-area: panel-colaborador;
   height: 200px;
 }
-.panelTaller{
-  grid-area: panelTaller;
+.panel-taller{
+  grid-area: panel-taller;
 }
-.panelSponsor{
-  grid-area: panelSponsor;
+.panel-sponsor{
+  grid-area: panel-sponsor;
   height: 150px;
 }
-.panelTimer{
-  grid-area: panelTimer;
+.panel-timer{
+  grid-area: panel-timer;
   background-color: black;
 }
-.panelCom{
-  grid-area: panelCom;
+.panel-comunidad{
+  grid-area: panel-comunidad;
 }
 #content {
   .card-container-com {
@@ -80,7 +80,6 @@
       }
       .card-com-content {
         display: flex;
-        justify-content: space-between;
         align-items: center;
       }
       
@@ -188,11 +187,11 @@
     width: 90%;
     margin: 0 auto;
     grid-template-areas:
-    "panelCabecera"
-    "panelColaborador"
-    "panelSponsor"
-    "panelCom"
-    "panelTaller"
-    "panelTimer"
+    "panel-cabecera"
+    "panel-colaborador"
+    "panel-sponsor"
+    "panel-comunidad"
+    "panel-taller"
+    "panel-timer"
   }
 }
