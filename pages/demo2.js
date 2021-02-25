@@ -35,7 +35,7 @@ const demo2 = () => {
 
   return (
     <>
-      <div className="swiper-container">
+      <div className="swiper-container swiperSleader">
         <div className="swiper-wrapper">
           <div
             className="swiper-slide"

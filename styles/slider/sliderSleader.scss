@@ -1,23 +1,5 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@import "../variables.scss";
 
-$colorTeamSvelte: #ff3e00;
-$colorTeamReact: #0d47a1;
-$colorTeamVue: #41b883;
-$colorTeamAngular: #e23237;
-$transicion600msLineal2: 1000ms linear all;
-$colorBackgroundBlackLigt: #05070b;
-$colorBackgroundBlackLigt: #17171d;
-$transicion600ms: all 600ms ease;
-
-body {
-  font-family: Lato;
-  display: flex;
-  min-height: 100vh;
-}
 .backgroundColor {
   background: linear-gradient(
     to top,
@@ -382,78 +364,6 @@ main {
       }
     }
   }
-}
-
-/* Colores de las redes sociales */
-.instagram {
-  border-radius: 5px;
-  color: #c15a3a !important;
-}
-
-.twitter {
-  border-radius: 5px;
-  color: #00acee !important;
-}
-
-.linkedin {
-  color: #0077b5 !important;
-}
-
-.github {
-  color: #ee216b !important;
-}
-
-.facebook {
-  color: #3b5998 !important;
-}
-
-/* botones */
-
-a.btn2 {
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  height: 80px;
-
-  justify-content: center;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  transition: $transicion600msLineal2;
-  overflow: hidden;
-  width: 250px;
-  will-change: transform;
-}
-
-.btn2::before,
-.btn2::after {
-  position: absolute;
-  content: "";
-  border: 0px solid;
-  transition: $transicion600msLineal2;
-  z-index: 100;
-}
-
-.btn2::before {
-  bottom: 0;
-  left: 0;
-  border-color: transparent transparent transparent #fff;
-}
-
-.btn2::after {
-  top: 0;
-  right: 0;
-  border-color: transparent #fff transparent transparent;
-}
-
-.btn2:hover {
-  color: #fff;
-}
-
-.btn2:hover::before,
-.btn2:hover::after {
-  border-width: 80px 260px;
 }
 
 /* Animaciones */
