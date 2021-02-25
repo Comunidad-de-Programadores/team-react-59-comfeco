@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-
+import A from "../nano/A";
+import Icono from "../nano/Icono";
 
 const CardLeader = ({
   avatar,
@@ -19,36 +20,35 @@ const CardLeader = ({
     const idAllContainerCard = document.querySelectorAll(`#${idCont}`);
     const idAllshowInformation = document.querySelectorAll(`#${idshow}`);
     const idAllIconShowInformation = document.querySelectorAll(`#${idIcon}`);
-    const length1 = idAllContainerCard.length;
+    /* const length1 = idAllContainerCard.length; */
 
-    for (let i = 0; i < length1; i++) {
-      idAllContainerCard[i].classList.toggle("activeRight");
+    /* for (let i = 0; i < length1; i++) { */
+    idAllContainerCard[1].classList.toggle("activeRight");
 
-      idAllshowInformation[i].classList.add("activeAnimation");
+    idAllshowInformation[1].classList.add("activeAnimation");
 
-      idAllshowInformation[i].classList.toggle("activeRightButton");
+    idAllshowInformation[1].classList.toggle("activeRightButton");
 
-      setTimeout(() => {
-        idAllshowInformation[i].classList.remove("activeAnimation");
-      }, 1500);
+    setTimeout(() => {
+      idAllshowInformation[1].classList.remove("activeAnimation");
+    }, 1500);
 
-      idAllIconShowInformation[i].classList.toggle("icon-menu");
+    idAllIconShowInformation[1].classList.toggle("icon-menu");
 
-      idAllIconShowInformation[i].classList.toggle("icon-reply");
-    }
+    idAllIconShowInformation[1].classList.toggle("icon-reply");
+    /*   } */
   };
   return (
     <>
       {/*  <div className="backgroundColor"></div> */}
       <div className={`${team} container2`}>
         <div className="showInformation" id={idshow}>
-          {/*  {console.log(id2)} */}
           <button
             onClick={() => {
               showInformation();
             }}
           >
-            <span className="ico icon-menu" id={idIcon}></span>
+            <Icono css="icon-menu" id={idIcon} />
           </button>
         </div>
         <div className="containerCard" id={idCont}>
@@ -146,24 +146,24 @@ const CardLeader = ({
             <div className="redesSocials">
               <ul>
                 <li className="btn2">
-                  <a href={facebook} className="">
-                    <span className="ico icon-facebook facebook"></span>
-                  </a>
+                  <A type="a" href={facebook}>
+                    <Icono css="icon-facebook facebook" />
+                  </A>
                 </li>
                 <li className="btn2">
-                  <a href={github} className="">
-                    <span className="ico icon-github github"></span>
-                  </a>
+                  <A type="a" href={github}>
+                    <Icono css="icon-github github" />
+                  </A>
                 </li>
                 <li className="btn2">
-                  <a href={twitter} className="">
-                    <span className="ico icon-twitter twitter"></span>
-                  </a>
+                  <A type="a" href={twitter}>
+                    <Icono css="icon-twitter twitter" />
+                  </A>
                 </li>
                 <li className="btn2">
-                  <a href={linkedin} className="">
-                    <span className="ico icon-linkedin linkedin"></span>
-                  </a>
+                  <A type="a" href={linkedin}>
+                    <Icono css="icon-linkedin linkedin" />
+                  </A>
                 </li>
               </ul>
             </div>

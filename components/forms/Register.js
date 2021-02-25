@@ -210,7 +210,7 @@ const Register = () => {
         <p>
           Al registrarte, estas aceptando los{" "}
           <A href={"/terminos-y-condiciones"}>Términos y condiciones</A>, y la
-          <A> Política de privacidad y protección de datos</A> de COMFECO.
+          <A href="/politica-de-privacidad-y-protección-de-datos"> Política de privacidad y protección de datos</A> de COMFECO.
         </p>
       </div>
     </div>
