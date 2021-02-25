@@ -18,8 +18,10 @@ const demoHome = () => {
         <>
           <div className="containerNotLogin">
             <div className="backgroundHome"></div>
-            <HomeLogin />
-            <HomeDashboard />
+            <main className="row col-xs-12">
+              <HomeLogin />
+              <HomeDashboard />
+            </main>
           </div>
         </>
       ) : (

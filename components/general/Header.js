@@ -3,6 +3,7 @@ import Router from "next/router";
 
 import Image from "next/image";
 import Icono from "../nano/Icono";
+import $ from "../nano/$";
 
 const Header = () => {
   const [localToken, setLocalToken] = useState(false);
@@ -30,6 +31,11 @@ const Header = () => {
   useEffect(() => {
     setLocalToken(!!localStorage.getItem("token"));
     setSessToken(!!sessionStorage.getItem("token"));
+    
+
+    window.onscroll = () => {
+      scrollHeader()
+    }
   }, []);
 
   useEffect(() => {
@@ -50,10 +56,23 @@ const Header = () => {
     Router.reload();
   };
 
+
+
+
+  const scrollHeader = () =>{
+
+    let altura = $("headerDesktop").offsetTop
+
+    if (window.pageYOffset > altura) {
+      $("headerDesktop").classList.add("menuFixed")
+    } else {
+      $("headerDesktop").classList.remove("menuFixed")
+    }
+  }
   return (
     <>
-      <header className="row col-xs-12">
-        <div className="row containerHeader headerDesktop">
+      <header className="row col-xs-12" id="headerDesktop">
+        <div className="row containerHeader headerDesktop" >
           <div className="col-xs-3">
             <Image
               src="/logo1.png"

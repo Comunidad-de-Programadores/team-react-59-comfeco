@@ -7,17 +7,17 @@
 
 #content{
   display: grid;
-  grid-template-columns: 20% auto 20%;
+  grid-template-columns: auto 20% ;
   grid-auto-rows: auto;
   grid-gap: 15px;
   width: 90%;
   margin: 0 auto;
   padding:15px;
   grid-template-areas:
-    "panelCom panelCabecera     panelTaller"
-    "panelCom panelColaborador  panelTaller"
-    "panelCom panelSponsor      panelTaller"
-    "panelCom panelTimer        panelTaller"
+    " panelCabecera    containerPaneles"
+    " panelColaborador containerPaneles"
+    " panelSponsor     containerPaneles"
+    " panelTimer       containerPaneles"
     
 }
 
