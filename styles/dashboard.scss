@@ -31,35 +31,34 @@
   /* box-shadow: 900px 3px 1px #ff0081, -900px 3px 1px #ff0081; */
   width: 90%;
 
-  *{
+  * {
     font-family: $fontTitle;
   }
   h1 {
     width: 100%;
     color: #fff;
     margin-bottom: 0px;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
   }
   h3 {
-    letter-spacing: .3px;
+    letter-spacing: 0.3px;
     margin-bottom: 0px;
-    color: rgb(255, 255, 255, .9);
+    color: rgb(255, 255, 255, 0.9);
   }
   .text {
-   color: #fff;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 90%;
-   margin-bottom: 25px;
-   letter-spacing: .3px;
-   
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 25px;
+    letter-spacing: 0.3px;
   }
 }
 .panelColaborador {
   width: 100%;
 
-  .swiper-container{
+  .swiper-container {
     width: 100%;
   }
 }

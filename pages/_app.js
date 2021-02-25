@@ -25,6 +25,9 @@ import "../styles/dashboard.scss";
 /* Clase para meter nuevos estilos (Uxiliar) */
 import "../styles/demo.scss";
 
+/* Estilos del Deadline */
+import "../styles/deadline.scss";
+
 import { Provider } from "next-auth/client";
 
 function MyApp({ Component, pageProps }) {

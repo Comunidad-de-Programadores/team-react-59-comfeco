@@ -24,6 +24,7 @@
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "17.0.1",
     "react-select": "^4.1.0",
-    "sass": "^1.32.7"
+    "sass": "^1.32.7",
+    "swiper": "^6.4.15"
   }
 }
