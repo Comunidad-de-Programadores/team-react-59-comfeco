@@ -10,6 +10,9 @@
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
     "jsonwebtoken": "^8.5.1",
+    "login-with-twitter": "^1.2.4",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
     "mongoose": "^5.11.16",
     "next": "10.0.6",
     "next-absolute-url": "^1.2.2",
@@ -17,9 +20,10 @@
     "react": "17.0.1",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "17.0.1",
-    "react-slick": "^0.28.0",
-    "sass": "^1.32.7",
-    "swiper": "^6.4.15",
+    "react-select": "^4.1.0",
+    "sass": "^1.32.7"
     "uuidv4": "^6.2.6"
+    "swiper": "^6.4.15",
+    "react-slick": "^0.28.0",
   }
 }

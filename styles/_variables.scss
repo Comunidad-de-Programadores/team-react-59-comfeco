@@ -28,6 +28,7 @@ $colorYellow4: #ffcb38;
 $colorYellow5: #ffd767;
 $colorYellow6: #ffe499;
 
+$colorBody: #282828;
 $colorTeamSvelte: #ff3e00;
 $colorTeamReact: #0d47a1;
 $colorTeamVue: #41b883;
@@ -40,7 +41,7 @@ $fontBasic: "Lato", "Crete Round", sans-serif;
 $fontTitle: "Crete Round", "Lato", sans-serif;
 
 $border: 1px solid #fff;
-
+$borderRadius: 4px;
 $transicion600ms: all ease 600ms;
 $transicion600msLineal: all 600ms;
 $transitionS1: 1s ease all;
@@ -53,3 +54,5 @@ $colorSelection: $colorPurple3;
 
 $formBackground: $colorPurple1;
 $formInputBackground: $colorPurple2;
+$formInputBackground:$colorPurple2;
+$formBackgroundDashboard: $colorWhite;

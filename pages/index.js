@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Layout from "../components/general/Layout";
+import HomeDashboard from "./componentsPages/HomeDashboard";
 import HomeLogin from "./componentsPages/HomeLogin";
+
 const Home = () => {
   const [tokenLocalExist, setTokenLocalExist] = useState(false);
   const [tokenSessExist, setTokenSessExist] = useState(false);
@@ -12,12 +14,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <main className="row col-xs-12">
-        <div className="backgroundRegister "></div>
-        <div className="containerSesion row between-md center-xs">
-          {!tokenSessExist && !tokenLocalExist ? <HomeLogin /> : ""}
-        </div>
-      </main>
+      {!tokenSessExist && !tokenLocalExist ? <HomeLogin /> : <HomeDashboard />}
     </Layout>
   );
 };

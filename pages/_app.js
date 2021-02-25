@@ -21,6 +21,8 @@ import "../styles/slider/sliderSleader.scss";
 /* css para cambiar los colores de la interfas (Proximaente)*/
 import "../styles/colorChange.scss";
 
+import "../styles/dashboard.scss";
+
 /* Clase para meter nuevos estilos (Uxiliar) */
 import "../styles/demo.scss";
 
