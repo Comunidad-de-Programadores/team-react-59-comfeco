@@ -72,7 +72,7 @@ const Workshops = ( ) => {
       <div className="card-taller">
         <div className="card-taller-header">
           <span className="card-taller-title"> Talleres</span>
-          <A type={'a'} css={'card-taller-link'} href={'#'}><span>Ver más</span></A>
+          <A css={'card-taller-link'} href={'#'}><span>Ver más</span></A>
         </div>
         
         <div className="card-taller-event">

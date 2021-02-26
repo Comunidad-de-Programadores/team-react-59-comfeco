@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 import CardLeader from "./CardLeader";
+import Swiper from 'swiper';
 
 const Sleader = () => {
   useEffect(() => {
