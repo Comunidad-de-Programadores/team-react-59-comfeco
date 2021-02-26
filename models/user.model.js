@@ -4,20 +4,45 @@ import bcrypt from "bcrypt-nodejs";
 const User = new mongoose.Schema(
   {
     type: { type: String, required: true },
+    email: { type: String },
     nickname: { type: String, required: true },
-    default: {
-      email: String,
-      password: String,
-    },
-    twitter: {
-      user: String,
-      id: String,
-    },
+    password: { type: String },
+    twitterId: { type: String },
+    twitterName: { type: String },
+    githubId: { type: String },
+    githubName: { type: String },
+    facebookId: { type: String },
+    facebookName: { type: String },
+    googleId: { type: String },
+    googleName: { type: String },
+    linkedinId: { type: String },
+    linkedinName: { type: String },
   },
   {
     timestamps: true,
   }
 );
+
+User.pre("save", function (next) {
+  if (!this.isModified("password")) {
+    return next();
+  }
+
+  bcrypt.genSalt(10, (err, result) => {
+    if (err) {
+      next(err);
+    }
+
+    bcrypt.hash(this.password, result, null, (err, hash) => {
+      if (err) {
+        next(err);
+      }
+
+      this.password = hash;
+      next();
+    });
+  });
+});
 
 User.methods.compare = function (pass, cb) {
   bcrypt.compare(pass, this.password, (err, equal) => {

@@ -1,7 +1,6 @@
 import User from "../../models/user.model";
 import { connectdb } from "../../database/db";
 import jwt from "jsonwebtoken";
-import encryptNewPassword from "../../functions/encryptNewPassword";
 
 export const config = {
   api: {
@@ -41,16 +40,12 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "Nickname existe" });
     }
 
-    const hash = await encryptNewPassword(password);
-
     //Register Users
     const register = await new User({
-      type: "Default",
+      type: "default",
+      email,
+      password,
       nickname,
-      default: {
-        email,
-        password: hash,
-      },
     }).save();
 
     //Create Token

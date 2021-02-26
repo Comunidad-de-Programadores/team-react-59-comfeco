@@ -59,10 +59,12 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const padre = e.target.parentNode;
+    e.target.elements[4].innerHTML = "...";
 
     if (
       e.target.registerPassword.value !== e.target.registerPasswordConfirm.value
     ) {
+      e.target.elements[4].innerHTML = "Crear cuenta";
       padre.style.border = "red 1px solid";
       setData({
         error: true,
@@ -84,6 +86,7 @@ const Register = () => {
     const res = await req.json();
     if (res.error) {
       padre.style.border = "red 1px solid";
+      e.target.elements[4].innerHTML = "Crear cuenta";
       setData({
         error: true,
         message: res.error,
