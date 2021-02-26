@@ -53,4 +53,20 @@
 
     }
 
+    @media (max-width:768px){
+        .content404{
+            img{
+                width: 480px;
+            }
+        }
+    }
+
+    @media (max-width:550px){
+        .content404{
+            img{
+                width: 150%;
+            }
+        }
+    }
+
 }
