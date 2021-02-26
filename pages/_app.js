@@ -13,6 +13,7 @@ import "../styles/colorChange.scss";
 import "../styles/form/newPassword.scss"
 
 import "../styles/demo.scss";
+import "../styles/404/404.scss";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
