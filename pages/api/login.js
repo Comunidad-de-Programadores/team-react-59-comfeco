@@ -12,6 +12,7 @@ export const config = {
 
 export default async function handler(req, res) {
   await connectdb();
+  console.log("hola");
 
   if (req.method === "POST") {
     //Request Body
@@ -28,6 +29,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "Email no existe" });
     }
 
+    console.log("2");
     //Compare password encrypt
     emailExist.compare(password, async (error, equal) => {
       if (error) {
