@@ -3,6 +3,7 @@ import Communities from "../../components/card/CardCommunity/Communities";
 import Workshops from "../../components/card/CardWorkshop/Workshops";
 import Counter from "../../components/deadline/counter";
 import Sleader from "../../components/sliders/Sleader";
+import CorouselSponsors from "../../components/sliders/CorouselSponsors";
 
 const HomeDashboard = () => {
   return (
@@ -20,40 +21,26 @@ const HomeDashboard = () => {
             </p>
           </div>
         </div>
-      </div>
-      <div className="panelColaborador">
-        <div className="title">
-          <h4>Lideres de equipo 2021</h4>
-        </div>
-        <Sleader />
-      </div>
-      <div className="containerPaneles">
-          <div className="panelTaller"> <Workshops /></div>
-          <div className="panelCom">
-            {<Communities />}
+        <div className="panelColaborador">
+          <div className="title">
+            <h4>Lideres de equipo 2021</h4>
           </div>
+          <Sleader />
         </div>
-      
+        <div className="containerPaneles row col-xs-12 around-xs">
+          <div className="panelCom">{<Communities />}</div>
 
-      <div className="content" id="content">
-        {/* <div className="panelCabecera">
-          <h1>Bienvenidos a Community Fest and Code</h1>
-          <h3>¡Conoce gente, aprende y gana!</h3>
-          <div>
-            <span>
-              La próxima edición regresa en el 2022, en la cual se planea
-              involucrar a todos los programadores independientmente del area de
-              conocimiento que se encuentre, todo con un mismo proposito,
-              aprender en comunidad.
-            </span>
+          <div className="panelTimer col-xs-5">
+            <Counter deadline={1614560400}></Counter>
           </div>
-        </div> */}
-        {/* <div className="panelColaborador"></div> */}
-        {<div className="panelSponsor">Sponsors</div>}
-        <div className="panelTimer">
-          <Counter deadline={1614560400}></Counter>
+          <div className="panelTaller">
+            <Workshops />
+          </div>
         </div>
-        
+
+        <div className="panelSponsor">
+          {<CorouselSponsors />}
+        </div>
       </div>
     </>
   );
