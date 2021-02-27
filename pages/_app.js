@@ -1,7 +1,7 @@
 /* estilos de las librerias */
 import "../styles/lib/normalize.scss";
 import "../styles/lib/flexboxGrid.scss";
-import "../styles/icons/fonts.css";
+import "../styles/icons/style.css";
 
 /* Estilos globales */
 import "../styles/globals.scss";
@@ -17,7 +17,7 @@ import "../styles/form/homeLogin.scss";
 import "../styles/slider/swiper.scss";
 import "../styles/slider/estilos.scss";
 import "../styles/slider/sliderSleader.scss";
-
+import "../styles/slider/sliderSponsors.scss";
 /* css para cambiar los colores de la interfas (Proximaente)*/
 import "../styles/colorChange.scss";
 import "../styles/dashboard.scss";
@@ -28,6 +28,9 @@ import "../styles/404/404.scss";
 
 /* Estilos del Deadline */
 import "../styles/deadline.scss";
+
+/* estilos para botones */
+import "../styles/button/btn1.scss";
 
 import { Provider } from "next-auth/client";
 
