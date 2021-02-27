@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?7a5r9q');
-  src:  url('fonts/icomoon.eot?7a5r9q#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?7a5r9q') format('truetype'),
-    url('fonts/icomoon.woff?7a5r9q') format('woff'),
-    url('fonts/icomoon.svg?7a5r9q#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?skibx7');
+  src:  url('fonts/icomoon.eot?skibx7#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?skibx7') format('truetype'),
+    url('fonts/icomoon.woff?skibx7') format('woff'),
+    url('fonts/icomoon.svg?skibx7#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,21 +25,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-angular:before {
-  content: "\e901";
-  color: #dd0031;
-}
-.icon-react:before {
-  content: "\e903";
-  color: #61dafb;
-}
-.icon-svelte:before {
-  content: "\e905";
-  color: #ff3e00;
-}
-.icon-vue-dot-js:before {
+.icon-world:before {
   content: "\e909";
-  color: #4fc08d;
+}
+.icon-globe:before {
+  content: "\e909";
+}
+.icon-internet:before {
+  content: "\e909";
+}
+.icon-network:before {
+  content: "\e909";
+}
+.icon-lock:before {
+  content: "\e902";
+}
+.icon-mail-envelope-closed:before {
+  content: "\e904";
+}
+.icon-network1:before {
+  content: "\e911";
 }
 .icon-linkedin:before {
   content: "\e90c";
@@ -50,26 +55,14 @@
 .icon-menu:before {
   content: "\e90f";
 }
-.icon-facebook:before {
-  content: "\f09a";
+.icon-navigation:before {
+  content: "\e901";
 }
-.icon-facebook-f:before {
-  content: "\f09a";
+.icon-expand_more:before {
+  content: "\e903";
 }
-.icon-github:before {
-  content: "\f09b";
-}
-.icon-chevron-left:before {
-  content: "\f053";
-}
-.icon-chevron-right:before {
-  content: "\f054";
-}
-.icon-lock:before {
-  content: "\e902";
-}
-.icon-mail-envelope-closed:before {
-  content: "\e904";
+.icon-assistant_navigation:before {
+  content: "\e905";
 }
 .icon-send:before {
   content: "\e906";
@@ -91,6 +84,24 @@
 }
 .icon-check-circle:before {
   content: "\e900";
+}
+.icon-check:before {
+  content: "\f00c";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-facebook-f:before {
+  content: "\f09a";
+}
+.icon-github:before {
+  content: "\f09b";
+}
+.icon-chevron-left:before {
+  content: "\f053";
+}
+.icon-chevron-right:before {
+  content: "\f054";
 }
 .icon-reply:before {
   content: "\e90d";
