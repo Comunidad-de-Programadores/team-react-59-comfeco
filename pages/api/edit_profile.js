@@ -7,16 +7,6 @@ export default async function handler(req, res) {
   await connectdb();
 
   if (req.method == "POST") {
-    const {
-      nickname,
-      email,
-      password,
-      image,
-      country,
-      gender,
-      biography,
-    } = req.body;
-
     const token = await extractToken(req);
     if (token.error) {
       return res.status(400).json({ error: "invalid" });
