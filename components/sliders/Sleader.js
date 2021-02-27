@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 import CardLeader from "./CardLeader";
-import Swiper from 'swiper';
 
 const Sleader = () => {
   useEffect(() => {
@@ -19,10 +18,10 @@ const Sleader = () => {
         modifier: 1,
         slideShadows: false,
       },
-      autoplay: {
+      /* autoplay: {
         delay: 1000,
         disableOnInteraction: false,
-      },
+      }, */
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -39,12 +38,12 @@ const Sleader = () => {
         <div className="swiper-wrapper">
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/react-leader-alejandro-nanez.png"
@@ -62,12 +61,12 @@ const Sleader = () => {
           </div>
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/react-leader-lina-maria-montano.png"
@@ -86,12 +85,12 @@ const Sleader = () => {
 
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/react-leader-vanessa-marely.png"
@@ -110,12 +109,12 @@ const Sleader = () => {
 
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/react-leader-lara-diaz.png"
@@ -134,12 +133,12 @@ const Sleader = () => {
 
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/react-leader-diego_plascencia.png"
@@ -158,12 +157,12 @@ const Sleader = () => {
 
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/svelte-leader-oscar-barajas.png"
@@ -182,12 +181,12 @@ const Sleader = () => {
 
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/svelte-leader-manuel-muño.png"
@@ -206,12 +205,12 @@ const Sleader = () => {
 
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/svelte-leader-silvestre-vivo.png"
@@ -230,12 +229,12 @@ const Sleader = () => {
 
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/svelte-leader-marcos-rivas.png"
@@ -254,12 +253,12 @@ const Sleader = () => {
 
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/svelte-leader-noah-kaufman.png"
@@ -277,12 +276,12 @@ const Sleader = () => {
           </div>
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/angular-leader-mayra-rodríguez.png"
@@ -301,12 +300,12 @@ const Sleader = () => {
 
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/angular-leader-Anartz-Mugika -Ledo.png"
@@ -325,12 +324,12 @@ const Sleader = () => {
 
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/angular-leader-bezael-perez.png"
@@ -348,12 +347,12 @@ const Sleader = () => {
           </div>
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/angular-leader-diego-montoya.png"
@@ -372,12 +371,12 @@ const Sleader = () => {
 
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/angular-leader-nicolas-molina.png"
@@ -396,12 +395,12 @@ const Sleader = () => {
 
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/vue-leader-fernando-de-la-rosa.png"
@@ -420,12 +419,12 @@ const Sleader = () => {
 
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/vue-leader-ignacio-anaya.png"
@@ -444,12 +443,12 @@ const Sleader = () => {
 
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/vue-leader-noemi-leon.png"
@@ -467,12 +466,12 @@ const Sleader = () => {
           </div>
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/vue-leader-cristopher-paniagua.png"
@@ -490,12 +489,12 @@ const Sleader = () => {
           </div>
           <div
             className="swiper-slide"
-            onMouseEnter={() => {
+            /* onMouseEnter={() => {
               swiper.autoplay.stop();
             }}
             onMouseLeave={() => {
               window.swiper.autoplay.start();
-            }}
+            }} */
           >
             <CardLeader
               avatar="/leader/vue-leader-manuel-ojeda.png"

@@ -22,8 +22,18 @@ const HomeDashboard = () => {
         </div>
       </div>
       <div className="panelColaborador">
-      <Sleader />
+        <div className="title">
+          <h4>Lideres de equipo 2021</h4>
+        </div>
+        <Sleader />
       </div>
+      <div className="containerPaneles">
+          <div className="panelTaller"> <Workshops /></div>
+          <div className="panelCom">
+            {<Communities />}
+          </div>
+        </div>
+      
 
       <div className="content" id="content">
         {/* <div className="panelCabecera">
@@ -38,17 +48,12 @@ const HomeDashboard = () => {
             </span>
           </div>
         </div> */}
-        <div className="panelColaborador"></div>
-        <div className="panelSponsor">Sponsors</div>
+        {/* <div className="panelColaborador"></div> */}
+        {<div className="panelSponsor">Sponsors</div>}
         <div className="panelTimer">
           <Counter deadline={1614560400}></Counter>
         </div>
-        <div className="containerPaneles">
-          <div className="panelTaller">{/*  <Workshops /> */}</div>
-          <div className="panelCom">
-            <Communities />
-          </div>
-        </div>
+        
       </div>
     </>
   );
