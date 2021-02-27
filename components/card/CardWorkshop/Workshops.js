@@ -51,19 +51,23 @@ const Workshops = ( ) => {
   }, [])
 
   useEffect(() => {
-    if(valueSelected.value !== undefined) {
-      let workShopToday = [];
-      getWorkshops(valueSelected.value).then(items => {
-        items.map((item) => {
-          //Verified isToday
-          if( isToday(item.date, item.hour, item.zone) ) {
-            //Convert Time Zone Local
-            item.hour = convertTimeZoneLocal(item.date, item.hour, item.zone);
-            workShopToday.push(item); 
-          }
+    try {
+      if(valueSelected.value !== undefined) {
+        let workShopToday = [];
+        getWorkshops(valueSelected.value).then(items => {
+          items.map((item) => {
+            //Verified isToday
+            if( isToday(item.date, item.hour, item.zone) ) {
+              //Convert Time Zone Local
+              item.hour = convertTimeZoneLocal(item.date, item.hour, item.zone);
+              workShopToday.push(item); 
+            }
+          });
+          setWorkshops(workShopToday);
         });
-        setWorkshops(workShopToday);
-      });
+      }
+    } catch (error) {
+      console.log("no paso nada!")
     }
   }, [valueSelected]);
 
