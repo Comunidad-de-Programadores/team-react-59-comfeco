@@ -24,6 +24,7 @@ import "../styles/dashboard.scss";
 
 /* Clase para meter nuevos estilos (Uxiliar) */
 import "../styles/demo.scss";
+import "../styles/404/404.scss";
 
 /* Estilos del Deadline */
 import "../styles/deadline.scss";
