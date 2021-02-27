@@ -10,13 +10,28 @@ export default async function handler(req, res) {
       return res.status(200).json({ error: "Put the values" });
     }
 
-    const code = await jwt.verify(token, process.env.Key);
+    const code = await jwt.verify(token, process.env.KEY);
     if (!code) {
       return res.status(401).json({ error: "Invalid token" });
     }
 
+    const emailExist = await User.findOne({ email: code.email });
+    console.log(emailExist);
+
     switch (code.type) {
       case "twitter":
+        if (emailExist && !emailExist.twitterId) {
+          const update = await User.findByIdAndUpdate(emailExist._id, {
+            twitterId: code.id,
+            twitterName: code.name,
+            image: code.image,
+          });
+
+          const token = await jwt.sign({ _id: update._id }, process.env.KEY);
+
+          return res.status(200).json({ token });
+        }
+
         const existTwitter = await User.findOne({ twitterId: code.id });
 
         if (!existTwitter) {
@@ -24,7 +39,7 @@ export default async function handler(req, res) {
         }
 
         const twitterToken = await jwt.sign(
-          { _id: existTwitter._id, image: code.image },
+          { _id: existTwitter._id },
           process.env.KEY
         );
 
@@ -32,6 +47,18 @@ export default async function handler(req, res) {
         break;
 
       case "github":
+        if (emailExist && !emailExist.githubId) {
+          const update = await User.findByIdAndUpdate(emailExist._id, {
+            githubId: code.id,
+            githubName: code.name,
+            image: code.image,
+          });
+
+          const token = await jwt.sign({ _id: update._id }, process.env.KEY);
+
+          return res.status(200).json({ token });
+        }
+
         const existGithub = await User.findOne({ githubId: code.id });
 
         if (!existGithub) {
@@ -39,7 +66,7 @@ export default async function handler(req, res) {
         }
 
         const githubToken = await jwt.sign(
-          { _id: existGithub._id, image: code.image },
+          { _id: existGithub._id },
           process.env.KEY
         );
 
@@ -47,6 +74,18 @@ export default async function handler(req, res) {
         break;
 
       case "facebook":
+        if (emailExist && !emailExist.facebookId) {
+          const update = await User.findByIdAndUpdate(emailExist._id, {
+            facebookId: code.id,
+            facebookName: code.name,
+            image: code.image,
+          });
+
+          const token = await jwt.sign({ _id: update._id }, process.env.KEY);
+
+          return res.status(200).json({ token });
+        }
+
         const existFacebook = await User.findOne({ facebookId: code.id });
 
         if (!existFacebook) {
@@ -54,7 +93,7 @@ export default async function handler(req, res) {
         }
 
         const facebookToken = await jwt.sign(
-          { _id: existFacebook._id, image: code.image },
+          { _id: existFacebook._id },
           process.env.KEY
         );
 
@@ -62,6 +101,18 @@ export default async function handler(req, res) {
         break;
 
       case "google":
+        if (emailExist && !emailExist.googleId) {
+          const update = await User.findByIdAndUpdate(emailExist._id, {
+            googleId: code.id,
+            googleName: code.name,
+            image: code.image,
+          });
+
+          const token = await jwt.sign({ _id: update._id }, process.env.KEY);
+
+          return res.status(200).json({ token });
+        }
+
         const existGoogle = await User.findOne({ googleId: code.id });
 
         if (!existGoogle) {
@@ -69,26 +120,11 @@ export default async function handler(req, res) {
         }
 
         const googleToken = await jwt.sign(
-          { _id: existGoogle._id, image: code.image },
+          { _id: existGoogle._id },
           process.env.KEY
         );
 
         res.status(200).json({ token: googleToken });
-        break;
-
-      case "linkedin":
-        const existLinkedin = await User.findOne({ linkedinId: code.id });
-
-        if (!existLinkedin) {
-          return res.status(400).json({ exist: false });
-        }
-
-        const linkedinToken = await jwt.sign(
-          { _id: existLinkedin._id },
-          process.env.KEY
-        );
-
-        res.status(200).json({ token: linkedinToken });
         break;
 
       default:
