@@ -19,12 +19,12 @@ const demoHome = () => {
             <div className="backgroundHome"></div>
             <main className="row col-xs-12">
               <HomeLogin />
-              <HomeDashboard />
+              {/* <HomeDashboard /> */}
             </main>
           </div>
         </>
       ) : (
-        <HomeDashboard />
+        {/* <HomeDashboard /> */}
       )}
     </Layout>
   );

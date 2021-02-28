@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?skibx7');
-  src:  url('fonts/icomoon.eot?skibx7#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?skibx7') format('truetype'),
-    url('fonts/icomoon.woff?skibx7') format('woff'),
-    url('fonts/icomoon.svg?skibx7#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?pl17ll');
+  src:  url('fonts/icomoon.eot?pl17ll#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?pl17ll') format('truetype'),
+    url('fonts/icomoon.woff?pl17ll') format('woff'),
+    url('fonts/icomoon.svg?pl17ll#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -43,17 +43,8 @@
 .icon-mail-envelope-closed:before {
   content: "\e904";
 }
-.icon-network1:before {
-  content: "\e911";
-}
-.icon-linkedin:before {
-  content: "\e90c";
-}
-.icon-twitter:before {
-  content: "\e910";
-}
-.icon-menu:before {
-  content: "\e90f";
+.icon-facebook1:before {
+  content: "\e912";
 }
 .icon-navigation:before {
   content: "\e901";
@@ -85,6 +76,27 @@
 .icon-check-circle:before {
   content: "\e900";
 }
+.icon-twitter-square:before {
+  content: "\f081";
+}
+.icon-facebook-square:before {
+  content: "\f082";
+}
+.icon-linkedin-square:before {
+  content: "\f08c";
+}
+.icon-github-square:before {
+  content: "\f092";
+}
+.icon-github1:before {
+  content: "\f09c";
+}
+.icon-youtube-play:before {
+  content: "\f16a";
+}
+.icon-instagram:before {
+  content: "\f16d";
+}
 .icon-check:before {
   content: "\f00c";
 }
@@ -102,6 +114,30 @@
 }
 .icon-chevron-right:before {
   content: "\f054";
+}
+.icon-network1:before {
+  content: "\e911";
+}
+.icon-instagram-with-circle:before {
+  content: "\e913";
+}
+.icon-linkedin-with-circle:before {
+  content: "\e914";
+}
+.icon-twitter-with-circle:before {
+  content: "\e915";
+}
+.icon-youtube-with-circle:before {
+  content: "\e916";
+}
+.icon-linkedin:before {
+  content: "\e90c";
+}
+.icon-twitter:before {
+  content: "\e910";
+}
+.icon-menu:before {
+  content: "\e90f";
 }
 .icon-reply:before {
   content: "\e90d";
