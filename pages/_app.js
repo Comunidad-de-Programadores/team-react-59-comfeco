@@ -14,6 +14,8 @@ import "../styles/form/newPassword.scss"
 
 import "../styles/demo.scss";
 
+import "../styles/perfil/perfil.scss";
+
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
