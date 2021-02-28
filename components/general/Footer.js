@@ -5,11 +5,11 @@ const Footer = () => {
     <>
       <footer className="row  col-xs-12">
         <div className="containerFooter">
-          <div className="col-xs-4 derechos">
+          <div className="col-lg-4 col-md-5 col-sm-6 col-xs-12 derechos">
             <p>Team react #59. Todos los derechos reserbados. 2021</p>
           </div>
 
-          <div className="col-xs-4 redesSociales">
+          <div className="col-lg-4 col-md-5 col-sm-6 col-xs-12 redesSociales">
             <ul>
               <li>
                 <a href="#">

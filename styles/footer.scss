@@ -8,8 +8,14 @@ footer {
   width: 100%;
   justify-content: center;
 
-  .derechos p {
-    margin-left: 35px;
+  .derechos {
+    display: flex;
+
+    align-items: center;
+
+    p {
+      margin-left: 35px;
+    }
   }
 
   .containerFooter {
@@ -19,6 +25,7 @@ footer {
     height: 50px;
     justify-content: space-between;
     width: 90%;
+    flex-wrap: wrap;
   }
 
   .redesSociales {
@@ -50,32 +57,32 @@ footer {
         box-shadow: inset 0px 0px 0px #ffffff;
         transition: $transicion600ms;
 
-        &:hover{
+        &:hover {
           /* box-shadow: inset 25px -25px 20px #ffffff; */
-        transition: $transicion600ms;
+          transition: $transicion600ms;
         }
-/* facebook */
-        &:nth-child(1):hover{
+        /* facebook */
+        &:nth-child(1):hover {
           box-shadow: inset 25px -25px 20px #3b5998;
         }
 
         /* twitter */
-        &:nth-child(2):hover{
+        &:nth-child(2):hover {
           box-shadow: inset 25px -25px 20px #00acee;
         }
 
         /* youtube */
-        &:nth-child(3):hover{
+        &:nth-child(3):hover {
           box-shadow: inset 25px -25px 20px #c4302b;
         }
 
         /* instagram */
-        &:nth-child(4):hover{
-          box-shadow: inset 25px -25px 20px  #8a3ab9;
+        &:nth-child(4):hover {
+          box-shadow: inset 25px -25px 20px #8a3ab9;
         }
         /* instagram */
-        &:nth-child(5):hover{
-          box-shadow: inset 25px -25px 20px  #0077b5;
+        &:nth-child(5):hover {
+          box-shadow: inset 25px -25px 20px #0077b5;
         }
 
         a {
@@ -100,10 +107,74 @@ footer {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  footer {
+    .col-md-5 {
+      flex-basis: 48%;
+      max-width: 48%;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  footer {
+    .containerFooter {
+      width: 100%;
+    }
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  footer {
+    .col-sm-6 {
+      flex-basis: 46%;
+      max-width: 46%;
+    }
+    .redesSociales ul {
+      padding: 0 0 0px 120px;
+    }
+    .derechos p {
+      position: absolute;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    .derechos {
+      order: 1;
+      height: 30px;
+      justify-content: center;
+      background: #000;
+
+      p {
+        margin: 0;
+      }
+    }
+    .redesSociales {
+      padding: 0;
+      height: 60px;
+      background-color: #111;
+
+      ul {
+        padding-left: 0;
+        margin: 0 23vw;
+      }
+    }
+  }
+}
 @media screen and (max-width: 500px) {
   footer {
     p {
       font-size: 13px;
+    }
+
+    .redesSociales {
+      ul {
+        margin: 0 auto;
+      }
     }
   }
 }
