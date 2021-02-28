@@ -20,9 +20,9 @@ export default async function handler(req, res) {
     let querys = {};
 
     for (let i in req.body) {
-      if (i && req.body[i] != "" && i == "password") {
+      if (req.body[i] && req.body[i] != "" && i == "password") {
         querys[i] = await encryptNewPassword(req.body[i]);
-      } else if (i && req.body[i] != "") {
+      } else if (req.body[i] && req.body[i] != "") {
         querys[i] = req.body[i];
       }
     }
