@@ -14,7 +14,6 @@ header {
   z-index: 100;
 
   background-color: transparent;
-  transition: $transicion600ms;
   border-bottom: 2px solid transparent;
 
   /* .user_nav {
@@ -79,7 +78,6 @@ header {
 .containerHeader {
   align-items: center;
   border-bottom: $borderHeaderFooter;
-  transition: $transicion600ms;
   display: flex;
   justify-content: center;
   width: 90%;
@@ -97,6 +95,18 @@ header {
         display: inline-block;
         padding: 36px 0 36px 15px;
 
+        &.name {
+          padding: 36px 0;
+          margin-right: 2px;
+        }
+
+        &.morePerfile {
+          padding: 14px 0 20px 0px !important;
+        }
+
+        .notifications {
+          padding-left: 0;
+        }
         a {
           color: #fff;
           display: block;
@@ -120,18 +130,153 @@ header {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  header.menuFixed {
-    background-color: $colorBackgroundColorFixed;
-    transition: $transicion600ms;
-    border-bottom: $borderHeaderFooter;
+/* @media screen and (min-width: 1700px) {
+  header.menuFixed .headerDesktop .borderRight{
+    right: 45% !important;
+  
+  }
+
+  header .headerDesktop .borderRight{
+    right: 35% !important;
+  
+  }
+}
+@media screen and (min-width: 1560px) {
+  header.menuFixed .headerDesktop .borderRight{
+    right: 33% !important;
+  
+  }
+
+  header .headerDesktop .borderRight{
+    right: 25% !important;
+  
+  }
+}
+
+@media screen and (max-width: 1560px) {
+  header.menuFixed .headerDesktop .borderRight{
+   right: 3.5vw !important;
+  
+  }
+
+  header .headerDesktop .borderRight{
+    right: 8vw !important;
+  
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  header.menuFixed .headerDesktop .borderRight{
+    right: 5vw !important;
+  
+  }
+
+  header .headerDesktop .borderRight{
+    right: 8vw !important;
+  
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  header.menuFixed .headerDesktop .borderRight{
+    right: 4vw !important;
+  
+  }
+
+  header .headerDesktop .borderRight{
+    right: 8vw !important;
+  
+  }
+}
+
+@media screen and (max-width: 1088px) {
+  header.menuFixed .headerDesktop .borderRight{
+    right: 4vw !important;
+  
+  }
+
+  header .headerDesktop .borderRight{
+    right: 8vw !important;
+  
+  }
+}
+ */
+
+@media screen and (max-width: 1500px) {
+  header.menuFixed .headerDesktop .borderRight {
+    right: 3.5vw !important;
+  }
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1024px) {
+  header.menuFixed .headerDesktop a img {
+    width: 116px !important ;
+    height: 30px !important;
+  }
+
+  header.menuFixed .headerDesktop .borderRight {
+    top: -14px !important;
+  }
+}
+
+@media screen and (max-width: 1150px) and (min-width: 1024px) {
+  header .headerDesktop .col-xs-3 a {
+    margin-left: 0 !important;
+  }
+
+  header {
+    .usuario {
+      margin-left: 0 !important;
+    }
 
     .containerHeader {
-      border-bottom: 2px solid transparent;
-      transition: $transicion600ms;
+      width: 95%;
+    }
+  }
+
+  header .headerDesktop .borderRight {
+    right: -21% !important;
+  }
+
+  .containerHeader .navegation nav ul li {
+    padding: 36px 0 36px 5px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header.menuFixed {
+    .containerHeader {
+      background-color: $colorBackgroundColorFixed;
+      border-bottom: $borderHeaderFooter;
+      width: 100%;
+
+      .navegation nav ul li {
+        padding: 20px 0 20px 10px;
+      }
+    }
+
+    .headerDesktop {
+      .borderRight {
+        height: 72px;
+        right: 0vw !important;
+        top: -13px;
+      }
+      .col-xs-3 {
+        a {
+          margin-left: 10px;
+        }
+      }
+
+      a img {
+        width: 139px !important;
+        height: 41px !important;
+      }
     }
   }
   header {
+    * {
+      transition: $transicion600ms;
+    }
     .headerDesktop {
       .col-xs-3 {
         position: relative;
@@ -141,16 +286,16 @@ header {
       }
 
       a img {
-        width: 180px !important;
-        height: 50px !important;
+        width: 157px !important;
+        height: 40px !important;
       }
 
       .borderRight {
         border-right: 2px solid #fff;
         height: 107px;
         position: absolute;
-        right: 170px;
-        top: -30px;
+        right: -25%;
+        top: -33px;
       }
 
       .usuario {

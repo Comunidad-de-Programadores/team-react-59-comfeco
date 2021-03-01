@@ -123,6 +123,16 @@ footer {
     }
   }
 }
+
+@media screen and (max-width: 1150px) and (min-width: 1024px) {
+
+  footer{
+    .containerFooter {
+      width: 95%;
+    }
+  }
+}
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   footer {
     .col-sm-6 {

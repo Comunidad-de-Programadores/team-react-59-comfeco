@@ -78,7 +78,7 @@ const Header = () => {
     <>
       <header className="row col-xs-12" id="headerDesktop">
         <div className="row containerHeader headerDesktop">
-          <div className="col-xs-3">
+          <div className="col-xs-3  col-sm-2 center-xs">
             <Link href="/">
               <a>
                 <Image
@@ -89,10 +89,10 @@ const Header = () => {
                 />
               </a>
             </Link>
-            <div className="borderRight"></div>
+            {<div className="borderRight"></div>}
           </div>
 
-          <div className="col-xs-9 navegation">
+          <div className="col-xs-9 col-sm-10 navegation">
             <nav>
               <ul>
                 <li>
@@ -120,15 +120,17 @@ const Header = () => {
 
               <div className="usuario">
                 <ul>
-                  
                   <li className="img">
                     <img src="/Genarogg.jpg" alt="" />
                   </li>
-                  <li>
+                  <li className="name">
                     <p>Genarogg</p>
                   </li>
-                  <li>
+                  <li className="morePerfile">
                     <span className="ico icon-expand_more"></span>
+                  </li>
+                  <li className="notifications">
+                    <span className="ico icon-lock"></span>
                   </li>
                 </ul>
               </div>
