@@ -74,6 +74,12 @@ const Header = () => {
       $("headerDesktop").classList.remove("menuFixed");
     }
   };
+
+  const contX = () => {
+    $("contX").classList.toggle("active");
+
+    $("siderbarTablet").classList.toggle("left");
+  };
   return (
     <>
       <header className="row col-xs-12" id="headerDesktop">
@@ -94,7 +100,7 @@ const Header = () => {
 
           <div className="col-xs-9 col-sm-10 navegation">
             <nav>
-              <ul>
+              <ul className="link">
                 <li>
                   <a href="#">
                     <span className="ico icon-lock"></span>Inicio
@@ -165,7 +171,99 @@ const Header = () => {
             )} */}
           </div>
         </div>
-        <div className="row center-xs containerHeader headerPhone">
+        <div className="row between-xs headerTablet">
+          <div className="col-xs-2 left">
+            <button
+              className="cont_x menu2"
+              id="contX"
+              onClick={() => {
+                contX();
+              }}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div className="col-xs-6 imgLogo">
+            <Image
+              src="/logo1.png"
+              alt="Picture of the author"
+              width={139}
+              height={41}
+            />
+          </div>
+          <div className="col-xs-3 right">
+            <div className="usuario">
+              <ul>
+                <li className="img">
+                  <img src="/Genarogg.jpg" alt="" />
+                </li>
+                <li className="name">
+                  <p>Genarogg</p>
+                </li>
+                <li className="morePerfile">
+                  <span className="ico icon-expand_more"></span>
+                </li>
+                <li className="notifications">
+                  <span className="ico icon-lock"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <nav className="siderbar" id="siderbarTablet">
+            <ul className="link">
+              <li>
+                <a
+                  href="#"
+                  onClick={() => {
+                    contX();
+                  }}
+                >
+                  <span
+                    className="ico icon-lock"
+                    onClick={() => {
+                      contX();
+                    }}
+                  ></span>
+                  Inicio
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onClick={() => {
+                    contX();
+                  }}
+                >
+                  <span className="ico icon-lock"></span>Comunidades
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onClick={() => {
+                    contX();
+                  }}
+                >
+                  <span className="ico icon-lock"></span>Talleres
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onClick={() => {
+                    contX();
+                  }}
+                >
+                  <span className="ico icon-lock"></span>Creadores de contenido
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        {/*  <div className="row center-xs containerHeader headerPhone">
           <div className="col-xs-2 left">
             <Icono css={"icon-menu"} />
           </div>
@@ -181,6 +279,7 @@ const Header = () => {
             <Icono css={"icon-account_circle"} />
           </div>
         </div>
+      */}{" "}
       </header>
     </>
   );

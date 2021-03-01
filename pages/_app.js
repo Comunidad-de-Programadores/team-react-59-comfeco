@@ -31,6 +31,7 @@ import "../styles/deadline.scss";
 
 /* estilos para botones */
 import "../styles/button/btn1.scss";
+import "../styles/button/btnHamburguesa.scss";
 
 import { Provider } from "next-auth/client";
 
