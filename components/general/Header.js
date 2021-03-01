@@ -33,11 +33,10 @@ const Header = () => {
   useEffect(() => {
     setLocalToken(!!localStorage.getItem("token"));
     setSessToken(!!sessionStorage.getItem("token"));
-    
 
     window.onscroll = () => {
-      scrollHeader()
-    }
+      scrollHeader();
+    };
   }, []);
 
   useEffect(() => {
@@ -66,23 +65,19 @@ const Header = () => {
     Router.reload();
   };
 
-
-
-
-  const scrollHeader = () =>{
-
-    let altura = $("headerDesktop").offsetTop
+  const scrollHeader = () => {
+    let altura = $("headerDesktop").offsetTop;
 
     if (window.pageYOffset > altura) {
-      $("headerDesktop").classList.add("menuFixed")
+      $("headerDesktop").classList.add("menuFixed");
     } else {
-      $("headerDesktop").classList.remove("menuFixed")
+      $("headerDesktop").classList.remove("menuFixed");
     }
-  }
+  };
   return (
     <>
       <header className="row col-xs-12" id="headerDesktop">
-        <div className="row containerHeader headerDesktop" >
+        <div className="row containerHeader headerDesktop">
           <div className="col-xs-3">
             <Link href="/">
               <a>
@@ -94,12 +89,54 @@ const Header = () => {
                 />
               </a>
             </Link>
+            <div className="borderRight"></div>
           </div>
+
           <div className="col-xs-9 navegation">
+            <nav>
+              <ul>
+                <li>
+                  <a href="#">
+                    <span className="ico icon-lock"></span>Inicio
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span className="ico icon-lock"></span>Comunidades
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span className="ico icon-lock"></span>Talleres
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span className="ico icon-lock"></span>Creadores de
+                    contenido
+                  </a>
+                </li>
+              </ul>
+
+              <div className="usuario">
+                <ul>
+                  
+                  <li className="img">
+                    <img src="/Genarogg.jpg" alt="" />
+                  </li>
+                  <li>
+                    <p>Genarogg</p>
+                  </li>
+                  <li>
+                    <span className="ico icon-expand_more"></span>
+                  </li>
+                </ul>
+              </div>
+            </nav>
             {/*Verify User localstorage*/}
-            {localToken && (
+            {/*  {localToken && (
               <nav className="user_nav">
-                {/* Image verify */}
+                Image verify 
                 {user.image ? (
                   <img src={user.image} />
                 ) : (
@@ -110,11 +147,11 @@ const Header = () => {
 
                 <button onClick={logout}>Logout</button>
               </nav>
-            )}
+            )} */}
             {/*Verify User session*/}
-            {sessToken && (
+            {/* {sessToken && (
               <nav className="user_nav">
-                {/* Image Verify */}
+                 Image Verify 
                 {user.image ? (
                   <img src={user.image} />
                 ) : (
@@ -123,7 +160,7 @@ const Header = () => {
                 <p>{user.nickname}</p>
                 <button onClick={logout}>Logout</button>
               </nav>
-            )}
+            )} */}
           </div>
         </div>
         <div className="row center-xs containerHeader headerPhone">
