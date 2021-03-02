@@ -11,6 +11,7 @@ import "../styles/form/homeLogin.scss";
 
 import "../styles/colorChange.scss";
 import "../styles/form/newPassword.scss";
+import "../styles/form/editProfile.scss";
 
 import "../styles/demo.scss";
 
