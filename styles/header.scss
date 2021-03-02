@@ -1,8 +1,8 @@
 @import "variables.scss";
 
-body {
+/* body {
   min-height: 111vh;
-}
+} */
 
 header {
   background-color: transparent;
@@ -537,75 +537,3 @@ header {
     }
   }
 }
-
-/* @media screen and (min-width: 769px) {
-  header {
-    .headerPhone {
-      display: none;
-    }
-  }
-} */
-
-/* @media screen and (max-width: 768px) {
-  .headerPhone {
-    background-color: #111;
-    .imgLogo {
-      img {
-        width: 120px;
-      }
-    }
-  }
-
-  .containerHeader {
-    width: 100%;
-
-    .col-xs-2.left {
-      text-align: left;
-
-      .ico {
-        font-size: 18px;
-      }
-    }
-  }
-  .col-xs-2.right {
-    text-align: right;
-
-    .ico {
-      font-size: 18px;
-    }
-  }
-} */
-
-/* @media screen and (max-width: 600px) {
-  .headerTablet {
-    display: none;
-  }
-
-  .headerPhone {
-    background-color: #111;
-    .imgLogo {
-      img {
-        width: 120px;
-      }
-    }
-  }
-} */
-
-/* @media screen and (min-width: 1025px) {
-} */
-
-/* @media screen and (min-width: 769px) and (max-width: 1024px) {
-  header {
-    background-color: #111;
-    width: 100%;
-    border-bottom: 2px solid #fff;
-
-    .containerHeader {
-      border-bottom: none;
-    }
-  }
-
-  main {
-    margin-top: 95px !important;
-  }
-} */
