@@ -317,6 +317,11 @@ header {
         height: 41px !important;
       }
     }
+
+    .siderBarNotificaciones {
+      top: 74px;
+      
+    }
   }
   header {
     .headerTablet {
@@ -325,6 +330,14 @@ header {
     * {
       transition: $transicion600ms;
     }
+
+    .siderBarNotificaciones {
+      top: 104px;
+      height: 50vh;
+      border-bottom: 1px solid #fff;
+      border-radius: 0 0 0 10px;
+    }
+
     .headerDesktop {
       .col-xs-3 {
         position: relative;

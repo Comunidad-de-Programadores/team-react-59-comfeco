@@ -76,6 +76,17 @@ const Header = () => {
   };
 
   const contX = () => {
+    if ($("dataUser").classList.contains("dataUserDisplay")) {
+      $("dataUser").classList.remove("dataUserDisplay");
+    }
+
+    if ($("expandMore").classList.contains("expandMore")) {
+      $("expandMore").classList.remove("expandMore");
+    }
+
+    if ($("expandMore2").classList.contains("expandMore")) {
+      $("expandMore2").classList.remove("expandMore");
+    }
     if ($("siderBarNotificaciones").classList.contains("right")) {
       $("siderBarNotificaciones").classList.remove("right");
     }
@@ -85,6 +96,17 @@ const Header = () => {
   };
 
   const showNotifications = () => {
+    if ($("dataUser").classList.contains("dataUserDisplay")) {
+      $("dataUser").classList.remove("dataUserDisplay");
+    }
+
+    if ($("expandMore").classList.contains("expandMore")) {
+      $("expandMore").classList.remove("expandMore");
+    }
+
+    if ($("expandMore2").classList.contains("expandMore")) {
+      $("expandMore2").classList.remove("expandMore");
+    }
     if ($("siderbarTablet").classList.contains("left")) {
       $("siderbarTablet").classList.remove("left");
     }
@@ -97,6 +119,17 @@ const Header = () => {
   };
 
   const showDataUser = () => {
+    if ($("siderbarTablet").classList.contains("left")) {
+      $("siderbarTablet").classList.remove("left");
+    }
+
+    if ($("contX").classList.contains("active")) {
+      $("contX").classList.remove("active");
+    }
+    if ($("siderBarNotificaciones").classList.contains("right")) {
+      $("siderBarNotificaciones").classList.remove("right");
+    }
+
     $("dataUser").classList.toggle("dataUserDisplay");
     $("expandMore").classList.toggle("expandMore");
     $("expandMore2").classList.toggle("expandMore");
