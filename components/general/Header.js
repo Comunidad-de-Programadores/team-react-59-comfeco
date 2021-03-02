@@ -11,7 +11,11 @@ import $ from "../nano/$";
 const Header = () => {
   const [localToken, setLocalToken] = useState(false);
   const [sessToken, setSessToken] = useState(false);
-  const [user, setUser] = useState({ nickname: "", email: null, image: null });
+  const [user, setUser] = useState({
+    nickname: "",
+    email: null,
+    image: "/no_user.jpg",
+  });
 
   const verifyToken = (type) => {
     fetch("/api/get_user", {
@@ -51,19 +55,12 @@ const Header = () => {
     }
   }, [localToken, sessToken]);
 
-  useEffect(() => {
-    if (user.email && !user.image) {
-      const hash = md5(user.email);
-      const image = `https://www.gravatar.com/avatar/${hash}?d=identicon`;
-      setUser({ ...user, image });
-    }
-  }, [user.email]);
-
   const logout = () => {
     localStorage.removeItem("token");
     sessionStorage.removeItem("token");
     setLocalToken(!!localStorage.getItem("token"));
     setSessToken(!!sessionStorage.getItem("token"));
+    showDataUser();
     Router.reload();
   };
 
@@ -179,68 +176,82 @@ const Header = () => {
                     Creadores de contenido
                   </A>
                 </li>
+                {!localToken && !sessToken && (
+                  <li>
+                    <Link href="/">
+                      <a className="login">Login</a>
+                    </Link>
+                  </li>
+                )}
               </ul>
 
-              <div className="usuario">
-                <ul>
-                  <li
-                    className="img"
-                    onClick={() => {
-                      showDataUser();
-                    }}
-                  >
-                    <img src="/Genarogg.jpg" alt="" />
-                  </li>
-                  <li
-                    className="name"
-                    onClick={() => {
-                      showDataUser();
-                    }}
-                  >
-                    <p>Genarogg</p>
-                  </li>
-                  <li className="morePerfile">
-                    <Icono css="icon-expand_more" id="expandMore" />
-                  </li>
-                  <li
-                    className="notifications"
-                    onClick={() => {
-                      showNotifications();
-                    }}
-                  >
-                    <Icono css="icon-bell" />
-                  </li>
-                </ul>
-              </div>
+              {localToken && (
+                <div className="usuario">
+                  <ul>
+                    <li
+                      className="img"
+                      onClick={() => {
+                        showDataUser();
+                      }}
+                    >
+                      <img src={user.image} alt="user" />
+                    </li>
+                    <li
+                      className="name"
+                      onClick={() => {
+                        showDataUser();
+                      }}
+                    >
+                      <p>{user.nickname}</p>
+                    </li>
+                    <li className="morePerfile">
+                      <Icono css="icon-expand_more" id="expandMore" />
+                    </li>
+                    <li
+                      className="notifications"
+                      onClick={() => {
+                        showNotifications();
+                      }}
+                    >
+                      <Icono css="icon-bell" />
+                    </li>
+                  </ul>
+                </div>
+              )}
+              {sessToken && (
+                <div className="usuario">
+                  <ul>
+                    <li
+                      className="img"
+                      onClick={() => {
+                        showDataUser();
+                      }}
+                    >
+                      <img src={user.image} alt="user" />
+                    </li>
+                    <li
+                      className="name"
+                      onClick={() => {
+                        showDataUser();
+                      }}
+                    >
+                      <p>{user.nickname}</p>
+                    </li>
+                    <li className="morePerfile">
+                      <Icono css="icon-expand_more" id="expandMore" />
+                    </li>
+                    <li
+                      className="notifications"
+                      onClick={() => {
+                        showNotifications();
+                      }}
+                    >
+                      <Icono css="icon-bell" />
+                    </li>
+                  </ul>
+                </div>
+              )}
             </nav>
-            {/*Verify User localstorage*/}
-            {/*  {localToken && (
-              <nav className="user_nav">
-                Image verify 
-                {user.image ? (
-                  <img src={user.image} />
-                ) : (
-                  <img src="/no_user.jpg" />
-                )}
-
-                <p>{user.nickname}</p>
-
-                <button onClick={logout}>Logout</button>
-              </nav>
-            )} */}
-            {/*Verify User session*/}
-            {/* {sessToken && (
-              <nav className="user_nav">
-                 Image Verify 
-                {user.image ? (
-                  <img src={user.image} />
-                ) : (
-                  <img src="/no_user.jpg" />
-                )}
-                <p>{user.nickname}</p>
-                <button onClick={logout}>Logout</button>
-              </nav>
-            )} */}
           </div>
         </div>
         <div className="row between-xs headerTablet">
@@ -269,41 +280,80 @@ const Header = () => {
           </div>
           <div className="col-xs-3 right">
             <div className="usuario">
-              <ul>
-                <li
-                  className="img"
-                  onClick={() => {
-                    showDataUser();
-                  }}
-                >
-                  <Image width={100} height={100} src="/Genarogg.jpg" alt="" />
-                </li>
-                <li
-                  className="name"
-                  onClick={() => {
-                    showDataUser();
-                  }}
-                >
-                  <p>Genarogg</p>
-                </li>
-                <li
-                  className="morePerfile"
-                  onClick={() => {
-                    showDataUser();
-                  }}
-                  id="expandMore2"
-                >
-                  <Icono css="icon-expand_more" />
-                </li>
-                <li
-                  className="notifications"
-                  onClick={() => {
-                    showNotifications();
-                  }}
-                >
-                  <Icono css="icon-bell" />
-                </li>
-              </ul>
+              {localToken && (
+                <ul>
+                  <li
+                    className="img"
+                    onClick={() => {
+                      showDataUser();
+                    }}
+                  >
+                    <img width={100} height={100} src={user.image} alt="user" />
+                  </li>
+                  <li
+                    className="name"
+                    onClick={() => {
+                      showDataUser();
+                    }}
+                  >
+                    <p>{user.nickname}</p>
+                  </li>
+                  <li
+                    className="morePerfile"
+                    onClick={() => {
+                      showDataUser();
+                    }}
+                    id="expandMore2"
+                  >
+                    <Icono css="icon-expand_more" />
+                  </li>
+                  <li
+                    className="notifications"
+                    onClick={() => {
+                      showNotifications();
+                    }}
+                  >
+                    <Icono css="icon-bell" />
+                  </li>
+                </ul>
+              )}
+              {sessToken && (
+                <ul>
+                  <li
+                    className="img"
+                    onClick={() => {
+                      showDataUser();
+                    }}
+                  >
+                    <img width={100} height={100} src={user.image} alt="user" />
+                  </li>
+                  <li
+                    className="name"
+                    onClick={() => {
+                      showDataUser();
+                    }}
+                  >
+                    <p>{user.nickname}</p>
+                  </li>
+                  <li
+                    className="morePerfile"
+                    onClick={() => {
+                      showDataUser();
+                    }}
+                    id="expandMore2"
+                  >
+                    <Icono css="icon-expand_more" />
+                  </li>
+                  <li
+                    className="notifications"
+                    onClick={() => {
+                      showNotifications();
+                    }}
+                  >
+                    <Icono css="icon-bell" />
+                  </li>
+                </ul>
+              )}
             </div>
           </div>
 
@@ -370,7 +420,7 @@ const Header = () => {
                 </A>
               </li>
               <li>
-                <button>
+                <button onClick={logout}>
                   <A href="/">
                     <Icono css="icon-logout" />
                     Cerrar Sesión

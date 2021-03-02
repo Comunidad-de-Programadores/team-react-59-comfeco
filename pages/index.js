@@ -1,6 +1,5 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/general/Layout";
-import HomeDashboard from "./componentsPages/HomeDashboard";
 import HomeLogin from "./componentsPages/HomeLogin";
 
 const Home = () => {
