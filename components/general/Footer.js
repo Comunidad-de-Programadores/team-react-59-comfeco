@@ -1,5 +1,6 @@
 import React from "react";
-
+import A from "../nano/A";
+import Icono from "../nano/Icono";
 const Footer = () => {
   return (
     <>
@@ -12,30 +13,30 @@ const Footer = () => {
           <div className="col-lg-4 col-md-5 col-sm-6 col-xs-12 redesSociales">
             <ul>
               <li>
-                <a href="#">
-                  <span className="ico icon-facebook "></span>
-                </a>
+                <A href="https://facebook.com" type="a">
+                  <Icono css="icon-facebook" />
+                </A>
               </li>
               <li>
-                <a href="#">
-                  <span className="ico icon-twitter "></span>
-                </a>
+                <A href="#" type="a">
+                  <Icono css=" icon-twitter " />
+                </A>
               </li>
 
               <li>
-                <a href="#">
-                  <span className="ico icon-youtube-play "></span>
-                </a>
+                <A href="#" type="a">
+                  <Icono css="icon-youtube-play" />
+                </A>
               </li>
               <li>
-                <a href="#">
-                  <span className="ico icon-instagram "></span>
-                </a>
+                <A href="#" type="a">
+                  <Icono css="icon-instagram" />
+                </A>
               </li>
               <li>
-                <a href="#">
-                  <span className="ico icon-linkedin "></span>
-                </a>
+                <A href="#" type="a">
+                  <Icono css="icon-linkedin" />
+                </A>
               </li>
             </ul>
           </div>

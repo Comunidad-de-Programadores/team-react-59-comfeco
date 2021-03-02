@@ -30,6 +30,7 @@ header {
         transition: $transicion600ms;
         span.icon-expand_more {
           padding-top: 6px;
+          font-size: 16px;
         }
       }
     }
@@ -106,6 +107,7 @@ header {
 
             span {
               padding-right: 10px;
+              font-size: 16px;
             }
           }
         }
@@ -127,7 +129,7 @@ header {
     position: absolute;
     right: 0;
 
-    background-color: #111;
+    background-color: $colorPurple1;;
     width: 100%;
     max-width: 10px;
     width: 90%;
@@ -138,7 +140,7 @@ header {
 
     top: 66px;
      right: -100%;
-    background-color: #111;
+   
     width: 90%;
     max-width: 350px;
     transition: 600ms all ease;
@@ -173,6 +175,7 @@ header {
 
           span {
             padding-right: 10px;
+            font-size: 16px;
           }
         }
       }
@@ -228,6 +231,7 @@ header {
 
           span {
             padding-right: 10px;
+            font-size: 16px;
           }
         }
       }
@@ -286,7 +290,7 @@ header {
 @media screen and (min-width: 1024px) {
   header.menuFixed {
     .containerHeader {
-      background-color: $colorBackgroundColorFixed;
+      background-color: $colorPurple1;
       border-bottom: $borderHeaderFooter;
       width: 100%;
 
@@ -376,6 +380,7 @@ header {
               display: flex;
               justify-content: center;
               align-items: center;
+              font-size: 16px;
             }
           }
         }
@@ -400,7 +405,7 @@ header {
   .headerTablet {
     width: 100%;
     justify-content: center;
-    background: #111;
+    background: $colorPurple1;;
     align-items: center;
     height: 66px;
     position: fixed;
@@ -455,7 +460,7 @@ header {
 
       top: 66px;
       left: -100%;
-      background-color: #111;
+      background-color: $colorPurple1;;
       width: 90%;
       max-width: 350px;
       transition: 600ms all ease;
@@ -489,6 +494,7 @@ header {
 
             span {
               padding-right: 10px;
+              font-size: 16px;
             }
           }
         }

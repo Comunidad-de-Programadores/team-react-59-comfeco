@@ -5,6 +5,7 @@ import md5 from "md5";
 
 import Image from "next/image";
 import Icono from "../nano/Icono";
+import A from "../nano/A";
 import $ from "../nano/$";
 
 const Header = () => {
@@ -139,16 +140,14 @@ const Header = () => {
       <header className="row col-xs-12" id="headerDesktop">
         <div className="row containerHeader headerDesktop">
           <div className="col-xs-3  col-sm-2 center-xs">
-            <Link href="/">
-              <a>
-                <Image
-                  src="/logo1.png"
-                  alt="Picture of the author"
-                  width={139}
-                  height={41}
-                />
-              </a>
-            </Link>
+            <A href="/">
+              <Image
+                src="/logo1.png"
+                alt="Picture of the author"
+                width={139}
+                height={41}
+              />
+            </A>
             {<div className="borderRight"></div>}
           </div>
 
@@ -156,25 +155,28 @@ const Header = () => {
             <nav>
               <ul className="link">
                 <li>
-                  <a href="#">
-                    <span className="ico icon-lock"></span>Inicio
-                  </a>
+                  <A href="/">
+                    <Icono css="icon-home" />
+                    Inicio
+                  </A>
                 </li>
                 <li>
-                  <a href="#">
-                    <span className="ico icon-lock"></span>Comunidades
-                  </a>
+                  <A href="/comunidades">
+                    <Icono css="icon-group_add" />
+                    Comunidades
+                  </A>
                 </li>
                 <li>
-                  <a href="#">
-                    <span className="ico icon-lock"></span>Talleres
-                  </a>
+                  <A href="/talleres">
+                    <Icono css="icon-trello" />
+                    Talleres
+                  </A>
                 </li>
                 <li>
-                  <a href="#">
-                    <span className="ico icon-lock"></span>Creadores de
-                    contenido
-                  </a>
+                  <A href="/creadores-de-contenido">
+                    <Icono css="icon-article" />
+                    Creadores de contenido
+                  </A>
                 </li>
               </ul>
 
@@ -197,10 +199,7 @@ const Header = () => {
                     <p>Genarogg</p>
                   </li>
                   <li className="morePerfile">
-                    <span
-                      className="ico icon-expand_more"
-                      id="expandMore"
-                    ></span>
+                    <Icono css="icon-expand_more" id="expandMore" />
                   </li>
                   <li
                     className="notifications"
@@ -208,7 +207,7 @@ const Header = () => {
                       showNotifications();
                     }}
                   >
-                    <span className="ico icon-lock"></span>
+                    <Icono css="icon-bell" />
                   </li>
                 </ul>
               </div>
@@ -258,12 +257,14 @@ const Header = () => {
             </button>
           </div>
           <div className="col-xs-6 imgLogo">
-            <Image
-              src="/logo1.png"
-              alt="Picture of the author"
-              width={139}
-              height={41}
-            />
+            <A href="/">
+              <Image
+                src="/logo1.png"
+                alt="Picture of the author"
+                width={139}
+                height={41}
+              />
+            </A>
           </div>
           <div className="col-xs-3 right">
             <div className="usuario">
@@ -274,7 +275,7 @@ const Header = () => {
                     showDataUser();
                   }}
                 >
-                  <img src="/Genarogg.jpg" alt="" />
+                  <Image width={100} height={100} src="/Genarogg.jpg" alt="" />
                 </li>
                 <li
                   className="name"
@@ -291,7 +292,7 @@ const Header = () => {
                   }}
                   id="expandMore2"
                 >
-                  <span className="ico icon-expand_more"></span>
+                  <Icono css="icon-expand_more" />
                 </li>
                 <li
                   className="notifications"
@@ -299,7 +300,7 @@ const Header = () => {
                     showNotifications();
                   }}
                 >
-                  <span className="ico icon-lock"></span>
+                  <Icono css="icon-bell" />
                 </li>
               </ul>
             </div>
@@ -308,50 +309,52 @@ const Header = () => {
           <nav className="siderbar" id="siderbarTablet">
             <ul className="link">
               <li>
-                <a
-                  href="#"
-                  onClick={() => {
-                    contX();
-                  }}
-                >
-                  <span
-                    className="ico icon-lock"
+                <Link href="/comunidades">
+                  <a
                     onClick={() => {
                       contX();
                     }}
-                  ></span>
-                  Inicio
-                </a>
+                  >
+                    <Icono css="icon-home" />
+                    Inicio
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  onClick={() => {
-                    contX();
-                  }}
-                >
-                  <span className="ico icon-lock"></span>Comunidades
-                </a>
+                <Link href="/comunidades">
+                  <a
+                    onClick={() => {
+                      contX();
+                    }}
+                  >
+                    <Icono css="icon-group_add" />
+                    Comunidades
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  onClick={() => {
-                    contX();
-                  }}
-                >
-                  <span className="ico icon-lock"></span>Talleres
-                </a>
+                <Link href="/talleres">
+                  <a
+                    onClick={() => {
+                      contX();
+                    }}
+                  >
+                    <Icono css="icon-trello" />
+                    Talleres
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  onClick={() => {
-                    contX();
-                  }}
-                >
-                  <span className="ico icon-lock"></span>Creadores de contenido
-                </a>
+                <Link href="/creadores-de-contenido">
+                  <a
+                    onClick={() => {
+                      contX();
+                    }}
+                  >
+                    <Icono css="icon-article" />
+                    Creadores de contenido
+                  </a>
+                </Link>
               </li>
             </ul>
           </nav>
@@ -360,16 +363,17 @@ const Header = () => {
           <nav>
             <ul>
               <li>
-                <a href="#">
-                  <span className="ico icon-lock"></span>Mi Perfil
-                </a>
+                <A href="/">
+                  <Icono css="icon-account_circle" />
+                  Mi Perfil
+                </A>
               </li>
               <li>
                 <button>
-                  <a href="#">
-                    <span className="ico icon-lock"></span>
+                  <A href="/">
+                    <Icono css="icon-logout" />
                     Cerrar Sesión
-                  </a>
+                  </A>
                 </button>
               </li>
             </ul>
@@ -379,24 +383,28 @@ const Header = () => {
         <nav className="siderBarNotificaciones" id="siderBarNotificaciones">
           <ul>
             <li>
-              <a href="#">
-                <span className="ico icon-lock"></span>notificasion#1
-              </a>
+              <A href="#">
+                <Icono css="icon-bell" />
+                Notificacion#1
+              </A>
             </li>
             <li>
-              <a href="#">
-                <span className="ico icon-lock"></span>notificasion#2
-              </a>
+              <A href="#">
+                <Icono css="icon-bell" />
+                Notificacion#2
+              </A>
             </li>
             <li>
-              <a href="#">
-                <span className="ico icon-lock"></span>notificasion#3
-              </a>
+              <A href="#">
+                <Icono css="icon-bell" />
+                Notificacion#3
+              </A>
             </li>
             <li>
-              <a href="#">
-                <span className="ico icon-lock"></span>notificasion#4
-              </a>
+              <A href="#">
+                <Icono css="icon-bell" />
+                Notificacion#4
+              </A>
             </li>
           </ul>
         </nav>
