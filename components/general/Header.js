@@ -14,7 +14,7 @@ const Header = () => {
   const [user, setUser] = useState({
     nickname: "",
     email: null,
-    image: "/no_user.jpg",
+    image: "no_user.jpg",
   });
 
   const verifyToken = (type) => {
@@ -32,7 +32,7 @@ const Header = () => {
           return;
         }
         console.log(data);
-        setUser(data);
+        setUser({ ...data, image: data.image ? data.image : "no_user.jpg" });
       });
   };
 
