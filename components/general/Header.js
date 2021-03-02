@@ -26,6 +26,7 @@ const Header = () => {
         if (data.error) {
           return;
         }
+        console.log(data);
         setUser(data);
       });
   };
@@ -51,7 +52,7 @@ const Header = () => {
   }, [localToken, sessToken]);
 
   useEffect(() => {
-    if (user.email) {
+    if (user.email && !user.image) {
       const hash = md5(user.email);
       const image = `https://www.gravatar.com/avatar/${hash}?d=identicon`;
       setUser({ ...user, image });

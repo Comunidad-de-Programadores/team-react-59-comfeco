@@ -21,44 +21,14 @@ export default async function handler(req, res) {
     }
 
     const user = await User.findById(content._id);
-    if (!user.type) {
-      return res.status(400).json({ error: "invalid" });
+    if (!user) {
+      return res.status(404).json({ error: "User doesn't exist" });
     }
 
-    switch (user.type) {
-      case "default":
-        res.status(200).json({ nickname: user.nickname, email: user.email });
-        break;
-      case "twitter":
-        res.status(200).json({
-          image: content.image,
-          nickname: user.nickname,
-        });
-        break;
-      case "github":
-        res.status(200).json({
-          image: content.image,
-          nickname: user.nickname,
-        });
-        break;
-      case "facebook":
-        res.status(200).json({
-          image: content.image,
-          nickname: user.nickname,
-        });
-        break;
-      case "google":
-        res.status(200).json({
-          image: content.image,
-          nickname: user.nickname,
-        });
-        break;
-      case "linkedin":
-        res.status(200).json({ nickname: user.nickname });
-        break;
-      default:
-        res.status(400).json({ error: "invalid" });
-    }
+    res.status(200).json({
+      ...user._doc,
+      password: null,
+    });
   } else {
     res.status(200).json({ message: "Only get method" });
   }
