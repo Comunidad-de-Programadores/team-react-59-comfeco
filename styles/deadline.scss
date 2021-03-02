@@ -1,18 +1,19 @@
 @import "variables.scss";
 
-.content {
-  width: 50%;
-  .panelTimer {
-    background: $colorPurple2;
-    border-radius: 10px;
-    .wrapper-deadline-counter {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 1rem;
-      padding: 10px;
-      width: 100%;
+.panelTimer {
+  font-family: $fontTitle;
+  border: 1px solid #fff;
+  background: $colorPurple1;
+  /* box-shadow: inset 0px 0px 20px 0px #ff00002e; */
+  .wrapper-deadline-counter {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: 10px;
+    width: 100%;
 
-      h2 {
+    .title {
+      h5 {
         text-align: center;
         font-size: 2rem;
         color: white;
@@ -23,28 +24,32 @@
         text-align: center;
         margin-bottom: 1rem;
       }
+    }
 
-      .wrapper-deadline {
-        border-radius: 7px;
-        border: 1px solid rgb(255 255 255 / 30%);
-        display: flex;
-        align-items: center;
-        padding: 1rem;
-        width: 100%;
-        justify-content: center;
-        color: white;
-        span {
-          font-size: 2rem;
-        }
+    .wrapper-deadline {
+      border-radius: 7px;
+      /* border: 1px solid rgb(255 255 255 / 30%); */
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      width: 100%;
+      justify-content: center;
+      color: white;
+      span {
+        font-size: 2rem;
       }
+    }
 
-      .wrapper-deadline_timer {
-        padding: 0px 0.85rem;
+    .wrapper-deadline_timer {
+      padding: 0px 0.85rem;
 
-        p {
-          font-weight: bold;
-          font-size: 2rem;
-        }
+      p {
+        font-weight: bold;
+        font-size: 2rem;
+        font-family: "Lato";
+        justify-content: center;
+        align-items: center;
+        display: flex;
       }
     }
   }

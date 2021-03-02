@@ -40,8 +40,10 @@ const Counter = (props) => {
   return (
     <>
       <div className="wrapper-deadline-counter">
-        <h2>¡Prepárate!</h2>
-        <p>Lo bueno está por venir</p>
+        <div className="title">
+          <h5>¡Prepárate!</h5>
+          <p>Lo bueno está por venir</p>
+        </div>
         <div className="wrapper-deadline">
           <div className="wrapper-deadline_timer">
             <p>{timerDays}</p>

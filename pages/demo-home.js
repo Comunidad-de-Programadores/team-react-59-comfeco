@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Layout from "../components/general/Layout";
 import HomeDashboard from "./componentsPages/HomeDashboard";
 import HomeLogin from "./componentsPages/HomeLogin";
-
 const demoHome = () => {
   const [tokenLocalExist, setTokenLocalExist] = useState(false);
   const [tokenSessExist, setTokenSessExist] = useState(false);
@@ -20,12 +19,12 @@ const demoHome = () => {
             <div className="backgroundHome"></div>
             <main className="row col-xs-12">
               <HomeLogin />
-              <HomeDashboard />
+              {/* <HomeDashboard /> */}
             </main>
           </div>
         </>
       ) : (
-        <HomeDashboard />
+        {/* <HomeDashboard /> */}
       )}
     </Layout>
   );

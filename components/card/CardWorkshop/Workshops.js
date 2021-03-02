@@ -51,19 +51,23 @@ const Workshops = ( ) => {
   }, [])
 
   useEffect(() => {
-    if(valueSelected.value !== undefined) {
-      let workShopToday = [];
-      getWorkshops(valueSelected.value).then(items => {
-        items.map((item) => {
-          //Verified isToday
-          if( isToday(item.date, item.hour, item.zone) ) {
-            //Convert Time Zone Local
-            item.hour = convertTimeZoneLocal(item.date, item.hour, item.zone);
-            workShopToday.push(item); 
-          }
+    try {
+      if(valueSelected.value !== undefined) {
+        let workShopToday = [];
+        getWorkshops(valueSelected.value).then(items => {
+          items.map((item) => {
+            //Verified isToday
+            if( isToday(item.date, item.hour, item.zone) ) {
+              //Convert Time Zone Local
+              item.hour = convertTimeZoneLocal(item.date, item.hour, item.zone);
+              workShopToday.push(item); 
+            }
+          });
+          setWorkshops(workShopToday);
         });
-        setWorkshops(workShopToday);
-      });
+      }
+    } catch (error) {
+      console.log("no paso nada!")
     }
   }, [valueSelected]);
 
@@ -72,7 +76,7 @@ const Workshops = ( ) => {
       <div className="card-taller">
         <div className="card-taller-header">
           <span className="card-taller-title"> Talleres</span>
-          <A type={'a'} css={'card-taller-link'} href={'#'}><span>Ver más</span></A>
+          <A css={'card-taller-link'} href={'#'}><span>Ver más</span></A>
         </div>
         
         <div className="card-taller-event">

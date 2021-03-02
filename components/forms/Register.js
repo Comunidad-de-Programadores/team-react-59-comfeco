@@ -5,16 +5,20 @@ import Router from "next/router";
 import $ from "../nano/$";
 
 const Register = () => {
+
   const [data, setData] = useState({ error: null, message: "" });
+
   const focus = () => {
+    
+    const focusClass ="activefocus";
     const activo = document.activeElement.id;
 
-    const addClass = (css) => {
-      return document.activeElement.parentNode.classList.add(`${css}`);
+    const addClass = () => {
+      return document.activeElement.parentNode.classList.add(`${focusClass}`);
     };
 
-    const removeClass = (id, css) => {
-      return $(`${id}`).parentNode.classList.remove(`${css}`);
+    const removeClass = (id) => {
+      return $(`${id}`).parentNode.classList.remove(`${focusClass}`);
     };
 
     /*  if (activo === "registerNombre") {
@@ -24,38 +28,37 @@ const Register = () => {
     } */
 
     if (activo === "registerUserName") {
-      addClass("activeFocus");
+      addClass();
     } else {
-      removeClass("registerUserName", "activeFocus");
+      removeClass("registerUserName");
     }
 
     if (activo === "registerCorreo") {
-      addClass("activeFocus");
+      addClass();
     } else {
-      removeClass("registerCorreo", "activeFocus");
+      removeClass("registerCorreo");
     }
 
     if (activo === "registerPassword") {
-      addClass("activeFocus");
+      addClass();
     } else {
-      removeClass("registerPassword", "activeFocus");
+      removeClass("registerPassword");
     }
 
     if (activo === "registerPasswordConfirm") {
-      addClass("activeFocus");
+      addClass();
     } else {
-      removeClass("registerPasswordConfirm", "activeFocus");
+      removeClass("registerPasswordConfirm");
     }
 
     if (activo === "front") {
-      /* removeClass("registerNombre", "activeFocus"); */
-      removeClass("registerUserName", "activeFocus");
-      removeClass("registerCorreo", "activeFocus");
-      removeClass("registerPassword", "activeFocus");
-      removeClass("registerPasswordConfirm", "activeFocus");
+      /* removeClass("registerNombre"); */
+      removeClass("registerUserName");
+      removeClass("registerCorreo");
+      removeClass("registerPassword");
+      removeClass("registerPasswordConfirm");
     }
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const padre = e.target.parentNode;
