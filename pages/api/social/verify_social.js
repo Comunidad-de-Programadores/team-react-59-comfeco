@@ -24,7 +24,7 @@ export default async function handler(req, res) {
           const update = await User.findByIdAndUpdate(emailExist._id, {
             twitterId: code.id,
             twitterName: code.name,
-            image: code.image,
+            image: emailExist.image ? emailExist.image : code.image,
           });
 
           const token = await jwt.sign({ _id: update._id }, process.env.KEY);
@@ -51,7 +51,7 @@ export default async function handler(req, res) {
           const update = await User.findByIdAndUpdate(emailExist._id, {
             githubId: code.id,
             githubName: code.name,
-            image: code.image,
+            image: emailExist.image ? emailExist.image : code.image,
           });
 
           const token = await jwt.sign({ _id: update._id }, process.env.KEY);
@@ -78,7 +78,7 @@ export default async function handler(req, res) {
           const update = await User.findByIdAndUpdate(emailExist._id, {
             facebookId: code.id,
             facebookName: code.name,
-            image: code.image,
+            image: emailExist.image ? emailExist.image : code.image,
           });
 
           const token = await jwt.sign({ _id: update._id }, process.env.KEY);
@@ -105,7 +105,7 @@ export default async function handler(req, res) {
           const update = await User.findByIdAndUpdate(emailExist._id, {
             googleId: code.id,
             googleName: code.name,
-            image: code.image,
+            image: emailExist.image ? emailExist.image : code.image,
           });
 
           const token = await jwt.sign({ _id: update._id }, process.env.KEY);
