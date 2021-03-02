@@ -76,9 +76,30 @@ const Header = () => {
   };
 
   const contX = () => {
+    if ($("siderBarNotificaciones").classList.contains("right")) {
+      $("siderBarNotificaciones").classList.remove("right");
+    }
     $("contX").classList.toggle("active");
 
     $("siderbarTablet").classList.toggle("left");
+  };
+
+  const showNotifications = () => {
+    if ($("siderbarTablet").classList.contains("left")) {
+      $("siderbarTablet").classList.remove("left");
+    }
+
+    if ($("contX").classList.contains("active")) {
+      $("contX").classList.remove("active");
+    }
+
+    $("siderBarNotificaciones").classList.toggle("right");
+  };
+
+  const showDataUser = () => {
+    $("dataUser").classList.toggle("dataUserDisplay");
+    $("expandMore").classList.toggle("expandMore");
+    $("expandMore2").classList.toggle("expandMore");
   };
   return (
     <>
@@ -126,16 +147,34 @@ const Header = () => {
 
               <div className="usuario">
                 <ul>
-                  <li className="img">
+                  <li
+                    className="img"
+                    onClick={() => {
+                      showDataUser();
+                    }}
+                  >
                     <img src="/Genarogg.jpg" alt="" />
                   </li>
-                  <li className="name">
+                  <li
+                    className="name"
+                    onClick={() => {
+                      showDataUser();
+                    }}
+                  >
                     <p>Genarogg</p>
                   </li>
                   <li className="morePerfile">
-                    <span className="ico icon-expand_more"></span>
+                    <span
+                      className="ico icon-expand_more"
+                      id="expandMore"
+                    ></span>
                   </li>
-                  <li className="notifications">
+                  <li
+                    className="notifications"
+                    onClick={() => {
+                      showNotifications();
+                    }}
+                  >
                     <span className="ico icon-lock"></span>
                   </li>
                 </ul>
@@ -196,16 +235,37 @@ const Header = () => {
           <div className="col-xs-3 right">
             <div className="usuario">
               <ul>
-                <li className="img">
+                <li
+                  className="img"
+                  onClick={() => {
+                    showDataUser();
+                  }}
+                >
                   <img src="/Genarogg.jpg" alt="" />
                 </li>
-                <li className="name">
+                <li
+                  className="name"
+                  onClick={() => {
+                    showDataUser();
+                  }}
+                >
                   <p>Genarogg</p>
                 </li>
-                <li className="morePerfile">
+                <li
+                  className="morePerfile"
+                  onClick={() => {
+                    showDataUser();
+                  }}
+                  id="expandMore2"
+                >
                   <span className="ico icon-expand_more"></span>
                 </li>
-                <li className="notifications">
+                <li
+                  className="notifications"
+                  onClick={() => {
+                    showNotifications();
+                  }}
+                >
                   <span className="ico icon-lock"></span>
                 </li>
               </ul>
@@ -263,23 +323,50 @@ const Header = () => {
             </ul>
           </nav>
         </div>
-        {/*  <div className="row center-xs containerHeader headerPhone">
-          <div className="col-xs-2 left">
-            <Icono css={"icon-menu"} />
-          </div>
-          <div className="col-xs-6 imgLogo">
-            <Image
-              src="/logo1.png"
-              alt="Picture of the author"
-              width={139}
-              height={41}
-            />
-          </div>
-          <div className="col-xs-2 right">
-            <Icono css={"icon-account_circle"} />
-          </div>
+        <div className="dataUser" id="dataUser">
+          <nav>
+            <ul>
+              <li>
+                <a href="#">
+                  <span className="ico icon-lock"></span>Mi Perfil
+                </a>
+              </li>
+              <li>
+                <button>
+                  <a href="#">
+                    <span className="ico icon-lock"></span>
+                    Cerrar Sesión
+                  </a>
+                </button>
+              </li>
+            </ul>
+          </nav>
         </div>
-      */}{" "}
+
+        <nav className="siderBarNotificaciones" id="siderBarNotificaciones">
+          <ul>
+            <li>
+              <a href="#">
+                <span className="ico icon-lock"></span>notificasion#1
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span className="ico icon-lock"></span>notificasion#2
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span className="ico icon-lock"></span>notificasion#3
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span className="ico icon-lock"></span>notificasion#4
+              </a>
+            </li>
+          </ul>
+        </nav>
       </header>
     </>
   );

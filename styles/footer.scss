@@ -7,6 +7,7 @@ footer {
 
   width: 100%;
   justify-content: center;
+  z-index: 0;
 
   .derechos {
     display: flex;
@@ -105,6 +106,8 @@ footer {
       }
     }
   }
+
+ 
 }
 
 @media screen and (min-width: 1024px) {
