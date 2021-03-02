@@ -19,7 +19,10 @@
   align-items: center;
   display: flex;
   justify-content: center;
-
+  input:focus, textarea:focus {
+    background-color: #521e87;
+    outline: none;
+  }
 } 
 
 .editProfile.formGroupSesion {
@@ -27,9 +30,9 @@
   border-radius: 10px;
   font-family: $fontTitle;
 
-  max-height: 900px;
+  max-height: 1200px;
   max-width: 1000px;
-  min-height: 800px;
+  min-height: 900px;
   min-width: 415px;
   padding: 40px;
 
@@ -45,13 +48,13 @@
     line-height: 3em;
   }
 
-  .container-photo {
+  .containerPhoto {
     border-radius: 50%;
     border-radius: 0;
     display:inline-block;
     padding:20px;
     margin: auto;
-    img.container-circle {
+    img.containerCircle {
       background-color: white;
       width: 140px;
       height: 140px;
@@ -72,7 +75,7 @@
       border: 5px solid #7535b6;
       border-radius:50%;
     }
-    .container-file {
+    .containerFile {
       position: relative; 
       padding: 0; 
       cursor: pointer;
@@ -83,7 +86,7 @@
     /* max-width: 324px; */
     width: 100%;
 
-    .container-box {
+    .containerBox {
       display: flex;
       padding: 5px;
       &.block {
@@ -92,13 +95,15 @@
       &.inline {
         align-items: center;
         justify-content: space-between;
+        padding: 10px 5px;
         input {
           width: 100%;
         }
       }
-      label {
+      .textForm {
         margin-right: 10px;
         padding: 10px 0;
+        width: 80%;
         span {
           padding-right: 5px;
         }
@@ -135,4 +140,40 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .editProfile.formGroupSesion {
+    max-height: 1200px;
+    max-width: 95vw;
+    min-height: 1000px;
+    min-width: 95vw;
+    padding: 20px;
 
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .editProfile.formGroupSesion {
+    max-height: 1800px;
+    max-width: 90vw;
+    min-height: 455px;
+    min-width: 95vw;
+    padding: 20px;
+
+  }
+  .col-xs-4, .col-xs-6 {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  form {
+    .containerBox {
+      &.inline {
+        flex-flow: column;
+        align-items: none;
+        justify-content: none;
+      }
+      .textForm {
+        width: 97% !important;
+      }
+    }
+  }
+}

@@ -12,15 +12,15 @@ const EditProfile = () => {
     >
       <form className="row">
         <h4 className="title">Editar Perfil</h4>
-        <div className="container-photo container-circle">
-          <div className="container-file" type="file">
-            <img className="container-circle"></img>
+        <div className="containerPhoto containerCircle">
+          <div className="containerFile" type="file">
+            <img className="containerCircle"></img>
             <span className="ico icon-https"></span>
           </div>
         </div>
         <div className="row col-xs-12">
-          <div className="container-box block col-xs-6">
-            <label htmlFor="nick" className="text-form">
+          <div className="containerBox block col-xs-6">
+            <label htmlFor="nick" className="textForm">
               <span className="ico icon-https"></span>
               Nick
             </label>
@@ -32,8 +32,8 @@ const EditProfile = () => {
               className=""
             />
           </div>
-          <div className="container-box block col-xs-6">
-            <label htmlFor="email" className="text-form">
+          <div className="containerBox block col-xs-6">
+            <label htmlFor="email" className="textForm">
               <span className="ico icon-https"></span>
               Correo
             </label>
@@ -47,8 +47,8 @@ const EditProfile = () => {
           </div>
         </div>
         <div className="row col-xs-12">
-          <div className="container-box block col-xs-4">
-            <label htmlFor="gender" className="text-form">
+          <div className="containerBox block col-xs-4">
+            <label htmlFor="gender" className="textForm">
               <span className="ico icon-https"></span>
               Género
             </label>
@@ -60,8 +60,8 @@ const EditProfile = () => {
               className=""
             />
           </div>
-          <div className="container-box block col-xs-4">
-            <label htmlFor="birthdate" className="text-form">
+          <div className="containerBox block col-xs-4">
+            <label htmlFor="birthdate" className="textForm">
               <span className="ico icon-https"></span>
               Fecha de Nacimiento
             </label>
@@ -73,8 +73,8 @@ const EditProfile = () => {
               className=""
             />
           </div>
-          <div className="container-box block col-xs-4">
-            <label htmlFor="country" className="text-form">
+          <div className="containerBox block col-xs-4">
+            <label htmlFor="country" className="textForm">
               <span className="ico icon-https"></span>
               País
             </label>
@@ -88,8 +88,8 @@ const EditProfile = () => {
           </div>
         </div>
         <div className="row col-xs-12">
-          <div className="container-box block col-xs-6">
-            <label htmlFor="password" className="text-form">
+          <div className="containerBox block col-xs-6">
+            <label htmlFor="password" className="textForm">
               <span className="ico icon-https"></span>
               Contraseña
             </label>
@@ -101,8 +101,8 @@ const EditProfile = () => {
               className=""
             />
           </div>
-          <div className="container-box block col-xs-6">
-            <label htmlFor="password2" className="text-form">
+          <div className="containerBox block col-xs-6">
+            <label htmlFor="password2" className="textForm">
               <span className="ico icon-https"></span>
               Repetir contraseña
             </label>
@@ -116,8 +116,8 @@ const EditProfile = () => {
           </div>
         </div>
         <div className="row col-xs-12">
-          <div className="container-box inline col-xs-6">
-            <label htmlFor="facebook" className="text-form">
+          <div className="containerBox inline col-xs-6">
+            <label htmlFor="facebook" className="textForm">
               <span className="ico icon-https"></span>
               facebook.com/
             </label>
@@ -129,8 +129,8 @@ const EditProfile = () => {
               className=""
             />
           </div>
-          <div className="container-box inline col-xs-6">
-            <label htmlFor="github" className="text-form">
+          <div className="containerBox inline col-xs-6">
+            <label htmlFor="github" className="textForm">
               <span className="ico icon-https"></span>
               github.com/
             </label>
@@ -144,8 +144,8 @@ const EditProfile = () => {
           </div>
         </div>
         <div className="row col-xs-12">
-          <div className="container-box inline col-xs-6">
-            <label htmlFor="linkedin" className="text-form">
+          <div className="containerBox inline col-xs-6">
+            <label htmlFor="linkedin" className="textForm">
               <span className="ico icon-https"></span>
               linkedin.com/in/
             </label>
@@ -157,8 +157,8 @@ const EditProfile = () => {
               className=""
             />
           </div>
-          <div className="container-box inline col-xs-6">
-            <label htmlFor="twitter" className="text-form">
+          <div className="containerBox inline col-xs-6">
+            <label htmlFor="twitter" className="textForm">
               <span className="ico icon-https"></span>
               twitter.com/
             </label>
@@ -171,11 +171,14 @@ const EditProfile = () => {
             />
           </div>
         </div>
-        <div className="container-box block row col-xs-12">
-          <label htmlFor="twitter" className="text-form">
+        <div className="containerBox block row col-xs-12">
+          <label htmlFor="biography" className="textForm">
                 Biografía
           </label>
-          <textarea></textarea>
+          <textarea name="biography"
+                    rows="10" 
+                    cols="50"
+          ></textarea>
         </div>
         <div className="buttonContainer col-xs-12">
           <button
