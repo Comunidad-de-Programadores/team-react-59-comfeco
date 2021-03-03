@@ -3,6 +3,7 @@ import A from "../nano/A";
 import Buttons from "./Buttons";
 import Router from "next/router";
 import $ from "../nano/$";
+import RedesLogin from "./RedesLogin"
 
 const Register = () => {
 
@@ -199,6 +200,7 @@ const Register = () => {
             {data.message}
           </p>
         )}
+        <RedesLogin />
 
         <div className="containerRegister">
           <button

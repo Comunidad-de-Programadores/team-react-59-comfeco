@@ -3,6 +3,7 @@ import Buttons from "./Buttons";
 import Router from "next/router";
 import $ from "../nano/$";
 import Icono from "../nano/Icono";
+import RedesLogin from "./RedesLogin"
 
 const Login = () => {
   const [data, setData] = useState({ error: null, message: "" });
@@ -130,6 +131,10 @@ const Login = () => {
           />
         </div>
         <br />
+
+        <RedesLogin />
+
+
         <div
           className="row col-xs-12 checkBoxContainer"
           onClick={() => {

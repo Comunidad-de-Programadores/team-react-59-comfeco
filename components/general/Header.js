@@ -65,7 +65,7 @@ const Header = () => {
   };
 
   const scrollHeader = () => {
-    let altura = ($("headerDesktop").offsetTop) + 2;
+    let altura = $("headerDesktop").offsetTop + 2;
 
     if (window.pageYOffset > altura) {
       $("headerDesktop").classList.add("menuFixed");
@@ -79,13 +79,21 @@ const Header = () => {
       $("dataUser").classList.remove("dataUserDisplay");
     }
 
-    if ($("expandMore").classList.contains("expandMore")) {
-      $("expandMore").classList.remove("expandMore");
+    
+      
+    try {
+      if ($("expandMore").classList.contains("expandMore")) {
+        $("expandMore").classList.remove("expandMore");
+      }
+
+      if ($("expandMore2").classList.contains("expandMore")) {
+        $("expandMore2").classList.remove("expandMore");
+      }
+    } catch (error) {
+      
     }
 
-    if ($("expandMore2").classList.contains("expandMore")) {
-      $("expandMore2").classList.remove("expandMore");
-    }
+    
     if ($("siderBarNotificaciones").classList.contains("right")) {
       $("siderBarNotificaciones").classList.remove("right");
     }
