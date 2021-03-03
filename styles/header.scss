@@ -13,6 +13,8 @@ header {
   position: fixed;
   width: 100%;
   z-index: 100;
+  top: -2px;
+  
 
   .usuario {
     margin-left: 40px;
@@ -129,7 +131,7 @@ header {
     position: absolute;
     right: 0;
 
-    background-color: $colorPurple1;;
+    background-color: $colorPurple1;
     width: 100%;
     max-width: 10px;
     width: 90%;
@@ -139,18 +141,18 @@ header {
     height: calc(100vh - 60px);
 
     top: 66px;
-     right: -100%;
-   
+    right: -100%;
+
     width: 90%;
     max-width: 350px;
     transition: 600ms all ease;
     overflow: hidden;
     border-left: 1px solid #fff;
 
-   &.right{
-    right: 0;
-    transition: 600ms all ease;
-   }
+    &.right {
+      right: 0;
+      transition: 600ms all ease;
+    }
     ul {
       height: 100%;
       li {
@@ -215,9 +217,17 @@ header {
         .notifications {
           padding-left: 0;
         }
+
+        &.login {
+          padding: 43px 0 36px 15px;
+          border-left: 2px solid #fff;
+        }
         a {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
           color: #fff;
-          display: block;
+          /* display: block; */
           font-size: 13px;
           font-weight: bold;
 
@@ -289,12 +299,16 @@ header {
 
 @media screen and (min-width: 1024px) {
   header.menuFixed {
+    /* box-shadow: 1px 1px 1px $colorPurple1; */
     .containerHeader {
       background-color: $colorPurple1;
       border-bottom: $borderHeaderFooter;
       width: 100%;
 
       .navegation nav ul li {
+        &.login {
+          padding: 24px 0 24px 10px;
+        }
         padding: 20px 0 20px 10px;
       }
     }
@@ -324,7 +338,6 @@ header {
 
     .siderBarNotificaciones {
       top: 74px;
-      
     }
   }
   header {
@@ -351,7 +364,7 @@ header {
       }
 
       a img {
-        width: 157px !important;
+        width: 154px !important;
         height: 40px !important;
       }
 
@@ -405,7 +418,7 @@ header {
   .headerTablet {
     width: 100%;
     justify-content: center;
-    background: $colorPurple1;;
+    background: $colorPurple1;
     align-items: center;
     height: 66px;
     position: fixed;
@@ -460,7 +473,7 @@ header {
 
       top: 66px;
       left: -100%;
-      background-color: $colorPurple1;;
+      background-color: $colorPurple1;
       width: 90%;
       max-width: 350px;
       transition: 600ms all ease;

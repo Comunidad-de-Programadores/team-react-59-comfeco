@@ -65,7 +65,7 @@ const Header = () => {
   };
 
   const scrollHeader = () => {
-    let altura = $("headerDesktop").offsetTop;
+    let altura = ($("headerDesktop").offsetTop) + 2;
 
     if (window.pageYOffset > altura) {
       $("headerDesktop").classList.add("menuFixed");
@@ -177,10 +177,11 @@ const Header = () => {
                   </A>
                 </li>
                 {!localToken && !sessToken && (
-                  <li>
-                    <Link href="/">
-                      <a className="login">Login</a>
-                    </Link>
+                  <li className="login">
+                    <A href="/" css="">
+                      <Icono css="icon-account_circle" />
+                      Login
+                    </A>
                   </li>
                 )}
               </ul>
