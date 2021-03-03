@@ -336,6 +336,7 @@
 }
 
 .containerSesion {
+  margin: 15vh 0vh 25vh 0vh;
   min-height: calc(50vh + 22px);
   width: 85%;
 
@@ -522,26 +523,7 @@
   }
 }
 
-@media screen and (max-width: 900px) {
-  .containerSesion {
-    .containerText {
-      .containerP {
-      }
 
-      h4 {
-      }
-
-      hr {
-      }
-
-      .ico {
-      }
-
-      p {
-      }
-    }
-  }
-}
 
 @media screen and (max-width: 768px) {
   .containerSesion .containerText {

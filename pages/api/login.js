@@ -29,7 +29,15 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: "Email no existe" });
     }
 
+<<<<<<< HEAD
     console.log("2");
+=======
+    //check if is register whit a social red
+    if (!emailExist.password) {
+      return res.status(400).json({ error: "Registrado con una red social" });
+    }
+
+>>>>>>> 86a09ceec74c9f808e16eb06f15d0e8343ec87ed
     //Compare password encrypt
     emailExist.compare(password, async (error, equal) => {
       if (error) {

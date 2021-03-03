@@ -1,0 +1,19 @@
+@import "variables.scss";
+
+.backgroundHome {
+  background: linear-gradient(to top, $colorPurple1, $colorBackgroundBlackLigt);
+  height: 186%;
+  left: -200px;
+  position: fixed;
+  transform: rotate(-183deg);
+  width: 235%;
+  z-index: -150;
+  top: -200px;
+}
+
+.containerNotLogin {
+  display: inherit;
+  flex-wrap: inherit;
+  min-height: inherit;
+  width: 100%;
+}

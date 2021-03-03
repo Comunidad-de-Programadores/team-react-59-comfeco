@@ -14,7 +14,6 @@ $colorFuchia4: #d740da;
 $colorFuchia5: #e480e5;
 $colorFuchia6: #ecadf6;
 
-
 $colorPurple1: #390f64;
 $colorPurple2: #521e87;
 $colorPurple3: #7535b6;
@@ -29,20 +28,35 @@ $colorYellow4: #ffcb38;
 $colorYellow5: #ffd767;
 $colorYellow6: #ffe499;
 
-$fontBasic: 'Lato', 'Crete Round', sans-serif;
-$fontTitle:'Crete Round','Lato', sans-serif;
+$colorBody: #282828;
+$colorTeamSvelte: #ff3e00;
+$colorTeamReact: #0d47a1;
+$colorTeamVue: #41b883;
+$colorTeamAngular: #e23237;
+$transicion600msLineal2: 1s linear all;
+$colorBackgroundBlackDark: #05070b;
+$colorBackgroundBlackLigt: #17171d;
+
+
+
+$fontBasic: "Lato", "Crete Round", sans-serif;
+$fontTitle: "Crete Round", "Lato", sans-serif;
 
 $border: 1px solid #fff;
-
+$borderRadius: 4px;
 $transicion600ms: all ease 600ms;
-$transicion600msLineal:all 600ms;
+$transicion600msLineal: all 600ms;
 $transitionS1: 1s ease all;
 
 $colorIcons: #fff;
 $colorText: #fff;
-$borderHeaderFooter: 2px solid #fff;;
+$borderHeaderFooter: 2px solid #fff;
 
 $colorSelection: $colorPurple3;
 
 $formBackground: $colorPurple1;
+$formInputBackground: $colorPurple2;
 $formInputBackground:$colorPurple2;
+$formBackgroundDashboard: $colorWhite;
+
+$colorBackgroundColorFixed:#1b003a;

@@ -4,8 +4,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
- 
 }
 
 button{
@@ -13,7 +11,7 @@ button{
 }
 
 body {
-  background: #282828;
+  background: $colorBody;
   display: flex;
   font-family: Lato, sans-serif;
   flex-wrap: wrap;
@@ -62,3 +60,25 @@ a::selection {
   color: #fff;
 }
 
+/* Colores de las redes sociales */
+.instagram {
+  border-radius: 5px;
+  color: #c15a3a !important;
+}
+
+.twitter {
+  border-radius: 5px;
+  color: #00acee !important;
+}
+
+.linkedin {
+  color: #0077b5 !important;
+}
+
+.github {
+  color: #ee216b !important;
+}
+
+.facebook {
+  color: #3b5998 !important;
+}

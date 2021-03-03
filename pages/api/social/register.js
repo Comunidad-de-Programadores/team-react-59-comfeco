@@ -30,14 +30,15 @@ export default async function handler(req, res) {
           }
 
           const newTwitterUser = await new User({
-            type: code.type,
             twitterId: code.id,
             twitterName: code.name,
             nickname,
+            image: code.image,
+            email: code.email,
           }).save();
 
           const twitterToken = await jwt.sign(
-            { _id: newTwitterUser._id, image: code.image },
+            { _id: newTwitterUser._id },
             process.env.KEY
           );
 
@@ -52,14 +53,15 @@ export default async function handler(req, res) {
           }
 
           const newGithubUser = await new User({
-            type: code.type,
             githubId: code.id,
             githubName: code.name,
             nickname,
+            image: code.image,
+            email: code.email,
           }).save();
 
           const githubToken = await jwt.sign(
-            { _id: newGithubUser._id, image: code.image },
+            { _id: newGithubUser._id },
             process.env.KEY
           );
 
@@ -74,14 +76,15 @@ export default async function handler(req, res) {
           }
 
           const newFacebookUser = await new User({
-            type: code.type,
             facebookId: code.id,
             facebookName: code.name,
             nickname,
+            image: code.image,
+            email: code.email,
           }).save();
 
           const facebookToken = await jwt.sign(
-            { _id: newFacebookUser._id, image: code.image },
+            { _id: newFacebookUser._id },
             process.env.KEY
           );
 
@@ -96,40 +99,19 @@ export default async function handler(req, res) {
           }
 
           const newGoogleUser = await new User({
-            type: code.type,
             googleId: code.id,
             googleName: code.name,
             nickname,
+            image: code.image,
+            email: code.email,
           }).save();
 
           const googleToken = await jwt.sign(
-            { _id: newGoogleUser._id, image: code.image },
+            { _id: newGoogleUser._id },
             process.env.KEY
           );
 
           res.status(200).json({ token: googleToken });
-          break;
-
-        case "linkedin":
-          const existLinkedin = await User.findOne({ linkedinId: code.id });
-
-          if (existLinkedin) {
-            return res.status(400).json({ error: "Linkedin Exist" });
-          }
-
-          const newLinkedinUser = await new User({
-            type: code.type,
-            linkedinId: code.id,
-            linkedinName: code.name,
-            nickname,
-          }).save();
-
-          const linkedinToken = await jwt.sign(
-            { _id: newLinkedinUser._id, image: code.image },
-            process.env.KEY
-          );
-
-          res.status(200).json({ token: linkedinToken });
           break;
 
         default:

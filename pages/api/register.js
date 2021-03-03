@@ -42,7 +42,6 @@ export default async function handler(req, res) {
 
     //Register Users
     const register = await new User({
-      type: "default",
       email,
       password,
       nickname,
