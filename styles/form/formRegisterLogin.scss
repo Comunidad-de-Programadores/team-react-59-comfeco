@@ -235,11 +235,13 @@
   transform-style: preserve-3d;
   z-index: 2;
 
+  
+
   .front,
   .newPassword {
     backface-visibility: hidden;
-    max-height: 390px;
-    min-height: 390px;
+    max-height: 420px;
+    min-height: 420px;
     position: relative;
     z-index: 1;
     border: 1px solid transparent;
@@ -304,8 +306,8 @@
   &.activeRight {
     transform: rotateY(180deg);
     .backRight {
-      max-height: 500px;
-      min-height: 500px;
+      max-height: 530px;
+      min-height: 530px;
       transition: $transicion600msLineal;
     }
     .backLeft {
@@ -567,8 +569,9 @@
 
   .containerForm {
     .front {
-      max-height: 390px;
-      min-height: 390px;
+      max-height: 415px;
+      min-height: 415px;
+
     }
     .backLeft {
       max-height: 260px;
