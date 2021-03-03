@@ -20,12 +20,9 @@ import "../styles/slider/sliderSleader.scss";
 import "../styles/slider/sliderSponsors.scss";
 /* css para cambiar los colores de la interfas (Proximaente)*/
 import "../styles/colorChange.scss";
-<<<<<<< HEAD
 import "../styles/form/newPassword.scss";
 import "../styles/form/editProfile.scss";
-=======
 import "../styles/dashboard.scss";
->>>>>>> 86a09ceec74c9f808e16eb06f15d0e8343ec87ed
 
 /* Clase para meter nuevos estilos (Uxiliar) */
 import "../styles/demo.scss";

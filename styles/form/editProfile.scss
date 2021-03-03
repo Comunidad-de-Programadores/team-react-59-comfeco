@@ -115,6 +115,16 @@
         color: #fff !important;
         font-weight: 300;
         padding: 10px 0px 10px 10px;
+        width: 100%;
+        
+      }
+      .containerInputIcon {
+        position: relative;
+        span {
+          position: absolute;
+          right: 10px;
+          top: 15px;
+        }
       }
       textarea {
         background-color: #521e87 !important;

@@ -15,13 +15,13 @@ const EditProfile = () => {
         <div className="containerPhoto containerCircle">
           <div className="containerFile" type="file">
             <img className="containerCircle"></img>
-            <span className="ico icon-https"></span>
+            <span className="ico icon-camera"></span>
           </div>
         </div>
         <div className="row col-xs-12">
           <div className="containerBox block col-xs-6">
             <label htmlFor="nick" className="textForm">
-              <span className="ico icon-https"></span>
+              <span className="ico icon-user"></span>
               Nick
             </label>
             <input
@@ -34,7 +34,7 @@ const EditProfile = () => {
           </div>
           <div className="containerBox block col-xs-6">
             <label htmlFor="email" className="textForm">
-              <span className="ico icon-https"></span>
+              <span className="ico icon-mail-envelope-closed"></span>
               Correo
             </label>
             <input
@@ -49,7 +49,6 @@ const EditProfile = () => {
         <div className="row col-xs-12">
           <div className="containerBox block col-xs-4">
             <label htmlFor="gender" className="textForm">
-              <span className="ico icon-https"></span>
               Género
             </label>
             <input
@@ -62,20 +61,21 @@ const EditProfile = () => {
           </div>
           <div className="containerBox block col-xs-4">
             <label htmlFor="birthdate" className="textForm">
-              <span className="ico icon-https"></span>
               Fecha de Nacimiento
             </label>
-            <input
+            <div className="containerInputIcon">
+              <input
               type="text"
               name="birthdate"
               id="birthdate"
               placeholder=""
               className=""
-            />
+              />
+              <span className="ico icon-calendar"></span>
+            </div>
           </div>
           <div className="containerBox block col-xs-4">
             <label htmlFor="country" className="textForm">
-              <span className="ico icon-https"></span>
               País
             </label>
             <input
@@ -90,7 +90,6 @@ const EditProfile = () => {
         <div className="row col-xs-12">
           <div className="containerBox block col-xs-6">
             <label htmlFor="password" className="textForm">
-              <span className="ico icon-https"></span>
               Contraseña
             </label>
             <input
@@ -103,7 +102,6 @@ const EditProfile = () => {
           </div>
           <div className="containerBox block col-xs-6">
             <label htmlFor="password2" className="textForm">
-              <span className="ico icon-https"></span>
               Repetir contraseña
             </label>
             <input
@@ -118,7 +116,7 @@ const EditProfile = () => {
         <div className="row col-xs-12">
           <div className="containerBox inline col-xs-6">
             <label htmlFor="facebook" className="textForm">
-              <span className="ico icon-https"></span>
+              <span className="ico icon-facebook1"></span>
               facebook.com/
             </label>
             <input
@@ -131,7 +129,7 @@ const EditProfile = () => {
           </div>
           <div className="containerBox inline col-xs-6">
             <label htmlFor="github" className="textForm">
-              <span className="ico icon-https"></span>
+              <span className="ico icon-github"></span>
               github.com/
             </label>
             <input
@@ -146,7 +144,7 @@ const EditProfile = () => {
         <div className="row col-xs-12">
           <div className="containerBox inline col-xs-6">
             <label htmlFor="linkedin" className="textForm">
-              <span className="ico icon-https"></span>
+              <span className="ico icon-linkedin-with-circle"></span>
               linkedin.com/in/
             </label>
             <input
@@ -159,7 +157,7 @@ const EditProfile = () => {
           </div>
           <div className="containerBox inline col-xs-6">
             <label htmlFor="twitter" className="textForm">
-              <span className="ico icon-https"></span>
+              <span className="ico icon-twitter-with-circle"></span>
               twitter.com/
             </label>
             <input
