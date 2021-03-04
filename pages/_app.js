@@ -15,6 +15,8 @@ import "../styles/form/newPassword.scss"
 import "../styles/demo.scss";
 
 import "../styles/perfil/perfil.scss";
+import "../styles/cards.scss";
+import "../styles/perfil/cardEvents.scss";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
