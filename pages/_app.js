@@ -35,6 +35,9 @@ import "../styles/deadline.scss";
 import "../styles/button/btn1.scss";
 import "../styles/button/btnHamburguesa.scss";
 
+/* estilos perfil */
+import "../styles/perfil/miPerfil.scss";
+
 import { Provider } from "next-auth/client";
 
 function MyApp({ Component, pageProps }) {

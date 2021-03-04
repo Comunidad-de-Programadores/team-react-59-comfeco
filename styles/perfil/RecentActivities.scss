@@ -1,0 +1,17 @@
+@import '../variables';
+
+.containerRecentActivities{
+    color: white;
+    margin-top: 20px;
+
+    .contentRecentActivities{
+        align-items: center;
+        background-color: $formBackground;
+        border-radius: 10px;
+        display: flex;
+        
+        justify-content: space-between;
+        margin-top: 10px;
+        padding: 5px;
+    }
+}
