@@ -13,14 +13,14 @@ const editProfile = () => {
   }, [token]);
 
   return (
-    <Layout>
+    <>
       <div className="backgroundRegister"></div>
       <div className="containerUser editProfileContainer row between-xs">
         <div className="containerForm" id="containerEditProfile">
-          <EditProfile token={tokenVal}/>
+          <EditProfile />
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
 

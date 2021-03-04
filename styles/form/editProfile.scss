@@ -6,6 +6,7 @@
   .containerForm {
     color: #fff;
     cursor: default;
+    margin-top: 40px;
     max-width: 1080px;
     position: relative;
     transition: $transicion600ms;
@@ -108,7 +109,7 @@
           padding-right: 5px;
         }
       }
-      input {
+      input, textarea, select {
         background-color: #521e87 !important;
         border: 3px solid transparent;
         border-radius: 4px;
@@ -125,14 +126,6 @@
           right: 10px;
           top: 15px;
         }
-      }
-      textarea {
-        background-color: #521e87 !important;
-        border: 3px solid transparent;
-        border-radius: 4px;
-        color: #fff !important;
-        font-weight: 300;
-        padding: 10px 0px 10px 10px;
       }
     }
   }
@@ -177,8 +170,8 @@
   form {
     .containerBox {
       &.inline {
-        flex-flow: column;
         align-items: none;
+        flex-flow: column;
         justify-content: none;
       }
       .textForm {
@@ -186,4 +179,24 @@
       }
     }
   }
+}
+
+.danger {
+  p {
+    color: red;
+    display: block;
+    padding-left: 10px;
+  }
+}
+
+.birthDate::-webkit-calendar-picker-indicator { 
+  opacity: 0;
+}
+.birthDate::-webkit-inner-spin-button {
+  display: none;
+}
+
+.birthDate {
+  background:#fff url('../../public/calendar.svg')  97% 50% no-repeat ;
+  
 }

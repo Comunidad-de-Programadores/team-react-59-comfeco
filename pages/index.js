@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/general/Layout";
 import HomeLogin from "./componentsPages/HomeLogin";
-
+import EditProfile from "./editar-perfil";
 const Home = () => {
   const [tokenLocalExist, setTokenLocalExist] = useState(false);
   const [tokenSessExist, setTokenSessExist] = useState(false);
@@ -13,7 +13,8 @@ const Home = () => {
 
   return (
     <Layout>
-      {!tokenSessExist && !tokenLocalExist ? <HomeLogin /> : null}
+      {/* {!tokenSessExist && !tokenLocalExist ? <HomeLogin /> : <EditProfile />} */}
+      <EditProfile />
     </Layout>
   );
 };
