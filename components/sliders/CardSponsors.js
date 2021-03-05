@@ -11,39 +11,39 @@ const CardSponsors = ({
 }) => {
   return (
     <>
-      <div class="containerCard">
-        <div class="cardSponsor">
-          <div class="poligones">
-            <div class="izq"></div>
-            <div class="der"></div>
+      <div className="containerCard">
+        <div className="cardSponsor">
+          <div className="poligones">
+            <div className="izq"></div>
+            <div className="der"></div>
           </div>
-          <div class="img">
+          <div className="img">
             {/* */}
             <Image src={img} width={200} height={275} />
           </div>
-          <div class="name">
+          <div className="name">
             <h3>{nombre}</h3>
           </div>
-          <div class="redesSociales">
+          <div className="redesSociales">
             <ul>
               <li>
-                <a class="btn2" href={globe}>
-                  <span class="ico   icon-globe"></span>
+                <a className="btn2" href={globe}>
+                  <span className="ico   icon-globe"></span>
                 </a>
               </li>
               <li>
-                <a class="btn2" href={facebook}>
-                  <span class="ico  icon-facebook"></span>
+                <a className="btn2" href={facebook}>
+                  <span className="ico  icon-facebook"></span>
                 </a>
               </li>
               <li>
-                <a class="btn2" href={twitter}>
-                  <span class="ico icon-twitter"></span>
+                <a className="btn2" href={twitter}>
+                  <span className="ico icon-twitter"></span>
                 </a>
               </li>
               <li>
-                <a class="btn2" href={linkedin}>
-                  <span class="ico icon-linkedin"></span>
+                <a className="btn2" href={linkedin}>
+                  <span className="ico icon-linkedin"></span>
                 </a>
               </li>
             </ul>
