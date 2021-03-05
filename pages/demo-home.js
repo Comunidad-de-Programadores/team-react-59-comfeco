@@ -17,9 +17,10 @@ const demoHome = () => {
         <>
           <div className="containerNotLogin">
             <div className="backgroundHome"></div>
+            <div className="backgroundLigth"></div>
             <main className="row col-xs-12">
               <HomeLogin />
-              {/* <HomeDashboard /> */}
+              <HomeDashboard />
             </main>
           </div>
         </>
