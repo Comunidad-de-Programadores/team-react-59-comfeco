@@ -37,8 +37,8 @@ const EditProfile = () => {
     setPasswordShown(passwordShown ? false : true);
   };
 
-  const voltearIniciar = () => {
-    const tarjeta = $("editProfileContainer");
+  const voltearDashboard = () => {
+    const tarjeta = $("containerDashboard");
 
     $("traseraDerecha").style.display = "none";
     if (
@@ -66,9 +66,9 @@ const EditProfile = () => {
     >
       <div className="buttonEditProfile buttonBack">
         <button
-          className="iniciarSesion"
+          className="homeDashboard"
           onClick={() => {
-            voltearIniciar();
+            voltearDashboard();
           }}
         >
           <A href="#homeDashboard" css="animationCircle" id="buttonBack">
