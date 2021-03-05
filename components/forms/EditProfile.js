@@ -5,13 +5,14 @@ import { PromiseProvider } from "mongoose";
 const EditProfile = () => {
   const { register, handleSubmit, errors, watch } = useForm();
   const [passwordShown, setPasswordShown] = useState(false);
+
   const onSubmit = formData => {
     alert(JSON.stringify(formData))
   }
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
   };
-  
+
   return (
     <div
       className="editProfile formGroupSesion col-xs-12"
@@ -79,7 +80,7 @@ const EditProfile = () => {
                 name="gender"
                 ref={register({required: true})}
               >
-                <option selected disabled>Seleccionar género</option>
+                <option selected disabled value="">Seleccionar género</option>
                 <option value="Femenino">Femenino</option>
                 <option value="Masculino">Masculino</option>
               </select>
@@ -100,10 +101,11 @@ const EditProfile = () => {
                 id="birthdate"
                 className="birthDate"
                 name="birthdate"
-                placeholder="dd/mm/yyyy"
                 ref={register({required: true})}
                 type="date"
-                value=""
+                placeholder="DD/MM/YYYY" 
+                pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" 
+                title="Enter a date in this format DD/MM/YYYY"
                 />
               </div>
             </div>
@@ -142,7 +144,7 @@ const EditProfile = () => {
                 name="area"
                 ref={register({required: true})}
               >
-                <option selected disabled>Seleccionar una área</option>
+                <option selected disabled value="">Seleccionar una área</option>
                 <option value="Frontend">Frontend</option>
                 <option value="Backend">Backend</option>
                 <option value="DevOps">DevOps</option>
@@ -216,14 +218,9 @@ const EditProfile = () => {
                 type="text"
                 name="facebook"
                 id="facebook"
-                ref={register({required: true})}
+                ref={register}
               />
             </div>
-            { errors.facebook &&
-              <div className="danger">
-                { errors.facebook?.type === "required" && <p>Facebook es requerido</p> }
-              </div>
-            }
           </div>
           <div className="col-xs-6">
             <div className="containerBox inline">
@@ -235,14 +232,9 @@ const EditProfile = () => {
                 type="text"
                 name="github"
                 id="github"
-                ref={register({required: true})}
+                ref={register}
               />
             </div>
-            { errors.github &&
-              <div className="danger">
-                { errors.github?.type === "required" && <p>Github es requerido</p> }
-              </div>
-            }
           </div>
         </div>
         <div className="row col-xs-12">
@@ -256,14 +248,9 @@ const EditProfile = () => {
                 type="text"
                 name="linkedin"
                 id="linkedin"
-                ref={register({required: true})}
+                ref={register}
               />
             </div>
-            { errors.linkedin &&
-              <div className="danger">
-                { errors.linkedin?.type === "required" && <p>Linkedin es requerido</p> }
-              </div>
-            }
           </div>
           <div className="col-xs-6">
             <div className="containerBox inline">
@@ -275,17 +262,12 @@ const EditProfile = () => {
                 type="text"
                 name="twitter"
                 id="twitter"
-                ref={register({required: true})}
+                ref={register}
               />
             </div>
-            { errors.twitter &&
-              <div className="danger">
-                { errors.twitter?.type === "required" && <p>Twitter es requerido</p> }
-              </div>
-            }
-            </div>
+          </div>
         </div>
-        <div className="col-xs-12 row">
+        <div className="row col-xs-12">
           <div className="containerBox block">
             <label htmlFor="biography" className="textForm">
                   Biografía
