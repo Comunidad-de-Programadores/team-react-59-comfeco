@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { PromiseProvider } from "mongoose";
 import debounce from "debounce";
+import A from "../nano/A";
+import $ from "../nano/$";
 
 const EditProfile = () => {
   const { register, handleSubmit, errors, watch, trigger } = useForm();
@@ -9,9 +11,52 @@ const EditProfile = () => {
 
   const onSubmit = formData => {
     alert(JSON.stringify(formData))
+    /*const req = await fetch("/api/edit_profile", {
+      method: "PUT",
+      headers: new Headers([["Content-type", "application/json"]]),
+      body: JSON.stringify({
+        nickname: formData.nickname,
+        email: formData.email,
+        gender: formData.gender,
+        birthdate: formData.birthdate,
+        country: formData.country,
+        area: formData.area,
+        password: formData.password,
+        github: formData.github,
+        linkedin: formData.linkedin,
+        twitter: formData.twitter,
+        biography: formData.biography
+        token: props.token,
+      }),
+    });
+
+    const res = await req.json();
+    */
   }
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
+  };
+
+  const voltearIniciar = () => {
+    const tarjeta = $("editProfileContainer");
+
+    $("traseraDerecha").style.display = "none";
+    if (
+      tarjeta.classList.contains("activeRight") ||
+      tarjeta.classList.contains("activeLeft")
+    ) {
+      tarjeta.classList.remove("activeRight");
+      if (tarjeta.classList.contains("activeLeft")) {
+      }
+      tarjeta.classList.remove("activeLeft");
+      $("buttonBack").classList.remove("active");
+    }
+
+    $("front").classList.add("tarjetaFocus");
+
+    setTimeout(() => {
+      $("front").classList.remove("tarjetaFocus");
+    }, 1500);
   };
 
   return (
@@ -19,6 +64,19 @@ const EditProfile = () => {
       className="editProfile formGroupSesion col-xs-12"
       id="editProfile"
     >
+      <div className="buttonEditProfile buttonBack">
+        <button
+          className="iniciarSesion"
+          onClick={() => {
+            voltearIniciar();
+          }}
+        >
+          <A href="#homeDashboard" css="animationCircle" id="buttonBack">
+            <span className="ico icon-reply"></span>
+          </A>
+        </button>
+      </div>
+          
       <form className="row" onSubmit={handleSubmit(onSubmit)}>
         <h4 className="title">Editar Perfil</h4>
         <div className="containerPhoto containerCircle">
