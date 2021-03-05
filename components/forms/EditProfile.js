@@ -34,6 +34,7 @@ const EditProfile = () => {
               </label>
               <input
                 id="nickname"
+                className={`${errors.nickname ? "errorRed" : ""}`}
                 name="nickname"
                 ref={register({required: true, maxLength: 30 })}
                 type="text"
@@ -53,6 +54,7 @@ const EditProfile = () => {
               </label>
               <input
                 id="email"
+                className={`${errors.email ? "errorRed" : ""}`}
                 name="email"
                 ref={register({
                   required: true,
@@ -77,6 +79,7 @@ const EditProfile = () => {
               </label>
               <select
                 id="gender"
+                className={`${errors.gender ? "errorRed" : ""}`}
                 name="gender"
                 ref={register({required: true})}
               >
@@ -99,7 +102,7 @@ const EditProfile = () => {
               <div className="containerInputIcon">
                 <input
                 id="birthdate"
-                className="birthDate"
+                className={`birthDate ${errors.birthdate ? "errorRed" : ""}`}
                 name="birthdate"
                 ref={register({required: true})}
                 type="date"
@@ -121,9 +124,10 @@ const EditProfile = () => {
                 País
               </label>
               <input
-                type="text"
-                name="country"
                 id="country"
+                className={`${errors.country ? "errorRed" : ""}`}
+                name="country"
+                type="text"
                 ref={register({required: true})}
               />
             </div>
@@ -141,6 +145,7 @@ const EditProfile = () => {
               </label>
               <select
                 id="area"
+                className={`${errors.area ? "errorRed" : ""}`}
                 name="area"
                 ref={register({required: true})}
               >
@@ -168,9 +173,10 @@ const EditProfile = () => {
               </label>
               <div className="containerInputIcon">
                 <input
-                  type={passwordShown ? "text" : "password"}
-                  name="password"
                   id="password"
+                  className={`${errors.password ? "errorRed" : ""}`}
+                  name="password"
+                  type={passwordShown ? "text" : "password"}
                   ref={register({required: true, minLength: 8 })}
                 />
                 <span className={`ico ${passwordShown ? "icon-eye" : "icon-eye-blocked"}`} onClick={togglePasswordVisiblity}></span>
@@ -190,9 +196,10 @@ const EditProfile = () => {
               </label>
               <div className="containerInputIcon">
                 <input
-                type={passwordShown ? "text" : "password"}
-                name="password2"
                 id="password2"
+                className={`${errors.password2 ? "errorRed" : ""}`}
+                name="password2"
+                type={passwordShown ? "text" : "password"}
                 ref={register({required: true, minLength: 8, validate: (value) => value === watch('password')})}
                 />
                 <span className={`ico ${passwordShown ? "icon-eye" : "icon-eye-blocked"}`} onClick={togglePasswordVisiblity}></span>
@@ -215,9 +222,9 @@ const EditProfile = () => {
                 facebook.com/
               </label>
               <input
-                type="text"
-                name="facebook"
                 id="facebook"
+                name="facebook"
+                type="text"
                 ref={register}
               />
             </div>
@@ -272,9 +279,10 @@ const EditProfile = () => {
             <label htmlFor="biography" className="textForm">
                   Biografía
             </label>
-            <textarea name="biography"
-                      rows="10" 
+            <textarea className={`${errors.biography ? "errorRed" : ""}`}
                       cols="50"
+                      name="biography"
+                      rows="10" 
                       ref={register({required: true, maxLength: 140 })}
             ></textarea>
           </div>
