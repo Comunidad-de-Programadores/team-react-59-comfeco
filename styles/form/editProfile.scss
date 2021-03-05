@@ -146,6 +146,28 @@
   }
 }
 
+.danger {
+  p {
+    color: red;
+    display: block;
+    padding-left: 10px;
+  }
+}
+
+.birthDate {
+  background:#fff url('../../public/calendar.svg')  97% 50% no-repeat ;
+  &::-webkit-calendar-picker-indicator { 
+    opacity: 0;
+  }
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+}
+
+.errorRed {
+  border: 1px solid red !important;
+}
+
 @media screen and (max-width: 768px) {
   .editProfile.formGroupSesion {
     max-height: 2000px;
@@ -182,28 +204,4 @@
       }
     }
   }
-}
-
-.danger {
-  p {
-    color: red;
-    display: block;
-    padding-left: 10px;
-  }
-}
-
-.birthDate::-webkit-calendar-picker-indicator { 
-  opacity: 0;
-}
-.birthDate::-webkit-inner-spin-button {
-  display: none;
-}
-
-.birthDate {
-  background:#fff url('../../public/calendar.svg')  97% 50% no-repeat ;
-  
-}
-
-.errorRed {
-  border: 1px solid red !important;
 }
