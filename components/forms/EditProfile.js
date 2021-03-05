@@ -1,9 +1,10 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { PromiseProvider } from "mongoose";
+import debounce from "debounce";
 
 const EditProfile = () => {
-  const { register, handleSubmit, errors, watch } = useForm();
+  const { register, handleSubmit, errors, watch, trigger } = useForm();
   const [passwordShown, setPasswordShown] = useState(false);
 
   const onSubmit = formData => {
@@ -36,8 +37,15 @@ const EditProfile = () => {
                 id="nickname"
                 className={`${errors.nickname ? "errorRed" : ""}`}
                 name="nickname"
+                onChange={e => {
+                  const value = e.target.value;
+                  console.log(errors.nickname);
+                }}
                 ref={register({required: true, maxLength: 30 })}
                 type="text"
+                onChange={debounce(async () => {
+                  await trigger('nickname')
+                }, 500)}
               />
             </div>
             { errors.nickname &&
@@ -61,6 +69,9 @@ const EditProfile = () => {
                   pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
                 })}
                 type="text"
+                onChange={debounce(async () => {
+                  await trigger('email')
+                }, 500)}
               />
             </div>
             { errors.email &&
@@ -109,6 +120,9 @@ const EditProfile = () => {
                 placeholder="DD/MM/YYYY" 
                 pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" 
                 title="Enter a date in this format DD/MM/YYYY"
+                onChange={debounce(async () => {
+                  await trigger('birthdate')
+                }, 500)}
                 />
               </div>
             </div>
@@ -129,6 +143,9 @@ const EditProfile = () => {
                 name="country"
                 type="text"
                 ref={register({required: true})}
+                onChange={debounce(async () => {
+                  await trigger('country')
+                }, 500)}
               />
             </div>
             { errors.country &&
@@ -178,6 +195,9 @@ const EditProfile = () => {
                   name="password"
                   type={passwordShown ? "text" : "password"}
                   ref={register({required: true, minLength: 8 })}
+                  onChange={debounce(async () => {
+                    await trigger('password')
+                  }, 500)}
                 />
                 <span className={`ico ${passwordShown ? "icon-eye" : "icon-eye-blocked"}`} onClick={togglePasswordVisiblity}></span>
               </div>
@@ -201,6 +221,9 @@ const EditProfile = () => {
                 name="password2"
                 type={passwordShown ? "text" : "password"}
                 ref={register({required: true, minLength: 8, validate: (value) => value === watch('password')})}
+                onChange={debounce(async () => {
+                  await trigger('password2')
+                }, 500)}
                 />
                 <span className={`ico ${passwordShown ? "icon-eye" : "icon-eye-blocked"}`} onClick={togglePasswordVisiblity}></span>
               </div>
@@ -284,6 +307,9 @@ const EditProfile = () => {
                       name="biography"
                       rows="10" 
                       ref={register({required: true, maxLength: 140 })}
+                      onChange={debounce(async () => {
+                        await trigger('biography')
+                      }, 500)}
             ></textarea>
           </div>
           { errors.biography &&
