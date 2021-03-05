@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { PromiseProvider } from "mongoose";
 import debounce from "debounce";
@@ -8,9 +8,34 @@ import $ from "../nano/$";
 const EditProfile = () => {
   const { register, handleSubmit, errors, watch, trigger } = useForm();
   const [passwordShown, setPasswordShown] = useState(false);
+  const [user, setUser] = useState({
+    email: "",
+    nickname: "",
+    gender: "",
+    biography: "",
+    birthdate: "",
+    image: "/no_user.jpg",
+    country: "",
+    area: "",
+  });
 
-  const onSubmit = formData => {
-    alert(JSON.stringify(formData))
+  useEffect(() => {
+    fetch("/api/get_user", {
+      headers: new Headers([
+        ["Authorization", `${localStorage.token || sessionStorage.token}`],
+      ]),
+    })
+      .then((data) => data.json())
+      .then((data) => {
+        if (data.error) {
+          return;
+        }
+        console.log(data);
+        setUser({ ...data, image: data.image ? data.image : "no_user.jpg" });
+      });
+  }, []);
+
+  const onSubmit = (formData) => {
     /*const req = await fetch("/api/edit_profile", {
       method: "PUT",
       headers: new Headers([["Content-type", "application/json"]]),
@@ -32,7 +57,27 @@ const EditProfile = () => {
 
     const res = await req.json();
     */
-  }
+
+    fetch("/api/edit_profile", {
+      method: "POST",
+      headers: new Headers([
+        ["Content-type", "application/json"],
+        ["Authorization", `${localStorage.token || sessionStorage.token}`],
+      ]),
+      body: JSON.stringify({
+        nickname: formData.nickname,
+        email: formData.email,
+        gender: formData.gender,
+        birthdate: formData.birthdate,
+        country: formData.country,
+        area: formData.area,
+        password: formData.password,
+        biography: formData.biography,
+      }),
+    })
+      .then((data) => data.json())
+      .then((data) => console.log(data));
+  };
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
   };
@@ -60,10 +105,7 @@ const EditProfile = () => {
   };
 
   return (
-    <div
-      className="editProfile formGroupSesion col-xs-12"
-      id="editProfile"
-    >
+    <div className="editProfile formGroupSesion col-xs-12" id="editProfile">
       <div className="buttonEditProfile buttonBack">
         <button
           className="homeDashboard"
@@ -76,12 +118,12 @@ const EditProfile = () => {
           </A>
         </button>
       </div>
-          
+
       <form className="row" onSubmit={handleSubmit(onSubmit)}>
         <h4 className="title">Editar Perfil</h4>
         <div className="containerPhoto containerCircle">
           <div className="containerFile" type="file">
-            <img className="containerCircle"></img>
+            <img className="containerCircle" src={user.image}></img>
             <span className="ico icon-camera"></span>
           </div>
         </div>
@@ -92,26 +134,31 @@ const EditProfile = () => {
                 Nick
               </label>
               <input
+                defaultValue={user.nickname}
                 id="nickname"
                 className={`${errors.nickname ? "errorRed" : ""}`}
                 name="nickname"
-                onChange={e => {
+                onChange={(e) => {
                   const value = e.target.value;
                   console.log(errors.nickname);
                 }}
-                ref={register({required: true, maxLength: 30 })}
+                ref={register({ maxLength: 30 })}
                 type="text"
                 onChange={debounce(async () => {
-                  await trigger('nickname')
+                  await trigger("nickname");
                 }, 500)}
               />
             </div>
-            { errors.nickname &&
+            {errors.nickname && (
               <div className="danger">
-                { errors.nickname?.type === "maxLength" && <p>La longitud máxima de Nickname es 30 carácteres</p> }
-                { errors.nickname?.type === "required" && <p>Nickname es requerido</p> }
+                {errors.nickname?.type === "maxLength" && (
+                  <p>La longitud máxima de Nickname es 30 carácteres</p>
+                )}
+                {errors.nickname?.type === "required" && (
+                  <p>Nickname es requerido</p>
+                )}
               </div>
-            }
+            )}
           </div>
           <div className="col-xs-6">
             <div className="containerBox block">
@@ -119,25 +166,29 @@ const EditProfile = () => {
                 Correo
               </label>
               <input
+                defaultValue={user.email}
                 id="email"
                 className={`${errors.email ? "errorRed" : ""}`}
                 name="email"
                 ref={register({
-                  required: true,
                   pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
                 })}
                 type="text"
                 onChange={debounce(async () => {
-                  await trigger('email')
+                  await trigger("email");
                 }, 500)}
               />
             </div>
-            { errors.email &&
+            {errors.email && (
               <div className="danger">
-                { errors.email?.type === "pattern" && <p>Introduzca una dirección de correo electrónico válida</p> }
-                { errors.email?.type === "required" && <p>Correo electrónico es requerido</p> }
+                {errors.email?.type === "pattern" && (
+                  <p>Introduzca una dirección de correo electrónico válida</p>
+                )}
+                {errors.email?.type === "required" && (
+                  <p>Correo electrónico es requerido</p>
+                )}
               </div>
-            }
+            )}
           </div>
         </div>
         <div className="row col-xs-12">
@@ -147,21 +198,27 @@ const EditProfile = () => {
                 Género
               </label>
               <select
+                value={user.gender}
+                onChange={(e) => setUser({ ...user, gender: e.target.value })}
                 id="gender"
                 className={`${errors.gender ? "errorRed" : ""}`}
                 name="gender"
-                ref={register({required: true})}
+                ref={register({})}
               >
-                <option selected disabled value="">Seleccionar género</option>
-                <option value="Femenino">Femenino</option>
-                <option value="Masculino">Masculino</option>
+                <option selected disabled value="">
+                  Seleccionar género
+                </option>
+                <option value="male">Femenino</option>
+                <option value="female">Masculino</option>
               </select>
             </div>
-            { errors.gender &&
+            {errors.gender && (
               <div className="danger">
-                { errors.gender?.type === "required" && <p>Seleccione una opción</p> }
+                {errors.gender?.type === "required" && (
+                  <p>Seleccione una opción</p>
+                )}
               </div>
-            }
+            )}
           </div>
           <div className="col-xs-4">
             <div className="containerBox block">
@@ -170,25 +227,28 @@ const EditProfile = () => {
               </label>
               <div className="containerInputIcon">
                 <input
-                id="birthdate"
-                className={`birthDate ${errors.birthdate ? "errorRed" : ""}`}
-                name="birthdate"
-                ref={register({required: true})}
-                type="date"
-                placeholder="DD/MM/YYYY" 
-                pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" 
-                title="Enter a date in this format DD/MM/YYYY"
-                onChange={debounce(async () => {
-                  await trigger('birthdate')
-                }, 500)}
+                  defaultValue={user.birthdate}
+                  id="birthdate"
+                  className={`birthDate ${errors.birthdate ? "errorRed" : ""}`}
+                  name="birthdate"
+                  ref={register({})}
+                  type="date"
+                  placeholder="DD/MM/YYYY"
+                  pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"
+                  title="Enter a date in this format DD/MM/YYYY"
+                  onChange={debounce(async () => {
+                    await trigger("birthdate");
+                  }, 500)}
                 />
               </div>
             </div>
-            { errors.birthdate &&
+            {errors.birthdate && (
               <div className="danger">
-                { errors.birthdate?.type === "required" && <p>Fecha de nacimiento es requerido</p> }
+                {errors.birthdate?.type === "required" && (
+                  <p>Fecha de nacimiento es requerido</p>
+                )}
               </div>
-            }
+            )}
           </div>
           <div className="col-xs-4">
             <div className="containerBox block">
@@ -196,49 +256,58 @@ const EditProfile = () => {
                 País
               </label>
               <input
+                defaultValue={user.country}
                 id="country"
                 className={`${errors.country ? "errorRed" : ""}`}
                 name="country"
                 type="text"
-                ref={register({required: true})}
+                ref={register({})}
                 onChange={debounce(async () => {
-                  await trigger('country')
+                  await trigger("country");
                 }, 500)}
               />
             </div>
-            { errors.country &&
+            {errors.country && (
               <div className="danger">
-                { errors.country?.type === "required" && <p>País es requerido</p> }
+                {errors.country?.type === "required" && (
+                  <p>País es requerido</p>
+                )}
               </div>
-            }
+            )}
           </div>
         </div>
         <div className="row col-xs-12">
           <div className="containerBox inline">
             <label htmlFor="area" className="textForm">
-                Área de conocimiento
-              </label>
-              <select
-                id="area"
-                className={`${errors.area ? "errorRed" : ""}`}
-                name="area"
-                ref={register({required: true})}
-              >
-                <option selected disabled value="">Seleccionar una área</option>
-                <option value="Frontend">Frontend</option>
-                <option value="Backend">Backend</option>
-                <option value="DevOps">DevOps</option>
-                <option value="Video Game Developers">Video Game Developers</option>
-                <option value="UI/UX">UI/UX</option>
-                <option value="Database Developer">Database Developer</option>
-                <option value="Cloud Computing">Cloud Computing</option>
-              </select>
+              Área de conocimiento
+            </label>
+            <select
+              onChange={(e) => setUser({ ...user, area: e.target.value })}
+              value={user.area}
+              id="area"
+              className={`${errors.area ? "errorRed" : ""}`}
+              name="area"
+              ref={register({})}
+            >
+              <option selected disabled value="">
+                Seleccionar una área
+              </option>
+              <option value="Frontend">Frontend</option>
+              <option value="Backend">Backend</option>
+              <option value="DevOps">DevOps</option>
+              <option value="Video Game Developers">
+                Video Game Developers
+              </option>
+              <option value="UI/UX">UI/UX</option>
+              <option value="Database Developer">Database Developer</option>
+              <option value="Cloud Computing">Cloud Computing</option>
+            </select>
           </div>
-          { errors.area &&
+          {errors.area && (
             <div className="danger">
-              { errors.area?.type === "required" && <p>Seleccione una opción</p> }
+              {errors.area?.type === "required" && <p>Seleccione una opción</p>}
             </div>
-          }
+          )}
         </div>
         <div className="row col-xs-12">
           <div className="col-xs-6">
@@ -252,20 +321,29 @@ const EditProfile = () => {
                   className={`${errors.password ? "errorRed" : ""}`}
                   name="password"
                   type={passwordShown ? "text" : "password"}
-                  ref={register({required: true, minLength: 8 })}
+                  ref={register({ minLength: 8 })}
                   onChange={debounce(async () => {
-                    await trigger('password')
+                    await trigger("password");
                   }, 500)}
                 />
-                <span className={`ico ${passwordShown ? "icon-eye" : "icon-eye-blocked"}`} onClick={togglePasswordVisiblity}></span>
+                <span
+                  className={`ico ${
+                    passwordShown ? "icon-eye" : "icon-eye-blocked"
+                  }`}
+                  onClick={togglePasswordVisiblity}
+                ></span>
               </div>
             </div>
-            { errors.password &&
+            {errors.password && (
               <div className="danger">
-                { errors.password?.type === "minLength" && <p>La longitud mínima es 8 carácteres</p> }
-                { errors.password?.type === "required" && <p>Password es requerido</p> }
+                {errors.password?.type === "minLength" && (
+                  <p>La longitud mínima es 8 carácteres</p>
+                )}
+                {errors.password?.type === "required" && (
+                  <p>Password es requerido</p>
+                )}
               </div>
-            }
+            )}
           </div>
           <div className="col-xs-6">
             <div className="containerBox block">
@@ -274,25 +352,39 @@ const EditProfile = () => {
               </label>
               <div className="containerInputIcon">
                 <input
-                id="password2"
-                className={`${errors.password2 ? "errorRed" : ""}`}
-                name="password2"
-                type={passwordShown ? "text" : "password"}
-                ref={register({required: true, minLength: 8, validate: (value) => value === watch('password')})}
-                onChange={debounce(async () => {
-                  await trigger('password2')
-                }, 500)}
+                  id="password2"
+                  className={`${errors.password2 ? "errorRed" : ""}`}
+                  name="password2"
+                  type={passwordShown ? "text" : "password"}
+                  ref={register({
+                    minLength: 8,
+                    validate: (value) => value === watch("password"),
+                  })}
+                  onChange={debounce(async () => {
+                    await trigger("password2");
+                  }, 500)}
                 />
-                <span className={`ico ${passwordShown ? "icon-eye" : "icon-eye-blocked"}`} onClick={togglePasswordVisiblity}></span>
+                <span
+                  className={`ico ${
+                    passwordShown ? "icon-eye" : "icon-eye-blocked"
+                  }`}
+                  onClick={togglePasswordVisiblity}
+                ></span>
               </div>
             </div>
-            { errors.password2 &&
-                <div className="danger">
-                  { errors.password2?.type === "minLength" && <p>La longitud mínima es 8 carácteres</p> }
-                  { errors.password2?.type === "required" && <p>Password es requerido</p> }
-                  { errors.password2?.type === "validate" &&  <p>El password no coincide</p> }
-                </div>
-              }
+            {errors.password2 && (
+              <div className="danger">
+                {errors.password2?.type === "minLength" && (
+                  <p>La longitud mínima es 8 carácteres</p>
+                )}
+                {errors.password2?.type === "required" && (
+                  <p>Password es requerido</p>
+                )}
+                {errors.password2?.type === "validate" && (
+                  <p>El password no coincide</p>
+                )}
+              </div>
+            )}
           </div>
         </div>
         <div className="row col-xs-12">
@@ -302,12 +394,7 @@ const EditProfile = () => {
                 <span className="ico icon-facebook1"></span>
                 facebook.com/
               </label>
-              <input
-                id="facebook"
-                name="facebook"
-                type="text"
-                ref={register}
-              />
+              <input id="facebook" name="facebook" type="text" ref={register} />
             </div>
           </div>
           <div className="col-xs-6">
@@ -316,12 +403,7 @@ const EditProfile = () => {
                 <span className="ico icon-github"></span>
                 github.com/
               </label>
-              <input
-                type="text"
-                name="github"
-                id="github"
-                ref={register}
-              />
+              <input type="text" name="github" id="github" ref={register} />
             </div>
           </div>
         </div>
@@ -332,12 +414,7 @@ const EditProfile = () => {
                 <span className="ico icon-linkedin-with-circle"></span>
                 linkedin.com/in/
               </label>
-              <input
-                type="text"
-                name="linkedin"
-                id="linkedin"
-                ref={register}
-              />
+              <input type="text" name="linkedin" id="linkedin" ref={register} />
             </div>
           </div>
           <div className="col-xs-6">
@@ -346,36 +423,37 @@ const EditProfile = () => {
                 <span className="ico icon-twitter-with-circle"></span>
                 twitter.com/
               </label>
-              <input
-                type="text"
-                name="twitter"
-                id="twitter"
-                ref={register}
-              />
+              <input type="text" name="twitter" id="twitter" ref={register} />
             </div>
           </div>
         </div>
         <div className="row col-xs-12">
           <div className="containerBox block">
             <label htmlFor="biography" className="textForm">
-                  Biografía
+              Biografía
             </label>
-            <textarea className={`${errors.biography ? "errorRed" : ""}`}
-                      cols="50"
-                      name="biography"
-                      rows="10" 
-                      ref={register({required: true, maxLength: 140 })}
-                      onChange={debounce(async () => {
-                        await trigger('biography')
-                      }, 500)}
+            <textarea
+              defaultValue={user.biography}
+              className={`${errors.biography ? "errorRed" : ""}`}
+              cols="50"
+              name="biography"
+              rows="10"
+              ref={register({ maxLength: 140 })}
+              onChange={debounce(async () => {
+                await trigger("biography");
+              }, 500)}
             ></textarea>
           </div>
-          { errors.biography &&
-              <div className="danger">
-                { errors.biography?.type === "maxLength" && <p>La longitud máxima es 140 carácteres</p> }
-                { errors.biography?.type === "required" && <p>Biografía es requerido</p> }
-              </div>
-            }
+          {errors.biography && (
+            <div className="danger">
+              {errors.biography?.type === "maxLength" && (
+                <p>La longitud máxima es 140 carácteres</p>
+              )}
+              {errors.biography?.type === "required" && (
+                <p>Biografía es requerido</p>
+              )}
+            </div>
+          )}
         </div>
         <div className="buttonContainer col-xs-12">
           <button
