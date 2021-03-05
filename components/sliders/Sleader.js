@@ -11,6 +11,8 @@ const Sleader = () => {
       slidesPerView: "auto",
       loop: true,
       speed: 5000,
+      lazy: true,
+      preloadImages: true,
       coverflowEffect: {
         rotate: 10,
         stretch: 25,
@@ -26,9 +28,9 @@ const Sleader = () => {
         el: ".swiper-pagination",
         clickable: true,
       },
-      preloadImages: true,
+      
 
-      lazy: true,
+      
     });
   }, []);
 

@@ -235,7 +235,8 @@
   transform-style: preserve-3d;
   z-index: 2;
 
-  
+  max-height: 530px;
+  min-height: 530px;
 
   .front,
   .newPassword {
@@ -338,11 +339,11 @@
 }
 
 .containerSesion {
-  margin: 15vh 0vh 25vh 0vh;
-  min-height: calc(50vh + 22px);
+  margin: 15vh 0vh 5vh 0vh;
+  min-height: calc(70vh + 22px);
   width: 85%;
 
-  .containerText {
+  /* .containerText {
     color: #fff;
     display: block;
     font-family: $fontTitle;
@@ -378,7 +379,7 @@
       width: 55px;
       margin-bottom: 25px;
     }
-  }
+  } */
 }
 .checkBoxContainer {
   .icon-check-circle {
@@ -442,24 +443,24 @@
     border-color: transparent;
   }
 }
-@media screen and (min-width: 1800px) {
+/* @media screen and (min-width: 1800px) {
   .containerSesion .containerText {
     padding-right: 222px !important;
   }
 }
-
+ */ /* 
 @media screen and (min-width: 1700px) {
   .containerSesion .containerText {
     padding-right: 202px !important;
   }
-}
-
+} */
+/* 
 @media screen and (min-width: 1450px) {
   .containerSesion .containerText {
     padding-right: 100px;
   }
-}
-
+} */
+/* 
 @media screen and (min-width: 1025px) {
   .containerSesion {
     .containerText {
@@ -470,13 +471,13 @@
       }
     }
   }
-}
+} */
 @media screen and (max-width: 1024px) {
   .containerSesion {
     min-height: 430px;
     width: 90%;
 
-    .containerText {
+    /* .containerText {
       padding-right: 0px;
       order: 15;
 
@@ -518,16 +519,14 @@
         font-family: Lato;
         font-weight: bold;
       }
-    }
+    } */
     .containerForm {
       order: 10;
     }
   }
 }
 
-
-
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .containerSesion .containerText {
     margin-bottom: 0;
     .containerP {
@@ -541,7 +540,7 @@
       width: 80vw;
     }
   }
-}
+} */
 
 @media screen and (max-width: 460px) {
   .containerSesion {
@@ -571,7 +570,6 @@
     .front {
       max-height: 415px;
       min-height: 415px;
-
     }
     .backLeft {
       max-height: 260px;
