@@ -79,9 +79,7 @@ const Workshops = ( ) => {
           <A css={'card-taller-link'} href={'#'}><span>Ver más</span></A>
         </div>
         
-        <div className="card-taller-event">
-            Hoy
-        </div>
+       
         <div className="card-taller-select">
           <Select
             options={group}
@@ -89,6 +87,9 @@ const Workshops = ( ) => {
             onChange={(option) => selectedGroup(option)}
             value={valueSelected}
           />
+        </div>
+        <div className="card-taller-event">
+            <p>Hoy:</p>
         </div>
         {workshops 
           ? workshops.map( workshop => ( <Workshop key={workshop._id} {...workshop} /> ))
