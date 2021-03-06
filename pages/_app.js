@@ -14,9 +14,13 @@ import "../styles/form/newPassword.scss";
 
 import "../styles/form/loginRedes.scss";
 
+/* scss swiper */ 
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import "swiper/components/effect-coverflow/effect-coverflow.scss";
 
 /* css del slider */
-import "../styles/slider/swiper.scss";
 import "../styles/slider/estilos.scss";
 import "../styles/slider/sliderSleader.scss";
 import "../styles/slider/sliderSponsors.scss";
@@ -37,8 +41,6 @@ import "../styles/deadline.scss";
 /* estilos para botones */
 import "../styles/button/btn1.scss";
 import "../styles/button/btnHamburguesa.scss";
-
-
 
 import { Provider } from "next-auth/client";
 
