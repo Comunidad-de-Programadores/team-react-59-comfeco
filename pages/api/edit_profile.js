@@ -22,8 +22,23 @@ export default async function handler(req, res) {
     for (let i in req.body) {
       if (req.body[i] && req.body[i] != "" && i == "password") {
         querys[i] = await encryptNewPassword(req.body[i]);
-      } else if (req.body[i] && req.body[i] != "") {
+      } else if (req.body[i] && req.body[i] != "" && i != "nickname") {
         querys[i] = req.body[i];
+      }
+    }
+
+    if (req.body.nickname && req.body.nickname != "") {
+      if (req.body.nickname == user.nickname) {
+        querys.nickname = user.nickname;
+      } else {
+        const existNickname = await User.findOne({
+          nickname: req.body.nickname,
+        });
+        if (existNickname) {
+          return res.status(400).json({ error: "nickname existente" });
+        }
+
+        querys.nickname = req.body.nickname;
       }
     }
 

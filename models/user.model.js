@@ -9,6 +9,8 @@ const User = new mongoose.Schema(
     country: { type: String },
     biography: { type: String },
     gender: { type: String },
+    birthdate: { type: String },
+    area: { type: String },
 
     //default
     password: { type: String },

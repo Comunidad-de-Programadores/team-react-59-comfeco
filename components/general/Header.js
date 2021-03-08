@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Router from "next/router";
 import Link from "next/link";
-import md5 from "md5";
 
 import Image from "next/image";
 import Icono from "../nano/Icono";

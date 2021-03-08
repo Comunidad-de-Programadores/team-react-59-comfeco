@@ -6,6 +6,7 @@
   .containerForm {
     color: #fff;
     cursor: default;
+    margin-top: 40px;
     max-width: 1080px;
     position: relative;
     transition: $transicion600ms;
@@ -30,7 +31,7 @@
   border-radius: 10px;
   font-family: $fontTitle;
 
-  max-height: 1200px;
+  max-height: 1230px;
   max-width: 1000px;
   min-height: 900px;
   min-width: 415px;
@@ -47,7 +48,9 @@
     text-align: center;
     line-height: 3em;
   }
-
+  .buttonEditProfile {
+    width: 100%;
+  }
   .containerPhoto {
     border-radius: 50%;
     border-radius: 0;
@@ -91,11 +94,13 @@
       padding: 5px;
       &.block {
         flex-flow: column;
+        width: 100%;
       }
       &.inline {
         align-items: center;
         justify-content: space-between;
         padding: 10px 5px;
+        width: 100%;
         input {
           width: 100%;
         }
@@ -106,9 +111,10 @@
         width: 80%;
         span {
           padding-right: 5px;
+          cursor: pointer;
         }
       }
-      input {
+      input, textarea, select {
         background-color: #521e87 !important;
         border: 3px solid transparent;
         border-radius: 4px;
@@ -126,14 +132,6 @@
           top: 15px;
         }
       }
-      textarea {
-        background-color: #521e87 !important;
-        border: 3px solid transparent;
-        border-radius: 4px;
-        color: #fff !important;
-        font-weight: 300;
-        padding: 10px 0px 10px 10px;
-      }
     }
   }
   .buttonContainer {
@@ -150,9 +148,31 @@
   }
 }
 
+.danger {
+  p {
+    color: red;
+    display: block;
+    padding-left: 10px;
+  }
+}
+
+.birthDate {
+  background:#fff url('../../public/calendar.svg')  97% 50% no-repeat ;
+  &::-webkit-calendar-picker-indicator { 
+    opacity: 0;
+  }
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+}
+
+.errorRed {
+  border: 1px solid red !important;
+}
+
 @media screen and (max-width: 768px) {
   .editProfile.formGroupSesion {
-    max-height: 1200px;
+    max-height: 2000px;
     max-width: 95vw;
     min-height: 1000px;
     min-width: 95vw;
@@ -177,8 +197,8 @@
   form {
     .containerBox {
       &.inline {
-        flex-flow: column;
         align-items: none;
+        flex-flow: column;
         justify-content: none;
       }
       .textForm {

@@ -7,7 +7,7 @@ import CorouselSponsors from "../../components/sliders/CorouselSponsors";
 
 const HomeDashboard = () => {
   return (
-    <>
+    <div id="containerDashboard">
       <div className="content row col-xs-12" id="content">
         <div className="panelCabecera row col-xs-12 center-xs">
           <h1>Bienvenidos a Community Fest and Code</h1>
@@ -42,7 +42,7 @@ const HomeDashboard = () => {
           {<CorouselSponsors />}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
