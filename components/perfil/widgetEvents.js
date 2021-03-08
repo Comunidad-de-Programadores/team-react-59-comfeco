@@ -5,7 +5,7 @@ import Link from "next/link";
 const WidgetEvents = () => {
   return (
     <>
-        <section className="card-widget col-xs-3">
+        <section className="card-widget">
             <div className="card-widget-head card-flex-inline">
                 <h3>Eventos de tu interés</h3>
                 <Link href="/eventos">
@@ -18,7 +18,7 @@ const WidgetEvents = () => {
                     <div className="card-event-title">Commnunity Fest and Code - 2021</div>
                     <div className="card-event-body">
                         <div className="card-event-body_image">
-                        <Image src="/perfil/default-event.jpg" alt="default avatar" width={70} height={70} />
+                        <Image src="/default-event.jpg" alt="default avatar" width={70} height={70} />
                         </div>
                         <div className="card-event-body_description">Lorem ipsum is simply dummy text of the printing and...</div>
                     </div>
@@ -30,7 +30,7 @@ const WidgetEvents = () => {
                     <div className="card-event-title">Commnunity Fest and Code - 2021</div>
                     <div className="card-event-body">
                         <div className="card-event-body_image">
-                        <Image src="/perfil/default-event.jpg" alt="default avatar" width={70} height={70} />
+                        <Image src="/default-event.jpg" alt="default avatar" width={70} height={70} />
                         </div>
                         <div className="card-event-body_description">Lorem ipsum is simply dummy text of the printing and...</div>
                     </div>
@@ -42,7 +42,7 @@ const WidgetEvents = () => {
                     <div className="card-event-title">Commnunity Fest and Code - 2021</div>
                     <div className="card-event-body">
                         <div className="card-event-body_image">
-                        <Image src="/perfil/default-event.jpg" alt="default avatar" width={70} height={70} />
+                        <Image src="/default-event.jpg" alt="default avatar" width={70} height={70} />
                         </div>
                         <div className="card-event-body_description">Lorem ipsum is simply dummy text of the printing and...</div>
                     </div>

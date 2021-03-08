@@ -5,14 +5,14 @@ import Link from "next/link";
 const WidgetPerfil = () => {
   return (
     <>
-        <section className="widget-perfil col-xs-3">
+        <section className="widget-perfil">
             <Link href="/editar-perfil">
               <a className="widget-perfil-link">Editar</a>
             </Link>{" "}
             <div className="widget-perfil-image">
               <div className="widget-perfil-image--rounded">
                 <Image
-                  src="/perfil/default-avatar.png"
+                  src="/default-avatar.png"
                   alt="default avatar"
                   width={150}
                   height={150}

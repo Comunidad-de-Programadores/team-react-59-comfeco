@@ -45,6 +45,10 @@ import "../styles/perfil/miPerfil.scss";
 
 import { Provider } from "next-auth/client";
 
+import "../styles/perfil/perfil.scss";
+import "../styles/cards.scss";
+import "../styles/perfil/cardEvents.scss";
+
 function MyApp({ Component, pageProps }) {
   return (
     <Provider session={pageProps.session}>
