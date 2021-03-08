@@ -1,8 +1,8 @@
 import React from "react";
-import HomeDashboardLogin from "./HomeDashboardLogin";
-import Register from "../../components/forms/Register";
-import Login from "../../components/forms/Login";
-import ResetPassword from "../../components/forms/ResetPassword";
+import HomeDashboard from "./HomeDashboard";
+import Register from "../../../components/forms/Register";
+import Login from "../../../components/forms/Login";
+import ResetPassword from "../../../components/forms/ResetPassword";
 
 const HomeLogin = () => {
   return (
@@ -29,9 +29,8 @@ const HomeLogin = () => {
             <Register />
           </div>
         </div>
-        <HomeDashboardLogin />
+        <HomeDashboard />
       </main>
-     
     </>
   );
 };

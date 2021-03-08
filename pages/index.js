@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/general/Layout";
-import HomeLogin from "./componentsPages/HomeLogin";
+import HomeLogin from "./componentsPages/home/HomeLogin";
+import Home from "./componentsPages/home/Home";
 import EditProfile from "./editar-perfil";
-const Home = () => {
+const Index = () => {
   const [tokenLocalExist, setTokenLocalExist] = useState(false);
   const [tokenSessExist, setTokenSessExist] = useState(false);
 
@@ -13,10 +14,10 @@ const Home = () => {
 
   return (
     <Layout>
-      {/* {!tokenSessExist && !tokenLocalExist ? <HomeLogin /> : <EditProfile />} */}
-      <EditProfile />
+      {!tokenSessExist && !tokenLocalExist ? <HomeLogin /> : <Home />}
+      {/* <EditProfile /> */}
     </Layout>
   );
 };
 
-export default Home;
+export default Index;
