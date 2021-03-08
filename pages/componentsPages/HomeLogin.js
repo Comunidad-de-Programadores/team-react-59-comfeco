@@ -2,16 +2,13 @@ import React from "react";
 import Register from "../../components/forms/Register";
 import Login from "../../components/forms/Login";
 import ResetPassword from "../../components/forms/ResetPassword";
-import WidgetPerfil from '../../components/perfil/widgetPerfil';
-import WidgetEvents from '../../components/perfil/widgetEvents';
 
 const HomeLogin = () => {
   return (
     <>
       <div className="containerText col-xs-12 col-md-5 ">
 
-        <WidgetPerfil />
-        <WidgetEvents />
+        
 
 
         <div className="title">
