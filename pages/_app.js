@@ -22,6 +22,8 @@ import "../styles/slider/sliderSleader.scss";
 import "../styles/slider/sliderSponsors.scss";
 /* css para cambiar los colores de la interfas (Proximaente)*/
 import "../styles/colorChange.scss";
+import "../styles/form/newPassword.scss";
+import "../styles/form/editProfile.scss";
 import "../styles/dashboard.scss";
 
 /* Clase para meter nuevos estilos (Uxiliar) */
@@ -38,7 +40,8 @@ import "../styles/deadline.scss";
 import "../styles/button/btn1.scss";
 import "../styles/button/btnHamburguesa.scss";
 
-
+/* estilos perfil */
+import "../styles/perfil/miPerfil.scss";
 
 import { Provider } from "next-auth/client";
 

@@ -12,6 +12,7 @@ export const config = {
 
 export default async function handler(req, res) {
   await connectdb();
+  console.log("hola");
 
   if (req.method === "POST") {
     //Request Body

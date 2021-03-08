@@ -1,0 +1,18 @@
+@import'./perfil.scss';
+@import'./Insignias.scss';
+@import'./RecentActivities.scss';
+@import'./cardEvents.scss';
+
+.containerMiPerfil{
+    align-items: center;
+    display: flex;
+    min-height: calc(100% + 120px);
+    justify-content: space-around;
+    
+    width: 100%;
+
+    .contentMiPerfil{
+        display: flex;
+        flex-direction: column;
+    }
+}
