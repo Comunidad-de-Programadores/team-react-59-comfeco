@@ -1,12 +1,10 @@
-@import "variables.scss";
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-button{
+button {
   background-color: transparent !important;
 }
 
@@ -53,7 +51,7 @@ a::selection {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $colorPurple2;
+  background: $colorPurpleIntermedio;
 }
 
 .ico {
@@ -83,8 +81,8 @@ a::selection {
   color: #3b5998 !important;
 }
 
-.google{
-  color:#db4a39 !important
+.google {
+  color: #db4a39 !important;
 }
 
 .instagramHover:hover {
@@ -109,6 +107,6 @@ a::selection {
   color: #3b5998 !important;
 }
 
-.googleHover:hover{
-  color:#db4a39 !important
+.googleHover:hover {
+  color: #db4a39 !important;
 }

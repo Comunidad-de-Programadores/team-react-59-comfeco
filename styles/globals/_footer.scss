@@ -1,18 +1,16 @@
-@import "variables.scss";
 
 footer {
   align-self: flex-end;
   align-items: center;
   color: #fff;
 
-  width: 100%;
   justify-content: center;
+  width: 100%;
   z-index: 0;
 
   .derechos {
-    display: flex;
-
     align-items: center;
+    display: flex;
 
     p {
       margin-left: 35px;
@@ -59,7 +57,6 @@ footer {
         transition: $transicion600ms;
 
         &:hover {
-          /* box-shadow: inset 25px -25px 20px #ffffff; */
           transition: $transicion600ms;
         }
         /* facebook */
@@ -88,7 +85,6 @@ footer {
 
         a {
           align-items: center;
-          /* background: rgba(#fff, 0.1); */
           display: flex;
 
           height: inherit;
@@ -96,7 +92,6 @@ footer {
           text-align: center;
           text-decoration: none;
           width: inherit;
-          /* border: 1px solid #fff; */
           border-bottom: none;
 
           span {
@@ -106,8 +101,6 @@ footer {
       }
     }
   }
-
- 
 }
 
 @media screen and (min-width: 1024px) {
@@ -128,8 +121,7 @@ footer {
 }
 
 @media screen and (max-width: 1150px) and (min-width: 1024px) {
-
-  footer{
+  footer {
     .containerFooter {
       width: 95%;
     }

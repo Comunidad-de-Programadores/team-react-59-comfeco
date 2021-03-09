@@ -1,5 +1,129 @@
-.darkMode{
-    p{
-        color: #fff
+@import "variables.scss";
+
+.darkMode {
+}
+
+.purpleMode {
+  /* Etiquetas */
+  p {
+    color: #fff;
+  }
+
+  header {
+    background-color: transparent;
+
+    .usuario {
+      ul {
+        .img {
+          border-left: 2px solid #fff;
+        }
+      }
     }
+    .dataUser {
+      background: rgba($formBackground, 1);
+      border: 1px solid #fff;
+
+      &:after {
+        border: 15px solid transparent;
+        border-bottom: 15px solid rgba($formBackground, 1);
+      }
+
+      nav {
+        ul {
+          li {
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .siderBarNotificaciones {
+      background-color: $colorPurpleOscuro;
+      border-left: 1px solid #fff;
+
+      ul {
+        li {
+          border-bottom: 1px solid #fff;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .containerHeader {
+      border-bottom: $borderHeaderFooter;
+
+      .navegation {
+        nav {
+          ul {
+            li {
+              &.login {
+                border-left: 2px solid #fff;
+              }
+
+              a {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .purpleMode {
+    header.menuFixed {
+      .containerHeader {
+        background-color: $colorPurpleOscuro;
+        border-bottom: $borderHeaderFooter;
+      }
+    }
+
+    header {
+      .siderBarNotificaciones {
+        border-bottom: 1px solid #fff;
+      }
+
+      .headerDesktop {
+        .borderRight {
+          border-right: 2px solid #fff;
+        }
+
+        .usuario {
+          ul {
+            li {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .purpleMode {
+    .headerTablet {
+      background: $colorPurpleOscuro;
+      border-bottom: 2px solid #fff;
+
+      .siderbar {
+        background-color: $colorPurpleOscuro;
+        border-right: 1px solid #fff;
+      }
+      ul {
+        li {
+          border-bottom: 1px solid #fff;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
 }

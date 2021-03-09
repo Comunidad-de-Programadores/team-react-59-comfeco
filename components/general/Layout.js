@@ -6,7 +6,7 @@ import Head from "next/head";
 const Layout = (props) => {
   return (
     <>
-      <div className="containerAll darkMode">
+      <div className="containerAll purpleMode">
         <Head>
           <title>Comfeco</title>
           <meta

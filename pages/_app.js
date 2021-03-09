@@ -3,10 +3,10 @@ import "../styles/lib/normalize.scss";
 import "../styles/lib/flexboxGrid.scss";
 import "../styles/icons/style.css";
 
-/* Estilos globales */
-import "../styles/globals.scss";
-import "../styles/header.scss";
-import "../styles/footer.scss";
+
+
+/* Estilos globales, header y footer */
+import "../styles/globals/style.scss";
 
 /* Estilos de los componentes de los formularios de registro */
 import "../styles/form/formRegisterLogin.scss";

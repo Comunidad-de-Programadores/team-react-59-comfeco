@@ -19,7 +19,7 @@
 }
 
 .panelCabecera {
-  background-color: $colorPurple1;
+  background-color: $colorPurpleOscuro;
   height: 200px;
   max-height: 35vh;
   border-top: 2px solid #fff;
@@ -120,7 +120,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      border-bottom: 1px solid $colorPurple1;
+      border-bottom: 1px solid $colorPurpleOscuro;
       padding-bottom: 4px;
     }
     .card-com-content {
@@ -226,11 +226,11 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        border-bottom: 1px solid $colorPurple1;
+        border-bottom: 1px solid $colorPurpleOscuro;
         padding-bottom: 4px;
       }
       .card-taller-event {
-        background-color: $colorPurple1;
+        background-color: $colorPurpleOscuro;
         color: $colorWhite;
         padding: 4px;
         margin: 8px 0;

@@ -1,20 +1,13 @@
-@import "variables.scss";
-
-/* body {
-  min-height: 111vh;
-} */
-
 header {
-  background-color: transparent;
   align-items: center;
+  background-color: transparent;
   height: fit-content;
   justify-content: center;
   min-height: 75px;
   position: fixed;
+  top: -2px;
   width: 100%;
   z-index: 100;
-  top: -2px;
-  
 
   .usuario {
     margin-left: 40px;
@@ -27,21 +20,22 @@ header {
       .img {
         border-left: 2px solid #fff;
       }
+
       li {
         margin-right: 8px;
         transition: $transicion600ms;
         span.icon-expand_more {
-          padding-top: 6px;
           font-size: 16px;
+          padding-top: 6px;
         }
       }
     }
 
     .expandMore {
-      transform: rotate(180deg);
       padding: 0;
       padding-bottom: 6px;
       transition: $transicion600ms;
+      transform: rotate(180deg);
     }
 
     img {
@@ -52,22 +46,22 @@ header {
   }
 
   .dataUser {
+    align-items: center;
+    background: rgba($formBackground, 1);
+    border: 1px solid #fff;
+    border-radius: 10px;
     max-height: 0px;
     min-height: 0px;
-    opacity: 0;
-    width: 180px;
-    border: 1px solid #fff;
-    background: rgba($formBackground, 1);
+    justify-content: center;
+    padding: 15px;
     position: absolute;
     right: 102px;
     top: 87px;
-    justify-content: center;
-    align-items: center;
     transition: $transicion600ms;
-    padding: 15px;
-    border-radius: 10px;
+    opacity: 0;
+    width: 180px;
 
-    &::after {
+    &:after {
       content: "";
       display: block;
       position: absolute;
@@ -118,48 +112,38 @@ header {
   }
   .dataUserDisplay {
     display: flex !important;
-    opacity: 1;
     max-height: 100px;
     min-height: 100px;
-    /*  min-width: 173px;
-    max-width: 173px; */
-    width: 180px;
+
+    opacity: 1;
     transition: $transicion600ms;
+    width: 180px;
   }
 
   .siderBarNotificaciones {
-    position: absolute;
-    right: 0;
-
-    background-color: $colorPurple1;
-    width: 100%;
-    max-width: 10px;
-    width: 90%;
-    max-width: 350px;
-
-    position: absolute;
-    height: calc(100vh - 60px);
-
-    top: 66px;
-    right: -100%;
-
-    width: 90%;
-    max-width: 350px;
-    transition: 600ms all ease;
-    overflow: hidden;
+    background-color: $colorPurpleOscuro;
     border-left: 1px solid #fff;
+    height: calc(100vh - 60px);
+    max-width: 350px;
+
+    right: -100%;
+    position: absolute;
+    top: 66px;
+    transition: $transicion600ms;
+    overflow: hidden;
+    width: 90%;
 
     &.right {
       right: 0;
-      transition: 600ms all ease;
+      transition: $transicion600ms;
     }
     ul {
       height: 100%;
       li {
-        list-style: none;
-        display: flex;
-        padding: 15px 0;
         border-bottom: 1px solid #fff;
+        display: flex;
+        list-style: none;
+        padding: 15px 0;
         width: 130%;
         a {
           color: #fff;
@@ -170,9 +154,9 @@ header {
           line-height: 22px;
           margin-right: 9px;
 
-          padding: 0;
           text-decoration: none;
           text-transform: uppercase;
+          padding: 0;
           padding-left: 50px;
 
           span {
@@ -219,15 +203,15 @@ header {
         }
 
         &.login {
-          padding: 43px 0 36px 15px;
           border-left: 2px solid #fff;
+          padding: 43px 0 36px 15px;
         }
         a {
-          display: inline-flex;
-          justify-content: center;
           align-items: center;
           color: #fff;
-          /* display: block; */
+          display: inline-flex;
+          justify-content: center;
+
           font-size: 13px;
           font-weight: bold;
 
@@ -299,9 +283,8 @@ header {
 
 @media screen and (min-width: 1024px) {
   header.menuFixed {
-    /* box-shadow: 1px 1px 1px $colorPurple1; */
     .containerHeader {
-      background-color: $colorPurple1;
+      background-color: $colorPurpleOscuro;
       border-bottom: $borderHeaderFooter;
       width: 100%;
 
@@ -331,8 +314,8 @@ header {
       }
 
       a img {
-        width: 139px !important;
         height: 41px !important;
+        width: 139px !important;
       }
     }
 
@@ -349,10 +332,10 @@ header {
     }
 
     .siderBarNotificaciones {
-      top: 104px;
-      height: 50vh;
       border-bottom: 1px solid #fff;
       border-radius: 0 0 0 10px;
+      height: 50vh;
+      top: 104px;
     }
 
     .headerDesktop {
@@ -364,8 +347,8 @@ header {
       }
 
       a img {
-        width: 154px !important;
         height: 40px !important;
+        width: 154px !important;
       }
 
       .borderRight {
@@ -416,14 +399,14 @@ header {
   }
 
   .headerTablet {
-    width: 100%;
-    justify-content: center;
-    background: $colorPurple1;
     align-items: center;
+    background: $colorPurpleOscuro;
+    border-bottom: 2px solid #fff;
+    justify-content: center;
     height: 66px;
     position: fixed;
     top: 0;
-    border-bottom: 2px solid #fff;
+    width: 100%;
 
     .left,
     .imgLogo,
@@ -468,28 +451,28 @@ header {
     }
 
     .siderbar {
-      position: absolute;
-      height: calc(100vh - 60px);
-
-      top: 66px;
-      left: -100%;
-      background-color: $colorPurple1;
-      width: 90%;
-      max-width: 350px;
-      transition: 600ms all ease;
-      overflow: hidden;
+      background-color: $colorPurpleOscuro;
       border-right: 1px solid #fff;
+      height: calc(100vh - 60px);
+      max-width: 350px;
+      left: -100%;
+
+      position: absolute;
+      top: 66px;
+      transition: $transicion600ms;
+      overflow: hidden;
+      width: 90%;
       &.left {
         left: 0;
-        transition: 600ms all ease;
+        transition: $transicion600ms;
       }
       ul {
         height: 100%;
         li {
-          list-style: none;
-          display: flex;
-          padding: 15px 0;
           border-bottom: 1px solid #fff;
+          display: flex;
+          list-style: none;
+          padding: 15px 0;
           width: 130%;
           a {
             color: #fff;

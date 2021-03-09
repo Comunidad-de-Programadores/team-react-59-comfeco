@@ -1,10 +1,30 @@
+/* Paleta de colores */
+$colorPurpleOscuro: #390f64;
+$colorPurpleIntermedio: #521e87;
+
+$formBackground: $colorPurpleOscuro;
+$formInputBackground: $colorPurpleIntermedio;
+
+
+/* fonts */
+$fontBasic: "Lato", "Crete Round", sans-serif;
+$fontTitle: "Crete Round", "Lato", sans-serif;
+
 /* Colores de Comfeco */
-$colorGray1: #2e2e2e;
-$colorGray2: #555555;
-$colorGray3: #777879;
+
+$colorYellow2: #f1b406;
+
+$colorYellow4: #ffcb38;
+$colorYellow5: #ffd767;
+$colorYellow6: #ffe499;
+
+
+
 $colorGray4: #c4c4c4;
 $colorGray5: #e3e3e3;
-
+$colorGray1: #2e2e2e;
+$colorGray3: #777879;
+$colorGray2: #555555;
 $colorWhite: #f3f3f3;
 
 $colorFuchia1: #69156a;
@@ -14,19 +34,20 @@ $colorFuchia4: #d740da;
 $colorFuchia5: #e480e5;
 $colorFuchia6: #ecadf6;
 
-$colorPurple1: #390f64;
-$colorPurple2: #521e87;
-$colorPurple3: #7535b6;
 $colorPurple4: #9349dd;
 $colorPurple5: #b983ff;
 $colorPurple6: #d7b7ff;
 
+
 $colorYellow1: #d39c00;
-$colorYellow2: #f1b406;
 $colorYellow3: #ffc41f;
-$colorYellow4: #ffcb38;
-$colorYellow5: #ffd767;
-$colorYellow6: #ffe499;
+
+
+
+
+
+$colorPurpleIntermedio: #521e87;
+$colorPurple3: #7535b6;
 
 $colorBody: #282828;
 $colorTeamSvelte: #ff3e00;
@@ -39,8 +60,7 @@ $colorBackgroundBlackLigt: #17171d;
 
 
 
-$fontBasic: "Lato", "Crete Round", sans-serif;
-$fontTitle: "Crete Round", "Lato", sans-serif;
+
 
 $border: 1px solid #fff;
 $borderRadius: 4px;
@@ -55,9 +75,7 @@ $borderHeaderFooter: 2px solid #fff;
 
 $colorSelection: $colorPurple3;
 
-$formBackground: $colorPurple1;
-$formInputBackground: $colorPurple2;
-$formInputBackground:$colorPurple2;
+
 $formBackgroundDashboard: $colorWhite;
 
 $colorBackgroundColorFixed:#1b003a;
