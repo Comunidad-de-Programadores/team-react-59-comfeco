@@ -28,7 +28,7 @@ import "../styles/dashboard.scss";
 
 /* Clase para meter nuevos estilos (Uxiliar) */
 import "../styles/demo.scss";
-import "../styles/404/404.scss";
+/* import "../styles/404/404.scss"; */
 
 /* css de las paginas */
 import "../styles/homeLogin.scss";
