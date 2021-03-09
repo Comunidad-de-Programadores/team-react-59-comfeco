@@ -1,5 +1,5 @@
-import React from 'react';
-import A from '../../nano/A';
+import React from "react";
+import A from "../../nano/A";
 
 const Community = ({ name, foto, url}) => {
   return(
@@ -8,7 +8,7 @@ const Community = ({ name, foto, url}) => {
         <img className="card-com-img" src={ foto } />
         <span className="card-com-title"> { name }</span>
       </div>
-      {url && <A css={ 'card-com-link' } href={ url }><span>Unirme</span></A>}
+      {url && <A css={ "card-com-link" } href={ url }><span>Unirme</span></A>}
     </div>
   )
 }

@@ -1,10 +1,10 @@
-import React, { useState, useEffect }  from 'react';
-import Icono from '../../nano/Icono';
-import moment from 'moment';
+import React, { useState, useEffect }  from "react";
+import Icono from "../../nano/Icono";
+import moment from "moment";
 
 const Workshop = ({ name, hour, attendant }) => {
   const [stateWorkshop, setStateWorkshop] = useState([false]);
-  let hourLocal = moment().format('LT');
+  let hourLocal = moment().format("LT");
   useEffect(() => {
     const timer = setTimeout(() => {
       setStateWorkshop(!stateWorkshop);
