@@ -4,7 +4,17 @@
   font-family: $fontTitle;
   border: 1px solid #fff;
   background: $colorPurple1;
-  /* box-shadow: inset 0px 0px 20px 0px #ff00002e; */
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transicion600ms;
+
+    &:hover{
+      border: 1px solid #d740da;
+      transition: $transicion600ms;
+      border-radius: 10px;
+    }
+
   .wrapper-deadline-counter {
     display: flex;
     flex-direction: column;

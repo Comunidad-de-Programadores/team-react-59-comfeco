@@ -2,11 +2,16 @@
 
 .dashboard {
   min-height: calc(100% - 50px - 75px);
+
+  
 }
 
 .content {
   display: flex;
   justify-content: center;
+  *{
+    letter-spacing: .5px;
+  }
 }
 
 .containerPaneles {
@@ -66,6 +71,13 @@
   padding: 10px 0;
   border: 1px solid #fff;
   overflow: hidden;
+  transition: $transicion600ms;
+
+  &:hover{
+    border: 1px solid #d740da;
+    border-radius: 10px;
+    transition: $transicion600ms;
+  }
 
   .swiper-container {
     width: 100%;
@@ -157,6 +169,13 @@
   justify-content: center;
   align-items: flex-start;
   width: 100%;
+  transition: $transicion600ms;
+
+  &:hover{
+    border: 1px solid #d740da;
+    border-radius: 10px ;
+    transition: $transicion600ms;
+  }
 }
 
 .panelTaller {
