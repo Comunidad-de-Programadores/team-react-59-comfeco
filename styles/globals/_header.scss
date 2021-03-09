@@ -18,7 +18,7 @@ header {
       justify-content: center;
 
       .img {
-        border-left: 2px solid #fff;
+        border-left: $borderHeaderFooter;
       }
 
       li {
@@ -88,7 +88,7 @@ header {
           }
           a {
             cursor: pointer;
-            color: #fff;
+
             display: block;
             font-size: 12px;
             font-weight: bold;
@@ -146,7 +146,6 @@ header {
         padding: 15px 0;
         width: 130%;
         a {
-          color: #fff;
           font-size: 13px;
           font-weight: bold;
 
@@ -203,12 +202,12 @@ header {
         }
 
         &.login {
-          border-left: 2px solid #fff;
+          border-left: $borderHeaderFooter;
           padding: 43px 0 36px 15px;
         }
         a {
           align-items: center;
-          color: #fff;
+
           display: inline-flex;
           justify-content: center;
 
@@ -352,7 +351,7 @@ header {
       }
 
       .borderRight {
-        border-right: 2px solid #fff;
+        border-right: $borderHeaderFooter;
         height: 107px;
         position: absolute;
         right: -25%;
@@ -362,7 +361,6 @@ header {
       .usuario {
         ul {
           li {
-            color: #fff;
             display: block;
             font-size: 13px;
             font-weight: bold;
@@ -401,7 +399,7 @@ header {
   .headerTablet {
     align-items: center;
     background: $colorPurpleOscuro;
-    border-bottom: 2px solid #fff;
+    border-bottom: $borderHeaderFooter;
     justify-content: center;
     height: 66px;
     position: fixed;
@@ -475,7 +473,6 @@ header {
           padding: 15px 0;
           width: 130%;
           a {
-            color: #fff;
             font-size: 13px;
             font-weight: bold;
 

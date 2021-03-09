@@ -1,11 +1,16 @@
 @import "variables.scss";
 
-.darkMode {
-}
+/* .darkMode {
+} */
 
 .purpleMode {
   /* Etiquetas */
-  p {
+  p,
+  li,
+  a,
+  footer,
+  span,
+  button {
     color: #fff;
   }
 
@@ -73,6 +78,141 @@
       }
     }
   }
+
+  footer {
+    .containerFooter {
+      border-top: $borderHeaderFooter;
+    }
+
+    .redesSociales {
+      ul {
+        li {
+          background-color: $colorFuchiaIntermedio;
+          border: $borderHeaderFooter;
+          box-shadow: inset 0px 0px 0px #fff;
+        }
+      }
+    }
+  }
+
+  .formGroupSesion {
+    background-color: $formBackground;
+
+    button {
+      background-color: transparent;
+
+      &.submit:hover {
+        background-color: rgba(#000, 0.3);
+      }
+    }
+
+    hr {
+      border: 1px solid #fff;
+
+      &.titleHr {
+        background-color: $colorFuchiaIntermedio;
+
+        border-left: 9px solid #fff;
+        border-right: 9px solid #fff;
+      }
+    }
+
+    form {
+      width: 100%;
+
+      .containerInput {
+        background-color: $formInputBackground !important;
+        border: 1px solid transparent;
+
+        &.error {
+          border: 1px solid #f22;
+        }
+
+        &:hover {
+          border: 1px solid $colorFuchiaIntermedio;
+        }
+      }
+    }
+
+    input {
+      background-color: $formInputBackground !important;
+      border: 3px solid transparent;
+
+      color: #fff !important;
+
+      &:focus {
+        background-color: $formInputBackground;
+      }
+      &::-webkit-input-placeholder {
+        color: white;
+      }
+
+      &::-moz-placeholder {
+        color: white;
+      }
+
+      &::-ms-input-placeholder {
+        color: white;
+      }
+    }
+
+    .buttonContainer {
+      button.login {
+        border: 1px solid #fff;
+
+        color: #fff;
+      }
+    }
+    .legal {
+      a {
+        color: $colorFuchiaIntermedio;
+      }
+    }
+
+    .forgotPasswordContainer {
+      a {
+        color: $colorFuchiaIntermedio;
+      }
+    }
+
+    .submitEmail {
+      background-color: $colorFuchiaIntermedio;
+    }
+  }
+
+  .containerForm {
+    color: #fff;
+  }
+
+  .checkBoxContainer {
+    .icon-check-circle {
+      &.active {
+        color: #cc3bcf;
+      }
+    }
+  }
+
+  .activeFocus {
+    border: 1px solid $colorFuchiaIntermedio !important;
+  }
+
+  form {
+    ul {
+      li {
+        button {
+          &:hover {
+            & span:last-child {
+              background-color: #000;
+            }
+          }
+        }
+
+        a{
+          background:  $colorFuchiaIntermedio;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -124,6 +264,55 @@
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .purpleMode {
+    footer {
+      .derechos {
+        background: #000;
+      }
+      .redesSociales {
+        background-color: #111;
+      }
+    }
+  }
+}
+
+/* Animaciones */
+
+.purpleMode {
+  @keyframes circle {
+    0% {
+      border-color: transparent;
+    }
+
+    25% {
+      border-color: transparent $colorFuchiaIntermedio transparent transparent;
+    }
+
+    50% {
+      border-color: transparent $colorFuchiaIntermedio $colorFuchiaIntermedio
+        transparent;
+    }
+
+    75% {
+      border-color: transparent $colorFuchiaIntermedio $colorFuchiaIntermedio
+        $colorFuchiaIntermedio;
+    }
+    100% {
+      border-color: $colorFuchiaIntermedio;
+    }
+  }
+
+  @keyframes tarjetaFocus {
+    1% {
+      border-color: #fff;
+    }
+    100% {
+      border-color: transparent;
     }
   }
 }

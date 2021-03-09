@@ -1,9 +1,13 @@
 @import "variables.scss";
 
 .formGroupSesion {
+  align-items: center;
   background-color: $formBackground;
   border-radius: 10px;
+  display: flex;
   font-family: $fontTitle;
+  flex-wrap: wrap;
+  justify-content: center;
 
   max-height: 503px;
   max-width: 415px;
@@ -11,12 +15,8 @@
   min-width: 415px;
 
   padding: 40px;
-
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
   overflow: hidden;
+
   p {
     text-align: left;
   }
@@ -27,7 +27,6 @@
     transition: $transicion600ms;
 
     a {
-      color: $colorText;
       text-decoration: none;
     }
 
@@ -40,9 +39,6 @@
       background-color: rgba(#000, 0.3);
       transition: $transicion600ms;
     }
-  }
-  span {
-    color: #fff;
   }
 
   hr {
@@ -108,7 +104,7 @@
     background-color: $formInputBackground !important;
     border: 3px solid transparent;
     border-radius: 4px;
-    color: $colorText !important;
+    color: #fff !important;
 
     font-weight: 300;
     height: 100%;
@@ -119,15 +115,15 @@
       outline: none;
     }
     &::-webkit-input-placeholder {
-      color: $colorText;
+      color: white;
     }
 
     &::-moz-placeholder {
-      color: $colorText;
+      color: white;
     }
 
     &::-ms-input-placeholder {
-      color: $colorText;
+      color: white;
     }
   }
 
@@ -156,7 +152,6 @@
     width: 100%;
 
     button {
-      color: #fff;
       width: 50%;
       border: 1px solid;
       height: 40px;
@@ -228,24 +223,24 @@
   color: #fff;
   cursor: default;
   max-width: 550px;
+  max-height: 530px;
+  min-height: 530px;
+
   position: relative;
   transition: $transicion600ms;
   transform: rotateY(0deg);
   transform-style: preserve-3d;
   z-index: 2;
 
-  max-height: 530px;
-  min-height: 530px;
-
   .front,
   .newPassword {
     backface-visibility: hidden;
+    border: 1px solid transparent;
     max-height: 420px;
     min-height: 420px;
     position: relative;
-    z-index: 1;
-    border: 1px solid transparent;
     transition: $transicion600ms;
+    z-index: 1;
   }
 
   .newPassword {
@@ -341,44 +336,6 @@
   margin: 15vh 0vh 5vh 0vh;
   min-height: calc(70vh + 22px);
   width: 85%;
-
-  /* .containerText {
-    color: #fff;
-    display: block;
-    font-family: $fontTitle;
-
-    text-shadow: 0px 0px 20px rgb(0 0 0 / 50%);
-
-    * {
-      text-align: left;
-    }
-
-    .ico {
-      font-size: 24px;
-      color: $colorYellow2;
-    }
-
-    p {
-      margin-bottom: 25px;
-      font-size: 18px;
-    }
-
-    h4 {
-      font-size: 24px;
-      margin-bottom: 5px;
-    }
-
-    hr {
-      border: 1px solid #fff;
-      background-color: #d740da;
-      border: none;
-      border-right: 10px solid #fff;
-      border-radius: 1px;
-      height: 4px;
-      width: 55px;
-      margin-bottom: 25px;
-    }
-  } */
 }
 .checkBoxContainer {
   .icon-check-circle {
@@ -402,29 +359,6 @@
   position: absolute;
 }
 
-@keyframes circle {
-  0% {
-    border-color: transparent;
-    transform: rotate(0deg);
-  }
-
-  25% {
-    border-color: transparent $colorFuchiaIntermedio transparent transparent;
-  }
-
-  50% {
-    border-color: transparent $colorFuchiaIntermedio $colorFuchiaIntermedio transparent;
-  }
-
-  75% {
-    border-color: transparent $colorFuchiaIntermedio $colorFuchiaIntermedio $colorFuchiaIntermedio;
-  }
-  100% {
-    border-color: $colorFuchiaIntermedio;
-    transform: rotate(-700deg);
-  }
-}
-
 .activeFocus {
   border: 1px solid $colorFuchiaIntermedio !important;
   transition: $transicion600ms !important;
@@ -434,112 +368,16 @@
   animation: tarjetaFocus 2s;
 }
 
-@keyframes tarjetaFocus {
-  1% {
-    border-color: #fff;
-  }
-  100% {
-    border-color: transparent;
-  }
-}
-/* @media screen and (min-width: 1800px) {
-  .containerSesion .containerText {
-    padding-right: 222px !important;
-  }
-}
- */ /* 
-@media screen and (min-width: 1700px) {
-  .containerSesion .containerText {
-    padding-right: 202px !important;
-  }
-} */
-/* 
-@media screen and (min-width: 1450px) {
-  .containerSesion .containerText {
-    padding-right: 100px;
-  }
-} */
-/* 
-@media screen and (min-width: 1025px) {
-  .containerSesion {
-    .containerText {
-      .containerP {
-        &.pRelleno {
-          display: none;
-        }
-      }
-    }
-  }
-} */
 @media screen and (max-width: 1024px) {
   .containerSesion {
     min-height: 430px;
     width: 90%;
 
-    /* .containerText {
-      padding-right: 0px;
-      order: 15;
-
-      display: inline-flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-self: center;
-      margin: 35px 0;
-
-      .title {
-        width: 90%;
-      }
-
-      .containerP {
-        display: inline-flex;
-        width: 40%;
-      }
-
-      h4 {
-        font-size: 24px;
-        margin-bottom: 5px;
-      }
-
-      hr {
-        border-radius: 3px;
-
-        width: 54px;
-        margin-bottom: 15px;
-      }
-
-      .ico {
-        font-size: 20px;
-      }
-
-      p {
-        margin-bottom: 20px;
-        font-size: 16px;
-
-        font-family: Lato;
-        font-weight: bold;
-      }
-    } */
     .containerForm {
       order: 10;
     }
   }
 }
-
-/* @media screen and (max-width: 768px) {
-  .containerSesion .containerText {
-    margin-bottom: 0;
-    .containerP {
-      width: 75vw;
-
-      .pRelleno {
-        display: none;
-      }
-    }
-    .title {
-      width: 80vw;
-    }
-  }
-} */
 
 @media screen and (max-width: 460px) {
   .containerSesion {
@@ -588,5 +426,39 @@
 
   .mainForLogin {
     margin-top: 25px;
+  }
+}
+
+@keyframes circle {
+  0% {
+    border-color: transparent;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    border-color: transparent $colorFuchiaIntermedio transparent transparent;
+  }
+
+  50% {
+    border-color: transparent $colorFuchiaIntermedio $colorFuchiaIntermedio
+      transparent;
+  }
+
+  75% {
+    border-color: transparent $colorFuchiaIntermedio $colorFuchiaIntermedio
+      $colorFuchiaIntermedio;
+  }
+  100% {
+    border-color: $colorFuchiaIntermedio;
+    transform: rotate(-700deg);
+  }
+}
+
+@keyframes tarjetaFocus {
+  1% {
+    border-color: #fff;
+  }
+  100% {
+    border-color: transparent;
   }
 }

@@ -1,9 +1,6 @@
 /* estilos de las librerias */
-import "../styles/lib/normalize.scss";
-import "../styles/lib/flexboxGrid.scss";
+import "../styles/lib/librerias.scss";
 import "../styles/icons/style.css";
-
-
 
 /* Estilos globales, header y footer */
 import "../styles/globals/style.scss";
@@ -11,17 +8,16 @@ import "../styles/globals/style.scss";
 /* Estilos de los componentes de los formularios de registro */
 import "../styles/form/formRegisterLogin.scss";
 import "../styles/form/newPassword.scss";
-
 import "../styles/form/loginRedes.scss";
 
-
+/*  */
 /* css del slider */
 import "../styles/slider/swiper.scss";
 import "../styles/slider/estilos.scss";
 import "../styles/slider/sliderSleader.scss";
 import "../styles/slider/sliderSponsors.scss";
 /* css para cambiar los colores de la interfas (Proximaente)*/
-import "../styles/colorChange.scss";
+
 import "../styles/form/newPassword.scss";
 import "../styles/form/editProfile.scss";
 import "../styles/dashboard.scss";
@@ -48,6 +44,7 @@ import { Provider } from "next-auth/client";
 import "../styles/perfil/perfil.scss";
 import "../styles/cards.scss";
 import "../styles/perfil/cardEvents.scss";
+import "../styles/colorChange.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
