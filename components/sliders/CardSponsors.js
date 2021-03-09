@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import A from "../nano/A";
+import Icono from "../nano/Icono";
 
 const CardSponsors = ({
   img,
@@ -26,25 +28,25 @@ const CardSponsors = ({
           </div>
           <div className="redesSociales">
             <ul>
-              <li>
-                <a className="btn2" href={globe}>
-                  <span className="ico   icon-globe"></span>
-                </a>
+              <li className="btn2">
+                <A href={globe}>
+                  <Icono css="icon-world github" />
+                </A>
               </li>
-              <li>
-                <a className="btn2" href={facebook}>
-                  <span className="ico  icon-facebook"></span>
-                </a>
+              <li className="btn2">
+                <A href={facebook}>
+                  <Icono css=" icon-facebook facebook" />
+                </A>
               </li>
-              <li>
-                <a className="btn2" href={twitter}>
-                  <span className="ico icon-twitter"></span>
-                </a>
+              <li className="btn2">
+                <A href={twitter}>
+                  <Icono css="icon-twitter twitter" />
+                </A>
               </li>
-              <li>
-                <a className="btn2" href={linkedin}>
-                  <span className="ico icon-linkedin"></span>
-                </a>
+              <li className="btn2">
+                <A href={linkedin}>
+                  <Icono css="icon-linkedin linkedin" />
+                </A>
               </li>
             </ul>
           </div>
