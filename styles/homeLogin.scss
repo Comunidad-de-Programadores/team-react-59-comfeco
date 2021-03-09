@@ -12,25 +12,6 @@ main {
   flex-wrap: wrap;
 }
 
-/* .backgroundRegister {
-  background: $colorGray1;
-
-  background: linear-gradient(
-    to bottom,
-    #000000,
-    #390f63,
-    #8a188c,
-    #69156a,
-    #d39d00
-  );
- 
-  height: 120vh;
-  position: fixed;
-  top: 0;
-  width: 120vw;
-  z-index: -1;
-} */
-
 .backgroundLigth {
   display: block;
   position: absolute;
@@ -47,6 +28,61 @@ main {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+.logueado {
+  margin: 25vh 0vh 0vh 0vh;
+  min-height: calc(60vh + 22px);
+  /* width: 85%; */
+  .welcome {
+    h1 {
+      text-transform: uppercase;
+    }
+    .text {
+      width: 43%;
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .logueado {
+    .welcome {
+      height: 290px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .logueado {
+    margin: 13vh 0vh 12vh 0vh ;
+    .welcome {
+      flex-basis: 90%;
+      max-width: 90%;
+      .text {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logueado {
+    
+    .welcome {
+      
+      .text {
+        width: 90%;;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .logueado {
+    margin: 4vh 0vh 15vh 0vh;
+   
+  }
+}
+
+
 @media screen and (max-width: 768px) {
   main {
     margin-top: 90px;
