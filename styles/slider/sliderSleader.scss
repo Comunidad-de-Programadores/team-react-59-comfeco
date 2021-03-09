@@ -1,29 +1,5 @@
 @import "../variables.scss";
 
-/* .backgroundColor {
-  background: linear-gradient(
-    to top,
-    $colorBackgroundBlackLigt,
-    $colorBackgroundBlackLigt
-  );
-  height: 186%;
-  left: -200px;
-  position: fixed;
-  transform: rotate(-183deg);
-  width: 235%;
-  z-index: -150;
-} */
-
-/* main {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-} */
-
-/* .ico {
-  color: #fff;
-} */
 
 .container2 {
   position: relative;
@@ -34,7 +10,7 @@
     display: flex;
     border-radius: 100%;
     background-color: #fff;
-    box-shadow: 0px 0px 13px 0px $colorBackgroundBlackLigt;
+    box-shadow: 0px 0px 13px 0px #17171d;
 
     height: 35px;
     position: absolute;
@@ -132,7 +108,7 @@
   }
 
   .back {
-    background-color: $colorBackgroundBlackLigt;
+    background-color: #17171d;
     border: 1px solid white;
     backface-visibility: hidden;
     border-radius: 10px;
@@ -259,7 +235,7 @@
   }
 
   .circleLogo {
-    background: $colorBackgroundBlackLigt;
+    background: #17171d;
     box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0);
     height: 40px;
     width: 40px;

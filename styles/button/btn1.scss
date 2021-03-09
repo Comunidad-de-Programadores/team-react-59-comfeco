@@ -12,7 +12,7 @@ a.btn2 {
     text-decoration: none;
     text-transform: uppercase;
   
-    transition: $transicion600msLineal2;
+    transition: $transicion600ms;
     overflow: hidden;
     width: 250px;
     will-change: transform;
@@ -23,7 +23,7 @@ a.btn2 {
     position: absolute;
     content: "";
     border: 0px solid;
-    transition: $transicion600msLineal2;
+    transition: $transicion600ms;
     z-index: 100;
   }
   

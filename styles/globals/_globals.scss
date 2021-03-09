@@ -9,7 +9,7 @@ button {
 }
 
 body {
-  background: $colorBody;
+  background: #282828;
   display: flex;
   font-family: Lato, sans-serif;
   flex-wrap: wrap;
@@ -25,23 +25,23 @@ body {
 }
 
 ::selection {
-  background: $colorSelection;
+  background: $colorPurpleSuave;
   color: #fff;
   text-shadow: none;
 }
 
 img::selection {
-  background: rgba($colorSelection, 0.2);
+  background: rgba($colorPurpleSuave, 0.2);
   color: #fff;
   text-shadow: none;
 }
 
 a::selection {
-  background: $colorSelection !important;
+  background: $colorPurpleSuave !important;
   text-decoration: none;
 
   &:hover {
-    border-bottom: 1px solid $colorSelection !important;
+    border-bottom: 1px solid $colorPurpleSuave !important;
   }
 }
 
