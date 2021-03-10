@@ -26,7 +26,6 @@
     font-family: $fontTitle;
   }
   h1 {
-   
     letter-spacing: 0.5px;
     margin-bottom: 0px;
     width: 100%;
@@ -96,7 +95,7 @@
 
 .card-container-com {
   align-items: center;
-  font-size: 16px;
+  font-size: 15px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -111,11 +110,13 @@
       }
     }
     .card-com-body {
-      align-items: flex-end;
-      border-bottom: 1px solid $colorPurpleOscuro;
+      align-items: center;
       display: flex;
       justify-content: space-between;
-      padding-bottom: 4px;
+
+      border-bottom: 1px solid $colorPurpleOscuro;
+
+      padding: 12px 0;
     }
     .card-com-content {
       align-items: center;
@@ -124,20 +125,42 @@
     }
 
     .card-com-img {
-      background: gray;
+      background: $colorFuchiaIntermedio;
+      border: 3px solid $colorFuchiaIntermedio;
       border-radius: 50%;
       height: 50px;
-      margin-right: 5px;
+      margin-right: 10px;
+      object-fit: cover;
       width: 50px;
     }
 
     .card-com-title {
       font-weight: 400;
+      font-size: 14px;
     }
 
     .card-com-link {
       color: $colorFuchiaIntermedio;
+      font-size: 14px;
       text-decoration: none;
+
+      &.iconA {
+        align-items: center;
+        display: flex;
+        height: 30px;
+        justify-content: center;
+        width: 30px;
+
+        span {
+          font-size: 18px;
+          transition: $transicion600ms;
+
+          &:hover {
+            color: $colorNaranja;
+            transition: $transicion600ms;
+          }
+        }
+      }
     }
   }
 }
@@ -160,13 +183,23 @@
   padding: 18px 28px;
 
   transition: $transicion600ms;
-  overflow: hidden;
+  overflow-y: scroll;
   width: 100%;
 
   &:hover {
     border: 1px solid $colorFuchiaIntermedio;
     border-radius: 10px;
     transition: $transicion600ms;
+
+    &::-webkit-scrollbar {
+      border-radius: 0 10px 10px 0;
+      transition: $transicion600ms;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      transition: $transicion600ms;
+    }
   }
 }
 
@@ -186,13 +219,14 @@
   padding: 18px 28px;
   flex-wrap: wrap;
 
-  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
   width: 100%;
 
   .card-container-taller {
     align-items: center;
     display: flex;
-    font-size: 16px;
+    font-size: 14px;
     justify-content: center;
     width: 100%;
 
@@ -211,9 +245,41 @@
       .card-taller-select {
         margin: 20px auto;
 
+        .css-yk16xz-control {
+          background-color: #521e87;
+          border: 1px solid transparent;
+        }
+
         .css-1uccc91-singleValue {
           white-space: normal;
+          color: #fff;
         }
+
+        .css-tlfecz-indicatorContainer {
+          svg {
+            fill: #fff;
+          }
+        }
+
+        .css-1gtu0rj-indicatorContainer {
+          color: #fff;
+          &:hover {
+            svg {
+              fill: #fff;
+            }
+          }
+        }
+
+        .css-1pahdxg-control {
+          background-color: #521e87;
+          border: 1px solid transparent;
+          box-shadow: 0 0 0 1px $colorFuchiaIntermedio;
+        }
+
+        .css-b8ldur-Input{
+          color: #fff;
+        }
+
       }
 
       .card-taller-body {
@@ -232,20 +298,26 @@
       }
 
       .card-taller-content {
+        align-items: center;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        padding: 12px 0;
       }
 
       .card-taller-img {
         align-items: center;
-        background: gray;
+        background-color: #fff;
         border-radius: 50%;
         display: flex;
-        height: 30px;
-        margin-right: 5px;
+        min-height: 50px;
+        margin-right: 10px;
         justify-content: center;
-        width: 30px;
+        min-width: 50px;
+        border: 3px solid $colorFuchiaIntermedio;
+
+        span{
+          color: $colorNaranja
+        }
       }
 
       .card-taller-text {
@@ -253,14 +325,16 @@
         flex-flow: column wrap;
         .card-taller-title {
           font-weight: 400;
-          color: $auxiliar1;
+          color: #fff;
         }
         .card-taller-hora {
-          color: $auxiliar1;
-          margin-bottom: 4px;
+          color: $colorNaranja;
+          margin: 4px 0;
+    font-family: $fontBasic;
+    font-weight: 900;
         }
         .card-taller-subtext {
-          color: $auxiliar1;
+          color: #fff;
           .card-taller-name {
             cursor: pointer;
             color: $colorFuchiaIntermedio;

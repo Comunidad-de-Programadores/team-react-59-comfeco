@@ -302,13 +302,22 @@
         }
       }
       .card-com-body {
-        border-bottom: 1px solid $colorPurpleOscuro;
+        border-bottom: 1px solid rgba(#fff, 0.2);
       }
       .card-com-img {
-        background: gray;
+        background: $colorFuchiaIntermedio;
+        border: 3px solid $colorFuchiaIntermedio;
       }
       .card-com-link {
         color: $colorFuchiaIntermedio;
+
+        &.iconA {
+          span {
+            &:hover {
+              color: $colorNaranja;
+            }
+          }
+        }
       }
     }
   }
@@ -335,6 +344,42 @@
           }
         }
 
+        .card-taller-select {
+          .css-yk16xz-control {
+            background-color: #521e87;
+            border: 1px solid transparent;
+          }
+
+          .css-1uccc91-singleValue {
+            color: #fff;
+          }
+
+          .css-tlfecz-indicatorContainer {
+            svg {
+              fill: #fff;
+            }
+          }
+
+          .css-1gtu0rj-indicatorContainer {
+            color: #fff;
+            &:hover {
+              svg {
+                fill: #fff;
+              }
+            }
+          }
+
+          .css-1pahdxg-control {
+            background-color: #521e87;
+
+            box-shadow: 0 0 0 1px $colorFuchiaIntermedio;
+          }
+
+          .css-b8ldur-Input {
+            color: #fff;
+          }
+        }
+
         .card-taller-body {
           border-bottom: 1px solid $colorPurpleOscuro;
         }
@@ -345,18 +390,23 @@
         }
 
         .card-taller-img {
-          background: gray;
+          background-color: $colorBackgroundBlackLigt;
+          border: 3px solid $colorFuchiaIntermedio;
+
+          span{
+            color: $colorNaranja
+          }
         }
 
         .card-taller-text {
           .card-taller-title {
-            color: $auxiliar1;
+            color: #fff;
           }
           .card-taller-hora {
-            color: $auxiliar1;
+            color: $colorNaranja;
           }
           .card-taller-subtext {
-            color: $auxiliar1;
+            color: #fff;
             .card-taller-name {
               color: $colorFuchiaIntermedio;
             }

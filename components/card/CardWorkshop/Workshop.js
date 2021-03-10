@@ -21,7 +21,7 @@ const Workshop = ({ name, hour, attendant }) => {
         <div className="card-taller-text col-xs-11">
           <span className="card-taller-title">{ name }</span>
           <span className="card-taller-hora">{ hour }</span>
-          <span className="card-taller-subtext">By <span className="card-taller-name">{ attendant }</span></span>
+          <span className="card-taller-subtext">By: <span className="card-taller-name">{ attendant }</span></span>
         </div>
       </div>
     </div>
