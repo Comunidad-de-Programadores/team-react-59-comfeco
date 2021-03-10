@@ -7,6 +7,8 @@
     align-items: center;
     display: flex;
     justify-content: center;
+
+    transform-style: initial;
   }
 }
 .containerCard {
@@ -49,7 +51,7 @@
     }
 
     .der {
-      box-shadow: -6px 174px 10px 0px rgba(#000,.6);
+      box-shadow: -6px 174px 10px 0px rgba(#000, 0.6);
       bottom: -145px;
       right: -128px;
       transform: rotate(45deg);

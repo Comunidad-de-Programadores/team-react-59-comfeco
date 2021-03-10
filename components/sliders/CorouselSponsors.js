@@ -3,7 +3,7 @@ import CardSponsors from "./CardSponsors";
 
 const CorouselSponsors = () => {
   useEffect(() => {
-    const swiper = new Swiper(".sponsors", {
+    const swiper2 = new Swiper(".sponsors", {
       effect: "coverflow",
       grabCursor: true,
       centeredSlides: false,
@@ -12,8 +12,8 @@ const CorouselSponsors = () => {
       speed: 600,
       lazy: true,
       preloadImages: true,
-      /* slidesPerView: 5, */
-      /* spaceBetween: 120, */
+     
+    
       coverflowEffect: {
         rotate: 5,
         stretch: 20,
