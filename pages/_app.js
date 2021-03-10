@@ -6,7 +6,7 @@ import "../styles/icons/style.css";
 import "../styles/globals/globals.scss";
 
 /* estilos para botones */
-import "../styles/button/btn1.scss";
+import "../styles/button/btn2.scss";
 import "../styles/button/btnHamburguesa.scss";
 
 /* Estilos de los componentes de los formularios de registro */
@@ -30,14 +30,14 @@ import "../styles/form/editProfile.scss";
 /* Clase para meter nuevos estilos (Uxiliar) */
 import "../styles/demo.scss";
 
-
-
 /* estilos perfil */
 import "../styles/perfil/miPerfil.scss";
 
 import "../styles/perfil/perfil.scss";
 import "../styles/cards.scss";
 import "../styles/perfil/cardEvents.scss";
+
+
 
 import "../styles/colorChange.scss";
 

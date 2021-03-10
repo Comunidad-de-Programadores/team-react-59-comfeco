@@ -9,6 +9,51 @@ main {
   width: 100%;
 }
 
+
+.backgroundHome {
+  background: linear-gradient(to top, $colorPurpleOscuro, $colorBackgroundBlackDark);
+  height: 186%;
+  left: -200px;
+  position: fixed;
+  transform: rotate(-183deg);
+  top: -200px;
+  width: 235%;
+  z-index: -150;
+}
+
+.containerNotLogin {
+  display: inherit;
+  flex-wrap: inherit;
+  min-height: inherit;
+  width: 100%;
+}
+
+.containerSesion {
+  font-family: $fontTitle;
+  .welcome {
+    height: 400px;
+    h1 {
+      color: #fff;
+      height: 0px;
+      letter-spacing: 0.5px;
+      margin-bottom: 0px;
+      width: 100%;
+    }
+
+    h3 {
+      color: rgba(#fff, 0.9);
+      height: 0px;
+      letter-spacing: 0.3px;
+      margin: 0px;
+    }
+
+    .text{
+      height: 0;
+      margin-top: -60px;
+    }
+  }
+}
+
 .backgroundLigth {
   display: block;
   background-image: radial-gradient(

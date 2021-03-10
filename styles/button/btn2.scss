@@ -1,4 +1,6 @@
-/* 
+
+@import "../variables.scss";
+
 a.btn2 {
     align-items: center;
     box-sizing: border-box;
@@ -10,7 +12,7 @@ a.btn2 {
     text-decoration: none;
     text-transform: uppercase;
   
-    transition: 1000ms all ease;
+    transition: $transicion600ms;
     overflow: hidden;
     width: 250px;
     will-change: transform;
@@ -21,7 +23,7 @@ a.btn2 {
     position: absolute;
     content: "";
     border: 0px solid;
-    transition: 1000ms all ease;
+    transition: $transicion600ms;
     z-index: 100;
   }
   
@@ -44,10 +46,10 @@ a.btn2 {
   .btn2:hover::before,
   .btn2:hover::after {
     border-width: 80px 260px;
-  } */
+  }
   
   /* Animaciones */
-/*   @keyframes fa-spin-fast {
+  @keyframes fa-spin-fast {
     0% {
       transform: rotate(0deg);
     }
@@ -55,4 +57,4 @@ a.btn2 {
       transform: rotate(359deg);
     }
   }
-   */
+  

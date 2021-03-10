@@ -230,6 +230,25 @@
       }
     }
   }
+  .backgroundHome {
+    background: linear-gradient(
+      to top,
+      $colorPurpleOscuro,
+      $colorBackgroundBlackDark
+    );
+  }
+
+  .containerSesion {
+    .welcome {
+      h1 {
+        color: #fff;
+      }
+
+      h3 {
+        color: rgba(#fff, 0.9);
+      }
+    }
+  }
 
   .backgroundLigth {
     background-image: radial-gradient(
