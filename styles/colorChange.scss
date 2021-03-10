@@ -10,7 +10,9 @@
   a,
   footer,
   span,
-  button {
+  button,
+  h5,
+  h1 {
     color: #fff;
   }
 
@@ -207,8 +209,142 @@
           }
         }
 
-        a{
-          background:  $colorFuchiaIntermedio;
+        a {
+          background: $colorFuchiaIntermedio;
+        }
+      }
+    }
+  }
+
+  .panelTimer {
+    background-color: $colorPurpleOscuro;
+    border: 1px solid #fff;
+
+    &:hover {
+      border: 1px solid $colorFuchiaIntermedio;
+    }
+
+    .wrapper-deadline-counter {
+      .wrapper-deadline {
+        color: #fff;
+      }
+    }
+  }
+
+  .backgroundLigth {
+    background-image: radial-gradient(
+      circle at center,
+      #ff57226b 0,
+      rgba(50, 51, 63, 0) 66.66%
+    );
+  }
+
+  .panelCabecera {
+    background-color: $colorPurpleOscuro;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+
+    h3 {
+      color: rgb(#fff, 0.9);
+    }
+    .text {
+      color: #fff;
+    }
+  }
+
+  .panelColaborador,
+  .panelSponsor {
+    background: $colorPurpleOscuro;
+    border: 1px solid #fff;
+
+    .title {
+      color: #fff;
+    }
+
+    &:hover {
+      border: 1px solid $colorFuchiaIntermedio;
+    }
+
+    .swiper-container {
+      .swiper-pagination-bullet {
+        background-color: #fff;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: $colorFuchiaIntermedio !important;
+      }
+    }
+  }
+
+  .card-container-com {
+    .card-com {
+      .card-com-header {
+        .card-com-title {
+          color: #fff;
+        }
+      }
+      .card-com-body {
+        border-bottom: 1px solid $colorPurpleOscuro;
+      }
+      .card-com-img {
+        background: gray;
+      }
+      .card-com-link {
+        color: $colorFuchiaIntermedio;
+      }
+    }
+  }
+
+  .panelTaller,
+  .panelCom {
+    background-color: $colorPurpleOscuro;
+    border: 1px solid #fff;
+
+    &:hover {
+      border: 1px solid $colorFuchiaIntermedio;
+    }
+  }
+
+  .panelTaller {
+    background-color: $colorPurpleOscuro;
+    border: 1px solid #fff;
+
+    .card-container-taller {
+      .card-taller {
+        .card-taller-header {
+          .card-taller-title {
+            color: #fff;
+          }
+        }
+
+        .card-taller-body {
+          border-bottom: 1px solid $colorPurpleOscuro;
+        }
+
+        .card-taller-event {
+          background-color: $colorPurpleOscuro;
+          color: #fff;
+        }
+
+        .card-taller-img {
+          background: gray;
+        }
+
+        .card-taller-text {
+          .card-taller-title {
+            color: $auxiliar1;
+          }
+          .card-taller-hora {
+            color: $auxiliar1;
+          }
+          .card-taller-subtext {
+            color: $auxiliar1;
+            .card-taller-name {
+              color: $colorFuchiaIntermedio;
+            }
+          }
+        }
+        .card-taller-link {
+          color: $colorFuchiaIntermedio;
         }
       }
     }
