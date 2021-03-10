@@ -349,6 +349,221 @@
       }
     }
   }
+
+  .container2 {
+    .showInformation {
+      background-color: #fff;
+      box-shadow: 0px 0px 13px 0px #17171d;
+
+      &.activeRightButton {
+        button {
+          background-color: #000 !important;
+        }
+      }
+    }
+  }
+
+  .containerCard {
+    color: #fff;
+
+    .front {
+      border: 1px solid transparent;
+    }
+
+    .back {
+      background-color: #17171d;
+      border: 1px solid white;
+
+      .avatarBack {
+        background-color: #fff;
+      }
+
+      .redesSocials {
+        ul {
+          li {
+            &.btn2:hover::before,
+            &.btn2:hover::after {
+              background-color: #fff;
+            }
+            a {
+              background: rgba(#fff, 0.1);
+            }
+          }
+        }
+      }
+    }
+
+    .circleLogo {
+      background-color: #17171d;
+      box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0);
+    }
+
+    .avatar {
+      box-shadow: 0px 13px 8px 2px #000;
+
+      border: 1px solid #fff !important;
+    }
+
+    &:hover {
+      .circleLogo {
+        box-shadow: inset 0px 0px 10px 10px rgb(0, 0, 0);
+      }
+
+      .teamTecnologi .containerSvg svg {
+        box-shadow: inset 0px -35px 20px 0px #000;
+      }
+    }
+
+    .teamTecnologi {
+      background-color: transparent;
+
+      .containerSvg {
+        svg {
+          box-shadow: inset 0px -25px 20px 0px #000;
+        }
+      }
+
+      .name {
+        p {
+          color: #fff;
+
+          &.svelte {
+            text-shadow: 0px 0px 20px #f00;
+          }
+        }
+      }
+    }
+  }
+
+  .cardSponsor {
+    border: 1px solid #fff;
+
+    .poligones {
+      .izq,
+      .der {
+        background-color: $colorAzulMorado;
+        border: 1px solid #fff;
+      }
+
+      .der {
+        box-shadow: -6px 174px 10px 0px rgba(#000, 0.6);
+      }
+    }
+
+    .img {
+      background-color: #000;
+      border: 1px solid #fff;
+    }
+
+    .name {
+      background-color: #fff;
+      box-shadow: 0px -10px 12px 0px #000;
+
+      h3 {
+        color: $colorAzulMorado;
+      }
+    }
+
+    .redesSociales {
+      ul {
+        li {
+          &.btn2:hover::before,
+          &.btn2:hover::after {
+            background-color: #fff;
+          }
+
+          a {
+            background: #111;
+            border: 1px solid #fff;
+          }
+        }
+      }
+      .ico {
+        color: #000;
+      }
+    }
+  }
+
+  .container2 {
+    .showInformation {
+      background-color: #fff;
+      box-shadow: 0px 0px 13px 0px #17171d;
+
+      &.activeRightButton {
+        button {
+          background-color: #000 !important;
+        }
+      }
+    }
+  }
+
+  .containerCard {
+    color: #fff;
+
+    .front {
+      border: 1px solid transparent;
+    }
+
+    .back {
+      background-color: #17171d;
+      border: 1px solid white;
+
+      .avatarBack {
+        background-color: #fff;
+      }
+
+      .redesSocials {
+        ul {
+          li {
+            &.btn2:hover::before,
+            &.btn2:hover::after {
+              background-color: #fff;
+            }
+            a {
+              background: rgba(#fff, 0.1);
+            }
+          }
+        }
+      }
+    }
+
+    .circleLogo {
+      background-color: #17171d;
+      box-shadow: inset 0px 0px 7px 0px rgba(#000, 0);
+    }
+
+    .avatar {
+      box-shadow: 0px 13px 8px 2px #000;
+    }
+
+    &:hover {
+      .circleLogo {
+        box-shadow: inset 0px 0px 10px 10px rgb(0, 0, 0);
+      }
+
+      .teamTecnologi .containerSvg svg {
+        box-shadow: inset 0px -35px 20px 0px #000;
+      }
+    }
+
+    .teamTecnologi {
+      .containerSvg {
+        svg {
+          box-shadow: inset 0px -25px 20px 0px #000;
+        }
+      }
+
+      .name {
+        p {
+          color: #fff;
+
+          &.svelte {
+            text-shadow: 0px 0px 20px #f00;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {

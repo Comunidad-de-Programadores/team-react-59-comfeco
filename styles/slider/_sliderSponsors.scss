@@ -1,47 +1,45 @@
 .sponsors {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 
-  .swiper-slide{
+  .swiper-slide {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 }
 .containerCard {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .cardSponsor {
-  /* background-color: #000; */
-  width: 250px;
-  height: 320px;
-  position: relative;
-
-  display: flex;
-  justify-content: center;
   align-items: center;
-
   border: 1px solid #fff;
   border-radius: 10px 10px 0 0;
+  display: flex;
+
+  height: 320px;
+  position: relative;
+  justify-content: center;
+  width: 250px;
 
   .poligones {
     height: 100%;
-    width: 100%;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
+    width: 100%;
 
     .izq,
     .der {
-      border-radius: 10px;
-      background: #6f00ff;
-      height: 130%;
-      width: 130%;
-      position: absolute;
+      background-color: $colorAzulMorado;
       border: 1px solid #fff;
+      border-radius: 10px;
+      height: 130%;
+      position: absolute;
+      width: 130%;
     }
 
     .izq {
@@ -51,63 +49,60 @@
     }
 
     .der {
+      box-shadow: -6px 174px 10px 0px rgba(#000,.6);
       bottom: -145px;
       right: -128px;
       transform: rotate(45deg);
-      box-shadow: -6px 174px 10px 0px #0000009c;
-      /* background: #000; */
     }
   }
 
   .img {
-    background-color: #fff;
-
-    position: absolute;
-    width: 200px;
-    height: 275px;
-    top: -25px;
-    background: #000;
-    overflow: hidden;
+    background-color: #000;
     border: 1px solid #fff;
 
+    height: 275px;
+    top: -25px;
+
+    position: absolute;
+    overflow: hidden;
+    width: 200px;
     img {
-      width: 100%; /*  */
+      width: 100%;
     }
   }
 
   .name {
-    position: absolute;
-    background-color: #fff;
-    bottom: 41px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    height: 27px;
-    font-family: Lato;
+    background-color: #fff;
     box-shadow: 0px -10px 12px 0px #000;
+    bottom: 41px;
+    display: flex;
+    font-family: $fontBasic;
+    height: 27px;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
 
     h3 {
-      color: #6f00ff;
+      color: $colorAzulMorado;
+      font-size: 14px;
       font-weight: 800;
       text-align: center;
       letter-spacing: normal;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      font-size: 14px;
     }
   }
 
   .redesSociales {
+    bottom: 0;
     display: flex;
-    width: 100%;
+    height: fit-content;
     justify-content: space-around;
     position: absolute;
 
-    height: fit-content;
-    width: fit-content;
     overflow: hidden;
-    bottom: 0;
+    width: fit-content;
 
     ul {
       align-items: center;
@@ -116,23 +111,22 @@
       width: 100%;
 
       li {
-        list-style: none;
-        display: inline-flex;
-        width: 35px;
-        height: 30px;
-        justify-content: center;
         align-items: center;
-        overflow: hidden;
+        display: inline-flex;
+        height: 30px;
+        list-style: none;
+        justify-content: center;
         position: relative;
+        width: 35px;
+        overflow: hidden;
 
-        &:first-child  {
+        &:first-child {
           border-radius: 10px 0 0 0;
         }
 
-        &:last-child  {
+        &:last-child {
           border-radius: 0 10px 0 0;
         }
-
 
         &:first-child > a {
           border-radius: 10px 0 0 0;
@@ -159,6 +153,8 @@
         a {
           align-items: center;
           background: #111;
+          border: 1px solid #fff;
+          border-bottom: none;
           display: flex;
 
           height: inherit;
@@ -166,8 +162,6 @@
           text-align: center;
           text-decoration: none;
           width: inherit;
-          border: 1px solid #fff;
-          border-bottom: none;
 
           span {
             z-index: 150;
@@ -179,62 +173,5 @@
       font-size: 16px;
       color: #000;
     }
-  }
-}
-
-a.btn2 {
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  height: 80px;
-
-  justify-content: center;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  transition: 1000ms all ease;
-  overflow: hidden;
-  width: 250px;
-  will-change: transform;
-}
-
-.btn2::before,
-.btn2::after {
-  position: absolute;
-  content: "";
-  border: 0px solid;
-  transition: 1000ms all ease;
-  z-index: 100;
-}
-
-.btn2::before {
-  bottom: 0;
-  left: 0;
-  border-color: transparent transparent transparent #fff;
-}
-
-.btn2::after {
-  top: 0;
-  right: 0;
-  border-color: transparent #fff transparent transparent;
-}
-
-.btn2:hover {
-  color: #fff;
-}
-
-.btn2:hover::before,
-.btn2:hover::after {
-  border-width: 80px 260px;
-}
-
-/* Animaciones */
-@keyframes fa-spin-fast {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
   }
 }

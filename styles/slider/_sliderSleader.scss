@@ -1,21 +1,18 @@
-@import "../variables.scss";
-
-
 .container2 {
   position: relative;
   width: 217px;
 
   .showInformation {
     align-items: center;
-    display: flex;
-    border-radius: 100%;
     background-color: #fff;
+    border-radius: 100%;
     box-shadow: 0px 0px 13px 0px #17171d;
-
-    height: 35px;
-    position: absolute;
-    justify-content: center;
     cursor: pointer;
+    
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    position: absolute;
 
     right: -17px;
     top: 0px;
@@ -63,7 +60,6 @@
 
 .containerCard {
   align-items: center;
-
   border-radius: 10px 10px 43px 43px;
   color: #fff;
   cursor: default;
@@ -71,8 +67,8 @@
   display: flex;
   justify-content: center;
   height: 310px;
-
   position: relative;
+
   transition: $transicion600ms;
   transform: rotateY(0deg);
   transform-style: preserve-3d;
@@ -133,20 +129,21 @@
       width: 100%;
 
       img {
+        bottom: -111px !important;
+        height: 320px !important;
         min-width: initial !important;
         max-width: initial !important;
+
         min-height: initial !important;
         max-height: initial !important;
         width: 218px !important;
-        height: 320px !important;
-        bottom: -111px !important;
       }
     }
 
     p.name {
-      text-align: center;
       font-size: 16px;
       letter-spacing: 0.2px;
+      text-align: center;
     }
 
     .description {
@@ -166,8 +163,8 @@
 
     .redesSocials {
       display: flex;
-      width: 100%;
       justify-content: space-around;
+      width: 100%;
       ul {
         align-items: center;
         display: flex;
@@ -176,10 +173,10 @@
 
         li {
           list-style: none;
-          width: 30px;
           height: 100%;
-          overflow: hidden;
           position: relative;
+          overflow: hidden;
+          width: 30px;
 
           &:first-child {
             border-radius: 10px 0 0 0;
@@ -235,25 +232,26 @@
   }
 
   .circleLogo {
-    background: #17171d;
+    background-color: #17171d;
     box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0);
-    height: 40px;
-    width: 40px;
     border-radius: 50%;
+    height: 40px;
+    
     position: absolute;
-    transition: $transicion600ms;
     top: 3px;
+    transition: $transicion600ms;
+    width: 40px;
   }
 
   .avatar {
-    border-radius: 10px 10px 35px 35px;
     border-bottom: none;
     box-shadow: 0px 13px 8px 2px #000;
+    border-radius: 10px 10px 35px 35px;
     border: 1px solid #fff !important;
-    position: absolute;
-    width: 100% !important;
     height: 325px !important;
+    position: absolute;
     top: -23px !important;
+    width: 100% !important;
   }
 
   &:hover {
@@ -289,8 +287,8 @@
 
     .containerSvg {
       align-items: flex-end;
-      bottom: 3px;
       display: flex;
+      bottom: 3px;
       justify-content: center;
       position: absolute;
       width: 400%;
@@ -300,8 +298,8 @@
         box-shadow: inset 0px -25px 20px 0px #000;
 
         height: 57px;
-        width: 200%;
         transition: $transicion600ms;
+        width: 200%;
 
         path {
           width: 150px;
@@ -370,7 +368,7 @@
       background-color: $colorTeamReact !important;
 
       span {
-        text-shadow: 1px 1px 0px #6200ff;
+        text-shadow: 1px 1px 0px $colorAzulMorado;
       }
     }
   }
