@@ -11,6 +11,9 @@
     padding:2rem;
     position: relative;
 
+    max-width: 415px;
+    min-width: 415px;
+
     &-link{
         position: absolute;
         top:15px;
@@ -28,6 +31,7 @@
             width: 150px;
             height: 150px;
             overflow: hidden;
+            border: 4px solid #fff;
         }
     }
     &-name{
@@ -39,7 +43,7 @@
         font-size: 1rem;
     }
     p{
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-family: Lato;
         font-size: 1rem!important;
     }
     &-social{

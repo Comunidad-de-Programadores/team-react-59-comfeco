@@ -9,6 +9,7 @@ const HomeDashboard = () => {
   const timer = <Counter deadline={1614560400}></Counter>
   return (
     <>
+    
       <div className="content row col-xs-12" id="content">
         
         <div className="panelColaborador">

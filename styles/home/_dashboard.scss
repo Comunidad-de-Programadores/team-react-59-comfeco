@@ -283,7 +283,9 @@
 
       .card-taller-body {
         align-items: flex-end;
-        border-bottom: 1px solid $colorPurpleOscuro;
+   
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
         display: flex;
         justify-content: space-between;
         padding-bottom: 4px;
