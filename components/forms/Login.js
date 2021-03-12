@@ -3,7 +3,7 @@ import Buttons from "./Buttons";
 import Router from "next/router";
 import $ from "../nano/$";
 import Icono from "../nano/Icono";
-import RedesLogin from "./RedesLogin"
+import RedesLogin from "./RedesLogin";
 
 const Login = () => {
   const [data, setData] = useState({ error: null, message: "" });
@@ -55,7 +55,7 @@ const Login = () => {
     e.preventDefault();
 
     const padre = e.target.parentNode;
-    e.target.elements[2].innerText = "...";
+    e.target.elements[6].innerText = "...";
 
     const req = await fetch("/api/login", {
       method: "POST",
@@ -69,7 +69,7 @@ const Login = () => {
     const res = await req.json();
     if (res.error) {
       padre.style.border = "red 1px solid";
-      e.target.elements[2].innerText = "Acceder";
+      e.target.elements[6].innerText = "Acceder";
       setData({
         error: true,
         message: res.error,
@@ -133,7 +133,6 @@ const Login = () => {
         <br />
 
         <RedesLogin />
-
 
         <div
           className="row col-xs-12 checkBoxContainer"
