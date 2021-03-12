@@ -42,9 +42,6 @@ const Sleader = () => {
 
   return (
     <>
-      <Head>
-        <script src="/swiper.min.js"></script>
-      </Head>
       <div className="swiper-container swiperSleader">
         <div className="swiper-wrapper">
           <div
