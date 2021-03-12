@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Buttons from "./Buttons";
 import Router from "next/router";
 import Icono from "../nano/Icono";
-import $ from "../nano/$";
 import RedesLogin from "./RedesLogin";
+import $ from "../nano/$";
 
 const Login = () => {
   const [data, setData] = useState({ error: null, message: "" });
