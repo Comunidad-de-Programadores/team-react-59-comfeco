@@ -20,6 +20,8 @@ import "../styles/home/home.scss";
 /* Estilos del slider */
 import "../styles/slider/slider.scss";
 
+/* estilos perfil */
+import "../styles/perfil/miPerfil.scss";
 /*  */
 
 
@@ -30,12 +32,10 @@ import "../styles/form/editProfile.scss";
 /* Clase para meter nuevos estilos (Uxiliar) */
 import "../styles/demo.scss";
 
-/* estilos perfil */
-import "../styles/perfil/miPerfil.scss";
 
-import "../styles/perfil/perfil.scss";
+
+/* import "../styles/perfil/perfil.scss"; */
 import "../styles/cards.scss";
-import "../styles/perfil/cardEvents.scss";
 
 
 

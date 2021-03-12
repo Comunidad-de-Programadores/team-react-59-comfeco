@@ -8,9 +8,10 @@ const WidgetPerfil = () => {
   return (
     <>
       <section className="widget-perfil">
-        <Link href="/editar-perfil">
-          <a className="widget-perfil-link">Editar</a>
-        </Link>{" "}
+        <A href="/editar-perfil" css="widget-perfil-link">
+          Editar
+          <Icono css="icon-external-link" />
+        </A>
         <div className="widget-perfil-image">
           <div className="widget-perfil-image--rounded">
             <Image
