@@ -34,7 +34,7 @@ import "../styles/demo.scss";
 
 
 /* import "../styles/perfil/perfil.scss"; */
-import "../styles/cards.scss";
+/* import "../styles/cards.scss"; */
 
 import "../styles/colorChange.scss";
 
