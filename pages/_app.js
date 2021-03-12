@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 /* estilos de las librerias */
 import "../styles/lib/librerias.scss";
 import "../styles/icons/style.css";
@@ -24,9 +26,6 @@ import "../styles/slider/slider.scss";
 import "../styles/perfil/miPerfil.scss";
 /*  */
 
-
-
-
 import "../styles/form/editProfile.scss";
 
 /* Clase para meter nuevos estilos (Uxiliar) */
@@ -37,17 +36,20 @@ import "../styles/demo.scss";
 /* import "../styles/perfil/perfil.scss"; */
 import "../styles/cards.scss";
 
-
-
 import "../styles/colorChange.scss";
 
 import { Provider } from "next-auth/client";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Provider session={pageProps.session}>
-      <Component {...pageProps} />
-    </Provider>
+    <>
+      <Head>
+        <script src="/swiper.min.js"></script>
+      </Head>
+      <Provider session={pageProps.session}>
+        <Component {...pageProps} />
+      </Provider>
+    </>
   );
 }
 

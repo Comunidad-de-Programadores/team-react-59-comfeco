@@ -3,15 +3,13 @@ import A from "../nano/A";
 import Buttons from "./Buttons";
 import Router from "next/router";
 import $ from "../nano/$";
-import RedesLogin from "./RedesLogin"
+import RedesLogin from "./RedesLogin";
 
 const Register = () => {
-
   const [data, setData] = useState({ error: null, message: "" });
 
   const focus = () => {
-    
-    const focusClass ="activefocus";
+    const focusClass = "activefocus";
     const activo = document.activeElement.id;
 
     const addClass = () => {
@@ -68,7 +66,7 @@ const Register = () => {
     if (
       e.target.registerPassword.value !== e.target.registerPasswordConfirm.value
     ) {
-      e.target.elements[4].innerHTML = "Crear cuenta";
+      e.target.elements[8].innerHTML = "Crear cuenta";
       padre.style.border = "red 1px solid";
       setData({
         error: true,
@@ -90,7 +88,7 @@ const Register = () => {
     const res = await req.json();
     if (res.error) {
       padre.style.border = "red 1px solid";
-      e.target.elements[4].innerHTML = "Crear cuenta";
+      e.target.elements[8].innerHTML = "Crear cuenta";
       setData({
         error: true,
         message: res.error,
@@ -218,7 +216,11 @@ const Register = () => {
         <p>
           Al registrarte, estas aceptando los{" "}
           <A href={"/terminos-y-condiciones"}>Términos y condiciones</A>, y la
-          <A href="/politica-de-privacidad-y-protección-de-datos"> Política de privacidad y protección de datos</A> de COMFECO.
+          <A href="/politica-de-privacidad-y-protección-de-datos">
+            {" "}
+            Política de privacidad y protección de datos
+          </A>{" "}
+          de COMFECO.
         </p>
       </div>
     </div>
