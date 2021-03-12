@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 /* estilos de las librerias */
 import "../styles/lib/normalize.scss";
 import "../styles/lib/flexboxGrid.scss";
@@ -14,10 +16,10 @@ import "../styles/form/newPassword.scss";
 
 import "../styles/form/loginRedes.scss";
 
-/* scss swiper */ 
-import 'swiper/swiper.scss';
-import 'swiper/components/navigation/navigation.scss';
-import 'swiper/components/pagination/pagination.scss';
+/* scss swiper */
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/pagination/pagination.scss";
 import "swiper/components/effect-coverflow/effect-coverflow.scss";
 
 /* css del slider */
@@ -46,9 +48,11 @@ import { Provider } from "next-auth/client";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Provider session={pageProps.session}>
-      <Component {...pageProps} />
-    </Provider>
+    <>
+      <Provider session={pageProps.session}>
+        <Component {...pageProps} />
+      </Provider>
+    </>
   );
 }
 

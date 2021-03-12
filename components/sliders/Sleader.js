@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 import CardLeader from "./CardLeader";
+import Swiper from "./swiper.js";
 
 const Sleader = () => {
   useEffect(() => {
@@ -20,17 +21,14 @@ const Sleader = () => {
         modifier: 1,
         slideShadows: false,
       },
-      /* autoplay: {
+      autoplay: {
         delay: 1000,
         disableOnInteraction: false,
-      }, */
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
-      
-
-      
     });
   }, []);
 
