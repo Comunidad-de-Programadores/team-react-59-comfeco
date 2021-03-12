@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import CardSponsors from "./CardSponsors";
 
+
+
 const CorouselSponsors = () => {
   useEffect(() => {
     const swiper2 = new Swiper(".sponsors", {
@@ -34,6 +36,7 @@ const CorouselSponsors = () => {
   }, []);
   return (
     <>
+   
       <div className="swiper-container sponsors">
         <div className="swiper-wrapper">
           <div className="swiper-slide">

@@ -5,7 +5,7 @@ import { signIn } from "next-auth/client";
 
 const RedesLogin = () => {
   return (
-    <div className="redesSociales">
+    <div className="redesSocialesAnimadas">
       <ul>
         <li>
           <button type="button" onClick={() => signIn("google")}>

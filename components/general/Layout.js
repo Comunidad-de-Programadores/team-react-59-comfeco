@@ -8,6 +8,7 @@ const Layout = (props) => {
     <>
       <div className="containerAll purpleMode">
         <Head>
+          <script src="/swiper.min.js"></script>
           <title>Comfeco</title>
           <meta
             name="description"

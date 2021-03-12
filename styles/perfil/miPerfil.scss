@@ -4,12 +4,11 @@
 @import'./cardEvents.scss';
 
 .containerMiPerfil{
-    align-items: center;
+    align-items: flex-start;
     display: flex;
-    min-height: calc(100% + 120px);
+    min-height: 75%;
     justify-content: space-around;
-    
-    width: 100%;
+    width: 90%;
 
     .contentMiPerfil{
         display: flex;

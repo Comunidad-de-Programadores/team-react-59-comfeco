@@ -4,38 +4,40 @@ import CardLeader from "./CardLeader";
 
 const Sleader = () => {
   useEffect(() => {
-    window.swiper = new Swiper(".swiperSleader", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: false,
-      slidesPerView: "auto",
-      loop: true,
-      speed: 5000,
-      lazy: true,
-      preloadImages: true,
-      coverflowEffect: {
-        rotate: 10,
-        stretch: 25,
-        depth: 0,
-        modifier: 1,
-        slideShadows: false,
-      },
-      autoplay: {
-        delay: 1000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        480: {
-          slidesPerView: 1,
-
-          rotate: 50,
+    try {
+      window.swiper = new Swiper(".swiperSleader", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: false,
+        slidesPerView: "auto",
+        loop: true,
+        speed: 5000,
+        lazy: true,
+        preloadImages: true,
+        coverflowEffect: {
+          rotate: 10,
+          stretch: 25,
+          depth: 0,
+          modifier: 1,
+          slideShadows: false,
         },
-      },
-    });
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          480: {
+            slidesPerView: 1,
+
+            rotate: 50,
+          },
+        },
+      });
+    } catch (error) {}
   }, []);
 
   return (
