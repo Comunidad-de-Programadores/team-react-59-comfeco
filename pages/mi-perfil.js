@@ -15,10 +15,11 @@ const miPerfil = () => {
           <div className="contentMiPerfil col-xs-5">
             <Insignias
               insignias={[
-                { imageUrl: "/perfil/insignias/ejemplo.png" },
-                { imageUrl: "/perfil/insignias/ejemplo.png" },
-                { imageUrl: "/perfil/insignias/ejemplo.png" },
-                { imageUrl: "/perfil/insignias/ejemplo.png" },
+                { imageUrl: "/insignias/insignia1.png" },
+                { imageUrl: "/insignias/insignia2.png" },
+                { imageUrl: "/insignias/insignia3.png" },
+                { imageUrl: "/insignias/insignia4.png" },
+                { imageUrl: "/insignias/insignia5.png" },
               ]}
             />
             <RecentActivities />
