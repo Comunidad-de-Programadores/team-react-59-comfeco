@@ -2,7 +2,7 @@ import Layout from "../components/general/Layout";
 import Insignias from "../components/perfil/insignias/Insignias";
 import WidgetPerfil from "../components/perfil/widgetPerfil";
 import RecentActivities from "../components/perfil/RecentActivities";
-import WidgetEvents from "../components/perfil/WidgetEvents";
+import WidgetEvents from "../components/perfil/widgetEvents";
 
 const miPerfil = () => {
   return (
