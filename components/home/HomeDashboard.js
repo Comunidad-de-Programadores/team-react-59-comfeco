@@ -1,9 +1,9 @@
 import React from "react";
-import Communities from "../../../components/card/CardCommunity/Communities";
-import Workshops from "../../../components/card/CardWorkshop/Workshops";
-import Counter from "../../../components/deadline/counter";
-import Sleader from "../../../components/sliders/Sleader";
-import CorouselSponsors from "../../../components/sliders/CorouselSponsors";
+import Communities from "../card/CardCommunity/Communities";
+import Workshops from "../card/CardWorkshop/Workshops";
+import Counter from "../deadline/counter";
+import Sleader from "../sliders/Sleader";
+import CorouselSponsors from "../sliders/CorouselSponsors";
 
 const HomeDashboard = () => {
   const timer = <Counter deadline={1614560400}></Counter>

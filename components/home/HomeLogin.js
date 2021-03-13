@@ -1,8 +1,8 @@
 import React from "react";
 import HomeDashboard from "./HomeDashboard";
-import Register from "../../../components/forms/Register";
-import Login from "../../../components/forms/Login";
-import ResetPassword from "../../../components/forms/ResetPassword";
+import Register from "../forms/Register";
+import Login from "../forms/Login";
+import ResetPassword from "../forms/ResetPassword";
 
 const HomeLogin = () => {
   return (

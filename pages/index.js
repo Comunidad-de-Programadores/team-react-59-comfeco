@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/general/Layout";
-import HomeLogin from "./componentsPages/home/HomeLogin";
-import Home from "./componentsPages/home/Home";
+import HomeLogin from "../components/home/HomeLogin";
+import Home from "../components/home/Home";
 import EditProfile from "./editar-perfil";
 const Index = () => {
   const [tokenLocalExist, setTokenLocalExist] = useState(false);
