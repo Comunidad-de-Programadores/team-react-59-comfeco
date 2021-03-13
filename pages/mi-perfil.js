@@ -1,6 +1,6 @@
 import Layout from "../components/general/Layout";
 import Insignias from "../components/perfil/insignias/Insignias";
-import WidgetPerfil from "../components/perfil/WidgetPerfil";
+import WidgetPerfil from "../components/perfil/widgetPerfil";
 import RecentActivities from "../components/perfil/RecentActivities";
 import WidgetEvents from "../components/perfil/WidgetEvents";
 
@@ -8,7 +8,7 @@ const miPerfil = () => {
   return (
     <Layout>
       <main>
-      <div className="backgroundHome"></div>
+        <div className="backgroundHome"></div>
         <div className="backgroundLigth"></div>
         <div className="containerMiPerfil">
           <WidgetPerfil />
