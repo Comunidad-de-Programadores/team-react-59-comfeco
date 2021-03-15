@@ -1,18 +1,19 @@
-@import "variables.scss";
+@import 'variables.scss';
 @import 'perfil.scss';
 @import 'Insignias.scss';
 @import 'RecentActivities.scss';
 @import 'cardEvents.scss';
+@import 'submodulos/moduleInsignias';
 
-.containerMiPerfil{
-    align-items: flex-start;
+.containerMiPerfil {
+  align-items: flex-start;
+  display: flex;
+  min-height: 75%;
+  justify-content: space-around;
+  width: 90%;
+
+  .contentMiPerfil {
     display: flex;
-    min-height: 75%;
-    justify-content: space-around;
-    width: 90%;
-
-    .contentMiPerfil{
-        display: flex;
-        flex-direction: column;
-    }
+    flex-direction: column;
+  }
 }
