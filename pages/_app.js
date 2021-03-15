@@ -10,18 +10,17 @@ import "../styles/form/formRegisterLogin.scss";
 import "../styles/form/homeLogin.scss";
 
 import "../styles/colorChange.scss";
-import "../styles/form/newPassword.scss";
+import "../styles/form/newPassword.scss"
 
 import "../styles/demo.scss";
 
-import { Provider } from "next-auth/client";
+import "../styles/perfil/perfil.scss";
+import "../styles/cards.scss";
+import "../styles/perfil/cardEvents.scss";
+import "../styles/group/group.scss";
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <Provider session={pageProps.session}>
-      <Component {...pageProps} />
-    </Provider>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
