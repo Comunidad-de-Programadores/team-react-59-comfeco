@@ -8,10 +8,13 @@
   padding-right: 0;
   padding-bottom: 0;
   position: relative;
-  min-height: 500px;
-  max-height: 600px;
+ /*  min-height: 500px;
+  max-height: 600px; */
   border: 1px solid #fff;
   transition: $transicion600ms;
+
+  min-height: 435px;
+  max-height: 435px;
 
   &:hover {
     border: 1px solid $colorFuchiaIntermedio;
@@ -122,7 +125,7 @@
   }
 
   &:last-child {
-    /* padding: 2rem; */
+    margin-bottom: 100px;
   }
 
   .card-event-body {
