@@ -53,7 +53,7 @@ const MyGroup = (group) => {
                         <div className="card-group-title_nivel">Avanzado</div>
                     </div>
                     <div className="card-group-rango">
-                        Integrante
+                        Lider
                     </div>
                 </div>
                 <div className="card-group">
