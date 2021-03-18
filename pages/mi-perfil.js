@@ -5,12 +5,13 @@ import RecentActivities from "../components/perfil/RecentActivities";
 import WidgetEvents from "../components/perfil/widgetEvents";
 
 const miPerfil = () => {
+  const recentActivities = <RecentActivities />
   return (
     <Layout>
       <main>
         <div className="backgroundHome"></div>
         <div className="backgroundLigth"></div>
-        <div className="containerMiPerfil">
+        <div className="containerMiPerfil row">
           <WidgetPerfil />
           <div className="contentMiPerfil col-xs-5">
             <Insignias
@@ -20,10 +21,12 @@ const miPerfil = () => {
                 { imageUrl: "/insignias/insignia3.png" },
                 { imageUrl: "/insignias/insignia4.png" },
                 { imageUrl: "/insignias/insignia5.png" },
+                /* { imageUrl: "/insignias/insignia5.png" }, */
               ]}
             />
-            <RecentActivities />
+            {recentActivities}
           </div>
+          
           <WidgetEvents />
         </div>
       </main>

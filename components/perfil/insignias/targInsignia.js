@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const TargInsignia = (props) => {
   return (
-    <div className="containerTargInsignia">
+    <div className="containerTargInsignia col-xs-6 col-md-2">
       <Image
         className="insigniaImg"
         src={props.url}

@@ -7,7 +7,7 @@ const Insignias = ({ insignias }) => {
   return (
     <div className="containerInsignias">
       <h3 className="titleInsignias">Insignias</h3>
-      <div className="insignias">
+      <div className="insignias row">
         {array.map((e, i) => {
           return <TargInsignia key={i} url={e.imageUrl} />;
         })}
