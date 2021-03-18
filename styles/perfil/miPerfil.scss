@@ -4,6 +4,7 @@
 @import 'RecentActivities.scss';
 @import 'cardEvents.scss';
 @import 'submodulos/moduleInsignias';
+@import '../group/group';
 
 .containerMiPerfil {
   align-items: flex-start;
@@ -74,21 +75,22 @@
 }
 @media screen and (max-width: 768px) {
   .containerInsignias .insignias .containerTargInsignia {
-   
     max-width: 85px;
     min-width: 85px;
     min-height: 85px;
     max-height: 85px;
   }
 
-  .containerMiPerfil {.contentMiPerfil {
-    margin-top: 20px;
+  .containerMiPerfil {
+    .contentMiPerfil {
+      margin-top: 20px;
 
-    &.col-xs-5 {
-      flex-basis: 100%;
-      max-width: 100%;
+      &.col-xs-5 {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
     }
-  }}
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -108,8 +110,6 @@
       min-width: 415px;
 
       margin-bottom: 32px;
-      .card-scroll {
-      }
 
       .card-widget-body {
         padding-right: 32px;
@@ -118,9 +118,8 @@
   }
 }
 
-@media screen and (max-width: 520px){
+@media screen and (max-width: 520px) {
   .containerInsignias .insignias .containerTargInsignia {
-   
     max-width: 60px;
     min-width: 60px;
     min-height: 60px;
@@ -139,12 +138,6 @@
     .card-widget {
       max-width: 95vw;
       min-width: 95vw;
-
-      .card-scroll {
-      }
-
-      .card-widget-body {
-      }
     }
 
     .contentMiPerfil {
