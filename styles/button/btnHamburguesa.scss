@@ -1,3 +1,5 @@
+@import "../variables";
+
 button.cont_x {
   outline: none;
   border: none;
@@ -34,16 +36,16 @@ button.cont_x {
 
 .cont_x.active span:nth-last-of-type(1) {
   transform: translateY(4px) rotate(-45deg);
-  background-color: #faa207;
+  background-color: $colorFuchiaIntermedio;
 }
 
 .cont_x.active span:nth-last-of-type(3) {
   transform: translateY(-9px) rotate(45deg);
-  background-color: #faa207;
+  background-color: $colorFuchiaIntermedio;
 }
 
 .cont_x.active span:nth-last-of-type(2) {
-  background-color: #faa207;
+  background-color: $colorFuchiaIntermedio;
   opacity: 0;
 }
 

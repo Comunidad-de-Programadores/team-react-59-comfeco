@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import 'variables.scss';
 @import 'perfil.scss';
 @import 'Insignias.scss';
@@ -5,13 +6,84 @@
 @import 'cardEvents.scss';
 @import 'submodulos/moduleInsignias';
 @import '../group/group';
+=======
+@import "variables.scss";
+@import "perfil.scss";
+@import "Insignias.scss";
+@import "RecentActivities.scss";
+@import "cardEvents.scss";
+@import "submodulos/moduleInsignias";
+
+.headerNav {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /*  margin-left: auto; */
+    ul {
+      li {
+        display: inline-block;
+        background: $colorPurpleIntermedio;
+        padding: 5px 20px;
+        transition: $transicion600ms;
+
+        &:hover {
+          background-color: $colorFuchiaIntermedio;
+          transition: $transicion600ms;
+        }
+
+        &:first-child {
+          border-radius: 10px 0 0 10px;
+        }
+
+        &:last-child {
+          border-radius: 0 10px 10px 0;
+        }
+
+        &.active {
+          background-color: $colorFuchiaIntermedio;
+          transition: $transicion600ms;
+        }
+
+        a {
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 13px;
+          font-weight: bold;
+
+          letter-spacing: 1px;
+          line-height: 22px;
+
+          padding: 0;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          span {
+            margin-right: 10px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+>>>>>>> e1277348e985067c5b47cace3ce0fc32bea175c3
 
 .containerMiPerfil {
   align-items: flex-start;
   display: flex;
   min-height: 75%;
+  flex-wrap: wrap;
   justify-content: space-around;
   width: 90%;
+
 
   .contentMiPerfil {
     display: flex;
@@ -40,6 +112,15 @@
   .containerMiPerfil {
     justify-content: space-between;
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .headerNav {
+    padding-bottom: 24px;
+    position: relative;
+    z-index: 150;
+    
   }
 }
 
@@ -124,6 +205,25 @@
     min-width: 60px;
     min-height: 60px;
     max-height: 60px;
+  }
+
+  .headerNav{
+    nav {
+      ul {
+        li {
+          padding: 2px 7px;
+
+          a {
+            font-size: 10px;
+
+            span {
+              margin-right: 7px;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
