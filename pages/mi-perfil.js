@@ -1,8 +1,9 @@
-import Layout from "../components/general/Layout";
-import Insignias from "../components/perfil/insignias/Insignias";
-import WidgetPerfil from "../components/perfil/widgetPerfil";
-import RecentActivities from "../components/perfil/RecentActivities";
-import WidgetEvents from "../components/perfil/widgetEvents";
+import Layout from '../components/general/Layout'
+import ModuloInsignias from '../components/perfil/submodulos/ModuloInsignias'
+import Insignias from '../components/perfil/insignias/Insignias'
+import WidgetPerfil from '../components/perfil/widgetPerfil'
+import RecentActivities from '../components/perfil/RecentActivities'
+import WidgetEvents from '../components/perfil/widgetEvents'
 
 const miPerfil = () => {
   const recentActivities = <RecentActivities />
@@ -31,7 +32,7 @@ const miPerfil = () => {
         </div>
       </main>
     </Layout>
-  );
-};
+  )
+}
 
-export default miPerfil;
+export default miPerfil

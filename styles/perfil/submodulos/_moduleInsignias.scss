@@ -1,0 +1,69 @@
+.containerModuleInsignias {
+  padding: 20px;
+
+  .contentModuleInsignias {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+
+    .moduleInsignia {
+      align-items: center;
+      background-color: $colorPurpleOscuro;
+      border-radius: 10px;
+      display: flex;
+
+      flex-direction: column;
+      height: 420px;
+      justify-content: space-between;
+      padding: 15px 10px;
+
+      h2 {
+        color: white;
+      }
+      h3,
+      h4 {
+        color: $colorFuchiaIntermedio;
+      }
+
+      img {
+        border: 3px solid #d740da;
+        border-radius: 50%;
+        box-shadow: inset 0px 0px 10px 4px #d740da;
+        transition: $transicion600ms;
+
+        padding: 5px;
+        width: 50%;
+
+        &:hover {
+          border: 3px solid #14a4ff;
+          box-shadow: inset 0px 0px 10px 4px #14a4ff;
+          transition: $transicion600ms;
+        }
+      }
+
+      p {
+        text-align: center;
+      }
+
+      .moduleInsigniaHr {
+        border: 1px solid $colorPurpleSuave;
+        width: 90%;
+      }
+    }
+    @media (min-width: 1940px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    @media (max-width: 1280px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 990px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 550px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

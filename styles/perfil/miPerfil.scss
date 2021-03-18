@@ -1,8 +1,9 @@
-@import "variables.scss";
-@import "perfil.scss";
-@import "Insignias.scss";
-@import "RecentActivities.scss";
-@import "cardEvents.scss";
+@import 'variables.scss';
+@import 'perfil.scss';
+@import 'Insignias.scss';
+@import 'RecentActivities.scss';
+@import 'cardEvents.scss';
+@import 'submodulos/moduleInsignias';
 
 .containerMiPerfil {
   align-items: flex-start;
