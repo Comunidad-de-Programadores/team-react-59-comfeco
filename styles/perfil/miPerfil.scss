@@ -1,9 +1,69 @@
-@import 'variables.scss';
-@import 'perfil.scss';
-@import 'Insignias.scss';
-@import 'RecentActivities.scss';
-@import 'cardEvents.scss';
-@import 'submodulos/moduleInsignias';
+@import "variables.scss";
+@import "perfil.scss";
+@import "Insignias.scss";
+@import "RecentActivities.scss";
+@import "cardEvents.scss";
+@import "submodulos/moduleInsignias";
+
+.headerNav {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /*  margin-left: auto; */
+    ul {
+      li {
+        display: inline-block;
+        background: $colorPurpleIntermedio;
+        padding: 5px 20px;
+        transition: $transicion600ms;
+
+        &:hover {
+          background-color: $colorFuchiaIntermedio;
+          transition: $transicion600ms;
+        }
+
+        &:first-child {
+          border-radius: 10px 0 0 10px;
+        }
+
+        &:last-child {
+          border-radius: 0 10px 10px 0;
+        }
+
+        &.active {
+          background-color: $colorFuchiaIntermedio;
+          transition: $transicion600ms;
+        }
+
+        a {
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 13px;
+          font-weight: bold;
+
+          letter-spacing: 1px;
+          line-height: 22px;
+
+          padding: 0;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          span {
+            margin-right: 10px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
 
 .containerMiPerfil {
   align-items: flex-start;
@@ -74,21 +134,22 @@
 }
 @media screen and (max-width: 768px) {
   .containerInsignias .insignias .containerTargInsignia {
-   
     max-width: 85px;
     min-width: 85px;
     min-height: 85px;
     max-height: 85px;
   }
 
-  .containerMiPerfil {.contentMiPerfil {
-    margin-top: 20px;
+  .containerMiPerfil {
+    .contentMiPerfil {
+      margin-top: 20px;
 
-    &.col-xs-5 {
-      flex-basis: 100%;
-      max-width: 100%;
+      &.col-xs-5 {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
     }
-  }}
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -108,8 +169,6 @@
       min-width: 415px;
 
       margin-bottom: 32px;
-      .card-scroll {
-      }
 
       .card-widget-body {
         padding-right: 32px;
@@ -118,9 +177,8 @@
   }
 }
 
-@media screen and (max-width: 520px){
+@media screen and (max-width: 520px) {
   .containerInsignias .insignias .containerTargInsignia {
-   
     max-width: 60px;
     min-width: 60px;
     min-height: 60px;
@@ -139,12 +197,6 @@
     .card-widget {
       max-width: 95vw;
       min-width: 95vw;
-
-      .card-scroll {
-      }
-
-      .card-widget-body {
-      }
     }
 
     .contentMiPerfil {

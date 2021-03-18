@@ -1,35 +1,24 @@
-import Layout from '../components/general/Layout'
-import ModuloInsignias from '../components/perfil/submodulos/ModuloInsignias'
-import Insignias from '../components/perfil/insignias/Insignias'
-import WidgetPerfil from '../components/perfil/widgetPerfil'
-import RecentActivities from '../components/perfil/RecentActivities'
-import WidgetEvents from '../components/perfil/widgetEvents'
+import Layout from "../components/general/Layout";
+import ModuloInsignias from "../components/perfil/submodulos/ModuloInsignias";
+
+import Perfil from "../components/perfil/union/Perfil";
+import Nav from "../components/perfil/union/Nav";
+
 
 const miPerfil = () => {
+  
   return (
     <Layout>
       <main>
-        <div className='backgroundHome'></div>
-        <div className='backgroundLigth'></div>
-        <div className='containerMiPerfil'>
-         {/*  <>
-            <WidgetPerfil />
-            <div className='contentMiPerfil col-xs-5'>
-              <Insignias
-                insignias={[
-                  { imageUrl: '/insignias/insignia1.png' },
-                  { imageUrl: '/insignias/insignia2.png' },
-                  { imageUrl: '/insignias/insignia3.png' },
-                  { imageUrl: '/insignias/insignia4.png' },
-                  { imageUrl: '/insignias/insignia5.png' },
-                ]}
-              />
-              <RecentActivities />
-            </div>
-            <WidgetEvents />
-          </> */}
+        <div className="backgroundHome"></div>
+        <div className="backgroundLigth"></div>
+
+        <Nav />
+
+        <div className="containerMiPerfil">
+          <Perfil />
           {/*--------------si descomentan este de abajo y comentan lo de arriba pueden ver el modulo de insignias----------------- */}
-          <>
+          {/* <>
             <ModuloInsignias
               insignias={[
                 {
@@ -81,11 +70,11 @@ const miPerfil = () => {
                 },
               ]}
             />
-          </>
+          </> */}
         </div>
       </main>
     </Layout>
-  )
-}
+  );
+};
 
-export default miPerfil
+export default miPerfil;
