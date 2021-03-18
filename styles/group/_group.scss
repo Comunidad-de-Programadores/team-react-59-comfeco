@@ -108,6 +108,59 @@
   }
 }
 
+/**buttons*/
+
+.btn {
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  padding: 0.7em 1em;
+  font-size: 16px;
+  display: inline-flex;
+  font-family: 'Crete Round', 'Lato', sans-serif;
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.btn.full-width {
+  width: 100%;
+}
+.btn-outline-default {
+  border: 1px solid #fff;
+  color: white;
+}
+.btn-outline-danger {
+  border: 1px solid #af2a2a;
+  color: #af2a2a;
+}
+.btn:disabled,
+.btn[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+.btn-default {
+  background-color: #ccc !important;
+  color: #282828;
+  &:hover {
+    background-color: rgb(187, 187, 187) !important;
+    color: #282828;
+  }
+}
+.btn-danger {
+  background-color: #af2a2a !important;
+  color: #af2a2a;
+}
+.btn-black {
+  background-color: #282828 !important;
+  color: #ccc;
+  &:hover {
+    background-color: #383838 !important;
+    color: #ccc;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .container-fluid {
     width: 90%;
