@@ -28,6 +28,9 @@ import "../styles/perfil/miPerfil.scss";
 
 import "../styles/form/editProfile.scss";
 
+/* Estilos Evento */
+import "../styles/evento/evento.scss";
+
 /* Clase para meter nuevos estilos (Uxiliar) */
 import "../styles/demo.scss";
 
