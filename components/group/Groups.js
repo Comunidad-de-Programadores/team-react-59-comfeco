@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Group from './Group'
 
 const Groups = ({grupos}) =>{
+    console.log({grupos})
     const [listGroup, setListGroup] = useState([grupos]);
     const [ search, setSearch ] = useState("");
     const [ filteredGroup, setFilteredGroup ] = useState([]);
