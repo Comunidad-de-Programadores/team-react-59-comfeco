@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import A from "../nano/A";
 import Icono from "../nano/Icono";
+import A from "../nano/A";
 
 const WidgetPerfil = () => {
   const [user, setUser] = useState({
