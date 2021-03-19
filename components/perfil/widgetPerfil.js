@@ -32,8 +32,8 @@ const WidgetPerfil = () => {
         </A>
         <div className="widget-perfil-image">
           <div className="widget-perfil-image--rounded">
-            <Image
-              src="/no_user.jpg"
+            <img
+              src={user.image}
               alt="default avatar"
               width={150}
               height={150}
