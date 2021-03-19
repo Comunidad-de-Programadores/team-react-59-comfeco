@@ -1,10 +1,18 @@
 @font-face {
   font-family: 'icomoon';
+<<<<<<< HEAD
   src:  url('fonts/icomoon.eot?i53q9');
   src:  url('fonts/icomoon.eot?i53q9#iefix') format('embedded-opentype'),
     url('fonts/icomoon.ttf?i53q9') format('truetype'),
     url('fonts/icomoon.woff?i53q9') format('woff'),
     url('fonts/icomoon.svg?i53q9#icomoon') format('svg');
+=======
+  src:  url('fonts/icomoon.eot?yxnzg');
+  src:  url('fonts/icomoon.eot?yxnzg#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?yxnzg') format('truetype'),
+    url('fonts/icomoon.woff?yxnzg') format('woff'),
+    url('fonts/icomoon.svg?yxnzg#icomoon') format('svg');
+>>>>>>> events
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,8 +33,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+<<<<<<< HEAD
 .icon-calendar:before {
   content: "\f073";
+=======
+.icon-share:before {
+  content: "\e923";
+}
+.icon-reply:before {
+  content: "\e90d";
+}
+.icon-google:before {
+  content: "\ea88";
+}
+.icon-google3:before {
+  content: "\ea8a";
+>>>>>>> events
 }
 .icon-external-link:before {
   content: "\f08e";
@@ -142,6 +164,36 @@
 .icon-mail-envelope-closed:before {
   content: "\e904";
 }
+.icon-exit_to_app:before {
+  content: "\e91a";
+}
+.icon-home:before {
+  content: "\e91b";
+}
+.icon-logout:before {
+  content: "\e91c";
+}
+.icon-article:before {
+  content: "\e91d";
+}
+.icon-facebook1:before {
+  content: "\e912";
+}
+.icon-navigation:before {
+  content: "\e901";
+}
+.icon-expand_more:before {
+  content: "\e903";
+}
+.icon-assistant_navigation:before {
+  content: "\e905";
+}
+.icon-send:before {
+  content: "\e906";
+}
+.icon-keyboard_backspace:before {
+  content: "\e907";
+}
 .icon-group1:before {
   content: "\e917";
 }
@@ -195,13 +247,4 @@
 }
 .icon-check-circle:before {
   content: "\e900";
-}
-.icon-reply:before {
-  content: "\e90d";
-}
-.icon-google:before {
-  content: "\ea88";
-}
-.icon-google3:before {
-  content: "\ea8a";
 }
