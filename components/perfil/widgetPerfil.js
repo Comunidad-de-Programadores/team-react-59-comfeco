@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import A from "../nano/A";
 import Icono from "../nano/Icono";
 
 const WidgetPerfil = () => {
+  const [user, setUser] = useState({
+    image: "/no_user.jpg",
+    nickname: "",
+    biography: "",
+    area: "",
+  });
+
+  useEffect(() => {
+    fetch("/api/get_user", {
+      headers: {
+        Authorization: `${localStorage.token || sessionStorage.token}`,
+      },
+    })
+      .then((data) => data.json())
+      .then((data) => {
+        setUser(data);
+      });
+  }, []);
+
   return (
     <>
       <section className="widget-perfil">
@@ -14,19 +33,27 @@ const WidgetPerfil = () => {
         <div className="widget-perfil-image">
           <div className="widget-perfil-image--rounded">
             <Image
-              src="/default-avatar.png"
+              src="/no_user.jpg"
               alt="default avatar"
               width={150}
               height={150}
             />
           </div>
         </div>
-        <div className="widget-perfil-name">Moises Lagos Pachas</div>
-        <div className="widget-perfil-subject">Desarrollador web</div>
+        <div className="widget-perfil-name">{user.nickname}</div>
+        <div className="widget-perfil-subject">
+          {user.area || user.area != "" ? (
+            user.area
+          ) : (
+            <p>Pon tu area en editar perfil</p>
+          )}
+        </div>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s
+          {user.biography || user.biography != "" ? (
+            user.biography
+          ) : (
+            <p>Pon tu biografia en editar perfil</p>
+          )}
         </p>
         <div className="widget-perfil-social"></div>
         <div className="redesSocialesAnimadas">
