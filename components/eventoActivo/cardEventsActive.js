@@ -24,10 +24,10 @@ const CardEventsActive = () => {
             <div className="target-image">
               <div className="target-image--rounded">
                 <Image
-                  src="/sponsors-oficiales/sponsor-Fernando-Herrera.png"
+                  src="/sponsors/sponsor-fernando_herrera.webp"
                   alt="sponsor"
-                  width={80}
-                  height={80}
+                  width={90}
+                  height={90}
                 />
               </div>
             </div>
@@ -39,8 +39,8 @@ const CardEventsActive = () => {
                 <Image
                   src="/sponsors-oficiales/sponsor-leonidas-esteban.png"
                   alt="sponsor"
-                  width={80}
-                  height={80}
+                  width={90}
+                  height={90}
                 />
               </div>
             </div>
@@ -50,10 +50,10 @@ const CardEventsActive = () => {
             <div className="target-image">
               <div className="target-image--rounded">
                 <Image
-                  src="/sponsors-oficiales/sponsor-domini-Code.png"
+                  src="/sponsors/sponsor-dominicode.webp"
                   alt="sponsor"
-                  width={80}
-                  height={80}
+                  width={90}
+                  height={90}
                 />
               </div>
             </div>
@@ -63,10 +63,10 @@ const CardEventsActive = () => {
             <div className="target-image">
               <div className="target-image--rounded">
                 <Image
-                  src="/sponsors-oficiales/sponsor-José-Dimas-Luján.png"
+                  src="/sponsors/sponsor-jose_dimas_lujan.webp"
                   alt="sponsor"
-                  width={80}
-                  height={80}
+                  width={90}
+                  height={90}
                 />
               </div>
             </div>
@@ -76,10 +76,10 @@ const CardEventsActive = () => {
             <div className="target-image">
               <div className="target-image--rounded">
                 <Image
-                  src="/sponsors-oficiales/sponsor-tekkitv.png"
+                  src="/sponsors/sponsor-tekkitv.webp"
                   alt="sponsor"
-                  width={80}
-                  height={80}
+                  width={90}
+                  height={90}
                 />
               </div>
             </div>
@@ -89,10 +89,10 @@ const CardEventsActive = () => {
             <div className="target-image">
               <div className="target-image--rounded">
                 <Image
-                  src="/sponsors-oficiales/sponsor-CodelyTV.png"
+                  src="/sponsors/sponsor-codelytv.webp"
                   alt="sponsor"
-                  width={80}
-                  height={80}
+                  width={90}
+                  height={90}
                 />
               </div>
             </div>
@@ -102,10 +102,10 @@ const CardEventsActive = () => {
             <div className="target-image">
               <div className="target-image--rounded">
                 <Image
-                  src="/sponsors-oficiales/sponsor-Stackly-Code.png"
+                  src="/sponsors/sponsor-stacklycode.webp"
                   alt="sponsor"
-                  width={80}
-                  height={80}
+                  width={90}
+                  height={90}
                 />
               </div>
             </div>
@@ -115,10 +115,10 @@ const CardEventsActive = () => {
             <div className="target-image">
               <div className="target-image--rounded">
                 <Image
-                  src="/sponsors-oficiales/sponsor-latamdev.png"
+                  src="/sponsors/sponsor-latamdev.webp"
                   alt="sponsor"
-                  width={80}
-                  height={80}
+                  width={90}
+                  height={90}
                 />
               </div>
             </div>
@@ -128,10 +128,10 @@ const CardEventsActive = () => {
             <div className="target-image">
               <div className="target-image--rounded">
                 <Image
-                  src="/sponsors-oficiales/sponsor-codigofacilito.png"
+                  src="/sponsors/sponsor-codigofacilito.webp"
                   alt="sponsor"
-                  width={80}
-                  height={80}
+                  width={90}
+                  height={90}
                 />
               </div>
             </div>
@@ -148,8 +148,8 @@ const CardEventsActive = () => {
                 <img
                   src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffae49dcf-7e01-40dd-a435-adcbf56f72c0%2Fnew_Imagen_Programador.png?table=block&id=edc76893-6add-402f-a435-48c2d6837f26&width=3090&userId=6b7cbe72-c418-4303-9561-4e0cf0548e46&cache=v2"
                   alt="default avatar"
-                  width="80"
-                  height="80"
+                  width="70"
+                  height="70"
                 />
               </div>
             </div>
@@ -160,8 +160,8 @@ const CardEventsActive = () => {
                 <img
                   src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F251de6e9-7154-4823-8646-1fd227f42a4b%2Fimage0.jpg?table=block&id=d2272fbf-3ff5-4030-86d6-0b408c8e17e2&width=3090&userId=6b7cbe72-c418-4303-9561-4e0cf0548e46&cache=v2"
                   alt="default avatar"
-                  width="80"
-                  height="80"
+                  width="70"
+                  height="70"
                 />
               </div>
             </div>
@@ -172,8 +172,8 @@ const CardEventsActive = () => {
                 <img
                   src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa173d523-295b-4dd0-98cb-c6963de94782%2F2f20e769-b428-41b0-964b-ddbd84e8765f.jpg?table=block&id=d3260c99-88e8-4dc2-a026-6fb3f06fd819&width=3090&userId=&cache=v2"
                   alt="default avatar"
-                  width="80"
-                  height="80"
+                  width="70"
+                  height="70"
                 />
               </div>
             </div>
@@ -188,8 +188,8 @@ const CardEventsActive = () => {
               <Image
                 src="/iconosTeam/vue.svg"
                 alt="vue"
-                width={80}
-                height={80}
+                width={70}
+                height={70}
               />
             </div>
             <span className="text-color-vue">VUE</span>
@@ -199,8 +199,8 @@ const CardEventsActive = () => {
               <Image
                 src="/iconosTeam/react.svg"
                 alt="react"
-                width={80}
-                height={80}
+                width={70}
+                height={70}
               />            </div>
             <span className="text-color-react">REACT</span>
           </div>
@@ -209,8 +209,8 @@ const CardEventsActive = () => {
               <Image
                 src="/iconosTeam/svelte.svg"
                 alt="svelte"
-                width={80}
-                height={80}
+                width={70}
+                height={70}
               />
             </div>
             <span className="text-color-svelte">SVELTE</span>
@@ -220,8 +220,8 @@ const CardEventsActive = () => {
               <Image
                 src="/iconosTeam/angular.svg"
                 alt="angular"
-                width={80}
-                height={80}
+                width={70}
+                height={70}
               />
             </div>
             <span className="text-color-angular">ANGULAR</span>
