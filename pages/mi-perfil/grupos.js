@@ -6,7 +6,7 @@ import LayoutMiPerfil from "../../components/perfil/union/LayoutMiPerfil";
 
 const grupos = ({list_group}) => {
   return (
-    <LayoutMiPerfil>
+    <LayoutMiPerfil  active={3}>
       <Grupos grupos={list_group} />
     </LayoutMiPerfil>
   );
