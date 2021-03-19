@@ -250,6 +250,7 @@ const CardEventsActive = () => {
           {/* <!--cards--> */}
           {card}
           {card}
+          {/* {card}
           {card}
           {card}
           {card}
@@ -257,8 +258,7 @@ const CardEventsActive = () => {
           {card}
           {card}
           {card}
-          {card}
-          {card}
+          {card} */}
           {/* <!-- end cards --> */}
         </div>
       </section>
