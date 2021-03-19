@@ -74,9 +74,11 @@ const Header = () => {
   };
 
   const contX = () => {
-    if ($("dataUser").classList.contains("dataUserDisplay")) {
-      $("dataUser").classList.remove("dataUserDisplay");
-    }
+    try {
+      if ($("dataUser").classList.contains("dataUserDisplay")) {
+        $("dataUser").classList.remove("dataUserDisplay");
+      }
+    } catch (error) {}
 
     try {
       if ($("expandMore").classList.contains("expandMore")) {
