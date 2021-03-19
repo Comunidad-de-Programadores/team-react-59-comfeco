@@ -78,8 +78,6 @@ const Header = () => {
       $("dataUser").classList.remove("dataUserDisplay");
     }
 
-    
-      
     try {
       if ($("expandMore").classList.contains("expandMore")) {
         $("expandMore").classList.remove("expandMore");
@@ -88,11 +86,8 @@ const Header = () => {
       if ($("expandMore2").classList.contains("expandMore")) {
         $("expandMore2").classList.remove("expandMore");
       }
-    } catch (error) {
-      
-    }
+    } catch (error) {}
 
-    
     if ($("siderBarNotificaciones").classList.contains("right")) {
       $("siderBarNotificaciones").classList.remove("right");
     }
@@ -418,26 +413,51 @@ const Header = () => {
             </ul>
           </nav>
         </div>
-        <div className="dataUser" id="dataUser">
-          <nav>
-            <ul>
-              <li>
-                <A href="/">
-                  <Icono css="icon-account_circle" />
-                  Mi Perfil
-                </A>
-              </li>
-              <li>
-                <button onClick={logout}>
+        {localToken && (
+          <div className="dataUser" id="dataUser">
+            <nav>
+              <ul>
+                <li>
                   <A href="/">
-                    <Icono css="icon-logout" />
-                    Cerrar Sesión
+                    <Icono css="icon-account_circle" />
+                    Mi Perfil
                   </A>
-                </button>
-              </li>
-            </ul>
-          </nav>
-        </div>
+                </li>
+                <li>
+                  <button onClick={logout}>
+                    <A href="/">
+                      <Icono css="icon-logout" />
+                      Cerrar Sesión
+                    </A>
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        )}
+
+        {sessToken && (
+          <div className="dataUser" id="dataUser">
+            <nav>
+              <ul>
+                <li>
+                  <A href="/">
+                    <Icono css="icon-account_circle" />
+                    Mi Perfil
+                  </A>
+                </li>
+                <li>
+                  <button onClick={logout}>
+                    <A href="/">
+                      <Icono css="icon-logout" />
+                      Cerrar Sesión
+                    </A>
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        )}
 
         <nav className="siderBarNotificaciones" id="siderBarNotificaciones">
           <ul>
