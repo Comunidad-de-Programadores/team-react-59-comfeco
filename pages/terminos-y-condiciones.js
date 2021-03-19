@@ -5,95 +5,44 @@ import Layout from "../components/general/Layout";
 const TerminosCondiciones = () => {
   return (
     <>
-      {/* <header>
-          <div>
-            <Image
-              src="/img/logos/logo1.png"
-              alt="Picture of the author"
-              width={175}
-              height={45}
-            />
-          </div>
-          <div>
-            <Link href="/">
-              <button type="button">Iniciar sesión</button>
-            </Link>
-          </div>
-        </header>
-         */}
-      <br />
-
+     
       <Layout>
         <div className="containerLegal">
           <main>
-            <section>
-              <h1>TÉRMINOS DEL SERVICIO DE COMFECO</h1>
+          <div className="backgroundHome"></div>
+          <div className="backgroundLigth"></div>
+          <div className="backgroundCard">
+          <section>
+              <h1>TÉRMINOS Y CONDICIONES</h1>
               <p>
-                Fecha: 12 de Febrero de 2021 |{" "}
-                <a href="https://www.google.com" target="_blank">
-                  Descargar PDF
-                </a>
+              Entérate aquí de nuestros términos y condiciones que reflejan la forma de trabajar de Comfeco como empresa, las leyes por las que nos regimos y determinados aspectos que siempre hemos creído que son ciertos. Por ello, estos términos ayudan a definir la relación que tiene <b>#Comfeco</b> y contigo cuando interactúas con nuestros servicios.
               </p>
-              <br />
-              <h3>
-                Sabemos que es tentador saltarse estos Términos del Servicio,
-                pero es importante determinar qué puedes esperar de nosotros al
-                usar nuestros talleres y qué esperamos nosotros de ti.
-              </h3>
-            </section>
-            <br />
-            <section>
               <p>
-                Estos Términos del Servicio reflejan la forma de trabajar de
-                Comfeco como empresa, las leyes por las que nos regimos y
-                determinados aspectos que siempre hemos creído que son ciertos.
-                Por ello, estos Términos ayudan a definir la relación que tiene
-                #Comfeco contigo cuando interactúas con nuestros servicios. Por
-                ejemplo, estos términos incluyen las siguientes secciones:
+                Estos términos incluyen lo siguiente:
               </p>
-              <br />
               <ul>
                 <li>
-                  Qué puedes esperar de nosotros, donde se describe cómo
-                  proporcionamos y desarrollamos nuestros servicios.
+                  Qué puedes esperar de nosotros, donde se describe cómo proporcionamos y desarrollamos nuestros servicios.
                 </li>
                 <li>
-                  Lo que esperamos de ti, donde se establecen ciertas reglas
-                  para utilizar nuestros servicios.
+                  Lo que esperamos de ti, donde se establecen ciertas reglas para utilizar nuestros servicios.
                 </li>
                 <li>
-                  En caso de problemas o discrepancias, donde se describen otros
-                  derechos legales que tienes y las consecuencias de infringir
-                  estos términos.
+                  En caso de problemas o discrepancias, donde se describen otros derechos legales que tienes y las consecuencias de infringir estos términos.
                 </li>
               </ul>
-              <br />
               <p>
-                Es importante que entiendas estos términos porque el uso de
-                nuestros servicios implica que los aceptas.
+                Además de estos términos, también publicamos una Política de Privacidad. Aunque no forme parte de estos términos, te recomendamos que la leas para entender mejor cómo puedes actualizar, gestionar, exportar y eliminar tu información.
               </p>
-              <p>
-                Además de estos términos, también publicamos una Política de
-                Privacidad. Aunque no forme parte de estos términos, te
-                recomendamos que la leas para entender mejor cómo puedes
-                actualizar, gestionar, exportar y eliminar tu información.
-              </p>
-            </section>
-            <br />
-            <section>
               <h2>Requisitos de edad mínima</h2>
               <p>
-                Si no tienes la edad mínima para poder gestionar tu propia
-                cuenta de Comfeco, debes contar con el permiso de tu padre,
-                madre o tutor legal para utilizar una cuenta de Comfeco. Pide a
-                tu padre, madre o tutor legal que lea estos términos contigo.
+                Si actualmente tienes la edad mínima, para poder gestionar tu propia cuenta de Comfeco, debes contar con el permiso de tu padre, madre o tutor legal para utilizar una cuenta de Comfeco. Pide a tu padre, madre o tutor legal que lea estos términos contigo.
               </p>
               <p>
-                Si eres padre, madre o tutor legal y permites a tu hijo/a que
-                utilice los servicios, se te aplican estos términos y eres
-                responsable de la actividad que realice en los servicios.
+                Si eres padre, madre o tutor legal y permites a tu hijo/a que utilice los servicios, se te aplican estos términos y eres responsable de la actividad que realice en los servicios.
               </p>
             </section>
+          </div>
           </main>
         </div>
       </Layout>
@@ -109,6 +58,17 @@ const TerminosCondiciones = () => {
       </style>
       <style jsx>
         {`
+          .backgroundCard {
+            background: #390f64;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            margin: 50px;
+            overflow: hidden;
+            padding: 50px;
+            position: relative;
+            transition: all ease 0.6s;
+            width: 100%;
+          }
           .containerLegal {
             align-items: center;
             display: flex;
@@ -120,15 +80,8 @@ const TerminosCondiciones = () => {
             width: 85%;
           }
 
-          header {
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 30px;
-          }
-
           h1 {
-            color: #3c4043;
+            color: #ffffff;
             display: block;
             font-size: 40px;
             letter-spacing: 0.8px;
@@ -138,29 +91,28 @@ const TerminosCondiciones = () => {
           }
 
           h2 {
+            color: #ffffff;
             font-size: 22px;
             font-weight: 700;
             line-height: 28px;
             margin-top: 40px;
           }
 
-          h3 {
-            font-size: 24px;
-            line-height: 32px;
-            padding-top: 24px;
-          }
-
           p {
             letter-spacing: 0.2px;
-            line-height: 24px;
+            line-height: 1.5;
             padding-top: 20px;
             text-align: justify;
-
-            width: 95%;
+            width: 100%;
           }
 
           ul {
             padding-left: 5%;
+            
+          }
+
+          li {
+            line-height: 1.5;
           }
 
           button {
