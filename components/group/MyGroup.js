@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 
 const MyGroup = (group) => {
@@ -25,69 +24,74 @@ const MyGroup = (group) => {
           </a>
         </Link>
       </div>
-      <div className='card-widget-body card-scroll' data-size='small'>
+      <div className='card-widget-body col-xs-12 card-scroll' data-size='small'>
         {/* <!--cards--> */}
         <div className='card-group'>
-          <div className='card-group-image'>
-            <Image
+          <div className='card-group-body'>
+            <img className='card-group-image'
               src='/default-event.jpg'
               alt='default avatar'
-              width={50}
-              height={50}
             />
+            <div className='card-group-title'>
+              <div className='card-group-title_name'>Marcelino Abreu</div>
+              <div className='card-group-title_nivel'>Avanzado</div>
           </div>
-          <div className='card-group-title'>
-            <div className='card-group-title_name'>Juansecu</div>
-            <div className='card-group-title_nivel'>Avanzado</div>
+          </div>
+          <div className='card-group-rango'>Líder</div>
+        </div>
+        <div className='card-group'>
+          <div className='card-group-body'>
+            <img className='card-group-image'
+              src='/default-event.jpg'
+              alt='default avatar'
+            />
+            <div className='card-group-title'>
+              <div className='card-group-title_name'>Genaro Gonzáles</div>
+              <div className='card-group-title_nivel'>Avanzado</div>
+          </div>
           </div>
           <div className='card-group-rango'>Integrante</div>
         </div>
         <div className='card-group'>
-          <div className='card-group-image'>
-            <Image
+          <div className='card-group-body'>
+            <img className='card-group-image'
               src='/default-event.jpg'
               alt='default avatar'
-              width={50}
-              height={50}
             />
+            <div className='card-group-title'>
+              <div className='card-group-title_name'>Moisés Lagos</div>
+              <div className='card-group-title_nivel'>Avanzado</div>
           </div>
-          <div className='card-group-title'>
-            <div className='card-group-title_name'>Juansecu</div>
-            <div className='card-group-title_nivel'>Avanzado</div>
           </div>
           <div className='card-group-rango'>Integrante</div>
         </div>
         <div className='card-group'>
-          <div className='card-group-image'>
-            <Image
+          <div className='card-group-body'>
+            <img className='card-group-image'
               src='/default-event.jpg'
               alt='default avatar'
-              width={50}
-              height={50}
             />
+            <div className='card-group-title'>
+              <div className='card-group-title_name'>Jarrison Cano</div>
+              <div className='card-group-title_nivel'>Avanzado</div>
           </div>
-          <div className='card-group-title'>
-            <div className='card-group-title_name'>Juansecu</div>
-            <div className='card-group-title_nivel'>Avanzado</div>
-          </div>
-          <div className='card-group-rango'>Lider</div>
-        </div>
-        <div className='card-group'>
-          <div className='card-group-image'>
-            <Image
-              src='/default-event.jpg'
-              alt='default avatar'
-              width={50}
-              height={50}
-            />
-          </div>
-          <div className='card-group-title'>
-            <div className='card-group-title_name'>Juansecu</div>
-            <div className='card-group-title_nivel'>Avanzado</div>
           </div>
           <div className='card-group-rango'>Integrante</div>
         </div>
-        {/* <!-- end cards --> */}
+        <div className='card-group'>
+          <div className='card-group-body'>
+            <img className='card-group-image'
+              src='/default-event.jpg'
+              alt='default avatar'
+            />
+            <div className='card-group-title'>
+              <div className='card-group-title_name'>Glisse Jorge</div>
+              <div className='card-group-title_nivel'>Avanzado</div>
+          </div>
+          </div>
+          <div className='card-group-rango'>Integrante</div>
+        </div>
+       {/* <!-- end cards --> */}
       </div>
       <div className='card-widget-footer'>
         <div className='row middle-xs action-groups'>
@@ -98,7 +102,7 @@ const MyGroup = (group) => {
           </div>
           <div className='col-xs-6'>
             <Link href='/chat'>
-              <a className='btn btn-default full-width'>ir al chat</a>
+              <a className='btn btn-outline btn-black full-width'>ir al chat</a>
             </Link>
           </div>
         </div>
