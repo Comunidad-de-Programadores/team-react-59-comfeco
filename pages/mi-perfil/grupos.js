@@ -1,9 +1,8 @@
 import React from "react";
 import absoluteUrl from "next-absolute-url";
 
-import Grupos from "../../components/perfil/union/Grupos";
-
 import LayoutMiPerfil from "../../components/perfil/union/LayoutMiPerfil";
+import Grupos from "../../components/perfil/union/Grupos";
 
 const grupos = ({ list_group }) => {
   return (
