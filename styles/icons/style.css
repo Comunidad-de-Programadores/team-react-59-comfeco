@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?bkdom6');
-  src:  url('fonts/icomoon.eot?bkdom6#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?bkdom6') format('truetype'),
-    url('fonts/icomoon.woff?bkdom6') format('woff'),
-    url('fonts/icomoon.svg?bkdom6#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?k925a6');
+  src:  url('fonts/icomoon.eot?k925a6#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?k925a6') format('truetype'),
+    url('fonts/icomoon.woff?k925a6') format('woff'),
+    url('fonts/icomoon.svg?k925a6#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,126 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-calendar:before {
+  content: "\f073";
+}
+.icon-external-link:before {
+  content: "\f08e";
+}
+.icon-calendar-o:before {
+  content: "\f133";
+}
+.icon-external-link-square:before {
+  content: "\f14c";
+}
+.icon-intersex:before {
+  content: "\f224";
+}
+.icon-transgender:before {
+  content: "\f224";
+}
+.icon-edit:before {
+  content: "\f044";
+}
+.icon-pencil-square-o:before {
+  content: "\f044";
+}
+.icon-twitter-square:before {
+  content: "\f081";
+}
+.icon-facebook-square:before {
+  content: "\f082";
+}
+.icon-linkedin-square:before {
+  content: "\f08c";
+}
+.icon-github-square:before {
+  content: "\f092";
+}
+.icon-github1:before {
+  content: "\f09c";
+}
+.icon-group:before {
+  content: "\f0c0";
+}
+.icon-users:before {
+  content: "\f0c0";
+}
+.icon-bell:before {
+  content: "\f0f3";
+}
+.icon-youtube-play:before {
+  content: "\f16a";
+}
+.icon-instagram:before {
+  content: "\f16d";
+}
+.icon-trello:before {
+  content: "\f181";
+}
+.icon-check:before {
+  content: "\f00c";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-facebook-f:before {
+  content: "\f09a";
+}
+.icon-github:before {
+  content: "\f09b";
+}
+.icon-chevron-left:before {
+  content: "\f053";
+}
+.icon-chevron-right:before {
+  content: "\f054";
+}
+.icon-save:before {
+  content: "\e91e";
+}
+.icon-check1:before {
+  content: "\e91f";
+}
+.icon-cog:before {
+  content: "\e920";
+}
+.icon-cross:before {
+  content: "\e921";
+}
+.icon-feather:before {
+  content: "\e923";
+}
+.icon-flag:before {
+  content: "\e924";
+}
+.icon-flash:before {
+  content: "\e922";
+}
+.icon-network1:before {
+  content: "\e911";
+}
+.icon-instagram-with-circle:before {
+  content: "\e913";
+}
+.icon-linkedin-with-circle:before {
+  content: "\e914";
+}
+.icon-twitter-with-circle:before {
+  content: "\e915";
+}
+.icon-youtube-with-circle:before {
+  content: "\e916";
+}
+.icon-linkedin:before {
+  content: "\e90c";
+}
+.icon-twitter:before {
+  content: "\e910";
+}
+.icon-menu:before {
+  content: "\e90f";
+}
 .icon-world:before {
   content: "\e909";
 }
@@ -88,30 +208,6 @@
 .icon-check-circle:before {
   content: "\e900";
 }
-.icon-network1:before {
-  content: "\e911";
-}
-.icon-instagram-with-circle:before {
-  content: "\e913";
-}
-.icon-linkedin-with-circle:before {
-  content: "\e914";
-}
-.icon-twitter-with-circle:before {
-  content: "\e915";
-}
-.icon-youtube-with-circle:before {
-  content: "\e916";
-}
-.icon-linkedin:before {
-  content: "\e90c";
-}
-.icon-twitter:before {
-  content: "\e910";
-}
-.icon-menu:before {
-  content: "\e90f";
-}
 .icon-reply:before {
   content: "\e90d";
 }
@@ -121,60 +217,6 @@
 .icon-google3:before {
   content: "\ea8a";
 }
-.icon-edit:before {
-  content: "\f044";
-}
-.icon-pencil-square-o:before {
-  content: "\f044";
-}
-.icon-twitter-square:before {
-  content: "\f081";
-}
-.icon-facebook-square:before {
-  content: "\f082";
-}
-.icon-linkedin-square:before {
-  content: "\f08c";
-}
-.icon-github-square:before {
-  content: "\f092";
-}
-.icon-github1:before {
-  content: "\f09c";
-}
-.icon-group:before {
-  content: "\f0c0";
-}
-.icon-users:before {
-  content: "\f0c0";
-}
-.icon-bell:before {
-  content: "\f0f3";
-}
-.icon-youtube-play:before {
-  content: "\f16a";
-}
-.icon-instagram:before {
-  content: "\f16d";
-}
-.icon-trello:before {
-  content: "\f181";
-}
-.icon-check:before {
-  content: "\f00c";
-}
-.icon-facebook:before {
-  content: "\f09a";
-}
-.icon-facebook-f:before {
-  content: "\f09a";
-}
-.icon-github:before {
-  content: "\f09b";
-}
-.icon-chevron-left:before {
-  content: "\f053";
-}
-.icon-chevron-right:before {
-  content: "\f054";
+.icon-user:before {
+  content: "\e971";
 }
