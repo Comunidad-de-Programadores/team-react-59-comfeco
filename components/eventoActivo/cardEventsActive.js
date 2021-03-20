@@ -249,16 +249,7 @@ const CardEventsActive = () => {
         <div className="card-event-body">
           {/* <!--cards--> */}
           {card}
-          {card}
-          {/* {card}
-          {card}
-          {card}
-          {card}
-          {card}
-          {card}
-          {card}
-          {card}
-          {card} */}
+          
           {/* <!-- end cards --> */}
         </div>
       </section>

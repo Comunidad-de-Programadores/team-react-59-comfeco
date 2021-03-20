@@ -420,7 +420,7 @@ const Header = () => {
             <nav>
               <ul>
                 <li>
-                  <A href="/">
+                  <A href="/mi-perfil">
                     <Icono css="icon-account_circle" />
                     Mi Perfil
                   </A>
