@@ -1,12 +1,13 @@
 import React from "react";
+import absoluteUrl from "next-absolute-url";
 
 import Grupos from "../../components/perfil/union/Grupos";
 
 import LayoutMiPerfil from "../../components/perfil/union/LayoutMiPerfil";
 
-const grupos = ({list_group}) => {
+const grupos = ({ list_group }) => {
   return (
-    <LayoutMiPerfil  active={3}>
+    <LayoutMiPerfil active={3}>
       <Grupos grupos={list_group} />
     </LayoutMiPerfil>
   );
@@ -14,12 +15,11 @@ const grupos = ({list_group}) => {
 
 export default grupos;
 
-export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/list_group");
+grupos.getInitialProps = async ({ req }) => {
+  const { host, protocol } = absoluteUrl(req);
+  const res = await fetch(`${protocol}//${host}/api/list_group`);
   const list_group = await res.json();
   return {
-    props: {
-      list_group,
-    },
+    list_group,
   };
-}
+};
