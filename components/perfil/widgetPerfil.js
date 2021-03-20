@@ -9,6 +9,10 @@ const WidgetPerfil = () => {
     nickname: "",
     biography: "",
     area: "",
+    twitterLink: "",
+    facebookLink: "",
+    githubLink: "",
+    linkedinLink: "",
   });
 
   useEffect(() => {
@@ -57,40 +61,51 @@ const WidgetPerfil = () => {
         </p>
         <div className="widget-perfil-social"></div>
         <div className="redesSocialesAnimadas">
-          <ul>
-            <li>
-              <button>
-                <A href="#">
-                  <Icono css="icon-facebook facebookHover" />
-                  <span></span>
-                </A>
-              </button>
-            </li>
-            <li>
-              <button>
-                <A href="#">
-                  <Icono css="icon-twitter twitterHover" />
-                  <span></span>
-                </A>
-              </button>
-            </li>
-            <li>
-              <button>
-                <A href="#">
-                  <Icono css="icon-github1 githubHover" />
-                  <span></span>
-                </A>
-              </button>
-            </li>
-            <li>
-              <button>
-                <A href="#">
-                  <Icono css="icon-linkedin linkedinHover" />
-                  <span></span>
-                </A>
-              </button>
-            </li>
-          </ul>
+          {user.facebookLink &&
+          user.facebookLink !== "" &&
+          user.twitterLink &&
+          user.twitterLink !== "" &&
+          user.linkedinLink &&
+          user.linkedinLink !== "" &&
+          user.githubLink &&
+          user.githubLink !== "" ? (
+            <ul>
+              <li>
+                <button>
+                  <A href={`https://www.facebook.com/${user.facebookLink}`}>
+                    <Icono css="icon-facebook facebookHover" />
+                    <span></span>
+                  </A>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <A href={`https://twitter.com/${user.twitterLink}`}>
+                    <Icono css="icon-twitter twitterHover" />
+                    <span></span>
+                  </A>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <A href={`https://github.com/${user.githubLink}`}>
+                    <Icono css="icon-github1 githubHover" />
+                    <span></span>
+                  </A>
+                </button>
+              </li>
+              <li>
+                <button>
+                  <A href={`https://www.linkedin.com/in/${user.linkedinLink}`}>
+                    <Icono css="icon-linkedin linkedinHover" />
+                    <span></span>
+                  </A>
+                </button>
+              </li>
+            </ul>
+          ) : (
+            <p>Completa tu perfil en editar perfil</p>
+          )}
         </div>
       </section>
     </>
