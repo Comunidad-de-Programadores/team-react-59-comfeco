@@ -1,5 +1,739 @@
-.darkMode{
-    p{
-        color: #fff
+@import "variables.scss";
+
+/* .darkMode {
+} */
+
+.purpleMode {
+  /* Etiquetas */
+  p,
+  li,
+  a,
+  footer,
+  span,
+  button,
+  h5,
+  h1,
+  h3 {
+    color: #fff;
+  }
+
+  header {
+    background-color: transparent;
+
+    .usuario {
+      ul {
+        .img {
+          border-left: 2px solid #fff;
+        }
+      }
     }
+    .dataUser {
+      background: rgba($formBackground, 1);
+      border: 1px solid #fff;
+
+      &:after {
+        border: 15px solid transparent;
+        border-bottom: 15px solid rgba($formBackground, 1);
+      }
+
+      nav {
+        ul {
+          li {
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .siderBarNotificaciones {
+      background-color: $colorPurpleOscuro;
+      border-left: 1px solid #fff;
+
+      ul {
+        li {
+          border-bottom: 1px solid #fff;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .containerHeader {
+      border-bottom: $borderHeaderFooter;
+
+      .navegation {
+        nav {
+          ul {
+            li {
+              &.login {
+                border-left: 2px solid #fff;
+              }
+
+              a {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .containerFooter {
+      border-top: $borderHeaderFooter;
+    }
+
+    .redesSociales {
+      ul {
+        li {
+          background-color: $colorFuchiaIntermedio;
+          border: $borderHeaderFooter;
+          box-shadow: inset 0px 0px 0px #fff;
+        }
+      }
+    }
+  }
+
+  .formGroupSesion {
+    background-color: $formBackground;
+
+    button {
+      background-color: transparent;
+
+      &.submit:hover {
+        background-color: rgba(#000, 0.3);
+      }
+    }
+
+    hr {
+      border: 1px solid #fff;
+
+      &.titleHr {
+        background-color: $colorFuchiaIntermedio;
+
+        border-left: 9px solid #fff;
+        border-right: 9px solid #fff;
+      }
+    }
+
+    form {
+      width: 100%;
+
+      .containerInput {
+        background-color: $formInputBackground !important;
+        border: 1px solid transparent;
+
+        &.error {
+          border: 1px solid #f22;
+        }
+
+        &:hover {
+          border: 1px solid $colorFuchiaIntermedio;
+        }
+      }
+    }
+
+    input {
+      background-color: $formInputBackground !important;
+      border: 3px solid transparent;
+
+      color: #fff !important;
+
+      &:focus {
+        background-color: $formInputBackground;
+      }
+      &::-webkit-input-placeholder {
+        color: white;
+      }
+
+      &::-moz-placeholder {
+        color: white;
+      }
+
+      &::-ms-input-placeholder {
+        color: white;
+      }
+    }
+
+    .buttonContainer {
+      button.login {
+        border: 1px solid #fff;
+
+        color: #fff;
+      }
+    }
+    .legal {
+      a {
+        color: $colorFuchiaIntermedio;
+      }
+    }
+
+    .forgotPasswordContainer {
+      a {
+        color: $colorFuchiaIntermedio;
+      }
+    }
+
+    .submitEmail {
+      background-color: $colorFuchiaIntermedio;
+    }
+  }
+
+  .containerForm {
+    color: #fff;
+  }
+
+  .checkBoxContainer {
+    .icon-check-circle {
+      &.active {
+        color: #cc3bcf;
+      }
+    }
+  }
+
+  .activeFocus {
+    border: 1px solid $colorFuchiaIntermedio !important;
+  }
+
+  form {
+    ul {
+      li {
+        button {
+          &:hover {
+            & span:last-child {
+              background-color: #000;
+            }
+          }
+        }
+
+        a {
+          background: $colorFuchiaIntermedio;
+        }
+      }
+    }
+  }
+
+  .panelTimer {
+    background-color: $colorPurpleOscuro;
+    border: 1px solid #fff;
+
+    &:hover {
+      border: 1px solid $colorFuchiaIntermedio;
+    }
+
+    .wrapper-deadline-counter {
+      .wrapper-deadline {
+        color: #fff;
+      }
+    }
+  }
+  .backgroundHome {
+    background: linear-gradient(
+      to top,
+      $colorPurpleOscuro,
+      $colorBackgroundBlackDark
+    );
+  }
+
+  .containerSesion {
+    .welcome {
+      h1 {
+        color: #fff;
+      }
+
+      h3 {
+        color: rgba(#fff, 0.9);
+      }
+    }
+  }
+
+  .backgroundLigth {
+    background-image: radial-gradient(
+      circle at center,
+      #ff57226b 0,
+      rgba(50, 51, 63, 0) 66.66%
+    );
+  }
+
+  .panelCabecera {
+    background-color: $colorPurpleOscuro;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+
+    h3 {
+      color: rgb(#fff, 0.9);
+    }
+    .text {
+      color: #fff;
+    }
+  }
+
+  .panelColaborador,
+  .panelSponsor {
+    background: $colorPurpleOscuro;
+    border: 1px solid #fff;
+
+    .title {
+      color: #fff;
+    }
+
+    &:hover {
+      border: 1px solid $colorFuchiaIntermedio;
+    }
+
+    .swiper-container {
+      .swiper-pagination-bullet {
+        background-color: #fff;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: $colorFuchiaIntermedio !important;
+      }
+    }
+  }
+
+  .card-container-com {
+    .card-com {
+      .card-com-header {
+        .card-com-title {
+          color: #fff;
+        }
+      }
+      .card-com-body {
+        border-bottom: 1px solid rgba(#fff, 0.2);
+      }
+      .card-com-img {
+        background: $colorFuchiaIntermedio;
+        border: 3px solid $colorFuchiaIntermedio;
+      }
+      .card-com-link {
+        color: $colorFuchiaIntermedio;
+
+        &.iconA {
+          span {
+            &:hover {
+              color: $colorNaranja;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .panelTaller,
+  .panelCom {
+    background-color: $colorPurpleOscuro;
+    border: 1px solid #fff;
+
+    &:hover {
+      border: 1px solid $colorFuchiaIntermedio;
+    }
+  }
+
+  .panelTaller {
+    background-color: $colorPurpleOscuro;
+    border: 1px solid #fff;
+
+    .card-container-taller {
+      .card-taller {
+        .card-taller-header {
+          .card-taller-title {
+            color: #fff;
+          }
+        }
+
+        .card-taller-select {
+          .css-yk16xz-control {
+            background-color: #521e87;
+            border: 1px solid transparent;
+          }
+
+          .css-1uccc91-singleValue {
+            color: #fff;
+          }
+
+          .css-tlfecz-indicatorContainer {
+            svg {
+              fill: #fff;
+            }
+          }
+
+          .css-1gtu0rj-indicatorContainer {
+            color: #fff;
+            &:hover {
+              svg {
+                fill: #fff;
+              }
+            }
+          }
+
+          .css-1pahdxg-control {
+            background-color: #521e87;
+
+            box-shadow: 0 0 0 1px $colorFuchiaIntermedio;
+          }
+
+          .css-b8ldur-Input {
+            color: #fff;
+          }
+        }
+
+        .card-taller-body {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .card-taller-event {
+          background-color: $colorPurpleOscuro;
+          color: #fff;
+        }
+
+        .card-taller-img {
+          background-color: $colorBackgroundBlackLigt;
+          border: 3px solid $colorFuchiaIntermedio;
+
+          span{
+            color: $colorNaranja
+          }
+        }
+
+        .card-taller-text {
+          .card-taller-title {
+            color: #fff;
+          }
+          .card-taller-hora {
+            color: $colorNaranja;
+          }
+          .card-taller-subtext {
+            color: #fff;
+            .card-taller-name {
+              color: $colorFuchiaIntermedio;
+            }
+          }
+        }
+        .card-taller-link {
+          color: $colorFuchiaIntermedio;
+        }
+      }
+    }
+  }
+
+  .container2 {
+    .showInformation {
+      background-color: #fff;
+      box-shadow: 0px 0px 13px 0px #17171d;
+
+      &.activeRightButton {
+        button {
+          background-color: #000 !important;
+        }
+      }
+    }
+  }
+
+  .containerCard {
+    color: #fff;
+
+    .front {
+      border: 1px solid transparent;
+    }
+
+    .back {
+      background-color: #17171d;
+      border: 1px solid white;
+
+      .avatarBack {
+        background-color: #fff;
+      }
+
+      .redesSocials {
+        ul {
+          li {
+            &.btn2:hover::before,
+            &.btn2:hover::after {
+              background-color: #fff;
+            }
+            a {
+              background: rgba(#fff, 0.1);
+            }
+          }
+        }
+      }
+    }
+
+    .circleLogo {
+      background-color: #17171d;
+      box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0);
+    }
+
+    .avatar {
+      box-shadow: 0px 13px 8px 2px #000;
+
+      border: 1px solid #fff !important;
+    }
+
+    &:hover {
+      .circleLogo {
+        box-shadow: inset 0px 0px 10px 10px rgb(0, 0, 0);
+      }
+
+      .teamTecnologi .containerSvg svg {
+        box-shadow: inset 0px -35px 20px 0px #000;
+      }
+    }
+
+    .teamTecnologi {
+      background-color: transparent;
+
+      .containerSvg {
+        svg {
+          box-shadow: inset 0px -25px 20px 0px #000;
+        }
+      }
+
+      .name {
+        p {
+          color: #fff;
+
+          &.svelte {
+            text-shadow: 0px 0px 20px #f00;
+          }
+        }
+      }
+    }
+  }
+
+  .cardSponsor {
+    border: 1px solid #fff;
+
+    .poligones {
+      .izq,
+      .der {
+        background-color: $colorAzulMorado;
+        border: 1px solid #fff;
+      }
+
+      .der {
+        box-shadow: -6px 174px 10px 0px rgba(#000, 0.6);
+      }
+    }
+
+    .img {
+      background-color: #000;
+      border: 1px solid #fff;
+    }
+
+    .name {
+      background-color: #fff;
+      box-shadow: 0px -10px 12px 0px #000;
+
+      h3 {
+        color: $colorAzulMorado;
+      }
+    }
+
+    .redesSociales {
+      ul {
+        li {
+          &.btn2:hover::before,
+          &.btn2:hover::after {
+            background-color: #fff;
+          }
+
+          a {
+            background: #111;
+            border: 1px solid #fff;
+          }
+        }
+      }
+      .ico {
+        color: #000;
+      }
+    }
+  }
+
+  .container2 {
+    .showInformation {
+      background-color: #fff;
+      box-shadow: 0px 0px 13px 0px #17171d;
+
+      &.activeRightButton {
+        button {
+          background-color: #000 !important;
+        }
+      }
+    }
+  }
+
+  .containerCard {
+    color: #fff;
+
+    .front {
+      border: 1px solid transparent;
+    }
+
+    .back {
+      background-color: #17171d;
+      border: 1px solid white;
+
+      .avatarBack {
+        background-color: #fff;
+      }
+
+      .redesSocials {
+        ul {
+          li {
+            &.btn2:hover::before,
+            &.btn2:hover::after {
+              background-color: #fff;
+            }
+            a {
+              background: rgba(#fff, 0.1);
+            }
+          }
+        }
+      }
+    }
+
+    .circleLogo {
+      background-color: #17171d;
+      box-shadow: inset 0px 0px 7px 0px rgba(#000, 0);
+    }
+
+    .avatar {
+      box-shadow: 0px 13px 8px 2px #000;
+    }
+
+    &:hover {
+      .circleLogo {
+        box-shadow: inset 0px 0px 10px 10px rgb(0, 0, 0);
+      }
+
+      .teamTecnologi .containerSvg svg {
+        box-shadow: inset 0px -35px 20px 0px #000;
+      }
+    }
+
+    .teamTecnologi {
+      .containerSvg {
+        svg {
+          box-shadow: inset 0px -25px 20px 0px #000;
+        }
+      }
+
+      .name {
+        p {
+          color: #fff;
+
+          &.svelte {
+            text-shadow: 0px 0px 20px #f00;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .purpleMode {
+    header.menuFixed {
+      .containerHeader {
+        background-color: $colorPurpleOscuro;
+        border-bottom: $borderHeaderFooter;
+      }
+    }
+
+    header {
+      .siderBarNotificaciones {
+        border-bottom: 1px solid #fff;
+      }
+
+      .headerDesktop {
+        .borderRight {
+          border-right: 2px solid #fff;
+        }
+
+        .usuario {
+          ul {
+            li {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .purpleMode {
+    .headerTablet {
+      background: $colorPurpleOscuro;
+      border-bottom: 2px solid #fff;
+
+      .siderbar {
+        background-color: $colorPurpleOscuro;
+        border-right: 1px solid #fff;
+      }
+      ul {
+        li {
+          border-bottom: 1px solid #fff;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .purpleMode {
+    footer {
+      .derechos {
+        background: #000;
+      }
+      .redesSociales {
+        background-color: #111;
+      }
+    }
+  }
+}
+
+/* Animaciones */
+
+.purpleMode {
+  @keyframes circle {
+    0% {
+      border-color: transparent;
+    }
+
+    25% {
+      border-color: transparent $colorFuchiaIntermedio transparent transparent;
+    }
+
+    50% {
+      border-color: transparent $colorFuchiaIntermedio $colorFuchiaIntermedio
+        transparent;
+    }
+
+    75% {
+      border-color: transparent $colorFuchiaIntermedio $colorFuchiaIntermedio
+        $colorFuchiaIntermedio;
+    }
+    100% {
+      border-color: $colorFuchiaIntermedio;
+    }
+  }
+
+  @keyframes tarjetaFocus {
+    1% {
+      border-color: #fff;
+    }
+    100% {
+      border-color: transparent;
+    }
+  }
 }

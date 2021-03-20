@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/general/Layout";
-import HomeLogin from "./componentsPages/HomeLogin";
-const Home = () => {
+import HomeLogin from "../components/home/HomeLogin";
+import Home from "../components/home/Home";
+import EditProfile from "./editar-perfil";
+const Index = () => {
   const [tokenLocalExist, setTokenLocalExist] = useState(false);
   const [tokenSessExist, setTokenSessExist] = useState(false);
 
@@ -12,14 +14,10 @@ const Home = () => {
 
   return (
     <Layout>
-      <main className="row col-xs-12">
-        <div className="backgroundRegister "></div>
-        <div className="containerSesion row between-md center-xs">
-          {!tokenSessExist && !tokenLocalExist ? <HomeLogin /> : ""}
-        </div>
-      </main>
+      {!tokenSessExist && !tokenLocalExist ? <HomeLogin /> : <Home />}
+      {/* <EditProfile /> */}
     </Layout>
   );
 };
 
-export default Home;
+export default Index;

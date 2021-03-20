@@ -1,0 +1,41 @@
+@import 'variables.scss';
+
+.card-widget-2 {
+  background: #390f64;
+  border-radius: 10px;
+  overflow: hidden;
+  .card-widget-head,
+  .card-widget-body,
+  .card-widget-footer {
+    padding: 1.2rem;
+  }
+  &-head {
+    h3 {
+      font-weight: 100;
+    }
+  }
+  &_link {
+    color: $colorYellow1;
+    text-decoration: none;
+    &:hover {
+      color: $colorYellow3;
+    }
+  }
+  .card-flex-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-scroll {
+    overflow-y: auto;
+    padding-right: 2rem;
+  }
+
+  [data-size='small'] {
+    height: 300px;
+  }
+
+  [data-size='medium'] {
+    height: 600px;
+  }
+}

@@ -1,27 +1,57 @@
-import "../styles/lib/normalize.scss";
-import "../styles/lib/flexboxGrid.scss";
-import "../styles/icons/fonts.css";
+import Head from 'next/head'
 
-import "../styles/globals.scss";
-import "../styles/header.scss";
-import "../styles/footer.scss";
+/* estilos de las librerias */
+import '../styles/lib/librerias.scss'
+import '../styles/icons/style.css'
 
-import "../styles/form/formRegisterLogin.scss";
-import "../styles/form/homeLogin.scss";
+/* Estilos globales, header y footer */
+import '../styles/globals/globals.scss'
 
-import "../styles/colorChange.scss";
-import "../styles/form/newPassword.scss";
+/* estilos para botones */
+import '../styles/button/btn2.scss'
+import '../styles/button/btnHamburguesa.scss'
 
-import "../styles/demo.scss";
+/* Estilos de los componentes de los formularios de registro */
+import '../styles/form/formRegisterLogin.scss'
+import '../styles/form/newPassword.scss'
+import '../styles/form/loginRedes.scss'
 
-import { Provider } from "next-auth/client";
+/* Estilos del home */
+import '../styles/home/home.scss'
+
+/* Estilos del slider */
+import '../styles/slider/slider.scss'
+
+/* estilos perfil */
+import '../styles/perfil/miPerfil.scss'
+/*  */
+
+import '../styles/form/editProfile.scss'
+
+/* Estilos Evento */
+import "../styles/evento/evento.scss";
+
+/* Clase para meter nuevos estilos (Uxiliar) */
+import '../styles/demo.scss'
+
+/* import "../styles/perfil/perfil.scss"; */
+import '../styles/cards.scss'
+
+import '../styles/colorChange.scss'
+
+import { Provider } from 'next-auth/client'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Provider session={pageProps.session}>
-      <Component {...pageProps} />
-    </Provider>
-  );
+    <>
+      <Head>
+        <script src='/swiper.min.js'></script>
+      </Head>
+      <Provider session={pageProps.session}>
+        <Component {...pageProps} />
+      </Provider>
+    </>
+  )
 }
 
-export default MyApp;
+export default MyApp

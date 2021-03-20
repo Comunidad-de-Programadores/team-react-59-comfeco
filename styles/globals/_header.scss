@@ -1,0 +1,532 @@
+header {
+  align-items: center;
+  background-color: transparent;
+  height: fit-content;
+  justify-content: center;
+  min-height: 75px;
+  position: fixed;
+  top: -2px;
+  width: 100%;
+  z-index: 1000;
+
+  .usuario {
+    margin-left: 40px;
+
+    ul {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      .img {
+        border-left: $borderHeaderFooter;
+      }
+
+      li {
+        margin-right: 8px;
+        transition: $transicion600ms;
+        span.icon-expand_more {
+          font-size: 16px;
+          padding-top: 6px;
+        }
+      }
+    }
+
+    .expandMore {
+      padding: 0;
+      padding-bottom: 6px;
+      transition: $transicion600ms;
+      transform: rotate(180deg);
+    }
+
+    img {
+      border-radius: 100%;
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  .dataUser {
+    align-items: center;
+    background: rgba($formBackground, 1);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    max-height: 0px;
+    min-height: 0px;
+    justify-content: center;
+    padding: 15px;
+    position: absolute;
+    right: 102px;
+    top: 87px;
+    transition: $transicion600ms;
+    opacity: 0;
+    width: 180px;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      border: 15px solid transparent;
+      border-bottom: 15px solid rgba($formBackground, 1);
+      right: calc(50% - 20px);
+      top: -29px;
+    }
+
+    nav {
+      overflow: hidden;
+      ul {
+        li {
+          list-style: none;
+          display: flex;
+
+          &:first-child {
+            margin-bottom: 10px;
+          }
+
+          button {
+            border: none;
+            outline: none;
+          }
+          a {
+            cursor: pointer;
+
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+
+            letter-spacing: 1px;
+            line-height: 22px;
+            margin-right: 9px;
+
+            padding: 0;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            span {
+              padding-right: 10px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .dataUserDisplay {
+    display: flex !important;
+    max-height: 100px;
+    min-height: 100px;
+
+    opacity: 1;
+    transition: $transicion600ms;
+    width: 180px;
+  }
+
+  .siderBarNotificaciones {
+    background-color: $colorPurpleOscuro;
+    border-left: 1px solid #fff;
+    height: calc(100vh - 60px);
+    max-width: 350px;
+
+    right: -100%;
+    position: absolute;
+    top: 66px;
+    transition: $transicion600ms;
+    overflow: hidden;
+    width: 90%;
+
+    &.right {
+      right: 0;
+      transition: $transicion600ms;
+    }
+    ul {
+      height: 100%;
+      li {
+        border-bottom: 1px solid #fff;
+        display: flex;
+        list-style: none;
+        padding: 15px 0;
+        width: 130%;
+        a {
+          font-size: 13px;
+          font-weight: bold;
+
+          letter-spacing: 1px;
+          line-height: 22px;
+          margin-right: 9px;
+
+          text-decoration: none;
+          text-transform: uppercase;
+          padding: 0;
+          padding-left: 50px;
+
+          span {
+            padding-right: 10px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.containerHeader {
+  align-items: center;
+  border-bottom: $borderHeaderFooter;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+
+  .navegation {
+    display: inline-flex;
+
+    nav {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-left: auto;
+
+      ul li {
+        display: inline-block;
+        padding: 36px 0 36px 15px;
+        cursor: pointer;
+        &.name {
+          padding: 36px 0;
+          margin-right: 2px;
+        }
+
+        &.morePerfile {
+          padding: 14px 0 20px 0px !important;
+        }
+
+        .notifications {
+          padding-left: 0;
+        }
+
+        &.login {
+          border-left: $borderHeaderFooter;
+          padding: 43px 0 36px 15px;
+        }
+        a {
+          align-items: center;
+
+          display: inline-flex;
+          justify-content: center;
+
+          font-size: 13px;
+          font-weight: bold;
+
+          letter-spacing: 1px;
+          line-height: 22px;
+          margin-right: 9px;
+
+          padding: 0;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          span {
+            padding-right: 10px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  header.menuFixed .headerDesktop .borderRight {
+    right: 3.5vw !important;
+  }
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1024px) {
+  header.menuFixed {
+    .headerDesktop {
+      a {
+        img {
+          width: 116px !important ;
+          height: 30px !important;
+        }
+      }
+      .borderRight {
+        top: -14px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) and (min-width: 1024px) {
+  header {
+    .headerDesktop {
+      .borderRight {
+        right: -21% !important;
+      }
+      .col-xs-3 {
+        a {
+          margin-left: 0 !important;
+        }
+      }
+    }
+    .usuario {
+      margin-left: 0 !important;
+    }
+
+    .containerHeader {
+      width: 95%;
+
+      .navegation nav ul li {
+        padding: 36px 0 36px 5px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header.menuFixed {
+    .containerHeader {
+      background-color: $colorPurpleOscuro;
+      border-bottom: $borderHeaderFooter;
+      width: 100%;
+
+      .navegation nav ul li {
+        &.login {
+          padding: 24px 0 24px 10px;
+        }
+        padding: 20px 0 20px 10px;
+      }
+    }
+
+    .dataUser {
+      right: 18px;
+      top: 82px;
+    }
+
+    .headerDesktop {
+      .borderRight {
+        height: 72px;
+        right: 0vw !important;
+        top: -13px;
+      }
+      .col-xs-3 {
+        a {
+          margin-left: 10px;
+        }
+      }
+
+      a img {
+        height: 41px !important;
+        width: 139px !important;
+      }
+    }
+
+    .siderBarNotificaciones {
+      top: 74px;
+    }
+  }
+  header {
+    .headerTablet {
+      display: none;
+    }
+    * {
+      transition: $transicion600ms;
+    }
+
+    .siderBarNotificaciones {
+      border-bottom: 1px solid #fff;
+      border-radius: 0 0 0 10px;
+      height: 50vh;
+      top: 104px;
+    }
+
+    .headerDesktop {
+      .col-xs-3 {
+        position: relative;
+        a {
+          margin-left: 30px;
+        }
+      }
+
+      a img {
+        height: 40px !important;
+        width: 154px !important;
+      }
+
+      .borderRight {
+        border-right: $borderHeaderFooter;
+        height: 107px;
+        position: absolute;
+        right: -25%;
+        top: -33px;
+      }
+
+      .usuario {
+        ul {
+          li {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+
+            letter-spacing: 1px;
+            line-height: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            span.icon-expand_more {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* header de tablet */
+@media screen and (max-width: 1024px) {
+  header {
+    .containerHeader.headerDesktop {
+      display: none;
+    }
+
+    .dataUser {
+      right: 33px;
+      top: 71px;
+    }
+  }
+
+  .headerTablet {
+    align-items: center;
+    background: $colorPurpleOscuro;
+    border-bottom: $borderHeaderFooter;
+    justify-content: center;
+    height: 66px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    .left,
+    .imgLogo,
+    .right {
+      display: flex;
+      align-items: center;
+      height: 60px;
+    }
+
+    .imgLogo {
+      justify-content: center;
+
+      img {
+        min-width: 120px !important;
+        min-height: 33px !important;
+      }
+    }
+
+    .left {
+      justify-content: flex-start;
+    }
+
+    .right {
+      justify-content: flex-end;
+
+      .usuario {
+        margin: 0;
+        ul {
+          li {
+            list-style: none;
+            &.img {
+              border: none;
+            }
+
+            &.notifications {
+              margin: 0;
+              margin-left: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    .siderbar {
+      background-color: $colorPurpleOscuro;
+      border-right: 1px solid #fff;
+      height: calc(100vh - 60px);
+      max-width: 350px;
+      left: -100%;
+
+      position: absolute;
+      top: 66px;
+      transition: $transicion600ms;
+      overflow: hidden;
+      width: 90%;
+      &.left {
+        left: 0;
+        transition: $transicion600ms;
+      }
+      ul {
+        height: 100%;
+        li {
+          border-bottom: 1px solid #fff;
+          display: flex;
+          list-style: none;
+          padding: 15px 0;
+          width: 130%;
+          a {
+            font-size: 13px;
+            font-weight: bold;
+
+            letter-spacing: 1px;
+            line-height: 22px;
+            margin-right: 9px;
+
+            padding: 0;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding-left: 50px;
+
+            span {
+              padding-right: 10px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  header .dataUser {
+    right: 0px;
+    top: 73px;
+
+    &::after {
+      right: calc(18% - 20px);
+    }
+  }
+
+  .headerTablet {
+    .right {
+      .usuario {
+        ul {
+          li {
+            &.img {
+              order: 1;
+              margin: 0;
+            }
+            &.name,
+            &.morePerfile {
+              display: none;
+            }
+
+            &.notifications {
+              margin: 0;
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

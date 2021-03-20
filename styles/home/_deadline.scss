@@ -1,0 +1,62 @@
+.panelTimer {
+  align-items: center;
+  background-color: $colorPurpleOscuro;
+  border: 1px solid #fff;
+  display: flex;
+  font-family: $fontTitle;
+  justify-content: center;
+  transition: $transicion600ms;
+
+  &:hover {
+    border: 1px solid $colorFuchiaIntermedio;
+    transition: $transicion600ms;
+    border-radius: 10px;
+  }
+
+  .wrapper-deadline-counter {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: 10px;
+    width: 100%;
+
+    .title {
+      h5 {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      & > p {
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+    }
+
+    .wrapper-deadline {
+      align-items: center;
+      border-radius: 7px;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      width: 100%;
+      color: #fff;
+      span {
+        font-size: 2rem;
+      }
+    }
+
+    .wrapper-deadline_timer {
+      padding: 0px 0.85rem;
+
+      p {
+        font-weight: bold;
+        font-size: 2rem;
+        font-family: $fontBasic;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+    }
+  }
+}

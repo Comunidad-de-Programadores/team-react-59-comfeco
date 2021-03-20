@@ -1,0 +1,180 @@
+footer {
+  align-self: flex-end;
+  align-items: center;
+
+  justify-content: center;
+  width: 100%;
+  z-index: 0;
+
+  .derechos {
+    align-items: center;
+    display: flex;
+
+    p {
+      margin-left: 35px;
+    }
+  }
+
+  .containerFooter {
+    align-items: center;
+    border-top: $borderHeaderFooter;
+    display: flex;
+    flex-wrap: wrap;
+    height: 50px;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .redesSociales {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 35px;
+
+    ul {
+      align-items: center;
+      display: flex;
+
+      justify-content: space-around;
+      padding: 0 0 0px 200px;
+      width: 100%;
+
+      li {
+        align-items: center;
+        background-color: $colorFuchiaIntermedio;
+        border: $borderHeaderFooter;
+        border-radius: 50%;
+        box-shadow: inset 0px 0px 0px #fff;
+        display: inline-flex;
+        height: 35px;
+        justify-content: center;
+
+        list-style: none;
+        position: relative;
+        transition: $transicion600ms;
+        overflow: hidden;
+        width: 35px;
+
+        &:hover {
+          transition: $transicion600ms;
+        }
+        /* facebook */
+        &:nth-child(1):hover {
+          box-shadow: inset 25px -25px 20px #3b5998;
+        }
+
+        /* twitter */
+        &:nth-child(2):hover {
+          box-shadow: inset 25px -25px 20px #00acee;
+        }
+
+        /* youtube */
+        &:nth-child(3):hover {
+          box-shadow: inset 25px -25px 20px #c4302b;
+        }
+
+        /* instagram */
+        &:nth-child(4):hover {
+          box-shadow: inset 25px -25px 20px #8a3ab9;
+        }
+        /* instagram */
+        &:nth-child(5):hover {
+          box-shadow: inset 25px -25px 20px #0077b5;
+        }
+
+        a {
+          align-items: center;
+          border-bottom: none;
+          display: flex;
+
+          height: inherit;
+          justify-content: center;
+          text-align: center;
+          text-decoration: none;
+          width: inherit;
+
+          span {
+            z-index: 150;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    .col-md-5 {
+      flex-basis: 48%;
+      max-width: 48%;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  footer {
+    .containerFooter {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) and (min-width: 1024px) {
+  footer {
+    .containerFooter {
+      width: 95%;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  footer {
+    .col-sm-6 {
+      flex-basis: 46%;
+      max-width: 46%;
+    }
+    .redesSociales ul {
+      padding: 0 0 0px 120px;
+    }
+    .derechos p {
+      position: absolute;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    .derechos {
+      background: #000;
+      height: 30px;
+      justify-content: center;
+      order: 1;
+
+      p {
+        margin: 0;
+      }
+    }
+    .redesSociales {
+      background-color: #111;
+      height: 60px;
+      padding: 0;
+
+      ul {
+        margin: 0 23vw;
+        padding-left: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  footer {
+    p {
+      font-size: 13px;
+    }
+
+    .redesSociales {
+      ul {
+        margin: 0 auto;
+      }
+    }
+  }
+}

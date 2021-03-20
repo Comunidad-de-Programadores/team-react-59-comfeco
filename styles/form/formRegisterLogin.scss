@@ -1,9 +1,13 @@
 @import "variables.scss";
 
 .formGroupSesion {
+  align-items: center;
   background-color: $formBackground;
   border-radius: 10px;
+  display: flex;
   font-family: $fontTitle;
+  flex-wrap: wrap;
+  justify-content: center;
 
   max-height: 503px;
   max-width: 415px;
@@ -11,12 +15,8 @@
   min-width: 415px;
 
   padding: 40px;
-
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
   overflow: hidden;
+
   p {
     text-align: left;
   }
@@ -27,7 +27,6 @@
     transition: $transicion600ms;
 
     a {
-      color: $colorText;
       text-decoration: none;
     }
 
@@ -41,20 +40,17 @@
       transition: $transicion600ms;
     }
   }
-  span {
-    color: #fff;
-  }
 
   hr {
-    border: 1px solid #fff;
+    border: 1px solid transparent !important;
 
     &.titleHr {
-      background-color: $colorFuchia4;
-      border: none;
-      border-left: 9px solid #fff;
-      border-right: 9px solid #fff;
-
-      border-radius: 1px;
+      background-color: $colorFuchiaIntermedio;
+      border: none !important;
+      border-left: 9px solid #fff !important;
+      border-right: 9px solid #fff !important;
+      
+      border-radius: 4px;
       height: 4px;
       margin: 0px auto 30px;
 
@@ -70,7 +66,6 @@
   }
 
   form {
-    /* max-width: 324px; */
     width: 100%;
 
     .containerInput {
@@ -83,7 +78,7 @@
       margin-bottom: 30px;
       justify-content: center;
       padding: 0 10px 0 8px;
-      transition: $transicion600msLineal;
+      transition: $transicion600ms;
       overflow: hidden;
 
       &.error {
@@ -91,8 +86,8 @@
       }
 
       &:hover {
-        border: 1px solid $colorFuchia4;
-        transition: $transicion600msLineal;
+        border: 1px solid $colorFuchiaIntermedio;
+        transition: $transicion600ms;
         outline: none;
       }
 
@@ -109,7 +104,7 @@
     background-color: $formInputBackground !important;
     border: 3px solid transparent;
     border-radius: 4px;
-    color: $colorText !important;
+    color: #fff !important;
 
     font-weight: 300;
     height: 100%;
@@ -120,15 +115,15 @@
       outline: none;
     }
     &::-webkit-input-placeholder {
-      color: $colorText;
+      color: white;
     }
 
     &::-moz-placeholder {
-      color: $colorText;
+      color: white;
     }
 
     &::-ms-input-placeholder {
-      color: $colorText;
+      color: white;
     }
   }
 
@@ -157,7 +152,6 @@
     width: 100%;
 
     button {
-      color: #fff;
       width: 50%;
       border: 1px solid;
       height: 40px;
@@ -172,7 +166,7 @@
     }
 
     a {
-      color: $colorFuchia4;
+      color: $colorFuchiaIntermedio;
       text-decoration: none;
     }
   }
@@ -182,7 +176,7 @@
     justify-content: center;
 
     a {
-      color: $colorFuchia4;
+      color: $colorFuchiaIntermedio;
       text-decoration: none;
       outline: none;
 
@@ -207,7 +201,7 @@
 
   .submitEmail {
     align-items: center;
-    background-color: $colorFuchia4;
+    background-color: $colorFuchiaIntermedio !important;
     display: flex;
     height: 100%;
     justify-content: center;
@@ -229,6 +223,9 @@
   color: #fff;
   cursor: default;
   max-width: 550px;
+  max-height: 530px;
+  min-height: 530px;
+
   position: relative;
   transition: $transicion600ms;
   transform: rotateY(0deg);
@@ -238,12 +235,12 @@
   .front,
   .newPassword {
     backface-visibility: hidden;
-    max-height: 390px;
-    min-height: 390px;
-    position: relative;
-    z-index: 1;
     border: 1px solid transparent;
-    transition: $transicion600msLineal;
+    max-height: 420px;
+    min-height: 420px;
+    position: relative;
+    transition: $transicion600ms;
+    z-index: 1;
   }
 
   .newPassword {
@@ -266,7 +263,7 @@
   .backRight {
     max-height: 373px;
     min-height: 373px;
-    transition: $transicion600msLineal;
+    transition: $transicion600ms;
     transform: rotateY(180deg);
     z-index: 15;
   }
@@ -288,6 +285,8 @@
       justify-content: flex-start;
       margin: 0;
 
+      
+
       a {
         align-items: center;
         background-color: transparent;
@@ -297,6 +296,10 @@
         justify-content: center;
         position: absolute;
         width: 30px;
+
+        &.animationCircle.active:before {
+          transform: none;
+        }
       }
     }
   }
@@ -304,9 +307,9 @@
   &.activeRight {
     transform: rotateY(180deg);
     .backRight {
-      max-height: 500px;
-      min-height: 500px;
-      transition: $transicion600msLineal;
+      max-height: 530px;
+      min-height: 530px;
+      transition: $transicion600ms;
     }
     .backLeft {
       display: none;
@@ -314,7 +317,7 @@
 
     & > .front {
       margin-bottom: 113px;
-      transition: $transicion600msLineal;
+      transition: $transicion600ms;
     }
   }
 
@@ -330,52 +333,15 @@
       max-height: 300px;
       min-height: 300px;
       margin-bottom: 0;
-      transition: $transicion600msLineal;
+      transition: $transicion600ms;
     }
   }
 }
 
 .containerSesion {
-  min-height: calc(50vh + 22px);
+  margin: 15vh 0vh 5vh 0vh;
+  min-height: calc(70vh + 22px);
   width: 85%;
-
-  .containerText {
-    color: #fff;
-    display: block;
-    font-family: $fontTitle;
-
-    text-shadow: 0px 0px 20px rgb(0 0 0 / 50%);
-
-    * {
-      text-align: left;
-    }
-
-    .ico {
-      font-size: 24px;
-      color: $colorYellow2;
-    }
-
-    p {
-      margin-bottom: 25px;
-      font-size: 18px;
-    }
-
-    h4 {
-      font-size: 24px;
-      margin-bottom: 5px;
-    }
-
-    hr {
-      border: 1px solid #fff;
-      background-color: #d740da;
-      border: none;
-      border-right: 10px solid #fff;
-      border-radius: 1px;
-      height: 4px;
-      width: 55px;
-      margin-bottom: 25px;
-    }
-  }
 }
 .checkBoxContainer {
   .icon-check-circle {
@@ -399,31 +365,8 @@
   position: absolute;
 }
 
-@keyframes circle {
-  0% {
-    border-color: transparent;
-    transform: rotate(0deg);
-  }
-
-  25% {
-    border-color: transparent $colorFuchia4 transparent transparent;
-  }
-
-  50% {
-    border-color: transparent $colorFuchia4 $colorFuchia4 transparent;
-  }
-
-  75% {
-    border-color: transparent $colorFuchia4 $colorFuchia4 $colorFuchia4;
-  }
-  100% {
-    border-color: $colorFuchia4;
-    transform: rotate(-700deg);
-  }
-}
-
 .activeFocus {
-  border: 1px solid $colorFuchia4 !important;
+  border: 1px solid $colorFuchiaIntermedio !important;
   transition: $transicion600ms !important;
 }
 
@@ -431,130 +374,13 @@
   animation: tarjetaFocus 2s;
 }
 
-@keyframes tarjetaFocus {
-  1% {
-    border-color: #fff;
-  }
-  100% {
-    border-color: transparent;
-  }
-}
-@media screen and (min-width: 1800px) {
-  .containerSesion .containerText {
-    padding-right: 222px !important;
-  }
-}
-
-@media screen and (min-width: 1700px) {
-  .containerSesion .containerText {
-    padding-right: 202px !important;
-  }
-}
-
-@media screen and (min-width: 1450px) {
-  .containerSesion .containerText {
-    padding-right: 100px;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .containerSesion {
-    .containerText {
-      .containerP {
-        &.pRelleno {
-          display: none;
-        }
-      }
-    }
-  }
-}
 @media screen and (max-width: 1024px) {
   .containerSesion {
     min-height: 430px;
     width: 90%;
 
-    .containerText {
-      padding-right: 0px;
-      order: 15;
-
-      display: inline-flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-self: center;
-      margin: 35px 0;
-
-      .title {
-        width: 90%;
-      }
-
-      .containerP {
-        display: inline-flex;
-        width: 40%;
-      }
-
-      h4 {
-        font-size: 24px;
-        margin-bottom: 5px;
-      }
-
-      hr {
-        border-radius: 3px;
-
-        width: 54px;
-        margin-bottom: 15px;
-      }
-
-      .ico {
-        font-size: 20px;
-      }
-
-      p {
-        margin-bottom: 20px;
-        font-size: 16px;
-
-        font-family: Lato;
-        font-weight: bold;
-      }
-    }
     .containerForm {
       order: 10;
-    }
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .containerSesion {
-    .containerText {
-      .containerP {
-      }
-
-      h4 {
-      }
-
-      hr {
-      }
-
-      .ico {
-      }
-
-      p {
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .containerSesion .containerText {
-    margin-bottom: 0;
-    .containerP {
-      width: 75vw;
-
-      .pRelleno {
-        display: none;
-      }
-    }
-    .title {
-      width: 80vw;
     }
   }
 }
@@ -585,8 +411,8 @@
 
   .containerForm {
     .front {
-      max-height: 390px;
-      min-height: 390px;
+      max-height: 415px;
+      min-height: 415px;
     }
     .backLeft {
       max-height: 260px;
@@ -606,5 +432,39 @@
 
   .mainForLogin {
     margin-top: 25px;
+  }
+}
+
+@keyframes circle {
+  0% {
+    border-color: transparent;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    border-color: transparent $colorFuchiaIntermedio transparent transparent;
+  }
+
+  50% {
+    border-color: transparent $colorFuchiaIntermedio $colorFuchiaIntermedio
+      transparent;
+  }
+
+  75% {
+    border-color: transparent $colorFuchiaIntermedio $colorFuchiaIntermedio
+      $colorFuchiaIntermedio;
+  }
+  100% {
+    border-color: $colorFuchiaIntermedio;
+    transform: rotate(-700deg);
+  }
+}
+
+@keyframes tarjetaFocus {
+  1% {
+    border-color: #fff;
+  }
+  100% {
+    border-color: transparent;
   }
 }

@@ -1,0 +1,159 @@
+.containerModuleInsignias {
+  /* padding: 20px; */
+
+  h1 {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+  }
+
+  .contentModuleInsignias {
+   /*  display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    .moduleInsignia {
+      align-items: center;
+      background-color: $colorPurpleOscuro;
+      border-radius: 10px;
+      display: flex;
+
+      flex-direction: column;
+      height: 420px;
+      justify-content: space-between;
+      padding: 15px 10px;
+
+      min-width: 330px;
+      max-width: 330px;
+      padding: 24px;
+
+      min-height: 430px;
+      max-height: 430px;
+      margin-bottom: 32px;
+
+      border: 1px solid #fff;
+      transition: $transicion600ms;
+
+      &:hover {
+        border: 1px solid $colorFuchiaIntermedio;
+        transition: $transicion600ms;
+
+        .imgContainer {
+          border: 3px solid $colorFuchiaIntermedio;
+          box-shadow: inset 0px 0px 10px 4px $colorFuchiaIntermedio;
+          transition: $transicion600ms;
+
+          img {
+            max-width: 95px;
+            min-width: 95px;
+            max-height: 95px;
+            min-height: 95px;
+            transition: $transicion600ms;
+          }
+        }
+
+        .title {
+          width: calc(100% + 4px);
+
+          border-bottom: 2px solid $colorFuchiaIntermedio;
+          border-top: 2px solid $colorFuchiaIntermedio;
+          transition: $transicion600ms;
+        }
+
+        .moduleInsigniaHr {
+          border: 1px solid $colorFuchiaIntermedio;
+          width: calc(100% + 4px);
+          transition: $transicion600ms;
+        }
+
+        h3,
+        h4 {
+          color: $azulClaro;
+          transition: $transicion600ms;
+        }
+      }
+
+      .title {
+        /* font-family: $fontTitle; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+
+        width: 100%;
+        border-bottom: 2px solid $colorPurpleIntermedio;
+        border-top: 2px solid $colorPurpleIntermedio;
+        transition: $transicion600ms;
+
+        h2 {
+          color: #fff;
+          padding: 5px 0;
+          font-size: 16px;
+
+          text-transform: capitalize;
+        }
+      }
+      h3,
+      h4 {
+        color: $colorFuchiaIntermedio;
+        text-transform: capitalize;
+        transition: $transicion600ms;
+      }
+
+      .imgContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 125px;
+        min-width: 125px;
+        max-height: 125px;
+        min-height: 125px;
+        border: 3px solid $azulClaro;
+        border-radius: 50%;
+        box-shadow: inset 0px 0px 10px 4px $azulClaro;
+        transition: $transicion600ms;
+
+        img {
+          max-width: 90px;
+          min-width: 90px;
+          max-height: 90px;
+          min-height: 90px;
+          transition: $transicion600ms;
+        }
+      }
+
+      p {
+        text-align: center;
+      }
+
+      .moduleInsigniaHr {
+        border: 1px solid $colorPurpleIntermedio;
+        width: 100%;
+        transition: $transicion600ms;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .containerMiPerfil {
+    .containerModuleInsignias {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .containerMiPerfil {
+    .containerModuleInsignias {
+      width: 98%;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .containerMiPerfil {
+    .containerModuleInsignias {
+      width: 100%;
+    }
+  }
+}

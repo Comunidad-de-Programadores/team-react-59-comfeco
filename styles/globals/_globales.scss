@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: transparent !important;
+}
+
+body {
+  background: #282828;
+  display: flex;
+  font-family: Lato, sans-serif;
+  flex-wrap: wrap;
+  min-height: 100.1vh;
+}
+
+#__next,
+.containerAll {
+  display: inherit;
+  flex-wrap: inherit;
+  min-height: inherit;
+  width: 100%;
+}
+
+::selection {
+  background: $colorPurpleSuave;
+  color: #fff;
+  text-shadow: none;
+}
+
+img::selection {
+  background: rgba($colorPurpleSuave, 0.2);
+  color: #fff;
+  text-shadow: none;
+}
+
+a::selection {
+  background: $colorPurpleSuave !important;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 1px solid $colorPurpleSuave !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: #fff;
+  transition: $transicion600ms;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $colorPurpleIntermedio;
+  transition: $transicion600ms;
+}
+
+.ico {
+  color: #fff;
+}
+
+/* Colores de las redes sociales */
+.instagram {
+  border-radius: 5px;
+  color: #c15a3a !important;
+}
+
+.twitter {
+  border-radius: 5px;
+  color: #00acee !important;
+}
+
+.linkedin {
+  color: #0077b5 !important;
+}
+
+.github {
+  color: #ee216b !important;
+}
+
+.facebook {
+  color: #3b5998 !important;
+}
+
+.google {
+  color: #db4a39 !important;
+}
+
+.instagramHover:hover {
+  border-radius: 5px;
+  color: #c15a3a !important;
+}
+
+.twitterHover:hover {
+  border-radius: 5px;
+  color: #00acee !important;
+}
+
+.linkedinHover:hover {
+  color: #0077b5 !important;
+}
+
+.githubHover:hover {
+  color: #ee216b !important;
+}
+
+.facebookHover:hover {
+  color: #3b5998 !important;
+}
+
+.googleHover:hover {
+  color: #db4a39 !important;
+}

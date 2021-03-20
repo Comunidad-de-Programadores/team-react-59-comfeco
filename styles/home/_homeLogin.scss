@@ -1,0 +1,131 @@
+main {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: calc(100% - 50px - 75px);
+  margin-top: 100px;
+  width: 100%;
+}
+
+
+.backgroundHome {
+  background: linear-gradient(to top, $colorPurpleOscuro, $colorBackgroundBlackDark);
+  height: 186%;
+  left: -200px;
+  position: fixed;
+  transform: rotate(-183deg);
+  top: -200px;
+  width: 235%;
+  z-index: -150;
+}
+
+.containerNotLogin {
+  display: inherit;
+  flex-wrap: inherit;
+  min-height: inherit;
+  width: 100%;
+}
+
+.containerSesion {
+  font-family: $fontTitle;
+  .welcome {
+    height: 400px;
+    h1 {
+      color: #fff;
+      height: 0px;
+      letter-spacing: 0.5px;
+      margin-bottom: 0px;
+      width: 100%;
+    }
+
+    h3 {
+      color: rgba(#fff, 0.9);
+      height: 0px;
+      letter-spacing: 0.3px;
+      margin: 0px;
+    }
+
+    .text{
+      height: 0;
+      margin-top: -60px;
+    }
+  }
+}
+
+.backgroundLigth {
+  display: block;
+  background-image: radial-gradient(
+    circle at center,
+    #ff57226b 0,
+    rgba(50, 51, 63, 0) 66.66%
+  );
+  left: 50%;
+  height: 200vh;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 0;
+  width: 99vw;
+  z-index: -1;
+}
+
+.logueado {
+  margin: 25vh 0vh 0vh 0vh;
+  min-height: calc(60vh + 22px);
+
+  .welcome {
+    h1 {
+      text-transform: uppercase;
+    }
+    .text {
+      width: 43%;
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  .logueado {
+    .welcome {
+      height: 290px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .logueado {
+    margin: 13vh 0vh 12vh 0vh;
+    .welcome {
+      flex-basis: 90%;
+      max-width: 90%;
+      .text {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logueado {
+    .welcome {
+      .text {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .logueado {
+    margin: 4vh 0vh 15vh 0vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    margin-top: 90px;
+    min-height: calc(100% - 50px - 90px);
+  }
+}
+
+@media screen and (max-width: 1400px) {
+}

@@ -3,18 +3,39 @@ import bcrypt from "bcrypt-nodejs";
 
 const User = new mongoose.Schema(
   {
-    type: { type: String, required: true },
-    email: { type: String },
+    image: { type: String },
     nickname: { type: String, required: true },
+    email: { type: String, required: true },
+    country: { type: String },
+    biography: { type: String },
+    gender: { type: String },
+    birthdate: { type: String },
+    area: { type: String },
+    facebookLink: { type: String },
+    twitterLink: { type: String },
+    githubLink: { type: String },
+    linkedinLink: { type: String },
+
+    //default
     password: { type: String },
+
+    //twitter
     twitterId: { type: String },
     twitterName: { type: String },
+
+    //github
     githubId: { type: String },
     githubName: { type: String },
+
+    //facebook
     facebookId: { type: String },
     facebookName: { type: String },
+
+    //google
     googleId: { type: String },
     googleName: { type: String },
+
+    //linkedin
     linkedinId: { type: String },
     linkedinName: { type: String },
   },

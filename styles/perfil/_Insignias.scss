@@ -1,0 +1,89 @@
+.containerInsignias {
+  align-items: center;
+  background-color: $colorPurpleOscuro;
+  border-radius: 10px;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #fff;
+  transition: $transicion600ms;
+
+  padding: 16px;
+  position: relative;
+  &:hover {
+    border: 1px solid $colorFuchiaIntermedio;
+    transition: $transicion600ms;
+
+    .titleInsignias {
+      border: 1px solid $colorFuchiaIntermedio;
+      border-bottom: none;
+      transition: $transicion600ms;
+      border-right: none;
+    }
+  }
+  .insignias {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+    /*  overflow-x: scroll;
+    overflow-y: hidden; */
+
+    .containerTargInsignia {
+      border-radius: 50%;
+
+      /* box-shadow: 0px 0px 5px 4px #14a4ff; */
+      max-width: 100px;
+      min-width: 100px;
+      min-height: 100px;
+      max-height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border: 3px solid #d740da;
+      box-shadow: inset 0px 0px 10px 4px #d740da;
+      transition: $transicion600ms;
+
+      &:hover {
+        border: 3px solid #14a4ff;
+        box-shadow: inset 0px 0px 10px 4px #14a4ff;
+        transition: $transicion600ms;
+      }
+
+      img {
+        max-width: 80% !important;
+        min-width: 80% !important;
+        min-height: 100% !important;
+        max-height: 80% !important;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .titleInsignias {
+    background: #390f64;
+    /* width: 100%; */
+    position: absolute;
+    top: -25px;
+    z-index: 0;
+    padding: 7px;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #fff;
+    border-bottom: none !important;
+    font-size: 16px;
+    transition: all ease 0.6s;
+    left: -1px;
+    box-shadow: 1px 4px 0px #390f64;
+    /* border-left: saddlebrown; */
+    border-right: none;
+  }
+}

@@ -3,18 +3,21 @@ import A from "../nano/A";
 import Buttons from "./Buttons";
 import Router from "next/router";
 import $ from "../nano/$";
+import RedesLogin from "./RedesLogin";
 
 const Register = () => {
   const [data, setData] = useState({ error: null, message: "" });
+
   const focus = () => {
+    const focusClass = "activefocus";
     const activo = document.activeElement.id;
 
-    const addClass = (css) => {
-      return document.activeElement.parentNode.classList.add(`${css}`);
+    const addClass = () => {
+      return document.activeElement.parentNode.classList.add(`${focusClass}`);
     };
 
-    const removeClass = (id, css) => {
-      return $(`${id}`).parentNode.classList.remove(`${css}`);
+    const removeClass = (id) => {
+      return $(`${id}`).parentNode.classList.remove(`${focusClass}`);
     };
 
     /*  if (activo === "registerNombre") {
@@ -24,38 +27,37 @@ const Register = () => {
     } */
 
     if (activo === "registerUserName") {
-      addClass("activeFocus");
+      addClass();
     } else {
-      removeClass("registerUserName", "activeFocus");
+      removeClass("registerUserName");
     }
 
     if (activo === "registerCorreo") {
-      addClass("activeFocus");
+      addClass();
     } else {
-      removeClass("registerCorreo", "activeFocus");
+      removeClass("registerCorreo");
     }
 
     if (activo === "registerPassword") {
-      addClass("activeFocus");
+      addClass();
     } else {
-      removeClass("registerPassword", "activeFocus");
+      removeClass("registerPassword");
     }
 
     if (activo === "registerPasswordConfirm") {
-      addClass("activeFocus");
+      addClass();
     } else {
-      removeClass("registerPasswordConfirm", "activeFocus");
+      removeClass("registerPasswordConfirm");
     }
 
     if (activo === "front") {
-      /* removeClass("registerNombre", "activeFocus"); */
-      removeClass("registerUserName", "activeFocus");
-      removeClass("registerCorreo", "activeFocus");
-      removeClass("registerPassword", "activeFocus");
-      removeClass("registerPasswordConfirm", "activeFocus");
+      /* removeClass("registerNombre"); */
+      removeClass("registerUserName");
+      removeClass("registerCorreo");
+      removeClass("registerPassword");
+      removeClass("registerPasswordConfirm");
     }
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const padre = e.target.parentNode;
@@ -64,7 +66,7 @@ const Register = () => {
     if (
       e.target.registerPassword.value !== e.target.registerPasswordConfirm.value
     ) {
-      e.target.elements[4].innerHTML = "Crear cuenta";
+      e.target.elements[8].innerHTML = "Crear cuenta";
       padre.style.border = "red 1px solid";
       setData({
         error: true,
@@ -86,7 +88,7 @@ const Register = () => {
     const res = await req.json();
     if (res.error) {
       padre.style.border = "red 1px solid";
-      e.target.elements[4].innerHTML = "Crear cuenta";
+      e.target.elements[8].innerHTML = "Crear cuenta";
       setData({
         error: true,
         message: res.error,
@@ -196,6 +198,7 @@ const Register = () => {
             {data.message}
           </p>
         )}
+        <RedesLogin />
 
         <div className="containerRegister">
           <button
@@ -213,7 +216,11 @@ const Register = () => {
         <p>
           Al registrarte, estas aceptando los{" "}
           <A href={"/terminos-y-condiciones"}>Términos y condiciones</A>, y la
-          <A> Política de privacidad y protección de datos</A> de COMFECO.
+          <A href="/politica-de-privacidad-y-protección-de-datos">
+            {" "}
+            Política de privacidad y protección de datos
+          </A>{" "}
+          de COMFECO.
         </p>
       </div>
     </div>

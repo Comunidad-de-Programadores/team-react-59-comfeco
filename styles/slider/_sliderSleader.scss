@@ -1,0 +1,471 @@
+.container2 {
+  position: relative;
+  width: 217px;
+
+  .showInformation {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0px 0px 13px 0px #17171d;
+    cursor: pointer;
+    
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    position: absolute;
+
+    right: -17px;
+    top: 0px;
+    transition: 1500ms all cubic-bezier(0, -15, 0, 15);
+    width: 35px;
+    z-index: 10;
+
+    &.activeRightButton {
+      top: -4%;
+      transition: 1500ms all cubic-bezier(0, -15, 0, 15);
+
+      button {
+        background-color: #000 !important;
+        transition: $transicion600ms;
+      }
+    }
+    &.activeAnimation {
+      animation: fa-spin-fast 200ms infinite linear;
+    }
+
+    button {
+      border: none;
+      border-radius: 100%;
+      cursor: pointer;
+      height: 80%;
+
+      transition: $transicion600ms;
+      outline: none;
+      width: 80%;
+
+      span {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &:hover {
+      button {
+        transition: $transicion600ms;
+      }
+    }
+  }
+}
+
+.containerCard {
+  align-items: center;
+  border-radius: 10px 10px 43px 43px;
+  color: #fff;
+  cursor: default;
+
+  display: flex;
+  justify-content: center;
+  height: 310px;
+  position: relative;
+
+  transition: $transicion600ms;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  width: 220px;
+  z-index: 2;
+
+  .front {
+    align-items: center;
+    backface-visibility: hidden;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    height: 310px;
+
+    position: relative;
+    width: 220px;
+    z-index: 1;
+
+    .img {
+      position: absolute;
+
+      & > div {
+        overflow: visible !important;
+
+        .avatar {
+          min-width: initial !important;
+          max-width: initial !important;
+          min-height: initial !important;
+          max-height: initial !important;
+        }
+      }
+    }
+  }
+
+  .back {
+    background-color: #17171d;
+    border: 1px solid white;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    overflow: hidden;
+    height: 100%;
+    position: absolute;
+    transform: rotateY(-180deg);
+
+    .avatarBack {
+      align-items: center;
+      clip-path: polygon(0 0, 100% 0, 100% 35%, 0 100%);
+      display: flex;
+      background-color: #fff;
+      height: 60%;
+      justify-content: center;
+      transition: 800ms linear all;
+      overflow: hidden;
+      width: 100%;
+
+      img {
+        bottom: -111px !important;
+        height: 320px !important;
+        min-width: initial !important;
+        max-width: initial !important;
+
+        min-height: initial !important;
+        max-height: initial !important;
+        width: 218px !important;
+      }
+    }
+
+    p.name {
+      font-size: 16px;
+      letter-spacing: 0.2px;
+      text-align: center;
+    }
+
+    .description {
+      align-items: center;
+      display: flex;
+
+      justify-content: center;
+      padding: 2px 0px 5px 0px;
+
+      p {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        width: 90%;
+      }
+    }
+
+    .redesSocials {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      ul {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        li {
+          list-style: none;
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+          width: 30px;
+
+          &:first-child {
+            border-radius: 10px 0 0 0;
+          }
+
+          &:last-child {
+            border-radius: 0 10px 0 0;
+          }
+
+          &.btn2::before {
+            bottom: 1px;
+          }
+
+          &.btn2::after {
+            top: 3px;
+          }
+
+          &.btn2:hover::before,
+          &.btn2:hover::after {
+            background-color: #fff;
+            border-width: 40px 60px;
+          }
+          a {
+            align-items: center;
+            background: rgba(#fff, 0.1);
+            display: flex;
+
+            height: inherit;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            width: inherit;
+            span {
+              z-index: 150;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.activeRight {
+    transform: rotateY(180deg);
+
+    .back .avatarBack {
+      clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
+      transition: 800ms linear all;
+    }
+  }
+
+  .containerButton {
+    position: relative;
+  }
+
+  .circleLogo {
+    background-color: #17171d;
+    box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    height: 40px;
+    
+    position: absolute;
+    top: 3px;
+    transition: $transicion600ms;
+    width: 40px;
+  }
+
+  .avatar {
+    border-bottom: none;
+    box-shadow: 0px 13px 8px 2px #000;
+    border-radius: 10px 10px 35px 35px;
+    border: 1px solid #fff !important;
+    height: 325px !important;
+    position: absolute;
+    top: -23px !important;
+    width: 100% !important;
+  }
+
+  &:hover {
+    .circleLogo {
+      box-shadow: inset 0px 0px 10px 10px rgb(0, 0, 0);
+      transition: $transicion600ms;
+    }
+
+    .teamTecnologi .containerSvg svg {
+      box-shadow: inset 0px -35px 20px 0px #000;
+      transition: $transicion600ms;
+    }
+  }
+
+  .team {
+    border-radius: 0 0 35px 35px;
+    bottom: 0px;
+    height: inherit;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .teamTecnologi {
+    align-items: flex-end;
+    background-color: transparent;
+    bottom: 17px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+
+    .containerSvg {
+      align-items: flex-end;
+      display: flex;
+      bottom: 3px;
+      justify-content: center;
+      position: absolute;
+      width: 400%;
+
+      svg {
+        border-radius: 50% 50% 0px 0px;
+        box-shadow: inset 0px -25px 20px 0px #000;
+
+        height: 57px;
+        transition: $transicion600ms;
+        width: 200%;
+
+        path {
+          width: 150px;
+        }
+      }
+    }
+
+    .logoLeader {
+      height: 30px;
+      position: absolute;
+      top: 8px;
+      z-index: 100;
+    }
+
+    .name {
+      align-items: center;
+      display: flex;
+      bottom: -17px;
+      border-radius: 7%;
+
+      height: 40px;
+      justify-content: center;
+      position: absolute;
+
+      width: 100%;
+      p {
+        color: #fff;
+        font-weight: 700;
+        text-align: center;
+        text-transform: capitalize;
+        width: 100%;
+
+        &.svelte {
+          text-shadow: 0px 0px 20px #f00;
+        }
+      }
+    }
+  }
+}
+
+/* Animaciones */
+@keyframes fa-spin-fast {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.react {
+  path {
+    fill: $colorTeamReact !important;
+  }
+
+  .name {
+    box-shadow: inset 0px -23px 0px 0px $colorTeamReact;
+  }
+
+  .showInformation {
+    &:hover button {
+      background-color: #002260 !important;
+    }
+
+    button {
+      background-color: $colorTeamReact !important;
+
+      span {
+        text-shadow: 1px 1px 0px $colorAzulMorado;
+      }
+    }
+  }
+
+  .back p.name {
+    box-shadow: none;
+  }
+}
+
+.svelte {
+  path {
+    fill: $colorTeamSvelte !important;
+  }
+
+  .name {
+    box-shadow: inset 0px -23px 0px 0px $colorTeamSvelte;
+  }
+
+  .showInformation {
+    &:hover button {
+      background-color: #ff2600 !important;
+    }
+
+    button {
+      background-color: $colorTeamSvelte !important;
+
+      span {
+        text-shadow: 1px 1px 0px transparent;
+      }
+    }
+  }
+
+  .back p.name {
+    box-shadow: none;
+  }
+}
+
+.vue {
+  .containerCard .teamTecnologi .logoLeader {
+    height: 24px;
+    top: 14px;
+  }
+  path {
+    fill: $colorTeamVue !important;
+  }
+
+  .name {
+    box-shadow: inset 0px -23px 0px 0px $colorTeamVue;
+  }
+
+  .showInformation {
+    &:hover button {
+      background-color: #00573dc9 !important;
+    }
+
+    button {
+      background-color: $colorTeamVue !important;
+
+      span {
+        text-shadow: 1px 1px 0px transparent;
+      }
+    }
+  }
+
+  .back p.name {
+    box-shadow: none;
+  }
+}
+
+.angular {
+  .containerCard .teamTecnologi .logoLeader {
+    height: 26px;
+    top: 10px;
+  }
+  path {
+    fill: $colorTeamAngular !important;
+  }
+
+  .name {
+    box-shadow: inset 0px -23px 0px 0px $colorTeamAngular;
+  }
+
+  .showInformation {
+    &:hover button {
+      background-color: #ac0000 !important;
+    }
+
+    button {
+      background-color: $colorTeamAngular !important;
+
+      span {
+        text-shadow: 1px 1px 0px transparent;
+      }
+    }
+  }
+
+  .back p.name {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,243 @@
+@import 'variables.scss';
+@import 'perfil.scss';
+@import 'Insignias.scss';
+@import 'RecentActivities.scss';
+@import 'cardEvents.scss';
+@import 'submodulos/moduleInsignias';
+@import '../group/group';
+
+.headerNav {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin:28px 0 16px 0;
+
+  nav {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /*  margin-left: auto; */
+    ul {
+      li {
+        display: inline-block;
+        background: $colorPurpleIntermedio;
+        padding: 5px 20px;
+        transition: $transicion600ms;
+
+        &:hover {
+          background-color: $colorFuchiaIntermedio;
+          transition: $transicion600ms;
+        }
+
+        &:first-child {
+          border-radius: 10px 0 0 10px;
+        }
+
+        &:last-child {
+          border-radius: 0 10px 10px 0;
+        }
+
+        &.active {
+          background-color: $colorFuchiaIntermedio;
+          transition: $transicion600ms;
+        }
+
+        a {
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 13px;
+          font-weight: bold;
+
+          letter-spacing: 1px;
+          line-height: 22px;
+
+          padding: 0;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          span {
+            margin-right: 10px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+.containerMiPerfil {
+  align-items: flex-start;
+  display: flex;
+  min-height: 75%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+
+  .contentMiPerfil {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1570px) {
+  .containerMiPerfil {
+    justify-content: space-between;
+    width: 80%;
+    .contentMiPerfil {
+      order: 10;
+      /* display: none; */
+      margin: 50px auto 32px auto;
+
+      &.col-xs-5 {
+        flex-basis: 90%;
+        max-width: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .containerMiPerfil {
+    justify-content: space-between;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .headerNav {
+    padding-bottom: 24px;
+    position: relative;
+    z-index: 150;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .containerMiPerfil {
+    justify-content: space-between;
+    width: 95%;
+
+    .widget-perfil {
+      max-width: 45vw;
+      min-width: 45vw;
+      padding: 18px;
+    }
+
+    .card-widget {
+      max-width: 45vw;
+      min-width: 45vw;
+
+      padding: 18px;
+      padding-right: 0;
+      padding-bottom: 0;
+
+      .card-scroll {
+        padding-top: 35px;
+        padding-bottom: 0px;
+      }
+
+      .card-widget-body {
+        padding-right: 18px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .containerInsignias .insignias .containerTargInsignia {
+    max-width: 85px;
+    min-width: 85px;
+    min-height: 85px;
+    max-height: 85px;
+  }
+
+  .containerMiPerfil {
+    .contentMiPerfil {
+      margin-top: 20px;
+
+      &.col-xs-5 {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .containerMiPerfil {
+    justify-content: center;
+    width: 97%;
+
+    .widget-perfil {
+      max-width: 415px;
+      min-width: 415px;
+      padding: 18px;
+      margin-bottom: 32px;
+    }
+
+    .card-widget {
+      max-width: 415px;
+      min-width: 415px;
+
+      margin-bottom: 32px;
+
+      .card-widget-body {
+        padding-right: 32px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .containerInsignias .insignias .containerTargInsignia {
+    max-width: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    max-height: 60px;
+  }
+
+  .headerNav {
+    nav {
+      ul {
+        li {
+          padding: 2px 7px;
+
+          a {
+            font-size: 10px;
+
+            span {
+              margin-right: 7px;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .containerMiPerfil {
+    .widget-perfil {
+      max-width: 95vw;
+      min-width: 95vw;
+      padding: 18px;
+    }
+
+    .card-widget {
+      max-width: 95vw;
+      min-width: 95vw;
+    }
+
+    .contentMiPerfil {
+      order: 10;
+      /* display: none; */
+      margin: 50px auto 32px auto;
+
+      &.col-xs-5 {
+        flex-basis: 95vw;
+        max-width: 95vw;
+      }
+    }
+  }
+}

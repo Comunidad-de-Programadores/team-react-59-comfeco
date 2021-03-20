@@ -1,48 +1,59 @@
-/* Colores de Comfeco */
-$colorGray1: #2e2e2e;
-$colorGray2: #555555;
-$colorGray3: #777879;
-$colorGray4: #c4c4c4;
-$colorGray5: #e3e3e3;
+/* Paleta de colores */
+$colorPurpleSuave: #7535b6;
+$colorPurpleIntermedio: #521e87;
+$colorPurpleOscuro: #390f64;
+$colorAzulMorado: #6200ff;
+$colorFuchiaIntermedio: #d740da;
+$colorNaranja:#ff5722;
+$azulClaro:#14a4ff;
 
-$colorWhite: #f3f3f3;
+/* colores de los team */
+$colorTeamSvelte: #ff3e00;
+$colorTeamReact: #0d47a1;
+$colorTeamVue: #41b883;
+$colorTeamAngular: #e23237;
 
-$colorFuchia1: #69156a;
-$colorFuchia2: #8a178c;
-$colorFuchia3: #b824bb;
-$colorFuchia4: #d740da;
-$colorFuchia5: #e480e5;
-$colorFuchia6: #ecadf6;
+$formBackground: $colorPurpleOscuro;
+$formInputBackground: $colorPurpleIntermedio;
+$formBackgroundDashboard: #fff;
+$auxiliar1: #b983ff;
 
+$colorBackgroundBlackLigt: #17171d;
+$colorBackgroundColorFixed: #1b003a;
+$colorBackgroundBlackDark: #05070b;
 
-$colorPurple1: #390f64;
-$colorPurple2: #521e87;
-$colorPurple3: #7535b6;
-$colorPurple4: #9349dd;
-$colorPurple5: #b983ff;
-$colorPurple6: #d7b7ff;
+/* fonts */
+$fontBasic: "Lato", "Crete Round", sans-serif;
+$fontTitle: "Crete Round", "Lato", sans-serif;
 
-$colorYellow1: #d39c00;
-$colorYellow2: #f1b406;
-$colorYellow3: #ffc41f;
-$colorYellow4: #ffcb38;
-$colorYellow5: #ffd767;
-$colorYellow6: #ffe499;
-
-$fontBasic: 'Lato', 'Crete Round', sans-serif;
-$fontTitle:'Crete Round','Lato', sans-serif;
-
-$border: 1px solid #fff;
-
-$transicion600ms: all ease 600ms;
-$transicion600msLineal:all 600ms;
+/* transicion */
+$transicion600ms: all ease 0.6s;
 $transitionS1: 1s ease all;
+
+/* bordes */
+
+$borderHeaderFooter: 2px solid #fff;
+$borderRadius: 10px;
+$border: 1px solid #fff;
 
 $colorIcons: #fff;
 $colorText: #fff;
-$borderHeaderFooter: 2px solid #fff;;
 
-$colorSelection: $colorPurple3;
+/* Eliminados */
+/* $colorFuchia1: #69156a; */
+/* $colorFuchia2: #8a178c; */
+/* $colorFuchia3: #b824bb; */
+/* $colorFuchia5: #e480e5; */
+/* $colorFuchia6: #ecadf6; */
 
-$formBackground: $colorPurple1;
-$formInputBackground:$colorPurple2;
+/* $colorPurple4: #9349dd;*/
+/* $colorPurple6: #d7b7ff; */
+
+/* */
+/* $colorGray2: #555555;
+$colorGray3: #777879;
+$colorGray1: #2e2e2e; */
+$colorYellow1: #d39c00;
+$colorYellow3: #ffc41f;
+
+

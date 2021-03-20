@@ -1,0 +1,28 @@
+.form-group{
+    padding: 0.5em 0;
+    label{
+        display: block;
+        width: 100%;
+        padding: 0.4em 0;
+        color: white;
+    }
+}
+.control-form{
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    justify-content: center;
+    padding:0.7em 1em;
+}
+
+.form-fullwidth{
+    width: 100%;
+}
+.form-default{
+    border:2px solid #e6e6e6;
+    background: #e2e2e2;
+    color: #111;
+    &::placeholder {
+        color: #111;
+    }
+}

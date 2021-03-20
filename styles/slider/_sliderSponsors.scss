@@ -1,0 +1,179 @@
+.sponsors {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  .swiper-slide {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    transform-style: initial;
+  }
+}
+.containerCard {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.cardSponsor {
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+
+  height: 320px;
+  position: relative;
+  justify-content: center;
+  width: 250px;
+
+  .poligones {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    .izq,
+    .der {
+      background-color: $colorAzulMorado;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      height: 130%;
+      position: absolute;
+      width: 130%;
+    }
+
+    .izq {
+      bottom: -145px;
+      right: 53px;
+      transform: rotate(-45deg);
+    }
+
+    .der {
+      box-shadow: -6px 174px 10px 0px rgba(#000, 0.6);
+      bottom: -145px;
+      right: -128px;
+      transform: rotate(45deg);
+    }
+  }
+
+  .img {
+    background-color: #000;
+    border: 1px solid #fff;
+
+    height: 275px;
+    top: -25px;
+
+    position: absolute;
+    overflow: hidden;
+    width: 200px;
+    img {
+      width: 100%;
+    }
+  }
+
+  .name {
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px -10px 12px 0px #000;
+    bottom: 41px;
+    display: flex;
+    font-family: $fontBasic;
+    height: 27px;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+
+    h3 {
+      color: $colorAzulMorado;
+      font-size: 14px;
+      font-weight: 800;
+      text-align: center;
+      letter-spacing: normal;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .redesSociales {
+    bottom: 0;
+    display: flex;
+    height: fit-content;
+    justify-content: space-around;
+    position: absolute;
+
+    overflow: hidden;
+    width: fit-content;
+
+    ul {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      li {
+        align-items: center;
+        display: inline-flex;
+        height: 30px;
+        list-style: none;
+        justify-content: center;
+        position: relative;
+        width: 35px;
+        overflow: hidden;
+
+        &:first-child {
+          border-radius: 10px 0 0 0;
+        }
+
+        &:last-child {
+          border-radius: 0 10px 0 0;
+        }
+
+        &:first-child > a {
+          border-radius: 10px 0 0 0;
+        }
+
+        &:last-child > a {
+          border-radius: 0 10px 0 0;
+        }
+
+        &.btn2::before {
+          bottom: 0px;
+        }
+
+        &.btn2::after {
+          top: 0;
+        }
+
+        &.btn2:hover::before,
+        &.btn2:hover::after {
+          background-color: #fff;
+          border-width: 40px 60px;
+        }
+
+        a {
+          align-items: center;
+          background: #111;
+          border: 1px solid #fff;
+          border-bottom: none;
+          display: flex;
+
+          height: inherit;
+          justify-content: center;
+          text-align: center;
+          text-decoration: none;
+          width: inherit;
+
+          span {
+            z-index: 150;
+          }
+        }
+      }
+    }
+    .ico {
+      font-size: 16px;
+      color: #000;
+    }
+  }
+}

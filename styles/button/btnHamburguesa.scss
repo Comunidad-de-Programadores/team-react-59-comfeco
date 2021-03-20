@@ -1,0 +1,91 @@
+@import "../variables";
+
+button.cont_x {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cont_x {
+  position: relative;
+  width: 17px;
+  height: 14px;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cont_x span {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+
+.cont_x span:nth-last-of-type(1) {
+  top: 0;
+}
+
+.cont_x span:nth-last-of-type(3) {
+  bottom: 0;
+}
+
+.cont_x.active span:nth-last-of-type(1) {
+  transform: translateY(4px) rotate(-45deg);
+  background-color: $colorFuchiaIntermedio;
+}
+
+.cont_x.active span:nth-last-of-type(3) {
+  transform: translateY(-9px) rotate(45deg);
+  background-color: $colorFuchiaIntermedio;
+}
+
+.cont_x.active span:nth-last-of-type(2) {
+  background-color: $colorFuchiaIntermedio;
+  opacity: 0;
+}
+
+.menu2.active span:nth-last-of-type(2) {
+  left: 80%;
+}
+
+.menu2.active:before {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  content: "";
+  border: 2px solid transparent;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: circulo 0.5s 0.3s forwards;
+  margin: -19px 0 0 -18px;
+}
+
+@keyframes circulo {
+  0% {
+    border-color: transparent;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    border-color: transparent #fff transparent transparent;
+  }
+
+  50% {
+    border-color: transparent #fff #fff transparent;
+  }
+
+  75% {
+    border-color: transparent #fff #fff #fff;
+  }
+  100% {
+    border-color: #fff;
+    transform: rotate(-700deg);
+  }
+}

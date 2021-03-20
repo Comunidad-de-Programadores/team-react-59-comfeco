@@ -1,0 +1,209 @@
+@import "variables.scss";
+
+.containerUser {
+  min-height: calc(100% + 120px);
+  width: 100%;
+  .containerForm {
+    color: #fff;
+    cursor: default;
+    margin-top: 40px;
+    max-width: 1080px;
+    position: relative;
+    transition: $transicion600ms;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    z-index: 2;
+  }
+}
+
+.editProfileContainer{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  input:focus, textarea:focus {
+    background-color: #521e87;
+    outline: none;
+  }
+} 
+
+.editProfile.formGroupSesion {
+  background-color: $formBackground;
+  border-radius: 10px;
+  font-family: $fontTitle;
+
+  max-height: 1230px;
+  max-width: 1000px;
+  min-height: 900px;
+  min-width: 415px;
+  padding: 40px;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  
+  .title {
+    font-size: 24px;
+    text-align: center;
+    line-height: 3em;
+  }
+  .buttonEditProfile {
+    width: 100%;
+  }
+  .containerPhoto {
+    border-radius: 50%;
+    border-radius: 0;
+    display:inline-block;
+    padding:20px;
+    margin: auto;
+    img.containerCircle {
+      background-color: white;
+      width: 140px;
+      height: 140px;
+    }
+    span {
+      position: absolute;
+      left:0;
+      text-align:center;
+      width:100%;
+      background-color:#521e87;
+      bottom:0;
+      padding:20px 0;
+    }
+    &>div {
+      display:inline-block;
+      overflow: hidden;
+      height: 140px;
+      border: 5px solid #7535b6;
+      border-radius:50%;
+    }
+    .containerFile {
+      position: relative; 
+      padding: 0; 
+      cursor: pointer;
+    }
+  }
+
+  form {
+    /* max-width: 324px; */
+    width: 100%;
+
+    .containerBox {
+      display: flex;
+      padding: 5px;
+      &.block {
+        flex-flow: column;
+        width: 100%;
+      }
+      &.inline {
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 5px;
+        width: 100%;
+        input {
+          width: 100%;
+        }
+      }
+      .textForm {
+        margin-right: 10px;
+        padding: 10px 0;
+        width: 80%;
+        span {
+          padding-right: 5px;
+          cursor: pointer;
+        }
+      }
+      input, textarea, select {
+        background-color: #521e87 !important;
+        border: 3px solid transparent;
+        border-radius: 4px;
+        color: #fff !important;
+        font-weight: 300;
+        padding: 10px 0px 10px 10px;
+        width: 100%;
+        
+      }
+      .containerInputIcon {
+        position: relative;
+        span {
+          position: absolute;
+          right: 10px;
+          top: 15px;
+        }
+      }
+    }
+  }
+  .buttonContainer {
+    margin-top: 20px;
+    button.edit {
+      border: 1px solid #fff;
+      border-radius: 5px;
+      color: white;
+      height: 40px;
+      outline: none;
+      padding: 5px 20px;
+      width: 50%;
+    }
+  }
+}
+
+.danger {
+  p {
+    color: red;
+    display: block;
+    padding-left: 10px;
+  }
+}
+
+.birthDate {
+  background:#fff url('../../public/calendar.svg')  97% 50% no-repeat ;
+  &::-webkit-calendar-picker-indicator { 
+    opacity: 0;
+  }
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+}
+
+.errorRed {
+  border: 1px solid red !important;
+}
+
+@media screen and (max-width: 768px) {
+  .editProfile.formGroupSesion {
+    max-height: 2000px;
+    max-width: 95vw;
+    min-height: 1000px;
+    min-width: 95vw;
+    padding: 20px;
+
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .editProfile.formGroupSesion {
+    max-height: 1800px;
+    max-width: 90vw;
+    min-height: 455px;
+    min-width: 95vw;
+    padding: 20px;
+
+  }
+  /* .col-xs-4, .col-xs-6 {
+    flex-basis: 100%;
+    max-width: 100%;
+  } */
+  form {
+    .containerBox {
+      &.inline {
+        align-items: none;
+        flex-flow: column;
+        justify-content: none;
+      }
+      .textForm {
+        width: 97% !important;
+      }
+    }
+  }
+}

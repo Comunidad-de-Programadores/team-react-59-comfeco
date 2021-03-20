@@ -1,0 +1,129 @@
+.widget-perfil {
+  align-items: center;
+  background: $colorPurpleOscuro;
+  border-radius: $borderRadius;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+
+  max-width: 415px;
+  min-width: 415px;
+  border: 1px solid #fff;
+  transition: $transicion600ms;
+
+  min-height: 435px;
+  max-height: 435px;
+  
+  &:hover{
+    border: 1px solid $colorFuchiaIntermedio;
+    transition: $transicion600ms;
+
+    .widget-perfil-image {
+     
+      
+      .widget-perfil-image--rounded {
+     
+        transition: $transicion600ms;
+        box-shadow: 0px 0px 20px 0px $azulClaro;
+      }
+    }
+  }
+
+  .widget-perfil-link {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    /* color: $colorFuchiaIntermedio !important; */
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        background: $colorPurpleIntermedio;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+
+    &:hover{
+      span{
+        color: $azulClaro !important;
+        transition: $transicion600ms;
+      }
+    }
+
+    span{
+      margin-left: 5px;
+      transition: $transicion600ms;
+    }
+  }
+  .widget-perfil-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    
+    .widget-perfil-image--rounded {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      border: 4px solid $azulClaro;
+      box-shadow: 0px 0px 10px 0px $azulClaro;
+      transition: $transicion600ms;
+    }
+  }
+  .widget-perfil-name {
+    font-size: 1.2rem;
+    font-family: $fontTitle;
+
+    color: $colorFuchiaIntermedio;
+  }
+  .widget-perfil-subject {
+    color: $azulClaro;
+    margin: 0.5rem 0 1.2rem 0;
+    font-size: 1rem;
+  }
+  p {
+    font-family: Lato;
+    font-size: 1rem !important;
+  }
+  .widget-perfil-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      
+      margin: 10px;
+      &:hover {
+        svg {
+          fill: $auxiliar1;
+          path {
+            fill: $auxiliar1;
+          }
+        }
+      }
+    }
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: white;
+      path {
+        fill: white;
+      }
+    }
+  }
+
+  .redesSocialesAnimadas {
+    margin: 20px 0 10px 0;
+
+    /* ul li a {
+      background-color: $azulClaro;
+      &:before {
+        content: "";
+        border: 1px solid;
+      }
+    } */
+  }
+}
