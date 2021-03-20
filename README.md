@@ -1,6 +1,8 @@
 <p align="center">
-  <a href="https://comfeco-react-59.herokuapp.com">
-    <img alt="Team react.js" src="https://i.postimg.cc/Dy8KMf4Z/logo1.png" width="120" />
+  <a href="https://comfeco-react-59.herokuapp.com" target="_blank"
+        rel="noopener">
+    <img alt="Team react.js" src="https://i.postimg.cc/Dy8KMf4Z/logo1.png" width="120" target="_blank"
+        rel="noopener"/>
   </a>
 </p>
 <h1 align="center">
