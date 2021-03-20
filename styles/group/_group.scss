@@ -6,37 +6,41 @@ main.wrap{
 
 .card-group {
   display: flex;
-  border-top: 1px solid #5d3884;
+  border-bottom: 1px solid #5d3884;
   align-items: center;
   padding: 8px 0px;
   justify-content: space-between;
   color: white;
-  .card-group-image {
-    border-radius: 50%;
-    background: #ccc;
-    overflow: hidden;
-    width: 50px;
-    height: 50px;
-    img {
-      width: 100%;
+  
+  .card-group-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .card-group-image {
+      border: 4px solid #9349dd;
+      box-shadow: 0px 0px 10px 0px #9349dd;
+      border-radius: 50%;
+      height: 50px;
+      margin-right: 10px;
+      object-fit: cover;
+      width: 50px;
     }
-  }
 
-  .card-group-title {
-    width: 50%;
-    padding-left: 10px;
-    .card-group-title_name {
-      font-weight: bold;
-      font-size: 1.2em;
-    }
-    .card-group-title_nivel {
-      font-size: 0.8em;
+    .card-group-title {
+      .card-group-title_name {
+        font-weight: bold;
+        font-size: 1em;
+      }
+      .card-group-title_nivel {
+        font-size: 0.8em;
+      }
     }
   }
   .card-group-rango {
     color: #9585a5;
-    width: 30%;
-    text-align: right;
+    font-size: 0.8em;
+    text-align: left;
+    padding-left: 8px;
   }
   &:first-child {
     border-top: 0;
@@ -48,12 +52,12 @@ main.wrap{
   text-decoration: none;
   .title_name {
     h3 {
-      font-size: 1em;
+      font-size: 0.8em;
       color: #957bb1;
     }
     h2 {
       color: white;
-      font-size: 1.2em;
+      font-size: 1em;
     }
   }
   i {
@@ -67,6 +71,10 @@ main.wrap{
 .action-groups {
   margin-right: -0.5rem;
   margin-left: -0.5rem;
+  button {
+    font-size: 0.8em;
+    font-weight: 600;
+  }
   > div {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
@@ -251,10 +259,32 @@ main.wrap{
     color: #fff;
   }
 }
-
+.wrap-group {
+  .row {
+    margin-top: 20px;
+    .card-widget-2 {
+      .card-scroll {
+        padding: 1.2rem;
+      }
+    }
+  }
+}
 @media screen and (min-width: 1024px) {
+  .wrap-group {
+    .row {
+      margin-right: -0.5rem;
+      margin-left: -0.5rem;
+      > div {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
   .container-fluid {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
   }
   .wrap-group {
