@@ -21,10 +21,10 @@ const editar = () => {
             </div>
 
             <div className="containerInfo row around-xs">
-              <div className="img col-xs-6 center-xs">
+              <div className="img col-sm-6  col-xs-12 center-xs">
                 <img src="/default-avatar.png" alt="default-avatar.png" />
               </div>
-              <div className=" row col-xs-6 main center-xs">
+              <div className="row col-sm-6  col-xs-12 main center-xs">
                 <div className="col-xs-12 nick">
                   <label htmlFor="">
                     <Icono css="icon-user" />
@@ -55,7 +55,7 @@ const editar = () => {
                   </label>
                 </div>
               </div>
-              <div className="row col-xs-6 redes center-xs">
+              <div className="row col-sm-6  col-xs-12 redes center-xs">
                 <div className="titleRedes">
                   <h3>Tus Redes Sociales</h3>
                 </div>
@@ -88,7 +88,7 @@ const editar = () => {
                   </label>
                 </div>
               </div>
-              <div className="row col-xs-6 email center-xs">
+              <div className="row col-sm-6  col-xs-12 email center-xs">
                 <div className="titleRedes">
                   <h3>Email & Área</h3>
                 </div>

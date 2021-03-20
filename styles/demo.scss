@@ -10,6 +10,7 @@
   position: relative;
   overflow: hidden;
   font-family: $fontTitle;
+  max-width: 1045px;
 
   .buttonBack {
     position: absolute;
@@ -232,15 +233,20 @@
         transition: $transicion600ms;
         border-radius: 4px;
 
-
-        &:hover{
-            background: rgba($colorPurpleIntermedio, 0.5) !important;
-            border: 1px solid $colorFuchiaIntermedio;
-            transition: $transicion600ms;
-            cursor: pointer;
+        &:hover {
+          background: rgba($colorPurpleIntermedio, 0.5) !important;
+          border: 1px solid $colorFuchiaIntermedio;
+          transition: $transicion600ms;
+          cursor: pointer;
         }
       }
     }
+  }
+
+  label {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
   }
 
   input {
@@ -251,5 +257,41 @@
 
   .mg-bottom {
     margin-bottom: 0 !important;
+  }
+}
+
+@media screen and (max-width: 1124px) {
+}
+
+@media screen and (max-width: 900px) {
+  .EditUser {
+    width: 95%;
+    padding: 20px 15px 30px 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .EditUser {
+    width: 95%;
+    padding: 20px 15px 30px 15px;
+
+    .img {
+      margin-bottom: 24px;
+    }
+    
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: $fontTitle;
+
+      .nick,
+      .genero,
+      .nacimiento,
+      .pais {
+        margin-bottom: 24px;
+      }
+    }
   }
 }
