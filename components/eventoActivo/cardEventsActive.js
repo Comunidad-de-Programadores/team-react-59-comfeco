@@ -235,7 +235,7 @@ const CardEventsActive = () => {
             <span>Ver más</span>
             <Icono css="icon-external-link" />
           </A>
-          <button class="participate">Participar</button>
+          <button className="participate">Participar</button>
         </div>
       </div>
     </div>

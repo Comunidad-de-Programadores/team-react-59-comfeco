@@ -31,25 +31,25 @@ const Nav = ({ active }) => {
       <div className="headerNav">
         <nav>
           <ul>
-            <li id="nav1">
+            <li id="nav1" >
               <A href="/mi-perfil">
                 <Icono css="icon-account_circle" />
                 Perfil
               </A>
             </li>
-            <li id="nav2">
+            <li id="nav2" >
               <A href="/mi-perfil/insignias">
                 <Icono css="icon-account_circle" />
                 Insignias
               </A>
             </li>
-            <li id="nav3">
+            <li id="nav3" >
               <A href="/mi-perfil/grupos">
                 <Icono css="icon-account_circle" />
                 Grupos
               </A>
             </li>
-            <li id="nav4">
+            <li id="nav4" >
               <A href="/mi-perfil/eventos">
                 <Icono css="icon-account_circle" />
                 Eventos

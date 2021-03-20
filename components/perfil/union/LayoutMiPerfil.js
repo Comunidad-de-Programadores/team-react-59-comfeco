@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "../../general/Layout";
 import Nav from "./Nav";
 import Perfil from "./Perfil";
-const LayoutMiPerfil = (props,  active ) => {
+const LayoutMiPerfil = (props) => {
   return (
     <Layout>
       <main>
