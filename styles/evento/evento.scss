@@ -1,12 +1,16 @@
 @import "variables.scss";
 
+.containerEventos {
+  width: 96%;
+}
+
 .containerEvento {
   align-items: flex-start;
   display: flex;
-  margin: 30px 0;
+  margin: 0 0 30px 0;
   min-height: 75%;
   justify-content: space-around;
-  width: 90%;
+  width: 100%;
   .background-fuscia {
     background: #521e87 !important;
   }
@@ -39,7 +43,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-right: 2rem;
+    /* padding-right: 2rem; */
   }
 
   .card-event-active {
@@ -65,7 +69,7 @@
       border-top-right-radius: 5px;
       display: flex;
       font-weight: 600;
-      justify-content: space-around;
+      justify-content: center;
       padding: 10px;
       text-decoration: none;
       z-index: 1;
@@ -131,6 +135,13 @@
           text-decoration: none;
           font-weight: 600;
           z-index: 10;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid #fff;
+          padding: 10px 20px;
+          border-radius: 5px;
           span {
             padding-right: 4px;
           }
@@ -151,5 +162,17 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card-events .card-event-active {
+    margin: 20px 0;
+    max-width: 96vw;
+    min-width: 96vw;
+  }
+
+  .card-events .card-event-active .card-event-footer .card-buttons button {
+    width: 35%;
   }
 }

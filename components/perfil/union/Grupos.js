@@ -8,10 +8,10 @@ const Grupos = ({grupos}) => {
     <main className="wrap">
       <div className="container-fluid wrap-group">
         <div className="row top-xs col-xs-12">
-          <div className="col-xs-12 col-md-3">
+          <div className="col-xs-12 col-md-4">
             <MyGroup />
           </div>
-          <div className="col-xs-12 col-md-9">
+          <div className="col-xs-12 col-md-8">
             <Groups grupos={grupos} />
           </div>
         </div>

@@ -1,7 +1,7 @@
 const ModuloInsignias = (props) => {
   return (
     <div className="containerModuleInsignias">
-      <h1>Insignias</h1>
+    {/*   <h1>Insignias</h1> */}
       <div className="contentModuleInsignias row around-xs">
         {props.insignias.map((e, i) => {
           return (
