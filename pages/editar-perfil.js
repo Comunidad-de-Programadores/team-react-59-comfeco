@@ -19,11 +19,7 @@ const editProfile = () => {
           <div className="backgroundHome"></div>
           <div className="backgroundLigth"></div>
           <div className="backgroundRegister"></div>
-          <div className="containerUser editProfileContainer row between-xs">
-            <div className="containerForm" id="containerEditProfile">
-              <EditProfile />
-            </div>
-          </div>
+          <EditProfile />
         </main>
       </Layout>
     </>
