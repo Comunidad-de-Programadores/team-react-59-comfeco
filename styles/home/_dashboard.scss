@@ -392,6 +392,8 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
+    position: relative;
+    z-index: 8888;
 
     .welcome {
       flex-basis: 47%;
