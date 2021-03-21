@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "../../components/general/Layout";
 import Icono from "../../components/nano/Icono";
 import A from "../../components/nano/A";
+import Router from "next/router";
 const editar = () => {
   const [user, setUser] = useState({
     nickname: "",
@@ -72,7 +73,9 @@ const editar = () => {
       }),
     })
       .then((data) => data.json())
-      .then((data) => getUser());
+      .then((data) => {
+        Router.reload();
+      });
   };
 
   return (
