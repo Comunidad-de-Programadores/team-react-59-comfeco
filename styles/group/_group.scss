@@ -1,7 +1,11 @@
 @import "../form/formulario";
 
-main.wrap{
+main.wrap {
   margin-top: 0;
+
+  .margin0 {
+    padding-top: 0;
+  }
 }
 
 .card-group {
@@ -11,7 +15,7 @@ main.wrap{
   padding: 8px 0px;
   justify-content: space-between;
   color: white;
-  
+
   .card-group-body {
     display: flex;
     flex-direction: row;
@@ -130,7 +134,7 @@ main.wrap{
       background-color: $colorFuchiaIntermedio;
     }
 
-    .card-group-two .card-group-two-image img{
+    .card-group-two .card-group-two-image img {
       border-bottom: 1px solid $colorFuchiaIntermedio;
     }
   }
@@ -272,8 +276,8 @@ main.wrap{
 @media screen and (min-width: 1024px) {
   .wrap-group {
     .row {
-      margin-right: -0.5rem;
-      margin-left: -0.5rem;
+      /*  margin-right: -0.5rem;
+      margin-left: -0.5rem; */
       > div {
         padding-right: 0.5rem;
         padding-left: 0.5rem;
@@ -289,8 +293,8 @@ main.wrap{
   }
   .wrap-group {
     .row {
-      margin-right: -0.5rem;
-      margin-left: -0.5rem;
+      /*   margin-right: -0.5rem;
+      margin-left: -0.5rem; */
       > div {
         padding-right: 0.5rem;
         padding-left: 0.5rem;

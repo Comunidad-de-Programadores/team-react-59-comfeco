@@ -8,12 +8,12 @@ const CardEventsActive = () => {
   const card = (
     <div className="card-event-active">
       <div className="card-event-head">
-        <Image
+        {/* <Image
           src="/logo1.png"
           alt="Picture of the author"
           width={139}
           height={41}
-        />
+        /> */}
         <h3>!DUELO DE TITANES!</h3>
         <Icono css="icon-share" />
       </div>
@@ -249,7 +249,9 @@ const CardEventsActive = () => {
         <div className="card-event-body">
           {/* <!--cards--> */}
           {card}
-          
+          {card}
+          {card}
+          {card}
           {/* <!-- end cards --> */}
         </div>
       </section>

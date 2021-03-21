@@ -5,7 +5,7 @@ import Eventos from "../../components/perfil/union/Eventos";
 
 const eventos = () => {
   return (
-    <LayoutMiPerfil  active={4}>
+    <LayoutMiPerfil  active={4} css={"containerEventos"}>
       <Eventos />
     </LayoutMiPerfil>
   );
