@@ -30,7 +30,7 @@ const WidgetPerfil = () => {
   return (
     <>
       <section className="widget-perfil">
-        <A href="/editar-perfil" css="widget-perfil-link">
+        <A href="/mi-perfil/editar" css="widget-perfil-link">
           Editar
           <Icono css="icon-external-link" />
         </A>
