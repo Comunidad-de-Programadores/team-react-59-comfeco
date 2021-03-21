@@ -295,3 +295,29 @@
     }
   }
 }
+
+.editProfile.formGroupSesion {
+  color: white;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 460px)  {
+  .editProfile.formGroupSesion {
+      max-height: 2000px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .editProfile.formGroupSesion {
+    .col-xs-4, .col-xs-6 {
+      max-width: 100% !important;
+    flex-basis: 100% !important;
+    }
+    .buttonContainer {
+      button.edit {
+        padding: 0px;
+      }
+    }
+  }
+}
+
