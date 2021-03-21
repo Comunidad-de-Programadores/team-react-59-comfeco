@@ -163,19 +163,19 @@ const Header = () => {
                   </A>
                 </li>
                 <li>
-                  <A href="/comunidades">
+                  <A href="/">
                     <Icono css="icon-group_add" />
                     Comunidades
                   </A>
                 </li>
                 <li>
-                  <A href="/talleres">
+                  <A href="/">
                     <Icono css="icon-trello" />
                     Talleres
                   </A>
                 </li>
                 <li>
-                  <A href="/creadores-de-contenido">
+                  <A href="/">
                     <Icono css="icon-article" />
                     Creadores de contenido
                   </A>
@@ -365,7 +365,7 @@ const Header = () => {
           <nav className="siderbar" id="siderbarTablet">
             <ul className="link">
               <li>
-                <Link href="/comunidades">
+                <Link href="/">
                   <a
                     onClick={() => {
                       contX();
@@ -377,7 +377,7 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/comunidades">
+                <Link href="/">
                   <a
                     onClick={() => {
                       contX();
@@ -389,7 +389,7 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/talleres">
+                <Link href="/">
                   <a
                     onClick={() => {
                       contX();
@@ -401,7 +401,7 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/creadores-de-contenido">
+                <Link href="/">
                   <a
                     onClick={() => {
                       contX();
