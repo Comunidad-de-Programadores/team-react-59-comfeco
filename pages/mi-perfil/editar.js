@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../../components/general/Layout";
-import A from "../../components/nano/A";
 import Icono from "../../components/nano/Icono";
+import A from "../../components/nano/A";
+import Router from "next/router";
 const editar = () => {
   const [user, setUser] = useState({
     nickname: "",
@@ -23,7 +24,7 @@ const editar = () => {
     error: null,
   });
 
-  useEffect(() => {
+  const getUser = () => {
     fetch("/api/get_user", {
       headers: {
         Authorization: `${localStorage.token}`,
@@ -37,6 +38,10 @@ const editar = () => {
         }
         setUser(data);
       });
+  };
+
+  useEffect(() => {
+    getUser();
   }, []);
 
   const handleSubmit = (e) => {
@@ -68,7 +73,9 @@ const editar = () => {
       }),
     })
       .then((data) => data.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        Router.reload();
+      });
   };
 
   return (
