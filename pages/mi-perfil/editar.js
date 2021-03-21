@@ -100,7 +100,15 @@ const editar = () => {
               onSubmit={handleSubmit}
             >
               <div className="img col-sm-6  col-xs-12 center-xs">
-                <img src={user.image} alt="default-avatar.png" />
+                <img
+                  src={user.image}
+                  style={{
+                    width: "300px",
+                    height: "300px",
+                    objectFit: "fill",
+                  }}
+                  alt="default-avatar.png"
+                />
               </div>
               <div className="row col-sm-6  col-xs-12 main center-xs">
                 <div className="col-xs-12 nick">
