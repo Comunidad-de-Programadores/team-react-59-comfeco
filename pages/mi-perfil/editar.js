@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../../components/general/Layout";
 import Icono from "../../components/nano/Icono";
-import A from "../../components/nano/A";
 import Router from "next/router";
+import A from "../../components/nano/A";
 const editar = () => {
   const [user, setUser] = useState({
     nickname: "",
