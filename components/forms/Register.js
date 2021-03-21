@@ -61,7 +61,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const padre = e.target.parentNode;
-    e.target.elements[4].innerHTML = "...";
+    e.target.elements[8].innerHTML = "...";
 
     if (
       e.target.registerPassword.value !== e.target.registerPasswordConfirm.value
