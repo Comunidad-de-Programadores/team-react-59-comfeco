@@ -6,7 +6,7 @@ import LayoutMiPerfil from "../../components/perfil/union/LayoutMiPerfil";
 
 const miPerfil = () => {
   return (
-    <LayoutMiPerfil>
+    <LayoutMiPerfil active={1}>
       <Perfil />
     </LayoutMiPerfil>
   );

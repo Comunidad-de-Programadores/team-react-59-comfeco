@@ -235,7 +235,7 @@ const CardEventsActive = () => {
             <span>Ver más</span>
             <Icono css="icon-external-link" />
           </A>
-          <button class="participate">Participar</button>
+          <button className="participate">Participar</button>
         </div>
       </div>
     </div>
@@ -249,16 +249,7 @@ const CardEventsActive = () => {
         <div className="card-event-body">
           {/* <!--cards--> */}
           {card}
-          {card}
-          {/* {card}
-          {card}
-          {card}
-          {card}
-          {card}
-          {card}
-          {card}
-          {card}
-          {card} */}
+          
           {/* <!-- end cards --> */}
         </div>
       </section>

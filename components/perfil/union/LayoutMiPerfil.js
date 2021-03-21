@@ -9,7 +9,8 @@ const LayoutMiPerfil = (props) => {
       <main>
         <div className="backgroundHome"></div>
         <div className="backgroundLigth"></div>
-        <Nav />
+      
+        <Nav active={props.active} />
         <div className="containerMiPerfil">{props.children}</div>
       </main>
     </Layout>

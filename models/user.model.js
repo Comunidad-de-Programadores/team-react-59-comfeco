@@ -11,6 +11,10 @@ const User = new mongoose.Schema(
     gender: { type: String },
     birthdate: { type: String },
     area: { type: String },
+    facebookLink: { type: String },
+    twitterLink: { type: String },
+    githubLink: { type: String },
+    linkedinLink: { type: String },
 
     //default
     password: { type: String },

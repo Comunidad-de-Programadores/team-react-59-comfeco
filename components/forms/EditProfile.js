@@ -17,6 +17,10 @@ const EditProfile = () => {
     image: "/no_user.jpg",
     country: "",
     area: "",
+    facebookLink: "",
+    twitterLink: "",
+    githubLink: "",
+    linkedinLink: "",
   });
 
   useEffect(() => {
@@ -73,6 +77,10 @@ const EditProfile = () => {
         area: formData.area,
         password: formData.password,
         biography: formData.biography,
+        githubLink: formData.github,
+        linkedinLink: formData.linkedin,
+        twitterLink: formData.twitter,
+        facebookLink: formData.facebook,
       }),
     })
       .then((data) => data.json())
@@ -394,7 +402,13 @@ const EditProfile = () => {
                 <span className="ico icon-facebook1"></span>
                 facebook.com/
               </label>
-              <input id="facebook" name="facebook" type="text" ref={register} />
+              <input
+                id="facebook"
+                defaultValue={user.facebookLink}
+                name="facebook"
+                type="text"
+                ref={register}
+              />
             </div>
           </div>
           <div className="col-xs-6">
@@ -403,7 +417,13 @@ const EditProfile = () => {
                 <span className="ico icon-github"></span>
                 github.com/
               </label>
-              <input type="text" name="github" id="github" ref={register} />
+              <input
+                type="text"
+                defaultValue={user.githubLink}
+                name="github"
+                id="github"
+                ref={register}
+              />
             </div>
           </div>
         </div>
@@ -414,7 +434,13 @@ const EditProfile = () => {
                 <span className="ico icon-linkedin-with-circle"></span>
                 linkedin.com/in/
               </label>
-              <input type="text" name="linkedin" id="linkedin" ref={register} />
+              <input
+                type="text"
+                defaultValue={user.linkedinLink}
+                name="linkedin"
+                id="linkedin"
+                ref={register}
+              />
             </div>
           </div>
           <div className="col-xs-6">
@@ -423,7 +449,13 @@ const EditProfile = () => {
                 <span className="ico icon-twitter-with-circle"></span>
                 twitter.com/
               </label>
-              <input type="text" name="twitter" id="twitter" ref={register} />
+              <input
+                type="text"
+                defaultValue={user.twitterLink}
+                name="twitter"
+                id="twitter"
+                ref={register}
+              />
             </div>
           </div>
         </div>

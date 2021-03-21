@@ -1,5 +1,5 @@
 import Layout from "../components/general/Layout";
-import CardEventsActive from "../components/eventoActivo/CardEventsActive";
+import CardEventsActive from "../components/eventoActivo/cardEventsActive";
 
 const evento = () => {
   return (

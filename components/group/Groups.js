@@ -46,9 +46,9 @@ const Groups = ({grupos}) =>{
         </form>
 
 
-        <div className="row">
+        <div className="row around-xs">
             {filteredGroup.map((group) => (
-                <div key={group.id}  className="col-xs-12 col-md-4">
+                <div key={group.id}  className="col-lg-4 col-ms-3 col-md-4 col-xs-12 containerCardGroup">
                     <Group data={group}/>
                 </div>
             ))}
