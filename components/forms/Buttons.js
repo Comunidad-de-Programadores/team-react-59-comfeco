@@ -56,7 +56,7 @@ const Buttons = () => {
           }}
           id="loginTitle"
         >
-          <A href="#iniciarSesion">Iniciar sesión</A>
+          <A href="#iniciarSesion">Iniciar</A>
         </button>
         <span>|</span>
         <button
